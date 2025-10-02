@@ -78,7 +78,7 @@ def rag(req: RAGRequest):
     )
 
     # Save context to history
-    history_manager.append(full_prompt)
+    history_manager.append(context)
 
     print("Full Prompt:", full_prompt)
     try:
