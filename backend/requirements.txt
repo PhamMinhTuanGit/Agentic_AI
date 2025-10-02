@@ -1,0 +1,7 @@
+neo4j
+bs4
+pdfplumber
+langchain
+requests
+faiss-cpu
+numpy

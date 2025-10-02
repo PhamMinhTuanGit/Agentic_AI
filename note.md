@@ -1,0 +1,2 @@
+- The framework can already retrieved context and answer according to provided context.But the accuracy is still in limit due to some backwards:
+1. The CLI section in PDF is not at verbatim format, so the framework can easily do mistake at the retrieval 

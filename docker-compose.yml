@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11435:11434"
+    volumes:
+      - ollama-data:/root/.ollama  # Persistent model storage
+    
+    
+  rag_backend:
+    build: ./rag_backend
+    ports:
+      - "6789:8000"
+    depends_on:
+      - ollama
+    volumes:
+      - rag_history:/app/rag_backend/history.txt
+
+volumes:
+  ollama-data:
+  rag_history:
