@@ -75,7 +75,7 @@ class RAGApplication:
         print("\n" + "="*70)
         print("💬 ANSWER")
         print("="*70)
-        print(result['answer'])
+        print(f"\033[1m{result['answer']}\033[0m")
         
         print("\n" + "="*70)
         print("📊 METADATA")
@@ -156,8 +156,8 @@ class RAGApplication:
                 # Process query
                 result = self.pipeline.query(query)
                 
-                # Display answer
-                print(f"\n🤖 Assistant: {result['answer']}")
+                # Display answer (bold)
+                print(f"\n🤖 Assistant: \033[1m{result['answer']}\033[0m")
                 
                 cache_indicator = "💾" if result['from_cache'] else "🔄"
                 print(f"\n{cache_indicator} [{result['elapsed_time']:.2f}s]", end="")
