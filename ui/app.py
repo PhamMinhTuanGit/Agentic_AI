@@ -49,6 +49,19 @@ st.markdown("""
         margin: 10px 0;
         border-left: 5px solid #4caf50;
     }
+    .source-doc {
+        background-color: #fff3e0;
+        padding: 12px;
+        border-radius: 8px;
+        margin: 8px 0;
+        border-left: 4px solid #ff9800;
+        font-size: 0.95em;
+    }
+    .source-scores {
+        font-size: 0.85em;
+        color: #666;
+        margin-top: 8px;
+    }
     .cache-hit {
         background-color: #c8e6c9;
         padding: 8px 12px;
@@ -83,6 +96,9 @@ if "messages" not in st.session_state:
 
 if "loading" not in st.session_state:
     st.session_state.loading = False
+
+if "show_history" not in st.session_state:
+    st.session_state.show_history = False
 
 # ==================== Cached Pipeline Initialization ====================
 @st.cache_resource
@@ -121,7 +137,11 @@ def process_query(query: str) -> Dict[str, Any]:
     
     try:
         start_time = time.time()
-        result = st.session_state.pipeline.query(query)
+        result = st.session_state.pipeline.query(
+            query,
+            return_sources=True,
+            return_context=False
+        )
         total_time = time.time() - start_time
         
         result['processed_at'] = datetime.now().isoformat()
@@ -139,39 +159,23 @@ def render_sidebar():
     """Render sidebar with function buttons"""
     st.sidebar.title("🎯 Functions")
     
-    col1, col2, col3 = st.sidebar.columns(3)
+    col1, col2 = st.sidebar.columns(2)
     
     with col1:
-        if st.sidebar.button("📊 Stats", use_container_width=True):
-            st.session_state.show_stats = not st.session_state.get('show_stats', False)
-            st.rerun()
+        # Toggle history without rerun
+        if st.sidebar.button("📜 History", use_container_width=True, key="history_btn"):
+            st.session_state.show_history = not st.session_state.get('show_history', False)
     
     with col2:
-        if st.sidebar.button("📜 History", use_container_width=True):
-            st.session_state.show_history = not st.session_state.get('show_history', False)
-            st.rerun()
-    
-    with col3:
-        if st.sidebar.button("🗑️ Clear", use_container_width=True):
-            st.session_state.messages = []
-            st.rerun()
+        # Clear history without rerun
+        if st.sidebar.button("🗑️ Clear", use_container_width=True, key="clear_btn"):
+            if st.session_state.messages:
+                st.session_state.messages = []
+                st.info("✅ Chat history cleared!")
     
     st.sidebar.divider()
     
-    # Show stats if requested
-    if st.session_state.get('show_stats', False):
-        st.sidebar.title("📈 Statistics")
-        if st.session_state.pipeline:
-            try:
-                stats = st.session_state.pipeline.get_stats()
-                st.sidebar.metric("Total Queries", stats.get('total_queries', 0))
-                st.sidebar.metric("Cache Hit Rate", f"{stats.get('cache_hit_rate', 0):.1%}")
-                st.sidebar.metric("Avg Latency", f"{stats.get('avg_total_time', 0):.2f}s")
-                st.sidebar.metric("Total Tokens", f"{stats.get('total_tokens', 0):,}")
-            except Exception as e:
-                st.sidebar.warning(f"Could not load stats: {str(e)}")
-    
-    # Show history if requested
+    # Show history if requested (no need for separate section, just toggle)
     if st.session_state.get('show_history', False):
         st.sidebar.title("📜 Query History")
         if st.session_state.messages:
@@ -231,6 +235,25 @@ def main():
                 </div>
                 </div>
                 """, unsafe_allow_html=True)
+                
+                # Display retrieved documents if available
+                sources = message.get('sources', [])
+                if sources:
+                    with st.expander(f"📚 Retrieved Documents ({len(sources)})"):
+                        for i, source in enumerate(sources, 1):
+                            doc_text = source.get('text', 'N/A')[:300]
+                            llm_score = source.get('llm_score', 0)
+                            retriever_score = source.get('retriever_score', 0)
+                            
+                            st.markdown(f"""
+                            <div class="source-doc">
+                            <b>Document {i}</b><br>
+                            {doc_text}...
+                            <div class="source-scores">
+                            🤖 LLM Score: {llm_score:.1f}/100 | 🔍 Retriever Score: {retriever_score:.4f}
+                            </div>
+                            </div>
+                            """, unsafe_allow_html=True)
     
     st.divider()
     
@@ -271,6 +294,7 @@ def main():
                     answer = result.get('answer', 'No answer generated')
                     from_cache = result.get('from_cache', False)
                     time_taken = result.get('total_time', 0)
+                    sources = result.get('sources', [])
                     
                     # Add assistant message to history
                     st.session_state.messages.append({
@@ -278,6 +302,7 @@ def main():
                         'content': answer,
                         'from_cache': from_cache,
                         'time_taken': time_taken,
+                        'sources': sources,
                         'timestamp': datetime.now().strftime("%H:%M:%S")
                     })
                     
