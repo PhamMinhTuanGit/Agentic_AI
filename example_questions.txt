@@ -1,0 +1,10 @@
+What is Border Gateway Protocol?
+How to configure BGP neighbors?
+What are BGP attributes and their usage?
+How to enable debugging in BGP?
+What is the difference between iBGP and eBGP?
+How to implement BGP route filtering?
+What are BGP communities and how are they used?
+How to configure BGP route reflectors?
+What is BGP graceful restart?
+How to troubleshoot BGP connection issues?

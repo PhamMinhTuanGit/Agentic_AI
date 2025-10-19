@@ -4,9 +4,16 @@ import faiss
 import json
 import numpy as np
 import requests
+import os
+from dotenv import load_dotenv
 from embedder import embed_text
 
+# Load environment variables
+load_dotenv()
+
 app = FastAPI()
+
+OLLAMA_API_URL = os.getenv("OLLAMA_API_URL")
 
 # Load FAISS index
 index = faiss.read_index("docs_index.faiss")
@@ -41,7 +48,7 @@ def rag(req: RAGRequest):
 
     # Call Ollama API running locally
     try:
-        response = requests.post("http://localhost:11435/api/generate", json={
+        response = requests.post(OLLAMA_API_URL, json={
             "model": req.model,
             "prompt": full_prompt,
             "max_tokens": req.max_tokens

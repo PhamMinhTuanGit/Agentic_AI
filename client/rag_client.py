@@ -1,6 +1,11 @@
+from dotenv import load_dotenv
+import os
 import requests
 
-API_URL = "http://localhost:8000/rag"
+# Load environment variables
+load_dotenv()
+
+API_URL = os.getenv("API_URL")
 
 def query_rag(prompt):
     continuation_token = None
