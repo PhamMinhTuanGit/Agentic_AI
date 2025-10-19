@@ -234,65 +234,63 @@ def main():
     
     st.divider()
     
-    # Input area with multiline support
-    user_input = st.text_area(
-        "Ask a question...",
-        placeholder="e.g., What is BGP protocol? How to configure OSPF?\n\nYou can use multiple lines and press Ctrl+Enter to submit",
-        label_visibility="collapsed",
-        height=100,
-        key="user_input"
-    )
-    
-    col1, col2, col3 = st.columns([3, 1, 1])
-    
-    with col1:
-        pass  # Empty space
-    
-    with col2:
-        if st.button("Clear", use_container_width=True):
-            st.session_state.user_input = ""
-            st.rerun()
-    
-    with col3:
-        submit_button = st.button("🔍 Send", use_container_width=True, type="primary")
-    
-    # Process input
-    if submit_button and user_input.strip():
-        # Add user message to history
-        st.session_state.messages.append({
-            'role': 'user',
-            'content': user_input.strip(),
-            'timestamp': datetime.now().strftime("%H:%M:%S")
-        })
+    # Input area with form for proper submission handling
+    with st.form("chat_form", clear_on_submit=True):
+        user_input = st.text_area(
+            "Ask a question...",
+            placeholder="e.g., What is BGP protocol? How to configure OSPF?\n\nYou can use multiple lines and press Ctrl+Enter to submit",
+            label_visibility="collapsed",
+            height=100
+        )
         
-        # Clear input field
-        st.session_state.user_input = ""
+        col1, col2, col3 = st.columns([3, 1, 1])
         
-        # Show processing status
-        with st.spinner("🤔 Processing your question..."):
-            result = process_query(user_input.strip())
+        with col1:
+            pass  # Empty space
+        
+        with col2:
+            clear_button = st.form_submit_button("Clear", use_container_width=True)
+        
+        with col3:
+            submit_button = st.form_submit_button("🔍 Send", use_container_width=True, type="primary")
+        
+        # Process input
+        if submit_button and user_input.strip():
+            # Add user message to history
+            st.session_state.messages.append({
+                'role': 'user',
+                'content': user_input.strip(),
+                'timestamp': datetime.now().strftime("%H:%M:%S")
+            })
             
-            if result:
-                answer = result.get('answer', 'No answer generated')
-                from_cache = result.get('from_cache', False)
-                time_taken = result.get('total_time', 0)
+            # Show processing status
+            with st.spinner("🤔 Processing your question..."):
+                result = process_query(user_input.strip())
                 
-                # Add assistant message to history
-                st.session_state.messages.append({
-                    'role': 'assistant',
-                    'content': answer,
-                    'from_cache': from_cache,
-                    'time_taken': time_taken,
-                    'timestamp': datetime.now().strftime("%H:%M:%S")
-                })
-                
-                # Rerun to display new messages and clear input
-                st.rerun()
-            else:
-                st.error("❌ Failed to process your question. Please try again.")
-    
-    elif submit_button and not user_input.strip():
-        st.warning("⚠️ Please enter a question first")
+                if result:
+                    answer = result.get('answer', 'No answer generated')
+                    from_cache = result.get('from_cache', False)
+                    time_taken = result.get('total_time', 0)
+                    
+                    # Add assistant message to history
+                    st.session_state.messages.append({
+                        'role': 'assistant',
+                        'content': answer,
+                        'from_cache': from_cache,
+                        'time_taken': time_taken,
+                        'timestamp': datetime.now().strftime("%H:%M:%S")
+                    })
+                    
+                    # Rerun to display new messages and clear input
+                    st.rerun()
+                else:
+                    st.error("❌ Failed to process your question. Please try again.")
+        
+        elif submit_button and not user_input.strip():
+            st.warning("⚠️ Please enter a question first")
+        
+        elif clear_button:
+            pass  # Form with clear_on_submit=True will handle clearing
 
 # ==================== Entry Point ====================
 if __name__ == "__main__":
