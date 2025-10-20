@@ -1,0 +1,141 @@
+network_topology:
+  name: "Star_Topology_Sample"
+  description: "Mạng nội bộ văn phòng nhỏ với mô hình hình sao"
+  devices:
+    - id: SW1
+      type: switch
+      ip: 192.168.1.1
+      interfaces:
+        - port: G0/1
+          connected_to: PC1
+        - port: G0/2
+          connected_to: PC2
+        - port: G0/3
+          connected_to: PC3
+        - port: G0/4
+          connected_to: Router1
+
+    - id: Router1
+      type: router
+      ip: 192.168.1.254
+      interfaces:
+        - port: G0/0
+          connected_to: SW1
+        - port: G0/1
+          connected_to: Internet
+
+    - id: PC1
+      type: host
+      ip: 192.168.1.10
+      mac: "00:11:22:33:44:01"
+      connected_to: SW1
+
+    - id: PC2
+      type: host
+      ip: 192.168.1.11
+      mac: "00:11:22:33:44:02"
+      connected_to: SW1
+
+    - id: PC3
+      type: host
+      ip: 192.168.1.12
+      mac: "00:11:22:33:44:03"
+      connected_to: SW1
+
+    - id: Internet
+      type: external_network
+      ip_range: "0.0.0.0/0"
+network_topology:
+  name: "Star_Topology_Sample"
+  description: "Mạng nội bộ văn phòng nhỏ với mô hình hình sao"
+  devices:
+    - id: SW1
+      type: switch
+      ip: 192.168.1.1
+      interfaces:
+        - port: G0/1
+          connected_to: PC1
+        - port: G0/2
+          connected_to: PC2
+        - port: G0/3
+          connected_to: PC3
+        - port: G0/4
+          connected_to: Router1
+
+    - id: Router1
+      type: router
+      ip: 192.168.1.254
+      interfaces:
+        - port: G0/0
+          connected_to: SW1
+        - port: G0/1
+          connected_to: Internet
+
+    - id: PC1
+      type: host
+      ip: 192.168.1.10
+      mac: "00:11:22:33:44:01"
+      connected_to: SW1
+network_topology:
+  name: "Star_Topology_Sample"
+  description: "Mạng nội bộ văn phòng nhỏ với mô hình hình sao"
+  devices:
+    - id: SW1
+      type: switch
+      ip: 192.168.1.1
+      interfaces:
+        - port: G0/1
+          connected_to: PC1
+        - port: G0/2
+          connected_to: PC2
+        - port: G0/3
+          connected_to: PC3
+        - port: G0/4
+          connected_to: Router1
+
+    - id: Router1
+      type: router
+      ip: 192.168.1.254
+      interfaces:
+        - port: G0/0
+          connected_to: SW1
+        - port: G0/1
+          connected_to: Internet
+
+    - id: PC1
+      type: host
+      ip: 192.168.1.10
+      mac: "00:11:22:33:44:01"
+      connected_to: SW1
+
+    - id: PC2
+      type: host
+      ip: 192.168.1.11
+      mac: "00:11:22:33:44:02"
+      connected_to: SW1
+
+    - id: PC3
+      type: host
+      ip: 192.168.1.12
+      mac: "00:11:22:33:44:03"
+      connected_to: SW1
+
+    - id: Internet
+      type: external_network
+      ip_range: "0.0.0.0/0"
+
+    - id: PC2
+      type: host
+      ip: 192.168.1.11
+      mac: "00:11:22:33:44:02"
+      connected_to: SW1
+
+    - id: PC3
+      type: host
+      ip: 192.168.1.12
+      mac: "00:11:22:33:44:03"
+      connected_to: SW1
+
+    - id: Internet
+      type: external_network
+      ip_range: "0.0.0.0/0"

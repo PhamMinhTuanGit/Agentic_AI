@@ -30,7 +30,7 @@ class SemanticChunker:
     """
     Semantic text chunker that splits text based on meaning and structure using nomic-embed-text from Ollama
     """
-    def __init__(self, max_chunk_size: int = 800, min_chunk_size: int = 200, 
+    def __init__(self, max_chunk_size: int = 2000, min_chunk_size: int = 1000, 
                  similarity_threshold: float = 0.5, embedding_model: str = "nomic-embed-text"):
         self.max_chunk_size = max_chunk_size
         self.min_chunk_size = min_chunk_size
@@ -155,7 +155,7 @@ class SemanticChunker:
         return chunks
 class HybridPDFEmbedder:
     def __init__(self, folder_path: str, model: str = "nomic-embed-text", 
-                 chunk_size: int = 800, min_chunk_size: int = 200, 
+                 chunk_size: int = 2000, min_chunk_size: int = 1000, 
                  alpha: float = 0.7, similarity_threshold: float = 0.5):
         """
         Initialize the Hybrid PDF Embedder with Semantic Chunking
@@ -478,8 +478,8 @@ if __name__ == "__main__":
     embedder = HybridPDFEmbedder(
         folder_path="documents",  # Relative to ingest folder
         model="nomic-embed-text",
-        chunk_size=800,          # Increased for semantic chunks
-        min_chunk_size=200,      # Minimum chunk size
+        chunk_size=2000,          # Increased for semantic chunks
+        min_chunk_size=1000,      # Minimum chunk size
         alpha=0.7,               # 70% dense, 30% sparse
         similarity_threshold=0.5  # Threshold for semantic similarity
     )

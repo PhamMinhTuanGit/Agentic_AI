@@ -23,6 +23,9 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+# Import CLI output configuration
+from rag.cli_output_config import CLIOutputConfig, create_cli_prompt
+
 
 class LLMClient:
     """
@@ -108,10 +111,17 @@ class LLMClient:
 7. **Monitoring**: SNMP, syslog, NetFlow configuration
 
 ## Response Format:
-- **For CLI requests**: Provide exact, executable commands with clear syntax
+- **For CLI requests**: Provide exact, executable ZebOS commands with clear syntax
 - **For configuration**: Include step-by-step instructions with proper command ordering
 - **For troubleshooting**: Suggest diagnostic commands and validation steps
 - **For examples**: Show complete configuration blocks when relevant
+
+## ZebOS Command Syntax:
+- Use "configure" (not "configure terminal")
+- Use "ipv4 address" (not "ip address")
+- Use "interface ethernet" (not just "interface")
+- Use "exit" to exit configuration modes
+- Device prompts: R1#, R1(config)#, R1(config-if)#, etc.
 
 ## Instructions:
 1. Answer based ONLY on the provided context
@@ -126,7 +136,31 @@ class LLMClient:
 ## Output Format for CLI Commands:
 - Use code blocks for commands
 - Prefix with device type/context (e.g., Router#, Switch#, Interface#)
-- Include output validation where applicable"""
+- Give complete commands, not just fragments
+- Separate commands with new lines for readability
+- Include output validation where applicable
+
+**Example**:
+```zsh
+! Step 1: Enter Configure mode and setup OSPF
+R1#configure
+R1(config)#router ospf 100
+R1(config-router)#network 10.1.1.0 0.0.0.255 area 1
+R1(config-router)#network 1.1.1.1 0.0.0.0 area 1
+R1(config-router)#bfd all-interfaces
+R1(config-router)#exit
+
+! Step 2: Configure Interface
+R1(config)#interface ethernet G0/0
+R1(config-if)#ipv4 address 10.1.1.1 255.255.255.0
+R1(config-if)#no shutdown
+R1(config-if)#exit
+
+! Step 3: Verify Configuration
+R1#show ip ospf neighbor
+R1#show interface brief
+```
+"""
         
         prompt = f"""{system_prompt}
 
@@ -143,7 +177,9 @@ Answer:"""
                 query: str,
                 context: str,
                 system_prompt: Optional[str] = None,
-                stream: bool = False) -> Dict[str, Any]:
+                stream: bool = False,
+                output_format: str = "default",
+                session_type: str = "general") -> Dict[str, Any]:
         """
         Generate answer using LLM
         
@@ -152,6 +188,8 @@ Answer:"""
             context: Retrieved context
             system_prompt: Optional system instructions
             stream: Enable streaming response
+            output_format: Output format (default, single_code_block)
+            session_type: Type of session (general, router, switch, topology)
         
         Returns:
             Dict with answer and metadata
@@ -160,8 +198,12 @@ Answer:"""
         start_time = time.time()
         
         try:
-            # Build prompt
-            prompt = self._build_prompt(query, context, system_prompt)
+            # Use CLI output config for single_code_block format
+            if output_format == "single_code_block":
+                prompt = create_cli_prompt(query, context, session_type)
+            else:
+                # Build prompt using default format
+                prompt = self._build_prompt(query, context, system_prompt)
             
             logger.info(f"🤖 Generating answer with {self.model}...")
             logger.debug(f"Prompt length: {len(prompt)} chars")

@@ -1,0 +1,43 @@
+network_topology:
+  name: "Ring_Topology_4_Routers"
+  description: "Mạng dạng vòng với 4 router kết nối theo chu trình khép kín"
+  devices:
+    - id: R1
+      type: router
+      interfaces:
+        - name: G0/0
+          ip: 10.0.12.1/30
+          connected_to: R2
+        - name: G0/1
+          ip: 10.0.14.1/30
+          connected_to: R4
+
+    - id: R2
+      type: router
+      interfaces:
+        - name: G0/0
+          ip: 10.0.12.2/30
+          connected_to: R1
+        - name: G0/1
+          ip: 10.0.23.1/30
+          connected_to: R3
+
+    - id: R3
+      type: router
+      interfaces:
+        - name: G0/0
+          ip: 10.0.23.2/30
+          connected_to: R2
+        - name: G0/1
+          ip: 10.0.34.1/30
+          connected_to: R4
+
+    - id: R4
+      type: router
+      interfaces:
+        - name: G0/0
+          ip: 10.0.34.2/30
+          connected_to: R3
+        - name: G0/1
+          ip: 10.0.14.2/30
+          connected_to: R1

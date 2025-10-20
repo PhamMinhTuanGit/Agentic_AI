@@ -23881,3 +23881,975 @@
 2025-10-19 10:25:56,091 - INFO -   - hybrid_docs_metadata.json (metadata & config)
 2025-10-19 10:25:56,091 - INFO -   - tfidf_vectorizer.pkl (TF-IDF vectorizer)
 2025-10-19 10:25:56,091 - INFO -   - svd_transformer.pkl (SVD transformer for dimension alignment)
+2025-10-20 05:37:24,234 - INFO - 🚀 Starting Hybrid PDF Embedding Pipeline
+2025-10-20 05:37:24,234 - INFO - ==================================================
+2025-10-20 05:37:24,234 - INFO - 📁 Processing PDFs in documents
+2025-10-20 05:37:24,234 - INFO - 📄 Processing: ZebOS_BFD_CmdRef.pdf
+2025-10-20 05:37:24,276 - INFO -   Extracted page 1
+2025-10-20 05:37:24,341 - INFO -   Extracted page 2
+2025-10-20 05:37:24,449 - INFO -   Extracted page 3
+2025-10-20 05:37:24,576 - INFO -   Extracted page 4
+2025-10-20 05:37:24,602 - INFO -   Extracted page 5
+2025-10-20 05:37:24,609 - INFO -   Extracted page 6
+2025-10-20 05:37:24,648 - INFO -   Extracted page 7
+2025-10-20 05:37:24,696 - INFO -   Extracted page 8
+2025-10-20 05:37:24,726 - INFO -   Extracted page 9
+2025-10-20 05:37:24,761 - INFO -   Extracted page 10
+2025-10-20 05:37:24,780 - INFO -   Extracted page 11
+2025-10-20 05:37:24,877 - INFO -   Extracted page 12
+2025-10-20 05:37:24,908 - INFO -   Extracted page 13
+2025-10-20 05:37:24,944 - INFO -   Extracted page 14
+2025-10-20 05:37:24,983 - INFO -   Extracted page 15
+2025-10-20 05:37:25,014 - INFO -   Extracted page 16
+2025-10-20 05:37:25,035 - INFO -   Extracted page 17
+2025-10-20 05:37:25,071 - INFO -   Extracted page 18
+2025-10-20 05:37:25,078 - INFO -   Extracted page 19
+2025-10-20 05:37:25,086 - INFO -   Extracted page 20
+2025-10-20 05:37:25,098 - INFO -   Extracted page 21
+2025-10-20 05:37:25,106 - INFO -   Extracted page 22
+2025-10-20 05:37:25,114 - INFO -   Extracted page 23
+2025-10-20 05:37:25,132 - INFO -   Extracted page 24
+2025-10-20 05:37:25,233 - INFO -   Extracted page 25
+2025-10-20 05:37:25,240 - INFO -   Extracted page 26
+2025-10-20 05:37:25,259 - INFO -   Extracted page 27
+2025-10-20 05:37:25,278 - INFO -   Extracted page 28
+2025-10-20 05:37:25,287 - INFO -   Extracted page 29
+2025-10-20 05:37:25,317 - INFO -   Extracted page 30
+2025-10-20 05:37:25,326 - INFO -   Extracted page 31
+2025-10-20 05:37:25,337 - INFO -   Extracted page 32
+2025-10-20 05:37:25,356 - INFO -   Extracted page 33
+2025-10-20 05:37:25,371 - INFO -   Extracted page 34
+2025-10-20 05:37:25,384 - INFO -   Extracted page 35
+2025-10-20 05:37:25,422 - INFO -   Extracted page 36
+2025-10-20 05:37:25,433 - INFO -   Extracted page 37
+2025-10-20 05:37:25,460 - INFO -   Extracted page 38
+2025-10-20 05:37:25,493 - INFO -   Extracted page 39
+2025-10-20 05:37:25,514 - INFO -   Extracted page 40
+2025-10-20 05:37:25,606 - INFO -   Extracted page 41
+2025-10-20 05:37:25,618 - INFO -   Extracted page 42
+2025-10-20 05:37:25,625 - INFO -   Extracted page 43
+2025-10-20 05:37:25,627 - INFO -   Extracted page 44
+2025-10-20 05:37:25,639 - INFO -   Extracted page 45
+2025-10-20 05:37:25,657 - INFO -   Extracted page 46
+2025-10-20 05:37:25,670 - INFO -   Extracted page 47
+2025-10-20 05:37:25,678 - INFO -   Extracted page 48
+2025-10-20 05:37:25,687 - INFO -   Extracted page 49
+2025-10-20 05:37:25,694 - INFO -   Extracted page 50
+2025-10-20 05:37:25,702 - INFO -   Extracted page 51
+2025-10-20 05:37:25,713 - INFO -   Extracted page 52
+2025-10-20 05:37:25,723 - INFO -   Extracted page 53
+2025-10-20 05:37:25,736 - INFO -   Extracted page 54
+2025-10-20 05:37:25,746 - INFO -   Extracted page 55
+2025-10-20 05:37:25,748 - INFO -   Extracted page 56
+2025-10-20 05:37:25,768 - INFO -   Extracted page 57
+2025-10-20 05:37:25,779 - INFO -   Extracted page 58
+2025-10-20 05:37:25,793 - INFO -   Extracted page 59
+2025-10-20 05:37:25,806 - INFO -   Extracted page 60
+2025-10-20 05:37:25,817 - INFO -   Extracted page 61
+2025-10-20 05:37:25,833 - INFO -   Extracted page 62
+2025-10-20 05:37:25,844 - INFO -   Extracted page 63
+2025-10-20 05:37:25,845 - INFO -   Extracted page 64
+2025-10-20 05:37:25,882 - INFO -   Extracted page 65
+2025-10-20 05:37:25,893 - INFO -   Extracted page 66
+2025-10-20 05:38:46,328 - INFO -   Created 51 semantic chunks
+2025-10-20 05:38:46,328 - INFO - 📄 Processing: ZebOS_BFD_Config.pdf
+2025-10-20 05:38:46,355 - INFO -   Extracted page 1
+2025-10-20 05:38:46,378 - INFO -   Extracted page 2
+2025-10-20 05:38:46,610 - INFO -   Extracted page 3
+2025-10-20 05:38:46,623 - INFO -   Extracted page 4
+2025-10-20 05:38:46,649 - INFO -   Extracted page 5
+2025-10-20 05:38:46,665 - INFO -   Extracted page 6
+2025-10-20 05:38:46,694 - INFO -   Extracted page 7
+2025-10-20 05:38:46,696 - INFO -   Extracted page 8
+2025-10-20 05:38:46,729 - INFO -   Extracted page 9
+2025-10-20 05:38:46,750 - INFO -   Extracted page 10
+2025-10-20 05:38:46,837 - INFO -   Extracted page 11
+2025-10-20 05:38:46,861 - INFO -   Extracted page 12
+2025-10-20 05:38:46,913 - INFO -   Extracted page 13
+2025-10-20 05:38:46,953 - INFO -   Extracted page 14
+2025-10-20 05:38:46,969 - INFO -   Extracted page 15
+2025-10-20 05:38:47,011 - INFO -   Extracted page 16
+2025-10-20 05:38:47,054 - INFO -   Extracted page 17
+2025-10-20 05:38:47,158 - INFO -   Extracted page 18
+2025-10-20 05:38:47,187 - INFO -   Extracted page 19
+2025-10-20 05:38:47,217 - INFO -   Extracted page 20
+2025-10-20 05:38:47,241 - INFO -   Extracted page 21
+2025-10-20 05:38:47,243 - INFO -   Extracted page 22
+2025-10-20 05:38:47,276 - INFO -   Extracted page 23
+2025-10-20 05:38:47,312 - INFO -   Extracted page 24
+2025-10-20 05:38:47,351 - INFO -   Extracted page 25
+2025-10-20 05:38:47,392 - INFO -   Extracted page 26
+2025-10-20 05:38:47,440 - INFO -   Extracted page 27
+2025-10-20 05:38:47,589 - INFO -   Extracted page 28
+2025-10-20 05:38:47,632 - INFO -   Extracted page 29
+2025-10-20 05:38:47,656 - INFO -   Extracted page 30
+2025-10-20 05:38:47,692 - INFO -   Extracted page 31
+2025-10-20 05:38:47,718 - INFO -   Extracted page 32
+2025-10-20 05:38:47,757 - INFO -   Extracted page 33
+2025-10-20 05:38:47,784 - INFO -   Extracted page 34
+2025-10-20 05:38:47,825 - INFO -   Extracted page 35
+2025-10-20 05:38:47,968 - INFO -   Extracted page 36
+2025-10-20 05:38:48,009 - INFO -   Extracted page 37
+2025-10-20 05:38:48,027 - INFO -   Extracted page 38
+2025-10-20 05:38:48,062 - INFO -   Extracted page 39
+2025-10-20 05:38:48,102 - INFO -   Extracted page 40
+2025-10-20 05:38:48,137 - INFO -   Extracted page 41
+2025-10-20 05:38:48,195 - INFO -   Extracted page 42
+2025-10-20 05:38:48,238 - INFO -   Extracted page 43
+2025-10-20 05:38:48,256 - INFO -   Extracted page 44
+2025-10-20 05:38:48,305 - INFO -   Extracted page 45
+2025-10-20 05:38:48,451 - INFO -   Extracted page 46
+2025-10-20 05:38:48,501 - INFO -   Extracted page 47
+2025-10-20 05:38:48,554 - INFO -   Extracted page 48
+2025-10-20 05:38:48,594 - INFO -   Extracted page 49
+2025-10-20 05:38:48,597 - INFO -   Extracted page 50
+2025-10-20 05:38:48,613 - INFO -   Extracted page 51
+2025-10-20 05:38:48,614 - INFO -   Extracted page 52
+2025-10-20 05:40:31,504 - INFO -   Created 63 semantic chunks
+2025-10-20 05:40:31,505 - INFO - 📄 Processing: ZebOS_BFD_DevGde.pdf
+2025-10-20 05:40:31,584 - INFO -   Extracted page 1
+2025-10-20 05:40:31,606 - INFO -   Extracted page 2
+2025-10-20 05:40:31,712 - INFO -   Extracted page 3
+2025-10-20 05:40:32,006 - INFO -   Extracted page 4
+2025-10-20 05:40:32,118 - INFO -   Extracted page 5
+2025-10-20 05:40:32,295 - INFO -   Extracted page 6
+2025-10-20 05:40:32,404 - INFO -   Extracted page 7
+2025-10-20 05:40:32,474 - INFO -   Extracted page 8
+2025-10-20 05:40:32,501 - INFO -   Extracted page 9
+2025-10-20 05:40:32,603 - INFO -   Extracted page 10
+2025-10-20 05:40:32,655 - INFO -   Extracted page 11
+2025-10-20 05:40:32,690 - INFO -   Extracted page 12
+2025-10-20 05:40:32,728 - INFO -   Extracted page 13
+2025-10-20 05:40:32,794 - INFO -   Extracted page 14
+2025-10-20 05:40:32,866 - INFO -   Extracted page 15
+2025-10-20 05:40:33,015 - INFO -   Extracted page 16
+2025-10-20 05:40:33,055 - INFO -   Extracted page 17
+2025-10-20 05:40:33,073 - INFO -   Extracted page 18
+2025-10-20 05:40:33,139 - INFO -   Extracted page 19
+2025-10-20 05:40:33,148 - INFO -   Extracted page 20
+2025-10-20 05:40:33,194 - INFO -   Extracted page 21
+2025-10-20 05:40:33,241 - INFO -   Extracted page 22
+2025-10-20 05:40:33,262 - INFO -   Extracted page 23
+2025-10-20 05:40:33,264 - INFO -   Extracted page 24
+2025-10-20 05:40:33,291 - INFO -   Extracted page 25
+2025-10-20 05:40:33,318 - INFO -   Extracted page 26
+2025-10-20 05:40:33,455 - INFO -   Extracted page 27
+2025-10-20 05:40:33,484 - INFO -   Extracted page 28
+2025-10-20 05:40:33,521 - INFO -   Extracted page 29
+2025-10-20 05:40:33,551 - INFO -   Extracted page 30
+2025-10-20 05:40:33,571 - INFO -   Extracted page 31
+2025-10-20 05:40:33,593 - INFO -   Extracted page 32
+2025-10-20 05:40:33,619 - INFO -   Extracted page 33
+2025-10-20 05:40:33,647 - INFO -   Extracted page 34
+2025-10-20 05:40:33,666 - INFO -   Extracted page 35
+2025-10-20 05:40:33,667 - INFO -   Extracted page 36
+2025-10-20 05:40:33,709 - INFO -   Extracted page 37
+2025-10-20 05:40:33,747 - INFO -   Extracted page 38
+2025-10-20 05:40:33,778 - INFO -   Extracted page 39
+2025-10-20 05:40:33,787 - INFO -   Extracted page 40
+2025-10-20 05:40:33,794 - INFO -   Extracted page 41
+2025-10-20 05:40:33,836 - INFO -   Extracted page 42
+2025-10-20 05:40:34,036 - INFO -   Extracted page 43
+2025-10-20 05:40:34,071 - INFO -   Extracted page 44
+2025-10-20 05:40:34,105 - INFO -   Extracted page 45
+2025-10-20 05:40:34,138 - INFO -   Extracted page 46
+2025-10-20 05:40:34,167 - INFO -   Extracted page 47
+2025-10-20 05:40:34,173 - INFO -   Extracted page 48
+2025-10-20 05:40:34,235 - INFO -   Extracted page 49
+2025-10-20 05:40:34,275 - INFO -   Extracted page 50
+2025-10-20 05:40:34,314 - INFO -   Extracted page 51
+2025-10-20 05:40:34,347 - INFO -   Extracted page 52
+2025-10-20 05:40:34,376 - INFO -   Extracted page 53
+2025-10-20 05:40:34,407 - INFO -   Extracted page 54
+2025-10-20 05:40:34,423 - INFO -   Extracted page 55
+2025-10-20 05:40:34,425 - INFO -   Extracted page 56
+2025-10-20 05:40:34,475 - INFO -   Extracted page 57
+2025-10-20 05:40:34,505 - INFO -   Extracted page 58
+2025-10-20 05:40:34,641 - INFO -   Extracted page 59
+2025-10-20 05:40:34,643 - INFO -   Extracted page 60
+2025-10-20 05:40:34,700 - INFO -   Extracted page 61
+2025-10-20 05:40:34,732 - INFO -   Extracted page 62
+2025-10-20 05:40:34,759 - INFO -   Extracted page 63
+2025-10-20 05:40:34,778 - INFO -   Extracted page 64
+2025-10-20 05:40:34,792 - INFO -   Extracted page 65
+2025-10-20 05:40:34,794 - INFO -   Extracted page 66
+2025-10-20 05:40:34,846 - INFO -   Extracted page 67
+2025-10-20 05:40:34,872 - INFO -   Extracted page 68
+2025-10-20 05:40:34,893 - INFO -   Extracted page 69
+2025-10-20 05:40:34,918 - INFO -   Extracted page 70
+2025-10-20 05:40:34,933 - INFO -   Extracted page 71
+2025-10-20 05:40:34,966 - INFO -   Extracted page 72
+2025-10-20 05:40:34,992 - INFO -   Extracted page 73
+2025-10-20 05:40:34,994 - INFO -   Extracted page 74
+2025-10-20 05:40:35,044 - INFO -   Extracted page 75
+2025-10-20 05:40:35,068 - INFO -   Extracted page 76
+2025-10-20 05:40:35,084 - INFO -   Extracted page 77
+2025-10-20 05:40:35,100 - INFO -   Extracted page 78
+2025-10-20 05:40:35,131 - INFO -   Extracted page 79
+2025-10-20 05:40:35,150 - INFO -   Extracted page 80
+2025-10-20 05:40:35,167 - INFO -   Extracted page 81
+2025-10-20 05:40:35,169 - INFO -   Extracted page 82
+2025-10-20 05:40:35,210 - INFO -   Extracted page 83
+2025-10-20 05:40:35,385 - INFO -   Extracted page 84
+2025-10-20 05:40:35,404 - INFO -   Extracted page 85
+2025-10-20 05:40:35,432 - INFO -   Extracted page 86
+2025-10-20 05:40:35,453 - INFO -   Extracted page 87
+2025-10-20 05:40:35,467 - INFO -   Extracted page 88
+2025-10-20 05:40:35,482 - INFO -   Extracted page 89
+2025-10-20 05:40:35,500 - INFO -   Extracted page 90
+2025-10-20 05:40:35,534 - INFO -   Extracted page 91
+2025-10-20 05:40:35,536 - INFO -   Extracted page 92
+2025-10-20 05:40:35,581 - INFO -   Extracted page 93
+2025-10-20 05:40:35,604 - INFO -   Extracted page 94
+2025-10-20 05:40:35,627 - INFO -   Extracted page 95
+2025-10-20 05:40:35,652 - INFO -   Extracted page 96
+2025-10-20 05:40:35,676 - INFO -   Extracted page 97
+2025-10-20 05:40:35,705 - INFO -   Extracted page 98
+2025-10-20 05:40:35,731 - INFO -   Extracted page 99
+2025-10-20 05:40:35,764 - INFO -   Extracted page 100
+2025-10-20 05:40:35,793 - INFO -   Extracted page 101
+2025-10-20 05:40:35,820 - INFO -   Extracted page 102
+2025-10-20 05:40:35,844 - INFO -   Extracted page 103
+2025-10-20 05:40:35,867 - INFO -   Extracted page 104
+2025-10-20 05:40:35,893 - INFO -   Extracted page 105
+2025-10-20 05:40:35,913 - INFO -   Extracted page 106
+2025-10-20 05:40:35,930 - INFO -   Extracted page 107
+2025-10-20 05:40:35,932 - INFO -   Extracted page 108
+2025-10-20 05:40:35,982 - INFO -   Extracted page 109
+2025-10-20 05:40:36,022 - INFO -   Extracted page 110
+2025-10-20 05:40:36,056 - INFO -   Extracted page 111
+2025-10-20 05:40:36,079 - INFO -   Extracted page 112
+2025-10-20 05:40:36,097 - INFO -   Extracted page 113
+2025-10-20 05:40:36,117 - INFO -   Extracted page 114
+2025-10-20 05:40:36,327 - INFO -   Extracted page 115
+2025-10-20 05:40:36,351 - INFO -   Extracted page 116
+2025-10-20 05:40:36,375 - INFO -   Extracted page 117
+2025-10-20 05:40:36,398 - INFO -   Extracted page 118
+2025-10-20 05:40:36,422 - INFO -   Extracted page 119
+2025-10-20 05:40:36,447 - INFO -   Extracted page 120
+2025-10-20 05:40:36,471 - INFO -   Extracted page 121
+2025-10-20 05:40:36,494 - INFO -   Extracted page 122
+2025-10-20 05:40:36,520 - INFO -   Extracted page 123
+2025-10-20 05:40:36,542 - INFO -   Extracted page 124
+2025-10-20 05:40:36,564 - INFO -   Extracted page 125
+2025-10-20 05:40:36,585 - INFO -   Extracted page 126
+2025-10-20 05:40:36,607 - INFO -   Extracted page 127
+2025-10-20 05:40:36,629 - INFO -   Extracted page 128
+2025-10-20 05:40:36,655 - INFO -   Extracted page 129
+2025-10-20 05:40:36,679 - INFO -   Extracted page 130
+2025-10-20 05:40:36,704 - INFO -   Extracted page 131
+2025-10-20 05:40:36,727 - INFO -   Extracted page 132
+2025-10-20 05:40:36,752 - INFO -   Extracted page 133
+2025-10-20 05:40:36,777 - INFO -   Extracted page 134
+2025-10-20 05:40:36,801 - INFO -   Extracted page 135
+2025-10-20 05:40:36,824 - INFO -   Extracted page 136
+2025-10-20 05:40:36,845 - INFO -   Extracted page 137
+2025-10-20 05:40:36,868 - INFO -   Extracted page 138
+2025-10-20 05:40:36,891 - INFO -   Extracted page 139
+2025-10-20 05:40:36,915 - INFO -   Extracted page 140
+2025-10-20 05:40:36,937 - INFO -   Extracted page 141
+2025-10-20 05:40:36,963 - INFO -   Extracted page 142
+2025-10-20 05:40:36,989 - INFO -   Extracted page 143
+2025-10-20 05:40:36,991 - INFO -   Extracted page 144
+2025-10-20 05:40:37,056 - INFO -   Extracted page 145
+2025-10-20 05:40:37,101 - INFO -   Extracted page 146
+2025-10-20 05:43:39,108 - INFO -   Created 155 semantic chunks
+2025-10-20 05:43:39,109 - INFO - 📄 Processing: ZebOS_BGP_CmdRef.pdf
+2025-10-20 05:43:39,223 - INFO -   Extracted page 1
+2025-10-20 05:43:39,248 - INFO -   Extracted page 2
+2025-10-20 05:43:39,787 - INFO -   Extracted page 3
+2025-10-20 05:43:39,997 - INFO -   Extracted page 4
+2025-10-20 05:43:40,128 - INFO -   Extracted page 5
+2025-10-20 05:43:40,329 - INFO -   Extracted page 6
+2025-10-20 05:43:40,453 - INFO -   Extracted page 7
+2025-10-20 05:43:40,458 - INFO -   Extracted page 8
+2025-10-20 05:43:40,484 - INFO -   Extracted page 9
+2025-10-20 05:43:40,580 - INFO -   Extracted page 10
+2025-10-20 05:43:40,623 - INFO -   Extracted page 11
+2025-10-20 05:43:40,674 - INFO -   Extracted page 12
+2025-10-20 05:43:40,706 - INFO -   Extracted page 13
+2025-10-20 05:43:40,744 - INFO -   Extracted page 14
+2025-10-20 05:43:40,763 - INFO -   Extracted page 15
+2025-10-20 05:43:40,801 - INFO -   Extracted page 16
+2025-10-20 05:43:40,832 - INFO -   Extracted page 17
+2025-10-20 05:43:40,871 - INFO -   Extracted page 18
+2025-10-20 05:43:40,993 - INFO -   Extracted page 19
+2025-10-20 05:43:41,030 - INFO -   Extracted page 20
+2025-10-20 05:43:41,054 - INFO -   Extracted page 21
+2025-10-20 05:43:41,078 - INFO -   Extracted page 22
+2025-10-20 05:43:41,106 - INFO -   Extracted page 23
+2025-10-20 05:43:41,117 - INFO -   Extracted page 24
+2025-10-20 05:43:41,164 - INFO -   Extracted page 25
+2025-10-20 05:43:41,176 - INFO -   Extracted page 26
+2025-10-20 05:43:41,219 - INFO -   Extracted page 27
+2025-10-20 05:43:41,247 - INFO -   Extracted page 28
+2025-10-20 05:43:41,258 - INFO -   Extracted page 29
+2025-10-20 05:43:41,295 - INFO -   Extracted page 30
+2025-10-20 05:43:41,308 - INFO -   Extracted page 31
+2025-10-20 05:43:41,323 - INFO -   Extracted page 32
+2025-10-20 05:43:41,344 - INFO -   Extracted page 33
+2025-10-20 05:43:41,369 - INFO -   Extracted page 34
+2025-10-20 05:43:41,383 - INFO -   Extracted page 35
+2025-10-20 05:43:41,530 - INFO -   Extracted page 36
+2025-10-20 05:43:41,536 - INFO -   Extracted page 37
+2025-10-20 05:43:41,549 - INFO -   Extracted page 38
+2025-10-20 05:43:41,570 - INFO -   Extracted page 39
+2025-10-20 05:43:41,601 - INFO -   Extracted page 40
+2025-10-20 05:43:41,612 - INFO -   Extracted page 41
+2025-10-20 05:43:41,644 - INFO -   Extracted page 42
+2025-10-20 05:43:41,667 - INFO -   Extracted page 43
+2025-10-20 05:43:41,709 - INFO -   Extracted page 44
+2025-10-20 05:43:41,713 - INFO -   Extracted page 45
+2025-10-20 05:43:41,728 - INFO -   Extracted page 46
+2025-10-20 05:43:41,747 - INFO -   Extracted page 47
+2025-10-20 05:43:41,791 - INFO -   Extracted page 48
+2025-10-20 05:43:41,809 - INFO -   Extracted page 49
+2025-10-20 05:43:41,830 - INFO -   Extracted page 50
+2025-10-20 05:43:41,841 - INFO -   Extracted page 51
+2025-10-20 05:43:41,877 - INFO -   Extracted page 52
+2025-10-20 05:43:41,894 - INFO -   Extracted page 53
+2025-10-20 05:43:41,917 - INFO -   Extracted page 54
+2025-10-20 05:43:41,937 - INFO -   Extracted page 55
+2025-10-20 05:43:41,967 - INFO -   Extracted page 56
+2025-10-20 05:43:42,100 - INFO -   Extracted page 57
+2025-10-20 05:43:42,122 - INFO -   Extracted page 58
+2025-10-20 05:43:42,155 - INFO -   Extracted page 59
+2025-10-20 05:43:42,165 - INFO -   Extracted page 60
+2025-10-20 05:43:42,178 - INFO -   Extracted page 61
+2025-10-20 05:43:42,198 - INFO -   Extracted page 62
+2025-10-20 05:43:42,214 - INFO -   Extracted page 63
+2025-10-20 05:43:42,236 - INFO -   Extracted page 64
+2025-10-20 05:43:42,253 - INFO -   Extracted page 65
+2025-10-20 05:43:42,278 - INFO -   Extracted page 66
+2025-10-20 05:43:42,287 - INFO -   Extracted page 67
+2025-10-20 05:43:42,317 - INFO -   Extracted page 68
+2025-10-20 05:43:42,326 - INFO -   Extracted page 69
+2025-10-20 05:43:42,354 - INFO -   Extracted page 70
+2025-10-20 05:43:42,364 - INFO -   Extracted page 71
+2025-10-20 05:43:42,383 - INFO -   Extracted page 72
+2025-10-20 05:43:42,410 - INFO -   Extracted page 73
+2025-10-20 05:43:42,418 - INFO -   Extracted page 74
+2025-10-20 05:43:42,439 - INFO -   Extracted page 75
+2025-10-20 05:43:42,469 - INFO -   Extracted page 76
+2025-10-20 05:43:42,479 - INFO -   Extracted page 77
+2025-10-20 05:43:42,506 - INFO -   Extracted page 78
+2025-10-20 05:43:42,508 - INFO -   Extracted page 79
+2025-10-20 05:43:42,537 - INFO -   Extracted page 80
+2025-10-20 05:43:42,540 - INFO -   Extracted page 81
+2025-10-20 05:43:42,556 - INFO -   Extracted page 82
+2025-10-20 05:43:42,571 - INFO -   Extracted page 83
+2025-10-20 05:43:42,590 - INFO -   Extracted page 84
+2025-10-20 05:43:42,611 - INFO -   Extracted page 85
+2025-10-20 05:43:42,782 - INFO -   Extracted page 86
+2025-10-20 05:43:42,793 - INFO -   Extracted page 87
+2025-10-20 05:43:42,804 - INFO -   Extracted page 88
+2025-10-20 05:43:42,815 - INFO -   Extracted page 89
+2025-10-20 05:43:42,832 - INFO -   Extracted page 90
+2025-10-20 05:43:42,853 - INFO -   Extracted page 91
+2025-10-20 05:43:42,876 - INFO -   Extracted page 92
+2025-10-20 05:43:42,893 - INFO -   Extracted page 93
+2025-10-20 05:43:42,918 - INFO -   Extracted page 94
+2025-10-20 05:43:42,957 - INFO -   Extracted page 95
+2025-10-20 05:43:42,988 - INFO -   Extracted page 96
+2025-10-20 05:43:43,000 - INFO -   Extracted page 97
+2025-10-20 05:43:43,015 - INFO -   Extracted page 98
+2025-10-20 05:43:43,031 - INFO -   Extracted page 99
+2025-10-20 05:43:43,070 - INFO -   Extracted page 100
+2025-10-20 05:43:43,084 - INFO -   Extracted page 101
+2025-10-20 05:43:43,104 - INFO -   Extracted page 102
+2025-10-20 05:43:43,134 - INFO -   Extracted page 103
+2025-10-20 05:43:43,172 - INFO -   Extracted page 104
+2025-10-20 05:43:43,199 - INFO -   Extracted page 105
+2025-10-20 05:43:43,248 - INFO -   Extracted page 106
+2025-10-20 05:43:43,272 - INFO -   Extracted page 107
+2025-10-20 05:43:43,295 - INFO -   Extracted page 108
+2025-10-20 05:43:43,318 - INFO -   Extracted page 109
+2025-10-20 05:43:43,351 - INFO -   Extracted page 110
+2025-10-20 05:43:43,393 - INFO -   Extracted page 111
+2025-10-20 05:43:43,415 - INFO -   Extracted page 112
+2025-10-20 05:43:43,584 - INFO -   Extracted page 113
+2025-10-20 05:43:43,608 - INFO -   Extracted page 114
+2025-10-20 05:43:43,633 - INFO -   Extracted page 115
+2025-10-20 05:43:43,663 - INFO -   Extracted page 116
+2025-10-20 05:43:43,687 - INFO -   Extracted page 117
+2025-10-20 05:43:43,712 - INFO -   Extracted page 118
+2025-10-20 05:43:43,736 - INFO -   Extracted page 119
+2025-10-20 05:43:43,763 - INFO -   Extracted page 120
+2025-10-20 05:43:43,782 - INFO -   Extracted page 121
+2025-10-20 05:43:43,803 - INFO -   Extracted page 122
+2025-10-20 05:43:43,829 - INFO -   Extracted page 123
+2025-10-20 05:43:43,855 - INFO -   Extracted page 124
+2025-10-20 05:43:43,873 - INFO -   Extracted page 125
+2025-10-20 05:43:43,898 - INFO -   Extracted page 126
+2025-10-20 05:43:43,936 - INFO -   Extracted page 127
+2025-10-20 05:43:43,960 - INFO -   Extracted page 128
+2025-10-20 05:43:43,979 - INFO -   Extracted page 129
+2025-10-20 05:43:43,997 - INFO -   Extracted page 130
+2025-10-20 05:43:44,020 - INFO -   Extracted page 131
+2025-10-20 05:43:44,044 - INFO -   Extracted page 132
+2025-10-20 05:43:44,064 - INFO -   Extracted page 133
+2025-10-20 05:43:44,106 - INFO -   Extracted page 134
+2025-10-20 05:43:44,151 - INFO -   Extracted page 135
+2025-10-20 05:43:44,155 - INFO -   Extracted page 136
+2025-10-20 05:43:44,182 - INFO -   Extracted page 137
+2025-10-20 05:43:44,211 - INFO -   Extracted page 138
+2025-10-20 05:43:44,243 - INFO -   Extracted page 139
+2025-10-20 05:43:44,280 - INFO -   Extracted page 140
+2025-10-20 05:43:44,302 - INFO -   Extracted page 141
+2025-10-20 05:43:44,349 - INFO -   Extracted page 142
+2025-10-20 05:43:44,562 - INFO -   Extracted page 143
+2025-10-20 05:43:44,589 - INFO -   Extracted page 144
+2025-10-20 05:43:44,617 - INFO -   Extracted page 145
+2025-10-20 05:43:44,637 - INFO -   Extracted page 146
+2025-10-20 05:43:44,674 - INFO -   Extracted page 147
+2025-10-20 05:43:44,691 - INFO -   Extracted page 148
+2025-10-20 05:43:44,708 - INFO -   Extracted page 149
+2025-10-20 05:43:44,737 - INFO -   Extracted page 150
+2025-10-20 05:43:44,765 - INFO -   Extracted page 151
+2025-10-20 05:43:44,791 - INFO -   Extracted page 152
+2025-10-20 05:43:44,832 - INFO -   Extracted page 153
+2025-10-20 05:43:44,843 - INFO -   Extracted page 154
+2025-10-20 05:43:44,891 - INFO -   Extracted page 155
+2025-10-20 05:43:44,898 - INFO -   Extracted page 156
+2025-10-20 05:43:44,917 - INFO -   Extracted page 157
+2025-10-20 05:43:44,958 - INFO -   Extracted page 158
+2025-10-20 05:43:44,961 - INFO -   Extracted page 159
+2025-10-20 05:43:44,974 - INFO -   Extracted page 160
+2025-10-20 05:43:44,988 - INFO -   Extracted page 161
+2025-10-20 05:43:45,001 - INFO -   Extracted page 162
+2025-10-20 05:43:45,008 - INFO -   Extracted page 163
+2025-10-20 05:43:45,038 - INFO -   Extracted page 164
+2025-10-20 05:43:45,089 - INFO -   Extracted page 165
+2025-10-20 05:43:45,095 - INFO -   Extracted page 166
+2025-10-20 05:43:45,112 - INFO -   Extracted page 167
+2025-10-20 05:43:45,131 - INFO -   Extracted page 168
+2025-10-20 05:43:45,184 - INFO -   Extracted page 169
+2025-10-20 05:43:45,226 - INFO -   Extracted page 170
+2025-10-20 05:43:45,251 - INFO -   Extracted page 171
+2025-10-20 05:43:45,269 - INFO -   Extracted page 172
+2025-10-20 05:43:45,287 - INFO -   Extracted page 173
+2025-10-20 05:43:45,307 - INFO -   Extracted page 174
+2025-10-20 05:43:45,326 - INFO -   Extracted page 175
+2025-10-20 05:43:45,341 - INFO -   Extracted page 176
+2025-10-20 05:43:45,357 - INFO -   Extracted page 177
+2025-10-20 05:43:45,370 - INFO -   Extracted page 178
+2025-10-20 05:43:45,386 - INFO -   Extracted page 179
+2025-10-20 05:43:45,408 - INFO -   Extracted page 180
+2025-10-20 05:43:45,457 - INFO -   Extracted page 181
+2025-10-20 05:43:45,459 - INFO -   Extracted page 182
+2025-10-20 05:43:45,703 - INFO -   Extracted page 183
+2025-10-20 05:43:45,729 - INFO -   Extracted page 184
+2025-10-20 05:43:45,748 - INFO -   Extracted page 185
+2025-10-20 05:43:45,768 - INFO -   Extracted page 186
+2025-10-20 05:43:45,786 - INFO -   Extracted page 187
+2025-10-20 05:43:45,805 - INFO -   Extracted page 188
+2025-10-20 05:43:45,823 - INFO -   Extracted page 189
+2025-10-20 05:43:45,839 - INFO -   Extracted page 190
+2025-10-20 05:43:45,850 - INFO -   Extracted page 191
+2025-10-20 05:43:45,869 - INFO -   Extracted page 192
+2025-10-20 05:43:45,879 - INFO -   Extracted page 193
+2025-10-20 05:43:45,908 - INFO -   Extracted page 194
+2025-10-20 05:43:45,949 - INFO -   Extracted page 195
+2025-10-20 05:43:45,985 - INFO -   Extracted page 196
+2025-10-20 05:43:46,011 - INFO -   Extracted page 197
+2025-10-20 05:43:46,029 - INFO -   Extracted page 198
+2025-10-20 05:43:46,056 - INFO -   Extracted page 199
+2025-10-20 05:43:46,059 - INFO -   Extracted page 200
+2025-10-20 05:43:46,083 - INFO -   Extracted page 201
+2025-10-20 05:43:46,087 - INFO -   Extracted page 202
+2025-10-20 05:43:46,098 - INFO -   Extracted page 203
+2025-10-20 05:43:46,123 - INFO -   Extracted page 204
+2025-10-20 05:43:46,136 - INFO -   Extracted page 205
+2025-10-20 05:43:46,162 - INFO -   Extracted page 206
+2025-10-20 05:43:46,181 - INFO -   Extracted page 207
+2025-10-20 05:43:46,196 - INFO -   Extracted page 208
+2025-10-20 05:43:46,219 - INFO -   Extracted page 209
+2025-10-20 05:43:46,233 - INFO -   Extracted page 210
+2025-10-20 05:43:46,247 - INFO -   Extracted page 211
+2025-10-20 05:43:46,261 - INFO -   Extracted page 212
+2025-10-20 05:43:46,282 - INFO -   Extracted page 213
+2025-10-20 05:43:46,299 - INFO -   Extracted page 214
+2025-10-20 05:43:46,315 - INFO -   Extracted page 215
+2025-10-20 05:43:46,332 - INFO -   Extracted page 216
+2025-10-20 05:43:46,351 - INFO -   Extracted page 217
+2025-10-20 05:43:46,383 - INFO -   Extracted page 218
+2025-10-20 05:43:46,401 - INFO -   Extracted page 219
+2025-10-20 05:43:46,424 - INFO -   Extracted page 220
+2025-10-20 05:43:46,437 - INFO -   Extracted page 221
+2025-10-20 05:43:46,451 - INFO -   Extracted page 222
+2025-10-20 05:43:46,466 - INFO -   Extracted page 223
+2025-10-20 05:43:46,480 - INFO -   Extracted page 224
+2025-10-20 05:43:46,494 - INFO -   Extracted page 225
+2025-10-20 05:43:46,516 - INFO -   Extracted page 226
+2025-10-20 05:43:46,549 - INFO -   Extracted page 227
+2025-10-20 05:43:46,552 - INFO -   Extracted page 228
+2025-10-20 05:43:46,563 - INFO -   Extracted page 229
+2025-10-20 05:43:46,573 - INFO -   Extracted page 230
+2025-10-20 05:43:46,584 - INFO -   Extracted page 231
+2025-10-20 05:43:46,593 - INFO -   Extracted page 232
+2025-10-20 05:43:46,605 - INFO -   Extracted page 233
+2025-10-20 05:43:46,623 - INFO -   Extracted page 234
+2025-10-20 05:43:46,631 - INFO -   Extracted page 235
+2025-10-20 05:43:46,641 - INFO -   Extracted page 236
+2025-10-20 05:43:46,667 - INFO -   Extracted page 237
+2025-10-20 05:43:46,685 - INFO -   Extracted page 238
+2025-10-20 05:43:46,712 - INFO -   Extracted page 239
+2025-10-20 05:43:46,721 - INFO -   Extracted page 240
+2025-10-20 05:43:46,732 - INFO -   Extracted page 241
+2025-10-20 05:43:46,754 - INFO -   Extracted page 242
+2025-10-20 05:43:46,763 - INFO -   Extracted page 243
+2025-10-20 05:43:46,765 - INFO -   Extracted page 244
+2025-10-20 05:43:46,788 - INFO -   Extracted page 245
+2025-10-20 05:43:46,790 - INFO -   Extracted page 246
+2025-10-20 05:43:47,090 - INFO -   Extracted page 247
+2025-10-20 05:43:47,153 - INFO -   Extracted page 248
+2025-10-20 05:43:47,200 - INFO -   Extracted page 249
+2025-10-20 05:43:47,218 - INFO -   Extracted page 250
+2025-10-20 05:48:25,961 - INFO -   Created 205 semantic chunks
+2025-10-20 05:48:25,961 - INFO - 📄 Processing: ZebOS_Data_Struct_DevGde.pdf
+2025-10-20 05:48:25,994 - INFO -   Extracted page 1
+2025-10-20 05:48:26,019 - INFO -   Extracted page 2
+2025-10-20 05:48:26,096 - INFO -   Extracted page 3
+2025-10-20 05:48:26,097 - INFO -   Extracted page 4
+2025-10-20 05:48:26,126 - INFO -   Extracted page 5
+2025-10-20 05:48:26,131 - INFO -   Extracted page 6
+2025-10-20 05:48:26,142 - INFO -   Extracted page 7
+2025-10-20 05:48:26,152 - INFO -   Extracted page 8
+2025-10-20 05:48:26,176 - INFO -   Extracted page 9
+2025-10-20 05:48:26,197 - INFO -   Extracted page 10
+2025-10-20 05:48:26,217 - INFO -   Extracted page 11
+2025-10-20 05:48:26,221 - INFO -   Extracted page 12
+2025-10-20 05:48:26,248 - INFO -   Extracted page 13
+2025-10-20 05:48:26,273 - INFO -   Extracted page 14
+2025-10-20 05:48:26,303 - INFO -   Extracted page 15
+2025-10-20 05:48:26,340 - INFO -   Extracted page 16
+2025-10-20 05:48:26,372 - INFO -   Extracted page 17
+2025-10-20 05:48:26,404 - INFO -   Extracted page 18
+2025-10-20 05:48:26,426 - INFO -   Extracted page 19
+2025-10-20 05:48:26,455 - INFO -   Extracted page 20
+2025-10-20 05:48:26,482 - INFO -   Extracted page 21
+2025-10-20 05:48:26,504 - INFO -   Extracted page 22
+2025-10-20 05:48:26,528 - INFO -   Extracted page 23
+2025-10-20 05:48:26,533 - INFO -   Extracted page 24
+2025-10-20 05:48:26,561 - INFO -   Extracted page 25
+2025-10-20 05:48:26,582 - INFO -   Extracted page 26
+2025-10-20 05:48:26,610 - INFO -   Extracted page 27
+2025-10-20 05:48:26,632 - INFO -   Extracted page 28
+2025-10-20 05:48:26,659 - INFO -   Extracted page 29
+2025-10-20 05:48:26,681 - INFO -   Extracted page 30
+2025-10-20 05:48:26,697 - INFO -   Extracted page 31
+2025-10-20 05:48:26,724 - INFO -   Extracted page 32
+2025-10-20 05:48:26,752 - INFO -   Extracted page 33
+2025-10-20 05:48:26,776 - INFO -   Extracted page 34
+2025-10-20 05:48:26,802 - INFO -   Extracted page 35
+2025-10-20 05:48:26,812 - INFO -   Extracted page 36
+2025-10-20 05:48:26,839 - INFO -   Extracted page 37
+2025-10-20 05:48:26,846 - INFO -   Extracted page 38
+2025-10-20 05:48:26,878 - INFO -   Extracted page 39
+2025-10-20 05:48:26,910 - INFO -   Extracted page 40
+2025-10-20 05:48:26,935 - INFO -   Extracted page 41
+2025-10-20 05:48:26,964 - INFO -   Extracted page 42
+2025-10-20 05:48:26,987 - INFO -   Extracted page 43
+2025-10-20 05:48:27,011 - INFO -   Extracted page 44
+2025-10-20 05:48:27,026 - INFO -   Extracted page 45
+2025-10-20 05:48:27,045 - INFO -   Extracted page 46
+2025-10-20 05:48:27,066 - INFO -   Extracted page 47
+2025-10-20 05:48:27,078 - INFO -   Extracted page 48
+2025-10-20 05:48:27,090 - INFO -   Extracted page 49
+2025-10-20 05:48:27,121 - INFO -   Extracted page 50
+2025-10-20 05:48:27,150 - INFO -   Extracted page 51
+2025-10-20 05:48:27,757 - INFO -   Extracted page 52
+2025-10-20 05:48:27,772 - INFO -   Extracted page 53
+2025-10-20 05:48:27,793 - INFO -   Extracted page 54
+2025-10-20 05:48:27,808 - INFO -   Extracted page 55
+2025-10-20 05:48:27,824 - INFO -   Extracted page 56
+2025-10-20 05:48:58,605 - INFO -   Created 38 semantic chunks
+2025-10-20 05:48:58,605 - INFO - 📄 Processing: ZebOS_CE_Config.pdf
+2025-10-20 05:48:58,721 - INFO -   Extracted page 1
+2025-10-20 05:48:58,743 - INFO -   Extracted page 2
+2025-10-20 05:48:58,847 - INFO -   Extracted page 3
+2025-10-20 05:48:59,102 - INFO -   Extracted page 4
+2025-10-20 05:48:59,218 - INFO -   Extracted page 5
+2025-10-20 05:48:59,393 - INFO -   Extracted page 6
+2025-10-20 05:48:59,597 - INFO -   Extracted page 7
+2025-10-20 05:48:59,667 - INFO -   Extracted page 8
+2025-10-20 05:48:59,696 - INFO -   Extracted page 9
+2025-10-20 05:48:59,739 - INFO -   Extracted page 10
+2025-10-20 05:48:59,798 - INFO -   Extracted page 11
+2025-10-20 05:48:59,854 - INFO -   Extracted page 12
+2025-10-20 05:48:59,905 - INFO -   Extracted page 13
+2025-10-20 05:49:00,044 - INFO -   Extracted page 14
+2025-10-20 05:49:00,096 - INFO -   Extracted page 15
+2025-10-20 05:49:00,149 - INFO -   Extracted page 16
+2025-10-20 05:49:00,206 - INFO -   Extracted page 17
+2025-10-20 05:49:00,231 - INFO -   Extracted page 18
+2025-10-20 05:49:00,265 - INFO -   Extracted page 19
+2025-10-20 05:49:00,314 - INFO -   Extracted page 20
+2025-10-20 05:49:00,369 - INFO -   Extracted page 21
+2025-10-20 05:49:00,506 - INFO -   Extracted page 22
+2025-10-20 05:49:00,559 - INFO -   Extracted page 23
+2025-10-20 05:49:00,615 - INFO -   Extracted page 24
+2025-10-20 05:49:00,628 - INFO -   Extracted page 25
+2025-10-20 05:49:00,631 - INFO -   Extracted page 26
+2025-10-20 05:49:00,644 - INFO -   Extracted page 27
+2025-10-20 05:49:00,697 - INFO -   Extracted page 28
+2025-10-20 05:49:00,742 - INFO -   Extracted page 29
+2025-10-20 05:49:00,761 - INFO -   Extracted page 30
+2025-10-20 05:49:00,807 - INFO -   Extracted page 31
+2025-10-20 05:49:00,863 - INFO -   Extracted page 32
+2025-10-20 05:49:01,013 - INFO -   Extracted page 33
+2025-10-20 05:49:01,015 - INFO -   Extracted page 34
+2025-10-20 05:49:01,057 - INFO -   Extracted page 35
+2025-10-20 05:49:01,081 - INFO -   Extracted page 36
+2025-10-20 05:49:01,114 - INFO -   Extracted page 37
+2025-10-20 05:49:01,178 - INFO -   Extracted page 38
+2025-10-20 05:49:01,209 - INFO -   Extracted page 39
+2025-10-20 05:49:01,273 - INFO -   Extracted page 40
+2025-10-20 05:49:01,307 - INFO -   Extracted page 41
+2025-10-20 05:49:01,352 - INFO -   Extracted page 42
+2025-10-20 05:49:01,404 - INFO -   Extracted page 43
+2025-10-20 05:49:01,429 - INFO -   Extracted page 44
+2025-10-20 05:49:01,476 - INFO -   Extracted page 45
+2025-10-20 05:49:01,655 - INFO -   Extracted page 46
+2025-10-20 05:49:01,688 - INFO -   Extracted page 47
+2025-10-20 05:49:01,714 - INFO -   Extracted page 48
+2025-10-20 05:49:01,735 - INFO -   Extracted page 49
+2025-10-20 05:49:01,774 - INFO -   Extracted page 50
+2025-10-20 05:49:01,820 - INFO -   Extracted page 51
+2025-10-20 05:49:01,866 - INFO -   Extracted page 52
+2025-10-20 05:49:01,916 - INFO -   Extracted page 53
+2025-10-20 05:49:01,970 - INFO -   Extracted page 54
+2025-10-20 05:49:02,021 - INFO -   Extracted page 55
+2025-10-20 05:49:02,081 - INFO -   Extracted page 56
+2025-10-20 05:49:02,138 - INFO -   Extracted page 57
+2025-10-20 05:49:02,325 - INFO -   Extracted page 58
+2025-10-20 05:49:02,351 - INFO -   Extracted page 59
+2025-10-20 05:49:02,404 - INFO -   Extracted page 60
+2025-10-20 05:49:02,461 - INFO -   Extracted page 61
+2025-10-20 05:49:02,512 - INFO -   Extracted page 62
+2025-10-20 05:49:02,543 - INFO -   Extracted page 63
+2025-10-20 05:49:02,577 - INFO -   Extracted page 64
+2025-10-20 05:49:02,629 - INFO -   Extracted page 65
+2025-10-20 05:49:02,691 - INFO -   Extracted page 66
+2025-10-20 05:49:02,742 - INFO -   Extracted page 67
+2025-10-20 05:49:02,795 - INFO -   Extracted page 68
+2025-10-20 05:49:02,834 - INFO -   Extracted page 69
+2025-10-20 05:49:02,872 - INFO -   Extracted page 70
+2025-10-20 05:49:02,910 - INFO -   Extracted page 71
+2025-10-20 05:49:02,968 - INFO -   Extracted page 72
+2025-10-20 05:49:03,025 - INFO -   Extracted page 73
+2025-10-20 05:49:03,214 - INFO -   Extracted page 74
+2025-10-20 05:49:03,236 - INFO -   Extracted page 75
+2025-10-20 05:49:03,256 - INFO -   Extracted page 76
+2025-10-20 05:49:03,287 - INFO -   Extracted page 77
+2025-10-20 05:49:03,342 - INFO -   Extracted page 78
+2025-10-20 05:49:03,399 - INFO -   Extracted page 79
+2025-10-20 05:49:03,437 - INFO -   Extracted page 80
+2025-10-20 05:49:03,475 - INFO -   Extracted page 81
+2025-10-20 05:49:03,533 - INFO -   Extracted page 82
+2025-10-20 05:49:03,595 - INFO -   Extracted page 83
+2025-10-20 05:49:03,634 - INFO -   Extracted page 84
+2025-10-20 05:49:03,666 - INFO -   Extracted page 85
+2025-10-20 05:49:03,704 - INFO -   Extracted page 86
+2025-10-20 05:49:03,734 - INFO -   Extracted page 87
+2025-10-20 05:49:03,773 - INFO -   Extracted page 88
+2025-10-20 05:49:03,813 - INFO -   Extracted page 89
+2025-10-20 05:49:03,857 - INFO -   Extracted page 90
+2025-10-20 05:49:03,891 - INFO -   Extracted page 91
+2025-10-20 05:49:03,917 - INFO -   Extracted page 92
+2025-10-20 05:49:03,941 - INFO -   Extracted page 93
+2025-10-20 05:49:03,983 - INFO -   Extracted page 94
+2025-10-20 05:49:04,027 - INFO -   Extracted page 95
+2025-10-20 05:49:04,271 - INFO -   Extracted page 96
+2025-10-20 05:49:04,307 - INFO -   Extracted page 97
+2025-10-20 05:49:04,333 - INFO -   Extracted page 98
+2025-10-20 05:49:04,360 - INFO -   Extracted page 99
+2025-10-20 05:49:04,386 - INFO -   Extracted page 100
+2025-10-20 05:49:04,418 - INFO -   Extracted page 101
+2025-10-20 05:49:04,464 - INFO -   Extracted page 102
+2025-10-20 05:49:04,496 - INFO -   Extracted page 103
+2025-10-20 05:49:04,521 - INFO -   Extracted page 104
+2025-10-20 05:49:04,560 - INFO -   Extracted page 105
+2025-10-20 05:49:04,597 - INFO -   Extracted page 106
+2025-10-20 05:49:04,641 - INFO -   Extracted page 107
+2025-10-20 05:49:04,669 - INFO -   Extracted page 108
+2025-10-20 05:49:04,700 - INFO -   Extracted page 109
+2025-10-20 05:49:04,732 - INFO -   Extracted page 110
+2025-10-20 05:49:04,766 - INFO -   Extracted page 111
+2025-10-20 05:49:04,816 - INFO -   Extracted page 112
+2025-10-20 05:49:04,868 - INFO -   Extracted page 113
+2025-10-20 05:49:04,926 - INFO -   Extracted page 114
+2025-10-20 05:49:04,979 - INFO -   Extracted page 115
+2025-10-20 05:49:05,030 - INFO -   Extracted page 116
+2025-10-20 05:49:05,078 - INFO -   Extracted page 117
+2025-10-20 05:49:05,101 - INFO -   Extracted page 118
+2025-10-20 05:49:05,144 - INFO -   Extracted page 119
+2025-10-20 05:49:05,175 - INFO -   Extracted page 120
+2025-10-20 05:49:05,428 - INFO -   Extracted page 121
+2025-10-20 05:49:05,473 - INFO -   Extracted page 122
+2025-10-20 05:49:05,512 - INFO -   Extracted page 123
+2025-10-20 05:49:05,541 - INFO -   Extracted page 124
+2025-10-20 05:49:05,572 - INFO -   Extracted page 125
+2025-10-20 05:49:05,638 - INFO -   Extracted page 126
+2025-10-20 05:49:05,668 - INFO -   Extracted page 127
+2025-10-20 05:49:05,725 - INFO -   Extracted page 128
+2025-10-20 05:49:05,773 - INFO -   Extracted page 129
+2025-10-20 05:49:05,833 - INFO -   Extracted page 130
+2025-10-20 05:49:05,870 - INFO -   Extracted page 131
+2025-10-20 05:49:05,936 - INFO -   Extracted page 132
+2025-10-20 05:49:05,967 - INFO -   Extracted page 133
+2025-10-20 05:49:05,970 - INFO -   Extracted page 134
+2025-10-20 05:49:06,014 - INFO -   Extracted page 135
+2025-10-20 05:49:06,072 - INFO -   Extracted page 136
+2025-10-20 05:49:06,136 - INFO -   Extracted page 137
+2025-10-20 05:49:06,174 - INFO -   Extracted page 138
+2025-10-20 05:49:06,222 - INFO -   Extracted page 139
+2025-10-20 05:49:06,289 - INFO -   Extracted page 140
+2025-10-20 05:49:06,350 - INFO -   Extracted page 141
+2025-10-20 05:49:06,415 - INFO -   Extracted page 142
+2025-10-20 05:49:06,469 - INFO -   Extracted page 143
+2025-10-20 05:49:06,493 - INFO -   Extracted page 144
+2025-10-20 05:49:06,551 - INFO -   Extracted page 145
+2025-10-20 05:49:06,873 - INFO -   Extracted page 146
+2025-10-20 05:49:06,931 - INFO -   Extracted page 147
+2025-10-20 05:49:06,985 - INFO -   Extracted page 148
+2025-10-20 05:49:07,041 - INFO -   Extracted page 149
+2025-10-20 05:49:07,098 - INFO -   Extracted page 150
+2025-10-20 05:49:07,165 - INFO -   Extracted page 151
+2025-10-20 05:49:07,215 - INFO -   Extracted page 152
+2025-10-20 05:49:07,258 - INFO -   Extracted page 153
+2025-10-20 05:49:07,305 - INFO -   Extracted page 154
+2025-10-20 05:49:07,366 - INFO -   Extracted page 155
+2025-10-20 05:49:07,424 - INFO -   Extracted page 156
+2025-10-20 05:49:07,483 - INFO -   Extracted page 157
+2025-10-20 05:49:07,537 - INFO -   Extracted page 158
+2025-10-20 05:49:07,571 - INFO -   Extracted page 159
+2025-10-20 05:49:07,620 - INFO -   Extracted page 160
+2025-10-20 05:49:07,680 - INFO -   Extracted page 161
+2025-10-20 05:49:07,736 - INFO -   Extracted page 162
+2025-10-20 05:49:07,796 - INFO -   Extracted page 163
+2025-10-20 05:49:07,859 - INFO -   Extracted page 164
+2025-10-20 05:49:07,917 - INFO -   Extracted page 165
+2025-10-20 05:49:07,979 - INFO -   Extracted page 166
+2025-10-20 05:49:08,017 - INFO -   Extracted page 167
+2025-10-20 05:49:08,040 - INFO -   Extracted page 168
+2025-10-20 05:49:08,086 - INFO -   Extracted page 169
+2025-10-20 05:49:08,141 - INFO -   Extracted page 170
+2025-10-20 05:49:08,484 - INFO -   Extracted page 171
+2025-10-20 05:49:08,535 - INFO -   Extracted page 172
+2025-10-20 05:49:08,566 - INFO -   Extracted page 173
+2025-10-20 05:49:08,568 - INFO -   Extracted page 174
+2025-10-20 05:49:08,612 - INFO -   Extracted page 175
+2025-10-20 05:49:08,685 - INFO -   Extracted page 176
+2025-10-20 05:49:08,745 - INFO -   Extracted page 177
+2025-10-20 05:49:08,810 - INFO -   Extracted page 178
+2025-10-20 05:49:08,875 - INFO -   Extracted page 179
+2025-10-20 05:49:08,945 - INFO -   Extracted page 180
+2025-10-20 05:49:09,005 - INFO -   Extracted page 181
+2025-10-20 05:49:09,073 - INFO -   Extracted page 182
+2025-10-20 05:49:09,117 - INFO -   Extracted page 183
+2025-10-20 05:49:09,155 - INFO -   Extracted page 184
+2025-10-20 05:49:09,185 - INFO -   Extracted page 185
+2025-10-20 05:49:09,187 - INFO -   Extracted page 186
+2025-10-20 05:49:09,221 - INFO -   Extracted page 187
+2025-10-20 05:49:09,276 - INFO -   Extracted page 188
+2025-10-20 05:49:09,330 - INFO -   Extracted page 189
+2025-10-20 05:49:09,346 - INFO -   Extracted page 190
+2025-10-20 05:49:09,374 - INFO -   Extracted page 191
+2025-10-20 05:49:09,427 - INFO -   Extracted page 192
+2025-10-20 05:49:09,480 - INFO -   Extracted page 193
+2025-10-20 05:49:09,531 - INFO -   Extracted page 194
+2025-10-20 05:49:09,580 - INFO -   Extracted page 195
+2025-10-20 05:49:09,625 - INFO -   Extracted page 196
+2025-10-20 05:49:09,674 - INFO -   Extracted page 197
+2025-10-20 05:49:09,725 - INFO -   Extracted page 198
+2025-10-20 05:49:09,773 - INFO -   Extracted page 199
+2025-10-20 05:49:09,823 - INFO -   Extracted page 200
+2025-10-20 05:49:09,862 - INFO -   Extracted page 201
+2025-10-20 05:49:09,913 - INFO -   Extracted page 202
+2025-10-20 05:49:09,979 - INFO -   Extracted page 203
+2025-10-20 05:49:10,038 - INFO -   Extracted page 204
+2025-10-20 05:49:10,090 - INFO -   Extracted page 205
+2025-10-20 05:49:10,505 - INFO -   Extracted page 206
+2025-10-20 05:49:10,565 - INFO -   Extracted page 207
+2025-10-20 05:49:10,625 - INFO -   Extracted page 208
+2025-10-20 05:49:10,675 - INFO -   Extracted page 209
+2025-10-20 05:49:10,726 - INFO -   Extracted page 210
+2025-10-20 05:49:10,736 - INFO -   Extracted page 211
+2025-10-20 05:49:10,738 - INFO -   Extracted page 212
+2025-10-20 05:49:10,763 - INFO -   Extracted page 213
+2025-10-20 05:49:10,817 - INFO -   Extracted page 214
+2025-10-20 05:49:10,872 - INFO -   Extracted page 215
+2025-10-20 05:49:10,924 - INFO -   Extracted page 216
+2025-10-20 05:49:10,953 - INFO -   Extracted page 217
+2025-10-20 05:49:10,989 - INFO -   Extracted page 218
+2025-10-20 05:49:11,027 - INFO -   Extracted page 219
+2025-10-20 05:49:11,041 - INFO -   Extracted page 220
+2025-10-20 05:49:11,046 - INFO -   Extracted page 221
+2025-10-20 05:49:11,097 - INFO -   Extracted page 222
+2025-10-20 05:49:11,147 - INFO -   Extracted page 223
+2025-10-20 05:49:11,205 - INFO -   Extracted page 224
+2025-10-20 05:49:11,259 - INFO -   Extracted page 225
+2025-10-20 05:49:11,308 - INFO -   Extracted page 226
+2025-10-20 05:49:11,364 - INFO -   Extracted page 227
+2025-10-20 05:49:11,414 - INFO -   Extracted page 228
+2025-10-20 05:49:11,464 - INFO -   Extracted page 229
+2025-10-20 05:49:11,518 - INFO -   Extracted page 230
+2025-10-20 05:49:11,572 - INFO -   Extracted page 231
+2025-10-20 05:49:11,620 - INFO -   Extracted page 232
+2025-10-20 05:49:11,672 - INFO -   Extracted page 233
+2025-10-20 05:49:11,724 - INFO -   Extracted page 234
+2025-10-20 05:49:11,775 - INFO -   Extracted page 235
+2025-10-20 05:49:11,820 - INFO -   Extracted page 236
+2025-10-20 05:49:11,860 - INFO -   Extracted page 237
+2025-10-20 05:49:11,904 - INFO -   Extracted page 238
+2025-10-20 05:49:11,955 - INFO -   Extracted page 239
+2025-10-20 05:49:12,006 - INFO -   Extracted page 240
+2025-10-20 05:49:12,059 - INFO -   Extracted page 241
+2025-10-20 05:49:12,108 - INFO -   Extracted page 242
+2025-10-20 05:49:12,161 - INFO -   Extracted page 243
+2025-10-20 05:49:12,211 - INFO -   Extracted page 244
+2025-10-20 05:49:12,258 - INFO -   Extracted page 245
+2025-10-20 05:49:12,308 - INFO -   Extracted page 246
+2025-10-20 05:49:12,358 - INFO -   Extracted page 247
+2025-10-20 05:49:12,785 - INFO -   Extracted page 248
+2025-10-20 05:49:12,813 - INFO -   Extracted page 249
+2025-10-20 05:49:12,815 - INFO -   Extracted page 250
+2025-10-20 05:49:12,868 - INFO -   Extracted page 251
+2025-10-20 05:49:12,925 - INFO -   Extracted page 252
+2025-10-20 05:49:12,976 - INFO -   Extracted page 253
+2025-10-20 05:49:13,000 - INFO -   Extracted page 254
+2025-10-20 05:49:13,043 - INFO -   Extracted page 255
+2025-10-20 05:49:13,101 - INFO -   Extracted page 256
+2025-10-20 05:49:13,155 - INFO -   Extracted page 257
+2025-10-20 05:49:13,211 - INFO -   Extracted page 258
+2025-10-20 05:49:13,249 - INFO -   Extracted page 259
+2025-10-20 05:49:13,306 - INFO -   Extracted page 260
+2025-10-20 05:49:13,364 - INFO -   Extracted page 261
+2025-10-20 05:49:13,411 - INFO -   Extracted page 262
+2025-10-20 05:49:13,449 - INFO -   Extracted page 263
+2025-10-20 05:49:13,461 - INFO -   Extracted page 264
+2025-10-20 05:55:51,300 - INFO -   Created 332 semantic chunks
+2025-10-20 05:55:51,300 - INFO - 📝 Total chunks created: 844
+2025-10-20 05:55:51,300 - INFO - 🧠 Creating dense embeddings...
+2025-10-20 05:55:51,826 - INFO - 📊 Dense embedding dimension detected: 768 (nomic-embed-text)
+2025-10-20 05:55:58,398 - INFO -   Processed 10/844 dense embeddings
+2025-10-20 05:56:01,761 - INFO -   Processed 20/844 dense embeddings
+2025-10-20 05:56:04,661 - INFO -   Processed 30/844 dense embeddings
+2025-10-20 05:56:08,091 - INFO -   Processed 40/844 dense embeddings
+2025-10-20 05:56:10,876 - INFO -   Processed 50/844 dense embeddings
+2025-10-20 05:56:14,354 - INFO -   Processed 60/844 dense embeddings
+2025-10-20 05:56:18,001 - INFO -   Processed 70/844 dense embeddings
+2025-10-20 05:56:22,276 - INFO -   Processed 80/844 dense embeddings
+2025-10-20 05:56:25,748 - INFO -   Processed 90/844 dense embeddings
+2025-10-20 05:56:29,333 - INFO -   Processed 100/844 dense embeddings
+2025-10-20 05:56:32,448 - INFO -   Processed 110/844 dense embeddings
+2025-10-20 05:56:37,135 - INFO -   Processed 120/844 dense embeddings
+2025-10-20 05:56:42,373 - INFO -   Processed 130/844 dense embeddings
+2025-10-20 05:56:47,046 - INFO -   Processed 140/844 dense embeddings
+2025-10-20 05:56:50,165 - INFO -   Processed 150/844 dense embeddings
+2025-10-20 05:56:53,243 - INFO -   Processed 160/844 dense embeddings
+2025-10-20 05:56:56,945 - INFO -   Processed 170/844 dense embeddings
+2025-10-20 05:57:00,800 - INFO -   Processed 180/844 dense embeddings
+2025-10-20 05:57:04,308 - INFO -   Processed 190/844 dense embeddings
+2025-10-20 05:57:07,496 - INFO -   Processed 200/844 dense embeddings
+2025-10-20 05:57:10,554 - INFO -   Processed 210/844 dense embeddings
+2025-10-20 05:57:14,056 - INFO -   Processed 220/844 dense embeddings
+2025-10-20 05:57:17,156 - INFO -   Processed 230/844 dense embeddings
+2025-10-20 05:57:20,986 - INFO -   Processed 240/844 dense embeddings
+2025-10-20 05:57:24,014 - INFO -   Processed 250/844 dense embeddings
+2025-10-20 05:57:27,509 - INFO -   Processed 260/844 dense embeddings
+2025-10-20 05:57:30,928 - INFO -   Processed 270/844 dense embeddings
+2025-10-20 05:57:37,535 - INFO -   Processed 280/844 dense embeddings
+2025-10-20 05:57:41,769 - INFO -   Processed 290/844 dense embeddings
+2025-10-20 05:57:44,604 - INFO -   Processed 300/844 dense embeddings
+2025-10-20 05:57:47,627 - INFO -   Processed 310/844 dense embeddings
+2025-10-20 05:57:50,735 - INFO -   Processed 320/844 dense embeddings
+2025-10-20 05:57:53,849 - INFO -   Processed 330/844 dense embeddings
+2025-10-20 05:57:57,408 - INFO -   Processed 340/844 dense embeddings
+2025-10-20 05:58:00,988 - INFO -   Processed 350/844 dense embeddings
+2025-10-20 05:58:03,687 - INFO -   Processed 360/844 dense embeddings
+2025-10-20 05:58:07,312 - INFO -   Processed 370/844 dense embeddings
+2025-10-20 05:58:10,089 - INFO -   Processed 380/844 dense embeddings
+2025-10-20 05:58:13,495 - INFO -   Processed 390/844 dense embeddings
+2025-10-20 05:58:16,526 - INFO -   Processed 400/844 dense embeddings
+2025-10-20 05:58:19,497 - INFO -   Processed 410/844 dense embeddings
+2025-10-20 05:58:22,927 - INFO -   Processed 420/844 dense embeddings
+2025-10-20 05:58:26,241 - INFO -   Processed 430/844 dense embeddings
+2025-10-20 05:58:29,298 - INFO -   Processed 440/844 dense embeddings
+2025-10-20 05:58:32,625 - INFO -   Processed 450/844 dense embeddings
+2025-10-20 05:58:35,816 - INFO -   Processed 460/844 dense embeddings
+2025-10-20 05:58:38,704 - INFO -   Processed 470/844 dense embeddings
+2025-10-20 05:58:42,489 - INFO -   Processed 480/844 dense embeddings
+2025-10-20 05:58:46,200 - INFO -   Processed 490/844 dense embeddings
+2025-10-20 05:58:50,046 - INFO -   Processed 500/844 dense embeddings
+2025-10-20 05:58:53,567 - INFO -   Processed 510/844 dense embeddings
+2025-10-20 05:58:58,607 - INFO -   Processed 520/844 dense embeddings
+2025-10-20 05:59:03,713 - INFO -   Processed 530/844 dense embeddings
+2025-10-20 05:59:08,188 - INFO -   Processed 540/844 dense embeddings
+2025-10-20 05:59:12,686 - INFO -   Processed 550/844 dense embeddings
+2025-10-20 05:59:17,067 - INFO -   Processed 560/844 dense embeddings
+2025-10-20 05:59:20,938 - INFO -   Processed 570/844 dense embeddings
+2025-10-20 05:59:24,669 - INFO -   Processed 580/844 dense embeddings
+2025-10-20 05:59:32,169 - INFO -   Processed 590/844 dense embeddings
+2025-10-20 05:59:37,337 - INFO -   Processed 600/844 dense embeddings
+2025-10-20 05:59:41,365 - INFO -   Processed 610/844 dense embeddings
+2025-10-20 05:59:45,534 - INFO -   Processed 620/844 dense embeddings
+2025-10-20 05:59:49,528 - INFO -   Processed 630/844 dense embeddings
+2025-10-20 05:59:53,617 - INFO -   Processed 640/844 dense embeddings
+2025-10-20 05:59:56,984 - INFO -   Processed 650/844 dense embeddings
+2025-10-20 06:00:01,043 - INFO -   Processed 660/844 dense embeddings
+2025-10-20 06:00:05,015 - INFO -   Processed 670/844 dense embeddings
+2025-10-20 06:00:08,899 - INFO -   Processed 680/844 dense embeddings
+2025-10-20 06:00:13,299 - INFO -   Processed 690/844 dense embeddings
+2025-10-20 06:00:17,932 - INFO -   Processed 700/844 dense embeddings
+2025-10-20 06:00:22,460 - INFO -   Processed 710/844 dense embeddings
+2025-10-20 06:00:27,431 - INFO -   Processed 720/844 dense embeddings
+2025-10-20 06:00:31,851 - INFO -   Processed 730/844 dense embeddings
+2025-10-20 06:00:36,607 - INFO -   Processed 740/844 dense embeddings
+2025-10-20 06:00:41,837 - INFO -   Processed 750/844 dense embeddings
+2025-10-20 06:00:46,731 - INFO -   Processed 760/844 dense embeddings
+2025-10-20 06:00:51,045 - INFO -   Processed 770/844 dense embeddings
+2025-10-20 06:00:55,816 - INFO -   Processed 780/844 dense embeddings
+2025-10-20 06:01:00,023 - INFO -   Processed 790/844 dense embeddings
+2025-10-20 06:01:04,073 - INFO -   Processed 800/844 dense embeddings
+2025-10-20 06:01:08,265 - INFO -   Processed 810/844 dense embeddings
+2025-10-20 06:01:12,912 - INFO -   Processed 820/844 dense embeddings
+2025-10-20 06:01:16,763 - INFO -   Processed 830/844 dense embeddings
+2025-10-20 06:01:20,862 - INFO -   Processed 840/844 dense embeddings
+2025-10-20 06:01:22,771 - INFO - 🔍 Creating sparse embeddings using TF-IDF...
+2025-10-20 06:01:22,989 - INFO - 🔗 Creating hybrid embeddings with alpha=0.7
+2025-10-20 06:01:22,989 - INFO -   Dense embeddings shape: (844, 768) (nomic-embed-text dimension)
+2025-10-20 06:01:22,989 - INFO -   Sparse embeddings shape: (844, 5000) (TF-IDF dimension)
+2025-10-20 06:01:22,989 - INFO - ⚠️  Adjusting sparse embeddings from 5000 to 768 dimensions using Truncated SVD
+2025-10-20 06:01:27,220 - INFO - ✅ Sparse embeddings adjusted. New shape: (844, 768)
+2025-10-20 06:01:27,225 - INFO - ✅ Hybrid embeddings created with shape: (844, 768)
+2025-10-20 06:01:27,225 - INFO - ✅ Pipeline complete! Created 844 hybrid embeddings
+2025-10-20 06:01:27,240 - INFO - ✅ Saved hybrid FAISS index to database/document/hybrid_docs_index.faiss
+2025-10-20 06:01:27,269 - INFO - ✅ Saved metadata to database/document/hybrid_docs_metadata.json
+2025-10-20 06:01:27,292 - INFO - ✅ Saved TF-IDF vectorizer to database/document/tfidf_vectorizer.pkl
+2025-10-20 06:01:27,396 - INFO - ✅ Saved SVD transformer to database/document/svd_transformer.pkl
+2025-10-20 06:01:27,414 - INFO - 
+📊 Processing Statistics:
+2025-10-20 06:01:27,415 - INFO - ==================================================
+2025-10-20 06:01:27,415 - INFO -   total_documents: 6
+2025-10-20 06:01:27,415 - INFO -   total_chunks: 844
+2025-10-20 06:01:27,415 - INFO -   avg_chunk_size: 1424.0011848341233
+2025-10-20 06:01:27,415 - INFO -   dense_embedding_model: nomic-embed-text
+2025-10-20 06:01:27,415 - INFO -   dense_embedding_dim: 768
+2025-10-20 06:01:27,415 - INFO -   sparse_embedding_method: TF-IDF with SVD alignment
+2025-10-20 06:01:27,415 - INFO -   hybrid_embedding_dim: 768
+2025-10-20 06:01:27,415 - INFO -   alpha_value: 0.7
+2025-10-20 06:01:27,415 - INFO -   dense_weight: 70%
+2025-10-20 06:01:27,415 - INFO -   sparse_weight: 30%
+2025-10-20 06:01:27,415 - INFO -   chunking_method: semantic
+2025-10-20 06:01:27,415 - INFO -   similarity_threshold: 0.5
+2025-10-20 06:01:27,415 - INFO -   min_chunk_size: 1000
+2025-10-20 06:01:27,415 - INFO -   embedding_alignment: SVD-reduced sparse to match dense dim
+2025-10-20 06:01:27,415 - INFO - 
+✅ Hybrid embedding pipeline completed successfully!
+2025-10-20 06:01:27,415 - INFO - 📁 Files saved:
+2025-10-20 06:01:27,415 - INFO -   - hybrid_docs_index.faiss (FAISS index)
+2025-10-20 06:01:27,415 - INFO -   - hybrid_docs_metadata.json (metadata & config)
+2025-10-20 06:01:27,415 - INFO -   - tfidf_vectorizer.pkl (TF-IDF vectorizer)
+2025-10-20 06:01:27,415 - INFO -   - svd_transformer.pkl (SVD transformer for dimension alignment)

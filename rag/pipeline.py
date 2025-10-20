@@ -33,6 +33,9 @@ from agent.retriever import HybridRetriever
 from agent.reranker import LLMReranker
 from rag.cache import CacheManager
 from rag.llm_client import LLMClient
+from rag.cli_output_config import CLIOutputConfig
+from network_stat.topology_parser import TopologyParser
+from network_stat.network_rag import NetworkTopologyRAG
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -64,13 +67,21 @@ class RAGPipeline:
                  
                  # LLM config
                  llm_model: str = "qwen2.5-coder:3b",
-                 llm_temperature: float = 0.7,
-                 llm_max_tokens: int = 2048,
+                 llm_temperature: float = 0.3,
+                 llm_max_tokens: int = 4096,
                  
                  # Cache config
                  enable_cache: bool = True,
                  cache_dir: str = "cache",
-                 cache_ttl_hours: int = 24):
+                 cache_ttl_hours: int = 24,
+                 
+                 # Topology config
+                 enable_topology: bool = True,
+                 topology_file: str = "network_stat/ring_topology.yaml",
+                 
+                 # CLI Output config
+                 enable_cli_format: bool = True,
+                 cli_output_format: str = "single_code_block"):
         """
         Initialize RAG Pipeline
         
@@ -89,12 +100,53 @@ class RAGPipeline:
             enable_cache: Enable/disable caching
             cache_dir: Cache directory
             cache_ttl_hours: Cache TTL in hours
+            enable_topology: Enable/disable topology context integration
+            topology_file: Path to topology YAML file
+            enable_cli_format: Enable/disable CLI output formatting
+            cli_output_format: CLI output format (single_code_block)
         """
         logger.info("🚀 Initializing RAG Pipeline")
         logger.info("=" * 70)
         
         self.retriever_top_k = retriever_top_k
         self.reranker_top_k = reranker_top_k
+        self.enable_topology = enable_topology
+        self.enable_cli_format = enable_cli_format
+        self.cli_output_format = cli_output_format
+        self.cli_config = CLIOutputConfig() if enable_cli_format else None
+        
+        # Initialize topology if enabled
+        logger.info("\n[0/5] 🌐 Initializing Network Topology...")
+        self.topology_parser = None
+        self.network_rag = None
+        self.topology_context = None
+        
+        if enable_topology:
+            try:
+                topology_path = Path(topology_file)
+                if topology_path.exists():
+                    self.topology_parser = TopologyParser(topology_file=str(topology_path))
+                    logger.info(f"✅ Topology loaded from {topology_file}")
+                    
+                    # Build topology context for LLM
+                    try:
+                        self.network_rag = NetworkTopologyRAG(str(topology_path))
+                        self.topology_context = self.network_rag.get_llm_context()
+                        logger.info(f"✅ Topology context built ({len(self.topology_context)} characters)")
+                    except Exception as e:
+                        logger.warning(f"⚠️  Could not build full topology RAG context: {e}")
+                        # Still try to get basic topology description
+                        try:
+                            self.topology_context = self.topology_parser.get_topology_description()
+                            logger.info(f"✅ Using basic topology description instead")
+                        except Exception as e2:
+                            logger.warning(f"⚠️  Could not load topology description: {e2}")
+                else:
+                    logger.warning(f"⚠️  Topology file not found: {topology_file}")
+            except Exception as e:
+                logger.warning(f"⚠️  Failed to load topology: {e}")
+        else:
+            logger.info("ℹ️  Topology integration disabled")
         
         # Initialize components
         logger.info("\n[1/4] 🔍 Initializing Retriever...")
@@ -146,6 +198,10 @@ class RAGPipeline:
         """
         Build context string from reranked documents
         
+        Includes:
+        - Retrieved documents
+        - Network topology information (if available)
+        
         Args:
             documents: List of reranked documents
         
@@ -154,15 +210,30 @@ class RAGPipeline:
         """
         context_parts = []
         
+        # Add topology context if available
+        if self.enable_topology and self.topology_context:
+            context_parts.append("=" * 70)
+            context_parts.append("NETWORK TOPOLOGY CONTEXT")
+            context_parts.append("=" * 70)
+            context_parts.append(self.topology_context)
+            context_parts.append("=" * 70)
+            context_parts.append("\n")
+        
+        # Add retrieved documents
+        context_parts.append("=" * 70)
+        context_parts.append("RELEVANT DOCUMENTS")
+        context_parts.append("=" * 70)
+        
         for i, doc in enumerate(documents, 1):
-            context_parts.append(f"[Document {i}]\n{doc['text']}\n")
+            context_parts.append(f"\n[Document {i}]\n{doc['text']}\n")
         
         return "\n".join(context_parts)
     
     def query(self, 
              question: str,
              return_context: bool = False,
-             return_sources: bool = False) -> Dict[str, Any]:
+             return_sources: bool = False,
+             output_format: Optional[str] = None) -> Dict[str, Any]:
         """
         Process a query through the RAG pipeline
         
@@ -177,15 +248,21 @@ class RAGPipeline:
             question: User question
             return_context: Include context in response
             return_sources: Include source documents in response
+            output_format: Output format (default, single_code_block)
         
         Returns:
             Dict with answer and metadata
         """
+        # Use configured output format if not specified
+        if output_format is None:
+            output_format = self.cli_output_format if self.enable_cli_format else "default"
+        
         self.stats['total_queries'] += 1
         pipeline_start_time = time.time()
         
         logger.info("\n" + "=" * 70)
         logger.info(f"📝 QUERY: {question}")
+        logger.info(f"   Output format: {output_format}")
         logger.info("=" * 70)
         
         # Step 1: Check cache
@@ -256,11 +333,17 @@ class RAGPipeline:
         
         # Step 5: Generate answer
         logger.info(f"\n[STEP 5/5] 💬 Generating answer with {self.llm_client.model}...")
+        logger.info(f"   Format: {output_format}")
         generation_start = time.time()
+        
+        # Determine session type based on topology
+        session_type = "topology" if self.enable_topology else "general"
         
         llm_result = self.llm_client.generate(
             query=question,
-            context=context
+            context=context,
+            output_format=output_format,
+            session_type=session_type
         )
         
         generation_time = time.time() - generation_start
