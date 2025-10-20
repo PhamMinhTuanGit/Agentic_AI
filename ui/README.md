@@ -19,9 +19,7 @@ Professional interactive web interface for the RAG (Retrieval-Augmented Generati
 - **Live Statistics**: Real-time hit rate, latency, and token tracking
 - **Query History**: Quick access to previous queries
 
-### 📊 Advanced Pages
-- **Analytics**: Performance charts, hit rate analysis, timing breakdown
-- **Settings**: Configuration guide, performance tuning, troubleshooting
+### 📊 Advanced Features
 - **Debug Console**: Raw JSON results, full query history, system logs
 
 ---
@@ -224,26 +222,7 @@ Benefits:
 - Result display
 - Debug console
 
-**Navigate**: Click sidebar or main area
-
-### 📊 Analytics (pages/analytics.py)
-- Performance charts
-- Cache hit/miss analysis
-- Time breakdown visualization
-- Performance recommendations
-
-**Metrics**:
-- Total queries, cache hits, hit rate
-- Average time per stage
-- Token usage
-- Query history table
-
-### ⚙️ Settings (pages/settings.py)
-- Configuration guide
-- Performance tuning options
-- Troubleshooting tips
-- Advanced settings reference
-- Developer information
+**Navigate**: Streamlit single-page application
 
 ---
 
@@ -326,18 +305,6 @@ ui/app.py (Main)
     ├── Query history
     ├── Logs
     └── System info
-
-ui/pages/analytics.py (Analytics)
-├── Key metrics (5 cards)
-├── Performance charts (Plotly)
-├── Cache hit/miss pie chart
-└── Recommendations
-
-ui/pages/settings.py (Settings)
-├── Configuration guide
-├── Performance tuning
-├── Troubleshooting
-└── Advanced settings
 ```
 
 ---
@@ -433,9 +400,6 @@ ui/
 ├── app.py                  # Main Streamlit application
 ├── __init__.py            # Package initialization
 ├── requirements.txt       # Streamlit dependencies
-├── pages/
-│   ├── analytics.py       # Analytics & charts page
-│   └── settings.py        # Settings & configuration page
 └── README.md              # This file
 ```
 
