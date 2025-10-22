@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>peer_activate</title><link rel="Prev" href="BGP%20CLI%20API.077.42.html" title="Previous"><link rel="Next" href="BGP%20CLI%20API.077.44.html" title="Next"><link rel="StyleSheet" href="css/BGP%20CLI%20API.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BGP%20CLI%20API_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BGP%20CLI%20API.077.43.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pi4N8AVhfbjchx9aky9FvfQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BGP%20CLI%20API.077.43.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.057.2.html#wwconnect_header">Border Gateway Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGP%20CLI%20API.077.01.html#wwconnect_header">CHAPTER 19	BGP Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGP%20CLI%20API.077.02.html#wwconnect_header">API Functions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">peer_activate</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww513910" class="Heading2NewPage"><span></span>peer_activate</div><div id="ww501467" class="Body"><span></span>This function activates specified peer's Address Family configuration.</div><div id="ww523550" class="Body"><span></span>This function is called by the following command:</div><div id="ww523551" class="Pseudocode1"><span></span>acttivate</div><div id="ww493321" class="Heading3"><span></span>Syntax</div><div id="ww516453" class="PseudoCode"><span></span>int</div><div id="ww528856" class="PseudoCode"><span></span>peer_activate (struct bgp *bgp, struct bgp_peer *peer, afi_t afi, safi_t safi);</div><div id="ww493325" class="Heading3"><span></span>Input Parameters</div><div id="ww501482" class="CmdHead1"><span class="Parameter">bgp</span></div><div id="ww528488" class="Cmd1">BGP Instance</div><div id="ww516861" class="CmdHead1"><span class="Parameter">peer</span></div><div id="ww528494" class="Cmd1">BGP peer</div><div id="ww501483" class="CmdHead1"><span class="Parameter">afi</span></div><div id="ww528500" class="Cmd1">Address Family</div><div id="ww493327" class="CmdHead1"><span class="Parameter">safi</span></div><div id="ww528506" class="Cmd1">Subsequent Address Family</div><div id="ww493329" class="Heading3"><span></span>Output Parameters</div><div id="ww493331" class="Body"><span></span>None</div><div id="ww493333" class="Heading3"><span></span>Return Value</div><div id="ww501490" class="Body"><span></span>BGP_API_SET_SUCCESS when the function is successful: peer address is configured correctly (0)</div><div id="ww542902" class="Body"><span></span>BGP_API_SET_ERROR when peer group is empty (-1)</div><div id="ww542974" class="Body"><span></span>BGP_API_SET_ERR_PEER_GROUP__INVALID when Invalid combination of address families for this peer-group (-41)</div><div id="ww542993" class="Body"><span></span>BGP_API_SET_ERR_UNSUP_VPNVF_CONF when it can't activate VPNV4 family for EBGP peer (-47)</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

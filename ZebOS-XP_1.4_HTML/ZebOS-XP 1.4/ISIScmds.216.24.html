@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>dynamic-hostname</title><link rel="Prev" href="ISIScmds.216.23.html" title="Previous"><link rel="Next" href="ISIScmds.216.25.html" title="Next"><link rel="StyleSheet" href="css/ISIScmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISIScmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISIScmds.216.24.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="plKtpXFXb1vP_002bu33veeg4lw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISIScmds.216.24.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.213.2.html#wwconnect_header">Intermediate System to Intermediate System Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISIScmds.216.01.html#wwconnect_header">CHAPTER 2	IS-IS Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">dynamic-hostname</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww506468" class="Heading1NewPage"><span></span>dynamic-hostname</div><div id="ww530622" class="Body"><span></span>Use this command to configure the hostname to be advertised for an ISIS instance using the dynamic hostname exchange mechanism (RFC 2763) and system-ID-to-hostname translation.</div><div id="ww534867" class="Body"><span></span>This command configures a hostname to be used for the Dynamic Hostname Exchange Mechanism and System-ID to hostname translation. This is required to get accurate results when using the <span class="Command">show isis database</span> and a few other commands</div><div id="ww530641" class="Body"><span></span>Use the no parameter to disable the Hostname configured. </div><div id="ww506470" class="Heading3"><span></span>Command Syntax </div><div id="ww506867" class="CmdMaster">dynamic-hostname</div><div id="ww560671" class="CmdMaster">hostname dynamic</div><div id="ww564147" class="CmdMaster">dynamic-hostname area-tag</div><div id="ww511107" class="CmdMaster">no dynamic-hostname</div><div id="ww564150" class="CmdMaster">no hostname dynamic</div><div id="ww534810" class="Heading3"><span></span>Parameters</div><div id="ww534815" class="CmdHead1">area-tag</div><div id="ww542965" class="Cmd1">Use the routing area tag as the hostname, not the router’s global hostname.</div><div id="ww534816" class="Heading3"><span></span>Default</div><div id="ww534817" class="Body"><span></span>By default, the Dynamic Hostname Exchange Mechanism is disabled.</div><div id="ww534818" class="Heading3"><span></span>Command Mode</div><div id="ww534819" class="Body"><span></span>Router mode</div><div id="ww511146" class="Heading3"><span></span>Example</div><div id="ww511153" class="CmdExample">#configure terminal</div><div id="ww511154" class="CmdExample">(config)#router isis bb</div><div id="ww511155" class="CmdExample">(config-router)#dynamic-hostname area-tag</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

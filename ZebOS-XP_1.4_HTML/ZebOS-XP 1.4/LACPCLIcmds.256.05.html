@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>lacp destination-mac</title><link rel="Prev" href="LACPCLIcmds.256.04.html" title="Previous"><link rel="Next" href="LACPCLIcmds.256.06.html" title="Next"><link rel="StyleSheet" href="css/LACPCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/LACPCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/LACPCLIcmds.256.05.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pj0TizpNQv7d5j0d5B83VMQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/LACPCLIcmds.256.05.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/LACPCLIcmds.256.01.html#wwconnect_header">CHAPTER 7	Link Aggregation Control Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">lacp destination-mac</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww513883" class="Heading1NewPage"><span></span>lacp destination-mac</div><div id="ww513884" class="Body"><span></span>Use this command to set the address type to use for sending LACPDUs (Link Aggregation Control Protocol Data Units).</div><div id="ww513885" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>The interface must be an aggregation port.</div><div id="ww513886" class="Body"><span></span>Use the <span class="Command">no</span> form of this command to set the address type to its default (multicast group address).</div><div id="ww513887" class="Heading3"><span></span>Command Syntax</div><div id="ww513888" class="CmdMaster">lacp destination-mac  (customer-bridge-group-address | multicast-group-address | non-tmpr-group-address)</div><div id="ww513889" class="CmdMaster">no lacp destination-mac</div><div id="ww513890" class="Heading3"><span></span>Parameters</div><div id="ww513891" class="CmdHead1">customer-bridge-group-address </div><div id="ww513892" class="Cmd1">&nbsp;</div><div id="ww513893" class="Cmd1">Customer bridge group address</div><div id="ww513894" class="CmdHead1">multicast-group-address</div><div id="ww513895" class="Cmd1">&nbsp;</div><div id="ww513896" class="Cmd1">Multicast group address (default)</div><div id="ww513897" class="CmdHead1">non-TPMR-group-address</div><div id="ww513898" class="Cmd1">&nbsp;</div><div id="ww513899" class="Cmd1">Non-Two-Port Media Access Control Relay (TPMR) group address</div><div id="ww513900" class="Heading3"><span></span>Command Mode</div><div id="ww513901" class="Body"><span></span>Interface mode</div><div id="ww513902" class="Heading3"><span></span>Example</div><div id="ww513903" class="CmdExample">#config terminal</div><div id="ww513904" class="CmdExample">(config)#interface eth1</div><div id="ww513905" class="CmdExample">(config-if)#lacp destination-mac customer-bridge-group-address</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

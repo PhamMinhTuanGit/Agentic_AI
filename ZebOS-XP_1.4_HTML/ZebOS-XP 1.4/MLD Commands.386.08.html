@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ipv6 mld last-member-query-interval</title><link rel="Prev" href="MLD%20Commands.386.07.html" title="Previous"><link rel="Next" href="MLD%20Commands.386.09.html" title="Next"><link rel="StyleSheet" href="css/MLD%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MLD%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MLD%20Commands.386.08.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pXl1nBtELOOfT39iQHAetig" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MLD%20Commands.386.08.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.381.2.html#wwconnect_header">Multicast Routing Information Base Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MLD%20Commands.386.01.html#wwconnect_header">CHAPTER 4	MLD Multicast Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ipv6 mld last-member-query-interval</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1059553" class="Heading1NewPage"><span></span>ipv6 mld last-member-query-interval</div><div id="ww1059554" class="Body"><span></span>Use this command to set the frequency at which the router sends MLD group-specific host query messages. This command applies to interfaces configured for MLD Layer-3 multicast protocols, MLD Snooping, or MLD Proxy.</div><div id="ww1059555" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to set this frequency to the default value.</div><div id="ww1059556" class="Heading3"><span></span>Command Syntax</div><div id="ww1059557" class="CmdMaster">ipv6 mld last-member-query-interval <span class="Parameter">&lt;1000-25500&gt;</span></div><div id="ww1059558" class="CmdMaster">no ipv6 mld last-member-query-interval</div><div id="ww1070475" class="Heading3"><span></span>Parameter</div><div id="ww1070498" class="CmdHead1"><span class="Parameter">&lt;1000-25500&gt;</span></div><div id="ww1070516" class="Cmd1">Specify a last member query interval value in milliseconds.</div><div id="ww1070478" class="Heading3"><span></span>Default</div><div id="ww1070479" class="Body"><span></span>The default last-member query-count value is 1000 milliseconds.</div><div id="ww1070480" class="Heading3"><span></span>Command Mode</div><div id="ww1070481" class="Body"><span></span>Interface mode for VLAN interface</div><div id="ww1059566" class="Heading3"><span></span>Example</div><div id="ww1059567" class="Body"><span></span>The following example changes the MLD group-specific host query message interval to 2 seconds: </div><div id="ww1059568" class="CmdExample">#configure terminal</div><div id="ww1059569" class="CmdExample">(config)#interface eth0</div><div id="ww1059570" class="CmdExample">(config-if)#ipv6 mld last-member-query-interval 2000</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

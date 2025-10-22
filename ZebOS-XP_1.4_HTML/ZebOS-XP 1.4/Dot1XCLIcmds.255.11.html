@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>dot1x port-control</title><link rel="Prev" href="Dot1XCLIcmds.255.10.html" title="Previous"><link rel="Next" href="Dot1XCLIcmds.255.12.html" title="Next"><link rel="StyleSheet" href="css/Dot1XCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Dot1XCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Dot1XCLIcmds.255.11.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="puyx4hW_002ft6v8FPwp4sbb3_002bA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Dot1XCLIcmds.255.11.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Dot1XCLIcmds.255.01.html#wwconnect_header">CHAPTER 6	802.1x Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">dot1x port-control</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww500479" class="Heading1NewPage"><span></span>dot1x port-control</div><div id="ww500480" class="Body"><span></span>Use this command to force a port state.</div><div id="ww501242" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to remove a port from the 802.1x management.</div><div id="ww500481" class="Heading3"><span></span>Command Syntax</div><div id="ww516283" class="CmdMaster">dot1x port-control dir (in|both)</div><div id="ww516278" class="CmdMaster">dot1x port-control (force-unauthorized|force-authorized|auto)</div><div id="ww516243" class="CmdMaster">no dot1x port-control</div><div id="ww506358" class="Heading3"><span></span>Parameters</div><div id="ww506381" class="CmdHead1">auto</div><div id="ww510695" class="Cmd1">Specify to enable authentication on port.</div><div id="ww506382" class="CmdHead1">dir</div><div id="ww510702" class="Cmd1">Specify the packet control direction.</div><div id="ww506383" class="CmdHead2">both</div><div id="ww510712" class="Cmd1">Discard receive and transmit packets from the supplicant</div><div id="ww506360" class="CmdHead2">in</div><div id="ww510719" class="Cmd1">Discard receive packets from the supplicant</div><div id="ww506435" class="CmdHead1">force-authorized</div><div id="ww510729" class="Cmd1">&nbsp;</div><div id="ww510736" class="Cmd1">Specify to force a port to always be in an authorized state.</div><div id="ww506449" class="CmdHead1">force-unauthorized</div><div id="ww510743" class="Cmd1">&nbsp;</div><div id="ww510750" class="Cmd1">Specify to force a port to always be in an unauthorized state.</div><div id="ww506361" class="Heading3"><span></span>Command Mode</div><div id="ww506362" class="Body"><span></span>Interface mode</div><div id="ww500976" class="Heading3"><span></span>Examples</div><div id="ww500977" class="CmdExample">#configure terminal</div><div id="ww500978" class="CmdExample">(config)#interface eth0</div><div id="ww500979" class="CmdExample">(config-if)#dot1x port-control auto</div><div id="ww514189" class="CmdExample">&nbsp;</div><div id="ww514204" class="CmdExample">(config)#interface eth0</div><div id="ww514196" class="CmdExample">(config-if)#no dot1x port-control</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

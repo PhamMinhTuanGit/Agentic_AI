@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>g8031 set-nr</title><link rel="Prev" href="EthernetProtectionSwitchingCLICmds.118.13.html" title="Previous"><link rel="Next" href="EthernetProtectionSwitchingCLICmds.118.15.html" title="Next"><link rel="StyleSheet" href="css/EthernetProtectionSwitchingCLICmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/EthernetProtectionSwitchingCLICmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/EthernetProtectionSwitchingCLICmds.118.14.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pRI5_002b1Pu_002bUx3PwNaGu647ew" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/EthernetProtectionSwitchingCLICmds.118.14.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/EthernetProtectionSwitchingCLICmds.118.01.html#wwconnect_header">CHAPTER 16	Ethernet Protection Switching Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">g8031 set-nr</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1004632" class="Heading1NewPage"><span></span>g8031 set-nr</div><div id="ww1004633" class="Body"><span></span>Use this command to force the near-end state to No Request (NR) with the given signal fields. </div><div id="ww1006627" class="Body"><span></span>This command should only be used when the near-end and far-end state machines cannot synchronize and operator intervention is required to resolve the deadlock.</div><div id="ww1004634" class="Heading3"><span></span>Command Syntax</div><div id="ww1010251" class="CmdMaster">g8031 set-nr (null-null | normal-normal | null-normal)</div><div id="ww1006569" class="Heading3"><span></span>Parameters</div><div id="ww1010290" class="CmdHead1">null-null</div><div id="ww1010291" class="Cmd1">Requested signal equals null and bridged signal equals null.</div><div id="ww1008685" class="CmdHead1">normal-normal</div><div id="ww1008677" class="Cmd1">Requested signal equals normal and bridged signal equals normal.</div><div id="ww1006576" class="CmdHead1">null-normal</div><div id="ww1007526" class="Cmd1">Requested signal equals null and bridged signal equals normal.</div><div id="ww1006577" class="Heading3"><span></span>Command Mode</div><div id="ww1006578" class="Body"><span></span>G8031 configure switching mode</div><div id="ww1004644" class="Heading3"><span></span>Examples</div><div id="ww1004645" class="CmdExample">#configure terminal</div><div id="ww1004646" class="CmdExample">(config)#g8031 configure switching eps-id 10 bridge 1</div><div id="ww1004647" class="CmdExample">(g8031-config-switching)#g8031 set-nr null-null</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

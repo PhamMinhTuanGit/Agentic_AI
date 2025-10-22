@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ospf_overflow_database_external_interval_unset</title><link rel="Prev" href="OSPFv2%20CLI%20API.466.156.html" title="Previous"><link rel="Next" href="OSPFv2%20CLI%20API.466.158.html" title="Next"><link rel="StyleSheet" href="css/OSPFv2%20CLI%20API.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/OSPFv2%20CLI%20API_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/OSPFv2%20CLI%20API.466.157.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN6mY2eBD1MkntJRD1K7I6ow" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/OSPFv2%20CLI%20API.466.157.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.453.2.html#wwconnect_header">Open Shortest Path First Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/OSPFv2%20CLI%20API.466.001.html#wwconnect_header">CHAPTER 12	OSPFv2 Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/OSPFv2%20CLI%20API.466.002.html#wwconnect_header">OSPFv2 API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ospf_overflow_database_external_interval_unset</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww631645" class="Heading2"><span></span>ospf_overflow_database_external_interval_unset</div><div id="ww631646" class="Body"><span></span>This function resets the value of the interval of the overflow state as defined by <span class="Parameter">OSPF_DEFAULT_EXIT_OVERFLOW_INTERVAL</span> (refer to <span class="Parameter">ospfd.h</span>).</div><div id="ww631647" class="Body"><span></span>This function is called by the following command:</div><div id="ww631648" class="Pseudocode1"><span></span><span class="Parameter">no overflow database external</span></div><div id="ww631649" class="Heading3"><span></span>Syntax</div><div id="ww631650" class="PseudoCode"><span></span>int </div><div id="ww631651" class="PseudoCode"><span></span>ospf_overflow_database_external_interval_unset (u_int32_t vr_id, int proc_id);</div><div id="ww631652" class="Heading3"><span></span>Input Parameters</div><div id="ww631653" class="CmdHead1"><span class="Parameter">vr_id</span></div><div id="ww631654" class="Cmd1">Virtual router ID; for a non-virtual-router implementation, specify 0</div><div id="ww631655" class="CmdHead1">proc_id</div><div id="ww631656" class="Cmd1">The process ID for the OSPF instance &lt;0–65535&gt;.</div><div id="ww631657" class="Heading3"><span></span>Output Parameters</div><div id="ww631658" class="Body1"><span></span>None</div><div id="ww631659" class="Heading3"><span></span>Return Value</div><div id="ww631660" class="Body"><span></span>OSPF_API_SET_ERR_PROCESS_ID_INVALID when the process ID is not valid</div><div id="ww631661" class="Body"><span></span>OSPF_API_SET_ERR_PROCESS_NOT_EXIST when the given process does not exist</div><div id="ww631662" class="Body"><span></span>OSPF_API_SET_SUCCESS when the function succeeds</div><div id="ww631663" class="Body"><span></span>OSPF_API_SET_ERR_VR_NOT_EXIST when the virtual router is not found</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

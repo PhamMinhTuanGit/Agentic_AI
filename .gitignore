@@ -1,6 +1,6 @@
 .venv
 .continue
-ZebOS-XP_1.4_HTML
+
 .streamlit/
 *.pyc
 __pycache__

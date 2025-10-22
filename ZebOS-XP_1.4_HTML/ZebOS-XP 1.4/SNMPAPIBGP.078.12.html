@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bgp_set_peer_keep_alive_configured</title><link rel="Prev" href="SNMPAPIBGP.078.11.html" title="Previous"><link rel="Next" href="SNMPAPIBGP.078.13.html" title="Next"><link rel="StyleSheet" href="css/SNMPAPIBGP.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SNMPAPIBGP_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SNMPAPIBGP.078.12.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="puO_002bBZhsAOWHnRwlniBQ1eg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SNMPAPIBGP.078.12.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.057.2.html#wwconnect_header">Border Gateway Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SNMPAPIBGP.078.01.html#wwconnect_header">CHAPTER 20	BGP MIB Support</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SNMPAPIBGP.078.06.html#wwconnect_header">MIB Definitions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bgp_set_peer_keep_alive_configured</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1157735" class="Heading2"><span></span>bgp_set_peer_keep_alive_configured</div><div id="ww1157736" class="Body"><span></span>This function modifies the time interval in seconds for the KeepAlive timer configured for this BGP speaker with the peer. If the value of this object is zero, no periodical KEEPALIVE messages are sent to the peer after the BGP connection has been established. The suggested value for this timer is 30 seconds.</div><div id="ww1157737" class="Heading3"><span></span>Syntax</div><div id="ww1157738" class="Pseudocode1"><span></span>int </div><div id="ww1162902" class="Pseudocode1"><span></span>bgp_set_peer_keep_alive_configured (u_int32_t vr_id, int proc_id, </div><div id="ww1162908" class="Pseudocode1"><span></span>struct pal_in4_addr *addr, int *tm);</div><div id="ww1157739" class="Heading3"><span></span>Input Parameters</div><div id="ww1157740" class="CmdHead1"><span class="Parameter">vr_id</span></div><div id="ww1162921" class="Cmd1">The Virtual Router ID. Its default value is 0. For a non-VR implementation, pass 0 for this parameter</div><div id="ww1157741" class="CmdHead1"><span class="Parameter">proc_id</span></div><div id="ww1162924" class="Cmd1">The BGP Process ID</div><div id="ww1157742" class="CmdHead1"><span class="Parameter">addr</span></div><div id="ww1162927" class="Cmd1">The address of the peer</div><div id="ww1157743" class="CmdHead1"><span class="Parameter">tm</span></div><div id="ww1162933" class="Cmd1">Supplies the new time interval</div><div id="ww1157744" class="Heading3"><span></span>Return Value</div><div id="ww1162941" class="Body"><span></span>BGP_API_SET_SUCCESS when the call modifies the peer’s KeepAlive configured interval (0)</div><div id="ww1162946" class="Body"><span></span>BGP_API_SET_ERROR when the function fails to configure peer hold time (-1)</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

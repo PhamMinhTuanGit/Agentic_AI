@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>MPLS LSP Destination Route Deletion</title><link rel="Prev" href="CSPFARCH.462.16.html" title="Previous"><link rel="Next" href="CSPFARCH.462.18.html" title="Next"><link rel="StyleSheet" href="css/CSPFARCH.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/CSPFARCH_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/CSPFARCH.462.17.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pLdvYgOxTghY_002fQ4W62mgZig" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/CSPFARCH.462.17.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.453.2.html#wwconnect_header">Open Shortest Path First Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/CSPFARCH.462.01.html#wwconnect_header">CHAPTER 8	Constrained Shortest Path First</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">MPLS LSP Destination Route Deletion</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww494496" class="Heading1NewPage"><span></span>MPLS LSP Destination Route Deletion</div><div id="ww495160" class="Body"><span></span>RSVP-TE uses the CSPF module to compute the Explicit Route Object (ERO) for its LSPs. CSPF uses the TE Link State Database (LSDB) populated by the OSPF module in calculating a constraint-based path from the ingress to the egress.</div><div id="ww495161" class="Body"><span></span>The MPLS LSP Destination Route Deletion feature defines a mechanism for the CSPF server to detect the loss of egress reachability and asynchronously communicates this to the RSVP-TE module. This eventually speeds up the LSP tear-down operation, instead of requiring long intervals for refresh timer expiration.</div><div id="ww495163" class="Body"><span></span>This section describes the procedures involved in detecting route deletions and the notification process between CSPF and RSVP-TE. It also describes the changes in the code in the OSPF-TE, CSPF, and RSVP-TE modules to accommodate this feature.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

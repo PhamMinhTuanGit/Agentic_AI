@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>is-type</title><link rel="Prev" href="ISIScmds.216.53.html" title="Previous"><link rel="Next" href="ISIScmds.216.55.html" title="Next"><link rel="StyleSheet" href="css/ISIScmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISIScmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISIScmds.216.54.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pw2gsMul6s_002fPP7iEJL_002bs_002f4Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISIScmds.216.54.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.213.2.html#wwconnect_header">Intermediate System to Intermediate System Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISIScmds.216.01.html#wwconnect_header">CHAPTER 2	IS-IS Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">is-type</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww557164" class="Heading1NewPage"><span></span>is-type</div><div id="ww557165" class="Body"><span></span>Use this command to set the IS to the specified level of routing.</div><div id="ww557169" class="Body"><span></span>Changing<span class="Command"> is-type</span> brings down, then brings up a particular level of routing. There is a limitation: Only one ISIS instance can run Level-2 routing (either Level-2 only IS, or Level-1-2 IS).</div><div id="ww557170" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter to set the IS to the default.</div><div id="ww557171" class="Heading3"><span></span>Command Syntax </div><div id="ww557172" class="CmdMaster">is-type (level-1|level-1-2|level-2-only)</div><div id="ww557173" class="CmdMaster">no is-type</div><div id="ww557174" class="Heading3"><span></span>Parameters</div><div id="ww557175" class="CmdHead1">level-1</div><div id="ww557176" class="Cmd1">Act as level-1 only IS.</div><div id="ww557177" class="CmdHead1">level-1-2</div><div id="ww557178" class="Cmd1">Act as level-1-2 IS.</div><div id="ww557179" class="CmdHead1">level-2-only</div><div id="ww557180" class="Cmd1">Act as level-2 only IS.</div><div id="ww557181" class="Heading3"><span></span>Default</div><div id="ww557185" class="Body"><span></span>By default, ISIS uses level-1-2 if there is no Level-2 instance nor a Level-1-2 instance. Otherwise, it uses level-1.</div><div id="ww557186" class="Heading3"><span></span>Command Mode</div><div id="ww557187" class="Body"><span></span>Router mode</div><div id="ww557188" class="Heading3"><span></span>Examples</div><div id="ww557189" class="CmdExample">#configure terminal</div><div id="ww557190" class="CmdExample">(config)#router isis bb</div><div id="ww557191" class="CmdExample">(config-router)#is-type level-1</div><div id="ww557192" class="CmdExample">&nbsp;</div><div id="ww557193" class="CmdExample">(config)#router isis bb</div><div id="ww557194" class="CmdExample">(config-router)#no is-type</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

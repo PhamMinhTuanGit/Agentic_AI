@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ip ospf database-filter</title><link rel="Prev" href="OSPFcmds.449.41.html" title="Previous"><link rel="Next" href="OSPFcmds.449.43.html" title="Next"><link rel="StyleSheet" href="css/OSPFcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/OSPFcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/OSPFcmds.449.42.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pklThFIPj3XbT6M2B5vzcDg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/OSPFcmds.449.42.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.446.2.html#wwconnect_header">Open Shortest Path First Command Reference </a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/OSPFcmds.449.01.html#wwconnect_header">CHAPTER 2	OSPFv2 Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ip ospf database-filter</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1103758" class="Heading1NewPage"><span></span>ip ospf database-filter</div><div id="ww1103759" class="Body"><span></span>Use this command to turn on the LSA database-filter for a particular interface.</div><div id="ww1123071" class="Body"><span></span>OSPF floods new LSAs over all interfaces in an area, except the interface on which the LSA arrives. This redundancy ensures robust flooding. However, too much redundancy can waste bandwidth and might lead to excessive link and CPU usage in certain topologies, resulting in destabilizing the network. To avoid this, use this command to block flooding of LSAs over specified interfaces.</div><div id="ww1103760" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to turn off the filter.</div><div id="ww1103761" class="Heading3"><span></span>Command Syntax</div><div id="ww1103762" class="CmdMaster">ip ospf (A.B.C.D|) database-filter all out</div><div id="ww1103763" class="CmdMaster">no ip ospf (A.B.C.D|) database-filter</div><div id="ww1123022" class="Heading3"><span></span>Parameters</div><div id="ww1103764" class="CmdHead1"><span class="Parameter">A.B.C.D</span></div><div id="ww1123038" class="Cmd1">The IP address of the interface.</div><div id="ww1103767" class="Heading3"><span></span>Default</div><div id="ww1103768" class="Body"><span></span>Disabled, all outgoing LSAs are flooded to the interface.</div><div id="ww1103769" class="Heading3"><span></span>Command Mode</div><div id="ww1103770" class="Body"><span></span>Interface mode</div><div id="ww1103773" class="Heading3"><span></span>Examples</div><div id="ww1103774" class="CmdExample">#configure terminal</div><div id="ww1103775" class="CmdExample">(config)#interface eth0</div><div id="ww1103776" class="CmdExample">(config-if)#ip ospf <span style="font-size: 10.0pt">database</span>-filter all out</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

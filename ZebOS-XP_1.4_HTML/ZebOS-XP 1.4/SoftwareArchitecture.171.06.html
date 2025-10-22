@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CE Auto-Configuration Support</title><link rel="Prev" href="SoftwareArchitecture.171.05.html" title="Previous"><link rel="Next" href="SoftwareArchitecture.171.07.html" title="Next"><link rel="StyleSheet" href="css/SoftwareArchitecture_2.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SoftwareArchitecture_IE7_2.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SoftwareArchitecture.171.06.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pI0777fP3nQTEuGEnXwF01A" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SoftwareArchitecture.171.06.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.168.2.html#wwconnect_header">Ethernet Local Management Interface Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SoftwareArchitecture.171.01.html#wwconnect_header">CHAPTER 2	System Architecture</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SoftwareArchitecture.171.02.html#wwconnect_header">System Implementation</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">CE Auto-Configuration Support</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1013458" class="Heading2"><span></span>CE Auto-Configuration Support</div><div id="ww1008321" class="Body"><span></span>The following are the supported CE auto-configuration features of the ELMI protocol:</div><div id="ww1008323" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>A CE-VLAN is created at UNI-C automatically if the CE bridge is configured for that CE-VLAN and if UNI-C receives information for any CE-VLAN in the CE-VLAN/EVC mapping, which does not exist at UNI-C. However, any existing (that is, manually configured) CE-VLAN configurations are not modified at UNI-C.</div><div id="ww1008373" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Status information is updated in the database maintained at UNI-C. It receives a status for an EVC indicating that the EVC is Not Active. View the latest status of an EVC by issuing the appropriate show CLI commands.</div><div id="ww1008309" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>Currently, ELMI does not support the functionality of the CE to stop transmitting Service Frames on EVC until it receives the STATUS message indicating that EVC is Active or Partially Active.</div><div id="ww1008430" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>ELMI includes an API that triggers an alarm when EVC goes down at UNI-C.</div><div id="ww1008452" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>ELMI buffers information when UNI-C receives information for bandwidth profile attributes. View this information by issuing the appropriate show CLI command.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>esadi instance</title><link rel="Prev" href="ESADI-CLI.642.05.html" title="Previous"><link rel="Next" href="ESADI-CLI.642.07.html" title="Next"><link rel="StyleSheet" href="css/ESADI-CLI.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ESADI-CLI_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ESADI-CLI.642.06.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pQIxN5ocLytyUakoEek2rpA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ESADI-CLI.642.06.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.638.2.html#wwconnect_header">Transparent Interconnection of Lots of Links Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ESADI-CLI.642.01.html#wwconnect_header">CHAPTER 3	ESADI Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">esadi instance</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1373676" class="Heading1NewPage"><span></span>esadi instance</div><div id="ww1373677" class="Body"><span></span>Use this command to enable an ESADI instance.</div><div id="ww1373678" class="Body"><span></span>Use the no parameter with this command to disable an ESADI instance.</div><div id="ww1373679" class="Heading3"><span></span>Command Syntax</div><div id="ww1373680" class="CmdMaster">esadi instance enable vlan (&lt;1-4094&gt;| X | all)</div><div id="ww1373681" class="CmdMaster">no esadi instance enable vlan (&lt;1-4094&gt;| X | all)</div><div id="ww1373682" class="Heading3"><span></span>Parameters</div><div id="ww1373687" class="CmdHead1">&lt;1-4094&gt;</div><div id="ww1373688" class="Cmd1">Specify the actual VLAN ID.</div><div id="ww1373689" class="CmdHead1">X </div><div id="ww1373690" class="Cmd1">Specify a range of VLANs (for example, 1-4).</div><div id="ww1373696" class="CmdHead1">all </div><div id="ww1373697" class="Cmd1">Specify enable all VLANs.</div><div id="ww1373698" class="Heading3"><span></span>Command Mode</div><div id="ww1373699" class="Body"><span></span>RBridge mode</div><div id="ww1373700" class="Heading3"><span></span>Examples</div><div id="ww1373701" class="CmdExample">&gt;enable</div><div id="ww1373702" class="CmdExample">#configure terminal</div><div id="ww1373703" class="CmdExample">(config)#bridge 1 protocol trill</div><div id="ww1373704" class="CmdExample">(config)#rbridge trill 1</div><div id="ww1373705" class="CmdExample">(config-rb)#esadi instance enable vlan all</div><div id="ww1373706" class="CmdExample">&nbsp;</div><div id="ww1373707" class="CmdExample">(config-rb)#no esadi instance enable vlan all</div><div id="ww1373708" class="CmdExample">&nbsp;</div><div id="ww1373709" class="CmdExample">&nbsp;</div><div id="ww1373671" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

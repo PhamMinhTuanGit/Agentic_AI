@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Overview</title><link rel="Prev" href="UnicastReversePathForwarding.678.1.html" title="Previous"><link rel="Next" href="UnicastReversePathForwarding.678.3.html" title="Next"><link rel="StyleSheet" href="css/UnicastReversePathForwarding.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/UnicastReversePathForwarding_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/UnicastReversePathForwarding.678.2.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN4dwatwzgCrCwOnuWRck8DQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/UnicastReversePathForwarding.678.2.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.662.2.html#wwconnect_header">Unicast Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/UnicastReversePathForwarding.678.1.html#wwconnect_header">CHAPTER 15	Unicast Reverse Path Forwarding</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Overview</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww500159" class="Heading1"><span></span>Overview</div><div id="ww500172" class="Body"><span></span>In an ISP or network usage, under Denial of Service attack from outside the network, often the packets carry spoofed source addresses. The spoofed source address maybe generated at random or may belong to any of the interior network addresses. By examining the source address in all the incoming packets a system may be able to filter these spoofed packets, unicast RPF check feature does exactly the same. It drops the packets whose source address does not fit in legitimately within the customers assigned source addresses. It also drops packets with addresses which are invalid, example 0.0.0.0/8, 10.0.0.0/8, 127.0.0.0/8 etc. </div><div id="ww500173" class="Body"><span></span>With this approach the malicious traffic effect can be suppressed, and attacks can be legitimately traced back to the source.There are several variations of applying Ingress filtering, each with its own merits and de-merits. Applying ingress filtering has an effect on Multi-homing feature if enabled.</div><div id="ww503679" class="Body"><span></span>The proposed ways to Implement Ingress Filtering are;</div><div id="ww503680" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Ingress Access Lists</div><div id="ww503681" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Strict Reverse Path forwarding.</div><div id="ww500222" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Feasible Path Reverse Path forwarding</div><div id="ww500237" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Loose Reverse Path forwarding</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

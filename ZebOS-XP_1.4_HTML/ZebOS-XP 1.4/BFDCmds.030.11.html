@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bfd multihop-peer X:X::X:X</title><link rel="Prev" href="BFDCmds.030.10.html" title="Previous"><link rel="Next" href="BFDCmds.030.12.html" title="Next"><link rel="StyleSheet" href="css/BFDCmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BFDCmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BFDCmds.030.11.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN4XdUNWBN1XplTEmNdoQSdQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BFDCmds.030.11.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.027.2.html#wwconnect_header">Bidirectional Forwarding Detection Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BFDCmds.030.01.html#wwconnect_header">CHAPTER 2	Bidirectional Forwarding Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bfd multihop-peer X:X::X:X</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1000041" class="Heading1NewPage"><span></span>bfd multihop-peer X:X::X:X</div><div id="ww1000096" class="Body"><span></span>Use this command to configure an IPv6 BFD multihop peer timer values.</div><div id="ww1000111" class="Body"><span></span>Use the <span class="Command">no</span> form of the command to reset the IPv6 multihop peer timer values.</div><div id="ww1000127" class="Heading3"><span></span>Command Syntax</div><div id="ww1010960" class="CmdMaster">bfd multihop-peer X:X::X:X interval &lt;50-999&gt; minrx &lt;50-999&gt; multiplier &lt;3-50&gt;</div><div id="ww1010973" class="CmdMaster">no bfd multihop-peer X:X::X:X interval &lt;50-999&gt; minrx &lt;50-999&gt; multiplier &lt;3-50&gt;</div><div id="ww1004134" class="Heading3"><span></span>Parameters</div><div id="ww1011004" class="CmdHead1">interval</div><div id="ww1011005" class="Cmd1">Indicate the interval parameter. </div><div id="ww1011006" class="CmdHead2">&lt;50-999&gt;</div><div id="ww1011007" class="Cmd1">Specify the actual transmit interval in milliseconds.</div><div id="ww1011008" class="CmdHead1">minrx</div><div id="ww1011009" class="Cmd1">Indicate the minrx parameter. </div><div id="ww1011010" class="CmdHead2">&lt;50-999&gt;</div><div id="ww1011011" class="Cmd1">Specify the actual reception interval in milliseconds.</div><div id="ww1011012" class="CmdHead1">multiplier</div><div id="ww1011013" class="Cmd1">Indicate the multiplier parameter.</div><div id="ww1011014" class="CmdHead2">&lt;3-50&gt;</div><div id="ww1007202" class="Cmd1">Specify the actual hello multiplier value.</div><div id="ww1000134" class="Heading3"><span></span>Command Mode</div><div id="ww1000230" class="Body"><span></span>Configure mode</div><div id="ww1023081" class="Heading3"><span></span>Default</div><div id="ww1023077" class="Body"><span></span>Default multiplier value is 3</div><div id="ww1000141" class="Heading3"><span></span>Example</div><div id="ww1000242" class="CmdExample">#configure terminal</div><div id="ww1002955" class="CmdExample">(config)#bfd multihop-peer 10.1.1.1 interval 100 minrx 100 multiplier 3</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CHAPTER 6 Proactive Ethernet OAM</title><link rel="Prev" href="PBB-TE.128.70.html" title="Previous"><link rel="Next" href="ProActiveEthernetOAM.129.2.html" title="Next"><link rel="StyleSheet" href="css/ProActiveEthernetOAM.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ProActiveEthernetOAM_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ProActiveEthernetOAM.129.1.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pZcrvwEkSKuOvpelALt_002fGKA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ProActiveEthernetOAM.129.1.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.122.2.html#wwconnect_header">Carrier Ethernet Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">CHAPTER 6	Proactive Ethernet OAM</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww998318" class="ChapterTitle"><span class="WebWorks_Number" style="width: 72pt"><span class="chapter">CHAPTER 6	</span></span>Proactive Ethernet OAM</div><div id="ww1009524" class="Body"><span></span>Proactive OAM uses dual-ended ETH-LM (Ethernet Loss Management) for performance monitoring and fault management. Proactive OAM periodically sends frames with ETH-LM information and the system computes the frame loss. Each MEP sends periodic dual-ended frames with ETH-LM information to its peer MEP in a point-to-point ME to facilitate frame loss measurements at the peer MEP. Each MEP terminates the dual-ended frames with ETH-LM information and makes the near-end and far-end loss measurements. Once enabled, the CCM frame continues to carry ETH-LM information until ETH-LM is disabled for the MEP. When configured for proactive loss measurement, a MEP periodically transmits CCM frames with the following information elements:</div><div id="ww1008144" class="Bulleted1"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>TxFCf: This is the value of the local counter TxFCl at the time of transmission of the CCM frame.</div><div id="ww1008145" class="Bulleted1"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>RxFCb: This is the value of the local counter RxFCl at the time of reception of the last CCM frame from the peer MEP.</div><div id="ww1008146" class="Bulleted1"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>TxFCb: This is the value of TxFCf in the last received CCM frame from the peer MEP.</div><div id="ww1008045" class="Body"><span></span>A CCM PDU transmits a period value equal to the CCM transmission period, which is configured in the performance monitoring application at the transmitting MEP. The receiving MEP detects an unexpected period defect condition if the CCM transmission period is not the same as the configured value.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

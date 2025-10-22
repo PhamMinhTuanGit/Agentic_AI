@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ip name-server</title><link rel="Prev" href="DNS%20Commands.606.6.html" title="Previous"><link rel="Next" href="DNS%20Commands.606.8.html" title="Next"><link rel="StyleSheet" href="css/DNS%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/DNS%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/DNS%20Commands.606.7.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pytX_002bMpJIYFTvZ4QrxKy4Gw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/DNS%20Commands.606.7.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.600.2.html#wwconnect_header">System Management Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/DNS%20Commands.606.1.html#wwconnect_header">CHAPTER 5	Domain Name System</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ip name-server</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww507445" class="Heading1NewPage"><span></span>ip name-server</div><div id="ww507446" class="Body"><span></span>Use this command to add 1-3 DNS server addresses that are used to translate hostnames to IP addresses.</div><div id="ww507635" class="Body"><span></span>Use the <span class="Command">no</span> form of this command to remove 1-3 DNS server addresses.</div><div id="ww507447" class="Heading3"><span></span>Command Syntax</div><div id="ww508526" class="CmdMaster">ip name-server A.B.C.D</div><div id="ww520911" class="CmdMaster">ip name-server (A.B.C.D) (A.B.C.D)</div><div id="ww520926" class="CmdMaster">ip name-server (A.B.C.D) (A.B.C.D) (A.B.C.D)</div><div id="ww520881" class="CmdMaster">ip name-server (X:X::X:X | A.B.C.D)</div><div id="ww520896" class="CmdMaster">ip name-server (X:X::X:X | A.B.C.D) (X:X::X:X | A.B.C.D)</div><div id="ww520941" class="CmdMaster">ip name-server (X:X::X:X | A.B.C.D) (X:X::X:X | A.B.C.D) (X:X::X:X | A.B.C.D)</div><div id="ww508518" class="CmdMaster">no ip name-server A.B.C.D</div><div id="ww520990" class="CmdMaster">no ip name-server A.B.C.D A.B.C.D</div><div id="ww521061" class="CmdMaster">no ip name-server A.B.C.D A.B.C.D A.B.C.D</div><div id="ww521028" class="CmdMaster">no ip name-server (X:X::X:X | A.B.C.D)</div><div id="ww521014" class="CmdMaster">no ip name-server (X:X::X:X | A.B.C.D) (X:X::X:X | A.B.C.D)</div><div id="ww521043" class="CmdMaster">no ip name-server (X:X::X:X | A.B.C.D) (X:X::X:X | A.B.C.D) (X:X::X:X | A.B.C.D)</div><div id="ww520984" class="Heading3"><span></span>Parameters</div><div id="ww520985" class="CmdHead1">A.B.C.D</div><div id="ww508940" class="Cmd1">IPv4 address of the name server</div><div id="ww521092" class="CmdHead1">X:X::X:X</div><div id="ww521093" class="Cmd1">IPv6 address of the name server</div><div id="ww508504" class="Heading3"><span></span>Command Mode</div><div id="ww508505" class="Body"><span></span>Configure mode </div><div id="ww507452" class="Heading3"><span></span>Examples</div><div id="ww507637" class="CmdExample">#configure terminal</div><div id="ww507453" class="CmdExample">(config)#ip name-server 123.70.0.23</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

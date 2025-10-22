@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Forming BGP Session</title><link rel="Prev" href="4ByteASN.064.02.html" title="Previous"><link rel="Next" href="4ByteASN.064.04.html" title="Next"><link rel="StyleSheet" href="css/4ByteASN.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/4ByteASN_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/4ByteASN.064.03.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN0KeSzbb7f2S_002fPtdmve5lPg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/4ByteASN.064.03.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.057.2.html#wwconnect_header">Border Gateway Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/4ByteASN.064.01.html#wwconnect_header">CHAPTER 6	Four-Byte ASN</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/4ByteASN.064.02.html#wwconnect_header">Interaction Between Four-Byte BGP Systems</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Forming BGP Session</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww515577" class="Heading2"><span></span>Forming BGP Session</div><div id="ww515602" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>	If both four-byte BGPs are configured to advertise their four-byte ASN capability (using global configuration), they exchange the four-byte ASN capability message in the OPEN message. </div><div id="ww515603" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>	If the configured ASN is in two-byte format, it is sent in the My ASN field of the OPEN message with a new ASN capability message. </div><div id="ww515604" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>	If the configured ASN is in non-mappable four-byte format, the ASN is sent in the ASN capability message of the OPEN message, and the My ASN field of the OPEN message has AS_TRANS.</div><div id="ww515605" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>	If BGP1 is configured with a non-mappable four-byte ASN, and BGP2 is configured with a mappable ASN, by default, AS4_PATH capability is turned off, BGP2 sends its ASN in the My ASN field of the OPEN message, and no new capability messages are sent to BGP1. The adjacency is formed between the two BGPs. (In this case, BGP2 acts as a two-byte BGP).</div><div id="ww515606" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>	If BGP2 sends an OPEN Message with AS_TRANS in the My ASN field, and AS_TRANS as the ASN in the new capability message, BGP1 sends a notification message with the sub-code, Bad Peer AS.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

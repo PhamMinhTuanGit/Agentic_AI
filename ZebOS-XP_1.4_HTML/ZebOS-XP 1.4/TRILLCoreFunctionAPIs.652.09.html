@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>trill_instance_bridge_unset</title><link rel="Prev" href="TRILLCoreFunctionAPIs.652.08.html" title="Previous"><link rel="Next" href="TRILLCoreFunctionAPIs.652.10.html" title="Next"><link rel="StyleSheet" href="css/TRILLCoreFunctionAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/TRILLCoreFunctionAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/TRILLCoreFunctionAPIs.652.09.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="paUy8XtPyRc44Du_002fXnQacWw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/TRILLCoreFunctionAPIs.652.09.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.645.2.html#wwconnect_header">Transparent Interconnection of Lots of Links Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/TRILLCoreFunctionAPIs.652.01.html#wwconnect_header">CHAPTER 6	TRILL Core Function API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">trill_instance_bridge_unset</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww504341" class="Heading2"><span></span>trill_instance_bridge_unset</div><div id="ww509610" class="Body"><span></span>This function resets (disables) the specified configuration. It is called by the <span class="Command">no rbridge trill bridge</span> CLI command and is contained in the trill_api.c file.</div><div id="ww504345" class="Heading3"><span></span>Syntax</div><div id="ww509184" class="PseudoCode"><span></span>s_int32_t</div><div id="ww509185" class="PseudoCode"><span></span>trill_instance_bridge_unset (u_int32_t vr_id, char *name, char *bridgeid)</div><div id="ww504349" class="Heading3"><span></span>Input Parameters</div><div id="ww504350" class="CmdHead1">vr_id </div><div id="ww504351" class="Cmd1">Specifies the identification of the virtual router.</div><div id="ww504352" class="CmdHead1">*name </div><div id="ww504353" class="Cmd1">Specifies the name of the interface.</div><div id="ww508870" class="CmdHead1">bridgeid</div><div id="ww508871" class="Cmd1">Specifies the bridge instance: 1–32.</div><div id="ww508872" class="Heading3"><span></span>Output Parameters</div><div id="ww508340" class="Body"><span></span>None</div><div id="ww504359" class="Heading3"><span></span>Return Values</div><div id="ww505035" class="Body"><span></span>TRILL_API_SET_SUCCESS: Indicates the function call executed properly.</div><div id="ww505036" class="Body"><span></span>TRILL_API_SET_BRIDGE_NOT_EXIST: Indicates the specified bridge does not exist; configure the bridge instance.</div><div id="ww505027" class="Body"><span></span>TRILL_API_SET_ERR_BRIDGE_NOT_BINDED_TO_THIS: Indicates the specified bridge was not binded to an instance.</div><div id="ww505155" class="Body"><span></span>TRILL_API_SET_ERR_INSTANCE_NOT_EXIST: Indicates there is no active IS-IS instance for the specified tag.</div><div id="ww505156" class="Body"><span></span>TRILL_API_SET_ERR_TAG_TOO_LONG: The tag length exceeds 60 characters.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

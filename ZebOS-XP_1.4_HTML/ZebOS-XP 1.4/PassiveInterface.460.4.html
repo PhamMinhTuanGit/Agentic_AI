@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Without Default Passive Interface</title><link rel="Prev" href="PassiveInterface.460.3.html" title="Previous"><link rel="Next" href="PassiveInterface.460.5.html" title="Next"><link rel="StyleSheet" href="css/PassiveInterface_2.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PassiveInterface_IE7_2.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PassiveInterface.460.4.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pg85Tgf7tUNErgY1thwRb7Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PassiveInterface.460.4.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.453.2.html#wwconnect_header">Open Shortest Path First Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PassiveInterface.460.1.html#wwconnect_header">CHAPTER 6	Passive Interface</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PassiveInterface.460.3.html#wwconnect_header">System Architecture</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Without Default Passive Interface</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww516828" class="Heading2"><span></span>Without Default Passive Interface</div><div id="ww516886" class="Body"><span></span>Before the default passive-interface feature, there were two methods to obtain routing information of connected interfaces of Router A:</div><div id="ww516887" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Configure OSPF on Router A and redistribute connected interfaces. As a result, a large number of Type-5 LSAs can be flooded over the domain.</div><div id="ww516888" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Configure OSPF on all interfaces and manually set most of them as passive. As a result, large Type-1 link-state LSAs might be flooded into the area. The Area Border Router (ABR) creates Type-3 LSAs, one for each Type-1 LSA, and floods them to the backbone. It is possible, however, to have unique summarization at the ABR level, which injects only one summary route into the backbone, thereby reducing processing overhead. </div><div id="ww516957" class="Body"><span></span>The solution to this problem was to configure OSPF on all interfaces and manually set the <span class="Command">passive‑interface</span> command, with the interface name on the interfaces where adjacency was not desired. In the above illustration, the user had to run the <span class="Command">passive-interface</span> command with the interface name for all interfaces (Eth1, Eth2, lo, Eth3, Eth4), except Eth0.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

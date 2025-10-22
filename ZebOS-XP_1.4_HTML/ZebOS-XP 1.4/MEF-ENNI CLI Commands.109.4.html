@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>oep mapping table</title><link rel="Prev" href="MEF-ENNI%20CLI%20Commands.109.3.html" title="Previous"><link rel="Next" href="MEF-ENNI%20CLI%20Commands.109.5.html" title="Next"><link rel="StyleSheet" href="css/MEF-ENNI%20CLI%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MEF-ENNI%20CLI%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MEF-ENNI%20CLI%20Commands.109.4.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pNIx9kSjZ7oqrnXaY7b2C0A" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MEF-ENNI%20CLI%20Commands.109.4.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MEF-ENNI%20CLI%20Commands.109.1.html#wwconnect_header">CHAPTER 7	MEF-ENNI Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">oep mapping table</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1051784" class="Heading1NewPage"><span></span>oep mapping table</div><div id="ww1051785" class="Body"><span></span>Use this command to create the oep-mapping table.The CLI will change the mode to OEP_MAP_MODE.</div><div id="ww1051786" class="Body"><span></span>Use the no command to delete the oep-mapping table</div><div id="ww1051787" class="Heading3"><span></span>Command Syntax </div><div id="ww1051788" class="CmdMaster">oep mapping table WORD (bridge &lt;1-32&gt;|)</div><div id="ww1051789" class="CmdMaster">no oep mapping table WORD (bridge &lt;1-32&gt;|)</div><div id="ww1051790" class="Heading3"><span></span>Parameters</div><div id="ww1051791" class="CmdHead1">WORD</div><div id="ww1051792" class="Cmd1">Specify the OEP mapping table name</div><div id="ww1051793" class="CmdHead1">&lt;1-32&gt;</div><div id="ww1051794" class="Cmd1">Bridge group for bridging</div><div id="ww1051795" class="Heading3"><span></span>Command Mode</div><div id="ww1051796" class="Body"><span></span>Configuration Mode</div><div id="ww1051797" class="Heading3"><span></span>Example</div><div id="ww1052998" class="CmdExample">(config)#vlan database </div><div id="ww1052999" class="CmdExample">(config-vlan)#vlan 2 type service multipoint-multipoint bridge 1 state enable </div><div id="ww1053000" class="CmdExample">(config-vlan)#vlan 3 type service multipoint-multipoint bridge 1 state enable </div><div id="ww1053001" class="CmdExample">(config-vlan)#vlan 4 type service multipoint-multipoint bridge 1 state enable </div><div id="ww1053002" class="CmdExample">(config-vlan)#vlan 5 type service multipoint-multipoint bridge 1 state enable </div><div id="ww1053003" class="CmdExample">(config-vlan)#vlan 6 type service multipoint-multipoint bridge 1 state enable</div><div id="ww1053004" class="CmdExample">(config-vlan)#ethernet svlan 6 ovc-id ovc1 oep-id oep1 bridge 1 </div><div id="ww1053005" class="CmdExample">(config-vlan)#ex</div><div id="ww1051780" class="CmdExample">(config)#oep mapping table </div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

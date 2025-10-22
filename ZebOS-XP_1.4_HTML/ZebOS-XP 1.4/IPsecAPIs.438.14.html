@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ipsec_esp_transform_set_create</title><link rel="Prev" href="IPsecAPIs.438.13.html" title="Previous"><link rel="Next" href="IPsecAPIs.438.15.html" title="Next"><link rel="StyleSheet" href="css/IPsecAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/IPsecAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/IPsecAPIs.438.14.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="puqJxUJ5RXqjjnjEsiOEqyw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/IPsecAPIs.438.14.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.432.2.html#wwconnect_header">Network Services Module Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/IPsecAPIs.438.01.html#wwconnect_header">CHAPTER 5	Internet Protocol Security API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/IPsecAPIs.438.07.html#wwconnect_header">Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ipsec_esp_transform_set_create</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1212045" class="Heading2"><span></span>ipsec_esp_transform_set_create</div><div id="ww1212124" class="Body"><span></span>This function creates a Transform Set with the specified ESP Encryption and Authentication algorithm.</div><div id="ww1212163" class="Heading3"><span></span>Syntax</div><div id="ww1212176" class="PseudoCode"><span></span>struct ipsec_transform_set *</div><div id="ww1215868" class="PseudoCode"><span></span>ipsec_esp_transform_set_create (u_int32_t vr_id, char transform_set_name[IPSEC_CONFIG_NAME_LEN],</div><div id="ww1215869" class="PseudoCode"><span></span>                                s_int32_t esp_auth_type,</div><div id="ww1215870" class="PseudoCode"><span></span>                                s_int32_t esp_enc_type)</div><div id="ww1215859" class="PseudoCode"><span></span>&nbsp;</div><div id="ww1212168" class="Heading3"><span></span>Input Parameters</div><div id="ww1212131" class="CmdHead1">vr_id </div><div id="ww1215912" class="Cmd1">                       Virtual router ID.</div><div id="ww1215913" class="CmdHead1">IPSEC_CONFIG_NAME_LEN</div><div id="ww1215914" class="Cmd1">          Transform set length (128).</div><div id="ww1215907" class="CmdHead1">esp_auth_type</div><div id="ww1212240" class="Cmd1">                        ESP authentication type.</div><div id="ww1212241" class="CmdHead1">esp_enc_type</div><div id="ww1212138" class="Cmd1">                        ESP encryption type.</div><div id="ww1212141" class="Heading3"><span></span>Output Parameters</div><div id="ww1212142" class="Body"><span></span>None</div><div id="ww1212143" class="Heading3"><span></span>Return Values</div><div id="ww1212144" class="Body"><span></span><span class="hypertext"><a href="../ZebOS-XP%201.4/IPsecAPIs.438.05.html#wwconnect_header" title="ipsec_transform_set">ipsec_transform_set</a></span> structure when the function is successful.</div><div id="ww1212145" class="Body"><span></span>NULL when the function fails.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

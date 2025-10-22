@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>PIM-SM Configuration</title><link rel="Prev" href="PIMSM_Config.391.03.html" title="Previous"><link rel="Next" href="PIMSM_Config.391.05.html" title="Next"><link rel="StyleSheet" href="css/PIMSM_Config.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PIMSM_Config_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PIMSM_Config.391.04.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pLJq5_002bPv5zVYfoN_002fZQ1HMlA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PIMSM_Config.391.04.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.389.2.html#wwconnect_header">Multicast Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PIMSM_Config.391.01.html#wwconnect_header">CHAPTER 1	 PIM Sparse Mode Configuration</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">PIM-SM Configuration</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1041404" class="Heading1NewPage"><span></span>PIM-SM Configuration</div><div id="ww1041406" class="Body"><span></span>PIM-SM is a soft-state protocol. The required steps to configure PIM-SM are the following:</div><div id="ww1064459" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Enable IP multicast on each PIM router (see <span class="hypertext"><a href="../ZebOS-XP%201.4/PIMSM_Config.391.06.html#wwconnect_header" title="Enabling IP Multicast Routing">Enabling IP Multicast Routing</a></span>)</div><div id="ww1068045" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Enable PIM-SM on the desired interfaces (see <span class="hypertext"><a href="../ZebOS-XP%201.4/PIMSM_Config.391.08.html#wwconnect_header" title="Enable PIM-SM on an Interface">Enable PIM-SM on an Interface</a></span>)</div><div id="ww1068051" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Configure the RP statically (see <span class="hypertext"><a href="../ZebOS-XP%201.4/PIMSM_Config.391.09.html#wwconnect_header" title="Configuring Rendezvous Point Statically">Configuring Rendezvous Point Statically</a></span> or dynamically (see <span class="hypertext"><a href="../ZebOS-XP%201.4/PIMSM_Config.391.10.html#wwconnect_header" title="Configure Rendezvous Point Dynamically Using Bootstrap Router Method">Configure Rendezvous Point Dynamically Using Bootstrap Router Method</a></span>) depending on which method you use)</div><div id="ww1064516" class="Body"><span></span>All multicast group states are dynamically maintained as the result of IGMP <span class="Parameter">Report/Leave</span> and PIM <span class="Parameter">Join/Prune</span> messages.</div><div id="ww1041414" class="Body"><span></span>This section provides the steps to configure the PIM-SM feature. Configuration steps and examples are used for two relevant scenarios. </div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

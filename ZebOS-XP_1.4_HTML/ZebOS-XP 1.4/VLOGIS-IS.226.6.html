@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Set Virtual Router Context</title><link rel="Prev" href="VLOGIS-IS.226.5.html" title="Previous"><link rel="Next" href="VLOGIS-IS.226.7.html" title="Next"><link rel="StyleSheet" href="css/VLOGIS-IS.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VLOGIS-IS_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VLOGIS-IS.226.6.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="puqBlTT6r0O_002fOh8wEJi1TPg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VLOGIS-IS.226.6.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.218.2.html#wwconnect_header">Intermediate System to Intermediate System Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLOGIS-IS.226.1.html#wwconnect_header">CHAPTER 7	VLOG Support</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLOGIS-IS.226.5.html#wwconnect_header">VLOG Support in IS-IS</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Set Virtual Router Context</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww999588" class="Heading2"><span></span>Set Virtual Router Context</div><div id="ww999589" class="Body"><span></span>To make all VR debug commands context-specific, the following macro is called:</div><div id="ww999590" class="PseudoCode"><span></span>#define LIB_GLOB_SET_VR_CONTEXT(LIB_GLOB, VR_CXT) \</div><div id="ww999591" class="PseudoCode"><span></span>  do {                                            \</div><div id="ww999592" class="PseudoCode"><span></span>    ((LIB_GLOB)-&gt;vr_in_cxt) = (VR_CXT);           \</div><div id="ww999593" class="PseudoCode"><span></span>  } while (0)</div><div id="ww999594" class="Body"><span></span>This macro is defined in lib.h. It passes arguments in <span class="Command">lib_global (ZG)</span> and the pointer for binding VR from <span class="Command">isis_master</span>. This sets the VR context (<span class="Command">VR_CXT</span>) in lib_globals (<span class="Command">LIB_GLOB</span>). To set VR context for all internal or external events, it is necessary to identify specific events that can occur in the IS-IS system, and need to be modified or extended to support VR in IS-IS. When a specified event occurs, a determination is made as to whether a particular debug option is enabled in the isis_master database. If the debug option is enabled, the debug message (error, warning, informational) is displayed using either the <span class="Command">zlog_info</span>, <span class="Command">zlog_err</span> or <span class="Command">zlog_warn </span>function<span class="Command">,</span> which redirects the message to <span class="Command">VLOGD</span>. The VLOG module is fully responsible for displaying debug messages to the terminals or log files for VR-specific debugging.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

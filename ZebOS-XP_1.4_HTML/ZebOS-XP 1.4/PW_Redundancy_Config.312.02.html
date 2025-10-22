@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Overview</title><link rel="Prev" href="PW_Redundancy_Config.312.01.html" title="Previous"><link rel="Next" href="PW_Redundancy_Config.312.03.html" title="Next"><link rel="StyleSheet" href="css/PW_Redundancy_Config.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PW_Redundancy_Config_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PW_Redundancy_Config.312.02.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN_002bGJzCGy7eaLYx9q0O70b2w" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PW_Redundancy_Config.312.02.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.295.2.html#wwconnect_header">Multi-Protocol Label Switching Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PW_Redundancy_Config.312.01.html#wwconnect_header">CHAPTER 16	PW Redundancy Configuration</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Overview</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1025185" class="Heading1"><span></span>Overview</div><div id="ww999641" class="Body"><span></span>In a single-segment pseudowire (SS-PW) application, the PSN (packet switched network) layer usually provides protection for the PW. One way is by using an RSVP LSP with FRR (Fast Reroute) backup; another way is an end-to-end backup LSP (Label Switched Path). However, there are some applications where the backup PW terminates on a different target PE node, so PSN protection methods cannot protect against failure of either the target PE (provider edge) node or a remote Access Circuit (AC). It is also important to an operator that a particular PW is preferred, for example, the one with the least latency.</div><div id="ww1010693" class="Body"><span></span>PW redundancy supports Label Distribution Protocol (LDP) PW and manual switchover between primary PW and secondary PW in MTU-s. In the case of PW applications, the PSN layer can provide the protection for PW. Occasionally, a TE (traffic-engineered) LSP signaled by RSVP-TE can be used as a PSN tunnel for a PW. In this scenario, TE can provide FRR to protect the end-to-end LSP in the PSN layer.</div><div id="ww1010681" class="Body"><span></span>FRR-based protection schemes cannot protect against failure of PE nodes and access circuits. However, PW redundancy can protect against these failures. Multi-homed CE (customer edge) devices can be connect between two PE nodes through two access circuits to provide protection. In case of Hierarchical VPLS (HVPLS), the MTU-s can create spoke circuits at the PEs. Any one can be used to protect another.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

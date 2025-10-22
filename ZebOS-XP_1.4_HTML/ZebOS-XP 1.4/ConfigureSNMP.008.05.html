@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Enable AgentX in the Source Code</title><link rel="Prev" href="ConfigureSNMP.008.04.html" title="Previous"><link rel="Next" href="ConfigureSNMP.008.06.html" title="Next"><link rel="StyleSheet" href="css/ConfigureSNMP.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ConfigureSNMP_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ConfigureSNMP.008.05.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pY9kpL0ywAD1udcAK_002bj272Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ConfigureSNMP.008.05.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Titlepage.001.2.html#wwconnect_header">ZebOS-XP Install Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ConfigureSNMP.008.01.html#wwconnect_header">Appendix D	Configure SNMP</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ConfigureSNMP.008.02.html#wwconnect_header">Obtain and Install SNMP</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Enable AgentX in the Source Code</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww952584" class="Heading2"><span></span>Enable AgentX in the Source Code</div><div id="ww969351" class="NumberedSpaced"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">1.	</span></span>Install the router software on the machine and unzip the source-code tar file.</div><div id="ww969353" class="NumberedSpaced"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">2.	</span></span>Change to the ZebOS-XP directory, run configure with <span class="Parameter">Agentx</span> enabled (apart from the other options) and compile the code:</div><div id="ww969354" class="Pseudocode1"><span></span><span class="Parameter">./configure --enable-agentx</span></div><div id="ww975099" class="NumberedSpaced"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">3.	</span></span>Change directory to <span class="Parameter">platform/PLATFORM, </span>where <span class="Parameter">PLATFORM</span> is the OS being used, for example:</div><div id="ww975100" class="Pseudocode1"><span></span>cd platform/LINUX</div><div id="ww975108" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">4.	</span></span>Compile the code by entering these (this) command(s):</div><div id="ww975109" class="Pseudocode1"><span></span>make all</div><div id="ww975110" class="Pseudocode1"><span></span>make install</div><div id="ww975118" class="Note1"><span class="WebWorks_Number" style="width: 36pt"><span>Note:	</span></span>If you do not enable AgentX, the SNMP code is built with <span class="Description">SMUX</span> enabled by default.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

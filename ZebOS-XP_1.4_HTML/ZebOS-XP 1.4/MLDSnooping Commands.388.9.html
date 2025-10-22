@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>show mld snooping statistics</title><link rel="Prev" href="MLDSnooping%20Commands.388.8.html" title="Previous"><link rel="Next" href="titlepage.389.1.html" title="Next"><link rel="StyleSheet" href="css/MLDSnooping%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MLDSnooping%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MLDSnooping%20Commands.388.9.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN6auX0Ygf3e9fLsWiFYc_002b3g" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MLDSnooping%20Commands.388.9.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.381.2.html#wwconnect_header">Multicast Routing Information Base Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MLDSnooping%20Commands.388.1.html#wwconnect_header">CHAPTER 6	L2 MLD Snooping Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">show mld snooping statistics</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1059985" class="Heading1NewPage"><span></span>show mld snooping statistics</div><div id="ww1063033" class="Body"><span></span>Use this command to display MLD Snooping statistics data.</div><div id="ww1059987" class="Heading3"><span></span>Command Syntax</div><div id="ww1076672" class="CmdMaster">show mld snooping statistics interface IFNAME</div><div id="ww1076686" class="CmdMaster">show mld (vrf NAME|) snooping statistics interface IFNAME</div><div id="ww1077993" class="Heading3"><span></span>Parameters</div><div id="ww1078002" class="CmdHead1">vrf</div><div id="ww1078003" class="Cmd1">Indicates the <span class="Command">vrf</span> keyword.</div><div id="ww1078004" class="CmdHead2">NAME</div><div id="ww1078005" class="Cmd1">Displays the VRF name.</div><div id="ww1077996" class="CmdHead1"><span class="Parameter">IFNAME</span></div><div id="ww1073165" class="Cmd1">The name of the VLAN interface</div><div id="ww1073166" class="Heading3"><span></span>Command Mode</div><div id="ww1073167" class="Body"><span></span>Exec mode and Privileged Exec mode</div><div id="ww1059992" class="Heading3"><span></span>Example</div><div id="ww1063042" class="Body"><span></span>The following displays MLDv2 statistical information for the ge10 interface.</div><div id="ww1059993" class="CmdExample2">#show mld snooping statistics ge10</div><div id="ww1063050" class="CmdExample2">Interface:      ge10</div><div id="ww1063051" class="CmdExample2">Group:          ff1e::10</div><div id="ww1063052" class="CmdExample2">Uptime:         00:00:13</div><div id="ww1063053" class="CmdExample2">Group mode:     Include</div><div id="ww1063054" class="CmdExample2">Last reporter:  fe80::202:b3ff:fef0:79d8</div><div id="ww1063055" class="CmdExample2">Group source list: (R - Remote, M - SSM Mapping)</div><div id="ww1063056" class="CmdExample2">  Source Address        Uptime    v2 Exp    Fwd  Flags</div><div id="ww1063057" class="CmdExample2">  7ffe::4               00:00:13  00:04:06  Yes  R</div><div id="ww1078711" class="CmdExample">#</div><div id="ww1077706" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

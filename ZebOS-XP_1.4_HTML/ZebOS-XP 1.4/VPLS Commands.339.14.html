@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ve-range</title><link rel="Prev" href="VPLS%20Commands.339.13.html" title="Previous"><link rel="Next" href="VPLS%20Commands.339.15.html" title="Next"><link rel="StyleSheet" href="css/VPLS%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VPLS%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VPLS%20Commands.339.14.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pJL76ij7AKGcWLqAMvUegqA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VPLS%20Commands.339.14.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.333.2.html#wwconnect_header">Multi-Protocol Label Switching Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VPLS%20Commands.339.01.html#wwconnect_header">CHAPTER 5	Virtual Private LAN Service Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ve-range</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1068100" class="Heading1NewPage"><span></span>ve-range</div><div id="ww1068120" class="Body"><span></span>Use this command to identify a range of VE IDs for a VPLS in an autonomous system (AS).</div><div id="ww1075144" class="Body"><span></span>A label block, defined by a Label Base (LB) and a VE block size (VBS), is a contiguous set of labels {LB, LB+1, ..., LB+VBS-1}. The ve-range command sets the block size in multiples of eight.</div><div id="ww1071098" class="Body"><span></span>Use the <span class="Command">no</span> parameter with this command to remove a VPLS VE range size.</div><div id="ww1070578" class="Heading3"><span></span>Command Syntax</div><div id="ww1071075" class="CmdMaster">ve-range &lt;8-128&gt;</div><div id="ww1071173" class="CmdMaster">no ve-range &lt;8-128&gt;</div><div id="ww1070594" class="Heading3"><span></span>Parameters</div><div id="ww1070606" class="CmdHead1">&lt;8-128&gt;</div><div id="ww1070617" class="Cmd1">VE range size as a 2-octet integer</div><div id="ww1070698" class="Note2"><span class="WebWorks_Number" style="width: 36pt"><span>Note:	</span></span>Ranges assigned must be given in multiples of eight.</div><div id="ww1070757" class="Heading3"><span></span>Command Mode</div><div id="ww1070774" class="Body"><span></span>VPLS Signaling mode</div><div id="ww1070798" class="Heading3"><span></span>Examples</div><div id="ww1075359" class="CmdExample">#configure terminal</div><div id="ww1075360" class="CmdExample">(config)# mpls vpls test 100</div><div id="ww1075361" class="CmdExample">(config-vpls)#signaling bgp</div><div id="ww1075362" class="CmdExample">(config-vpls-sig)# ve-range 32</div><div id="ww1075363" class="CmdExample">(config-vpls-sig)#exit </div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

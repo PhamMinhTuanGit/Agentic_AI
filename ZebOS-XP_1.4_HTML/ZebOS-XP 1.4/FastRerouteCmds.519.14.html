@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>fast-reroute bandwidth</title><link rel="Prev" href="FastRerouteCmds.519.13.html" title="Previous"><link rel="Next" href="FastRerouteCmds.519.15.html" title="Next"><link rel="StyleSheet" href="css/FastRerouteCmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/FastRerouteCmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/FastRerouteCmds.519.14.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN9jvVvYhgmqFyrznc35sL5A" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/FastRerouteCmds.519.14.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.515.2.html#wwconnect_header">RSVP-TE Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/FastRerouteCmds.519.01.html#wwconnect_header">CHAPTER 3	Fast Reroute Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">fast-reroute bandwidth</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww566257" class="Heading1NewPage"><span></span>fast-reroute bandwidth</div><div id="ww565508" class="Body"><span></span>Use this command to configure bandwidth to reserve for fast reroute on a P2MP LSP.</div><div id="ww570507" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>This command is only applicable to primary P2MP LSPs.</div><div id="ww565673" class="Body"><span></span>Use the <span class="Command">no</span> parameter with this command to remove the reserved bandwidth.</div><div id="ww565546" class="Heading3"><span></span>Command Syntax</div><div id="ww565547" class="CmdMaster">fast-reroute bandwidth BANDWIDTH</div><div id="ww567110" class="CmdMaster">no fast-reroute bandwidth</div><div id="ww565548" class="Heading3"><span></span>Parameters</div><div id="ww565549" class="CmdHead1">BANDWIDTH</div><div id="ww565550" class="Cmd1">Set a bandwidth in the range of 1 to 10000000000 in bits per second. Usable units include kilobits (k), megabits (m), and gigabits (g).</div><div id="ww565551" class="Heading3"><span></span>Command Mode</div><div id="ww565552" class="Body"><span></span>P2MP LSP mode</div><div id="ww565553" class="Heading3"><span></span>Examples</div><div id="ww571944" class="CmdExample">#configure terminal</div><div id="ww571965" class="CmdExample">(config)#rsvp-trunk T1 ipv4 p2mp</div><div id="ww571945" class="CmdExample">(config-p2mp-trunk)#primary-lsp</div><div id="ww571946" class="CmdExample">(config-p2mp-lsp)#fast-reroute protection facility</div><div id="ww571947" class="CmdExample">(config-p2mp-lsp)#</div><div id="ww571948" class="CmdExample">&nbsp;</div><div id="ww571949" class="CmdExample">(config-p2mp-lsp)#no fast-reroute protection facility</div><div id="ww568818" class="Writer_Comment"><span></span>&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

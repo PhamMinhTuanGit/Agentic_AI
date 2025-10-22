@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bridge protocol mstp</title><link rel="Prev" href="SpanningTreeCLIcmds.253.07.html" title="Previous"><link rel="Next" href="SpanningTreeCLIcmds.253.09.html" title="Next"><link rel="StyleSheet" href="css/SpanningTreeCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SpanningTreeCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.08.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pytoGpffdrZeqMis4CX1EtA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.08.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SpanningTreeCLIcmds.253.01.html#wwconnect_header">CHAPTER 4	Spanning Tree Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bridge protocol mstp</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww535248" class="Heading1NewPage"><span></span>bridge protocol mstp</div><div id="ww535249" class="Body"><span></span>Use this command to create a multiple spanning-tree protocol (MSTP) bridge of a specified parameter. This command creates an instance of the spanning tree and associates the VLANs specified with that instance.</div><div id="ww535250" class="Body"><span></span>The MSTP bridges can have different spanning-tree topologies for different VLANs inside a region of “similar” MSTP bridges. The multiple spanning tree protocol, like the rapid spanning tree protocol, provides rapid reconfiguration capability, while providing load balancing ability. A bridge created with this command forms its own separate region unless it is added explicitly to a region using the <span class="Command">region name</span> command.</div><div id="ww544206" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to remove the bridge.</div><div id="ww544191" class="Heading3"><span></span>Command Syntax</div><div id="ww557023" class="CmdMaster">bridge &lt;1-32&gt; protocol mstp (ring|)</div><div id="ww557024" class="CmdMaster">no bridge &lt;1-32&gt;</div><div id="ww557025" class="Heading3"><span></span>Parameters</div><div id="ww535257" class="CmdHead1">&lt;1-32&gt;</div><div id="ww535258" class="Cmd1">Specify the bridge group ID.</div><div id="ww535259" class="CmdHead1">ring</div><div id="ww535260" class="Cmd1">(Optional) Enable rapid ring spanning-tree.</div><div id="ww535261" class="Heading3"><span></span>Command Mode</div><div id="ww535262" class="Body"><span></span>Configure mode</div><div id="ww535263" class="Heading3"><span></span>Examples</div><div id="ww535264" class="CmdExample">#configure terminal</div><div id="ww535265" class="CmdExample">(config)#bridge 2 protocol mstp</div><div id="ww535266" class="CmdExample">&nbsp;</div><div id="ww535267" class="CmdExample">#configure terminal</div><div id="ww535268" class="CmdExample">(config)#bridge 2 protocol mstp ring</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>set gvrp timer</title><link rel="Prev" href="GVRPCLIcmds.259.08.html" title="Previous"><link rel="Next" href="GVRPCLIcmds.259.10.html" title="Next"><link rel="StyleSheet" href="css/GVRPCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/GVRPCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/GVRPCLIcmds.259.09.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN_002fZ6jX9yomGmBINRcYTdbkw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/GVRPCLIcmds.259.09.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/GVRPCLIcmds.259.01.html#wwconnect_header">CHAPTER 10	GVRP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">set gvrp timer</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww999722" class="Heading1NewPage"><span></span>set gvrp timer</div><div id="ww999723" class="Body"><span></span>Use this command to set the GVRP timers.</div><div id="ww999724" class="Heading3"><span></span>Command Syntax</div><div id="ww1002430" class="CmdMaster">set gvrp timer join TIMER_VALUE IF_NAME</div><div id="ww1006710" class="CmdMaster">set gvrp timer leave TIMER_VALUE IF_NAME</div><div id="ww1006743" class="CmdMaster">set gvrp timer leaveall TIMER_VALUE IF_NAME</div><div id="ww1002392" class="Heading3"><span></span>Parameters</div><div id="ww1003354" class="CmdHead1">join</div><div id="ww1003355" class="Cmd1">Specify the timer for joining the group.</div><div id="ww1003356" class="CmdHead1">leave</div><div id="ww1003357" class="Cmd1">Specify the timer for leaving a group.</div><div id="ww1003358" class="CmdHead1">leaveall</div><div id="ww1003359" class="Cmd1">Specify the timer for leaving all groups.</div><div id="ww1003360" class="CmdHead2">TIMER_VALUE</div><div id="ww1003361" class="Cmd1">Specify the timer value in hundredths of a second.</div><div id="ww1003362" class="CmdHead2">IF_NAME</div><div id="ww1003363" class="Cmd1">Specify the name of the interface.</div><div id="ww1002402" class="Heading3"><span></span>Command Mode</div><div id="ww1002403" class="Body"><span></span>Configure mode</div><div id="ww999733" class="Heading3"><span></span>Examples</div><div id="ww999734" class="CmdExample">#configure terminal</div><div id="ww999735" class="CmdExample">(config)#set gvrp timer leave 245 eth0</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

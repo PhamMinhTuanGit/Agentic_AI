@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>igmp snooping querier</title><link rel="Prev" href="IGMPSnooping%20Commands.387.4.html" title="Previous"><link rel="Next" href="IGMPSnooping%20Commands.387.6.html" title="Next"><link rel="StyleSheet" href="css/IGMPSnooping%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/IGMPSnooping%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/IGMPSnooping%20Commands.387.5.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pl8vCYGq_002fnmd1ay_002fPsiEjdQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/IGMPSnooping%20Commands.387.5.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.381.2.html#wwconnect_header">Multicast Routing Information Base Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/IGMPSnooping%20Commands.387.1.html#wwconnect_header">CHAPTER 5	L2 IGMP Snooping Multicast Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">igmp snooping querier</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1059135" class="Heading1NewPage"><span></span>igmp snooping querier</div><div id="ww1061587" class="Body"><span></span>Use this command to enable IGMP snooping querier functionality on a VLAN when IGMP is not enabled on the particular VLAN. When enabled, the IGMP Snooping querier sends out periodic IGMP queries for all interfaces on that VLAN. </div><div id="ww1072793" class="Body"><span></span>The IGMP Snooping querier uses the 0.0.0.0 source IP address, because it only masquerades as a proxy IGMP querier for faster network convergence. It does not start, or automatically cease, the IGMP Querier operation if it detects query message(s) from a multicast router. It restarts as the IGMP Snooping querier if no queries are seen within the other querier interval.</div><div id="ww1059137" class="Body"><span></span>Use the <span style="font-family: &quot;Courier New&quot;; font-size: 10.5pt">no</span> parameter with this command to disable IGMP querier configuration.</div><div id="ww1059138" class="Heading3"><span></span>Command Syntax</div><div id="ww1059139" class="CmdMaster">igmp snooping querier</div><div id="ww1059140" class="CmdMaster">no igmp snooping querier</div><div id="ww1072762" class="Heading3"><span></span>Default</div><div id="ww1090744" class="Body"><span></span>By default, Querier is disabled </div><div id="ww1090730" class="Heading3"><span></span>Parameters</div><div id="ww1072840" class="Body"><span></span>None</div><div id="ww1072767" class="Heading3"><span></span>Command Mode</div><div id="ww1072768" class="Body"><span></span>Interface mode for VLAN interface.</div><div id="ww1059153" class="Heading3"><span></span>Example</div><div id="ww1059154" class="CmdExample">#configure terminal</div><div id="ww1059155" class="CmdExample">(config)#interface vlan1.1</div><div id="ww1059156" class="CmdExample">(config-if)#igmp snooping querier</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

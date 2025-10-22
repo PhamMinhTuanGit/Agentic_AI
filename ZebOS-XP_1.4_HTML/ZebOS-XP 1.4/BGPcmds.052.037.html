@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bgp scan-time</title><link rel="Prev" href="BGPcmds.052.036.html" title="Previous"><link rel="Next" href="BGPcmds.052.038.html" title="Next"><link rel="StyleSheet" href="css/BGPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BGPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BGPcmds.052.037.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pJ5zMRCcPd2ePdiCBuaOKvQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BGPcmds.052.037.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.049.2.html#wwconnect_header">Border Gateway Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGPcmds.052.001.html#wwconnect_header">CHAPTER 2	BGP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bgp scan-time</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1248984" class="Heading1NewPage"><span></span>bgp scan-time</div><div id="ww1282003" class="Body"><span></span>Use this command to configure scanning intervals of BGP routers. This interval is the period after which router checks the validity of the routes in its database. To disable BGP scanning, set the scan-time interval to 0 seconds. </div><div id="ww1248986" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to disable this function.</div><div id="ww1335721" class="Heading3"><span></span>Command Syntax</div><div id="ww1335722" class="CmdMaster">bgp scan-time &lt;0-60&gt;</div><div id="ww1394472" class="CmdMaster">no bgp scan-time</div><div id="ww1449760" class="CmdMaster">no bgp scan-time &lt;0-60&gt;</div><div id="ww1281978" class="Heading3"><span></span>Parameter</div><div id="ww1281979" class="CmdHead1">&lt;0-60&gt;</div><div id="ww1298984" class="Cmd1">Scanning interval in seconds</div><div id="ww1281980" class="Heading3"><span></span>Default</div><div id="ww1281951" class="Body"><span></span>The default scan-time interval is 60 seconds. </div><div id="ww1281952" class="Heading3"><span></span>Command Mode</div><div id="ww1281953" class="Body"><span></span>Router mode</div><div id="ww1248995" class="Heading3"><span></span>Examples</div><div id="ww1248996" class="CmdExample">#configure terminal</div><div id="ww1248997" class="CmdExample">(config)#router bgp 100</div><div id="ww1472234" class="CmdExample">(config-router)#bgp scan-time 10</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

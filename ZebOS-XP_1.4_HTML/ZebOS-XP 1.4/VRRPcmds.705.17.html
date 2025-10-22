@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>vrrp vmac</title><link rel="Prev" href="VRRPcmds.705.16.html" title="Previous"><link rel="Next" href="VRRPv6cmds.706.01.html" title="Next"><link rel="StyleSheet" href="css/VRRPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VRRPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VRRPcmds.705.17.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pAYkcteA5MBjeZLYSuBe7PQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VRRPcmds.705.17.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.702.2.html#wwconnect_header">Virtual Router Redundancy Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRRPcmds.705.01.html#wwconnect_header">CHAPTER 2	VRRP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">vrrp vmac</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1044532" class="Heading1NewPage"><span></span>vrrp vmac</div><div id="ww1032509" class="Body"><span></span>Use this command to enable or disable Virtual MAC (VMAC).</div><div id="ww1037287" class="Body"><span></span>This command affects all VRRP groups in a router. On a single network segment, multiple VRRP groups can be configured, each using a different VMAC. The use of VMAC addressing allows for faster switchover when a backup router assumes the master role. When this command is used to enable a VMAC, the virtual router forwards packets with a special-purpose multicast VMAC address (0:0:5e:0:01:&lt;VR ID&gt;). Otherwise, it forwards with is interface’s physical address.</div><div id="ww1037279" class="Body"><span></span>The VMAC address is assigned to a router interface at the time the VRRP group is enabled in the router.</div><div id="ww1032510" class="Heading3"><span></span>Command Syntax</div><div id="ww1032511" class="CmdMaster">vrrp vmac (enable|disable)</div><div id="ww1037242" class="Heading3"><span></span>Parameters</div><div id="ww1032512" class="CmdHead1">enable</div><div id="ww1037259" class="Cmd1">Enable virtual MAC addressing.</div><div id="ww1032513" class="CmdHead1">disable</div><div id="ww1037266" class="Cmd1">Disable virtual MAC addressing and use physical MAC addressing.</div><div id="ww1032514" class="Heading3"><span></span>Command Mode</div><div id="ww1032515" class="Body"><span></span>Configure mode</div><div id="ww1032519" class="Heading3"><span></span>Example</div><div id="ww1033422" class="Body"><span></span>The example below shows how to enable a virtual MAC address on the router.</div><div id="ww1032520" class="CmdExample">#configure terminal</div><div id="ww1032521" class="CmdExample">(config)#vrrp vmac enable</div><div id="ww1033444" class="Body"><span></span>The example below shows how to disable a virtual MAC address on the router.</div><div id="ww1033429" class="CmdExample">#configure terminal</div><div id="ww1033436" class="CmdExample">(config)#vrrp vmac disable</div><div id="ww1034527" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

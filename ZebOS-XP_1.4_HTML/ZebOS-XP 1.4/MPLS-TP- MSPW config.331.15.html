@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Validation</title><link rel="Prev" href="MPLS-TP-%20MSPW%20config.331.14.html" title="Previous"><link rel="Next" href="MPLSTP-VPLS-cfg.332.01.html" title="Next"><link rel="StyleSheet" href="css/MPLS-TP-%20MSPW%20config.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MPLS-TP-%20MSPW%20config_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MPLS-TP-%20MSPW%20config.331.15.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="piHP5fALOK1kL51elVQ_002fQ9g" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MPLS-TP-%20MSPW%20config.331.15.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.295.2.html#wwconnect_header">Multi-Protocol Label Switching Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP-%20MSPW%20config.331.01.html#wwconnect_header">CHAPTER 35	MPLS-TP MSPW Configurations</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP-%20MSPW%20config.331.13.html#wwconnect_header">Configuration of MSPW</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Validation</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1094229" class="Heading2"><span></span>Validation</div><div id="ww1094412" class="Heading3"><span></span>S-PE</div><div id="ww1094414" class="CmdExample">#show mpls ms-pw</div><div id="ww1094415" class="CmdExample">MS-PW  VC_TYPE  Segment-1  VC1-ID  Segment-2  VC2-ID</div><div id="ww1094416" class="CmdExample">sp1    MPLS-TP     vc1      101       vc2        102</div><div id="ww1094418" class="CmdExample">&nbsp;</div><div id="ww1094419" class="CmdExample">#show mpls ms-pw sp1</div><div id="ww1094420" class="CmdExample">MS-PW Status: UP</div><div id="ww1094421" class="CmdExample">VC1:              vc1       VC2:           vc2</div><div id="ww1094422" class="CmdExample">id:               101       id:            102</div><div id="ww1094423" class="CmdExample">Status:           UP        Status:           UP</div><div id="ww1094424" class="CmdExample">Endpoint:         1.1.1.1   Endpoint:      3.3.3.3</div><div id="ww1094425" class="CmdExample">Control Word:     0         Control Word:  0</div><div id="ww1094426" class="CmdExample">VC Type:          Ethernet  VC Type:       Ethernet</div><div id="ww1094427" class="CmdExample">Owner:            Manual    Owner:         Manual</div><div id="ww1094428" class="CmdExample">Role:             Active    Role:          Active</div><div id="ww1094430" class="CmdExample">&nbsp;</div><div id="ww1094431" class="CmdExample">#show mpls ms-pw sp1 vc-table</div><div id="ww1094432" class="CmdExample">In VC    vlan-id         in-lbl  nw-intf         out-lbl         status  tunnel-lbl</div><div id="ww1094433" class="CmdExample">vc1      N/A             200     eth1             210             Active         1100</div><div id="ww1094391" class="CmdExample">vc2      N/A             110     eth2             100             Active   </div><div id="ww1094998" class="CmdExample">2000</div><div id="ww1094407" class="Body"><span></span>&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

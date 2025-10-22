@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ptp-unicast</title><link rel="Prev" href="PTP-CLI.490.16.html" title="Previous"><link rel="Next" href="PTP-CLI.490.18.html" title="Next"><link rel="StyleSheet" href="css/PTP-CLI.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PTP-CLI_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PTP-CLI.490.17.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pw_002bz9onh6jA_002bua1LIeKQfmQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PTP-CLI.490.17.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.487.2.html#wwconnect_header">Precision Time Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PTP-CLI.490.01.html#wwconnect_header">CHAPTER 2	Precision Time Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ptp-unicast</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1373826" class="Heading1NewPage"><span></span>ptp-unicast</div><div id="ww1373827" class="Body"><span></span>Use this command to enable or disable PTP unicast on an interface.</div><div id="ww1381263" class="Body"><span></span>Before you give this command, you must have previously created a clock with the <span class="hypertext"><a href="../ZebOS-XP%201.4/PTP-CLI.490.16.html#wwconnect_header" title="ptp-clk">ptp-clk</a></span> command.</div><div id="ww1373828" class="Heading3"><span></span>Command Syntax</div><div id="ww1373829" class="CmdMaster">ptp-unicast-enable (max-table-size SIZE |)</div><div id="ww1373830" class="CmdMaster">ptp-unicast-disable</div><div id="ww1373831" class="Heading3"><span></span>Parameters</div><div id="ww1373832" class="CmdHead1">max-table-size</div><div id="ww1373833" class="Cmd1">Maximum size of the unicast neighbor table.</div><div id="ww1373834" class="CmdHead2">SIZE</div><div id="ww1373835" class="Cmd1">Maximum size of the unicast neighbor table &lt;5-50&gt;. The default value is 1.</div><div id="ww1373836" class="Heading3"><span></span>Command Mode</div><div id="ww1373837" class="Body"><span></span>PTP clock port configure mode</div><div id="ww1373838" class="Heading3"><span></span>Examples</div><div id="ww1373839" class="CmdExample">&gt;ena</div><div id="ww1373840" class="CmdExample">#config term</div><div id="ww1373841" class="CmdExample">Enter configuration commands, one per line.  End with CNTL/Z.</div><div id="ww1373842" class="CmdExample">(config)#interface eth0</div><div id="ww1373843" class="CmdExample">(config-if)#clock-port</div><div id="ww1373844" class="CmdExample">(config-clk-port)#ptp-unicast-enable max-table-size 20</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

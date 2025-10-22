@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>isis priority</title><link rel="Prev" href="ISIScmds.216.44.html" title="Previous"><link rel="Next" href="ISIScmds.216.46.html" title="Next"><link rel="StyleSheet" href="css/ISIScmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISIScmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISIScmds.216.45.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pq2jQzdPWsIDnqrGwkBVd_002fA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISIScmds.216.45.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.213.2.html#wwconnect_header">Intermediate System to Intermediate System Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISIScmds.216.01.html#wwconnect_header">CHAPTER 2	IS-IS Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">isis priority</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww512400" class="Heading1NewPage"><span></span>isis priority</div><div id="ww537483" class="Body"><span></span>Use this command to set the priority for LAN DIS election. This command changes the priority value in LAN ISIS Hello PDUs. A lower priority value is less preferred in DIS election, and a higher priority value is more preferred.</div><div id="ww537502" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>This command is not valid for Point-to-Point interface. </div><div id="ww537475" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter to set priority to the default.</div><div id="ww512425" class="Heading3"><span></span>Command Syntax </div><div id="ww561282" class="CmdMaster">isis priority &lt;0-127&gt; (level-1|level-2|)</div><div id="ww512504" class="CmdMaster">no isis priority (level-1|level-2|)</div><div id="ww564463" class="CmdMaster">no isis priority &lt;0-127&gt; (level-1|level-2|)</div><div id="ww537391" class="Heading3"><span></span>Parameters</div><div id="ww537392" class="CmdHead1">&lt;0-127&gt;</div><div id="ww543374" class="Cmd1">Priority value</div><div id="ww543357" class="CmdHead1">level-1</div><div id="ww543358" class="Cmd1">Specify a password for Level-1 hello PDUs.</div><div id="ww543359" class="CmdHead1">level-2</div><div id="ww543360" class="Cmd1">Specify a password for Level-2 hello PDUs.</div><div id="ww537395" class="Heading3"><span></span>Default</div><div id="ww537447" class="Body"><span></span>By default, ISIS uses 64 for the priority value, and the priority is applied to both level-1 and level-2.</div><div id="ww537397" class="Heading3"><span></span>Command Mode</div><div id="ww537398" class="Body"><span></span>Interface mode</div><div id="ww512439" class="Heading3"><span></span>Example </div><div id="ww512440" class="CmdExample">#configure terminal</div><div id="ww512441" class="CmdExample">(config)#interface eth0</div><div id="ww512442" class="CmdExample">(config-if)#isis priority 127</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

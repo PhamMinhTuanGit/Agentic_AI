@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Line Card</title><link rel="Prev" href="MPLS-TP%20OAM-Y1731.354.5.html" title="Previous"><link rel="Next" href="MPLS-TP%20OAM-Y1731.354.7.html" title="Next"><link rel="StyleSheet" href="css/MPLS-TP%20OAM-Y1731.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MPLS-TP%20OAM-Y1731_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MPLS-TP%20OAM-Y1731.354.6.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pxPpzuKMjU3_002bP2cqFwrvf4Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MPLS-TP%20OAM-Y1731.354.6.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.346.2.html#wwconnect_header">Multi-Protocol Label Switching Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP%20OAM-Y1731.354.1.html#wwconnect_header">CHAPTER 7	MPLS-TP OAM Y-1731 Support</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP%20OAM-Y1731.354.2.html#wwconnect_header">System Architecture</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Line Card</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1022728" class="Heading2"><span></span>Line Card</div><div id="ww1023715" class="Body"><span></span>The line card contains the major part of the Y.1731 based MPLS TP OAM. The line card OAM provides infrastructure to maintain MEG-related information to perform the various IETF MPLS TP OAM tasks. An existing MEG table in the line card stores both the IETF and ITU MEG entries. The type field in MEG entry determines whether the MEG is IETF MEG or ITU MEG.</div><div id="ww1022738" class="Body"><span></span>Similar to control card, the structure to store ITU MEG entities is defined inside library. The data structure that holds the information that is defined in OAMD. </div><div id="ww1023783" class="Body"><span></span>NSM module creates the MPLS TP tunnel and VC using the identifiers defined in draft-ietf-mpls-tp-itu-t-identifiers-03. An mpls-tp tunnel creates the source global-id, node-id, destination global-id, node-id, tunnel-number. Instead of global-ids, both CC and ICC is used. The key used while inserting and searching the tunnel inside the tunnel tree is the combination of source and destination identifiers, which is global-id and node-id.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

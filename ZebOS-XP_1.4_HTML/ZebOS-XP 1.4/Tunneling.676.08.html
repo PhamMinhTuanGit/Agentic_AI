@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>IPv6 Transition Tunnel</title><link rel="Prev" href="Tunneling.676.07.html" title="Previous"><link rel="Next" href="Tunneling.676.09.html" title="Next"><link rel="StyleSheet" href="css/Tunneling_3.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Tunneling_IE7_3.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Tunneling.676.08.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pjfwENNvs5nhFSTZ7UyH8Yw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Tunneling.676.08.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.662.2.html#wwconnect_header">Unicast Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Tunneling.676.01.html#wwconnect_header">CHAPTER 13	Tunneling and Transitioning</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">IPv6 Transition Tunnel</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1053771" class="Heading1"><span></span>IPv6 Transition Tunnel</div><div id="ww1053772" class="Body"><span></span>In this method of IPv6 transition, tunnels are enabled and configured statically. IPv4 and IPv6 addresses are manually assigned on both sides of the tunnel interface. To configure a tunnel interface, assign:</div><div id="ww1053773" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>an IPv4 address for reaching the local dual-stack router over the IPv4 network. For example, IPv4 address <span style="font-family: &quot;Courier New&quot;">192.168.1.1</span> is assigned on R1 as the tunnel source.</div><div id="ww1053774" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>an IPv4 address for reaching the dual-stack router at the other end of the tunnel over the IPv4 network. For example, <span style="font-family: &quot;Courier New&quot;">192.168.2.2 </span>is assigned on R1 as tunnel the destination.</div><div id="ww1053775" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>an IPv6 address locally on the tunnel interface. For example, the IPv6 address <span style="font-family: &quot;Courier New&quot;">3ffe:b00:ffff:2::1/64</span> is assigned on R1.</div><div id="ww1053779" class="Body"><span></span>R3 is configured similarly to allow forwarding of IPv6 packets over the IPv4 network.</div><div class="ww_skin_page_overflow"><div id="ww1055822" class="AnchorImage">.<img class="Default" src="../ZebOS-XP%201.4/images/IPv4%20Nework%20Tunnel.jpg" width="680" height="227" style="display: inline; left: 0.0; top: 0.0" alt=""></div></div><div id="ww1055836" class="FigureTitle"><span>Figure 13-120: </span>IPv6 Transition Tunnel</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ethernet cfm pbb-te server-ais</title><link rel="Prev" href="PBB-TE-CFM%20CLI%20Commands.114.13.html" title="Previous"><link rel="Next" href="PBB-TE-CFM%20CLI%20Commands.114.15.html" title="Next"><link rel="StyleSheet" href="css/PBB-TE-CFM%20CLI%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PBB-TE-CFM%20CLI%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PBB-TE-CFM%20CLI%20Commands.114.14.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN1JvMiabFBiI6Du2wwrD7qQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PBB-TE-CFM%20CLI%20Commands.114.14.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PBB-TE-CFM%20CLI%20Commands.114.01.html#wwconnect_header">CHAPTER 12	PBB-TE CFM Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ethernet cfm pbb-te server-ais</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1049954" class="Heading1NewPage"><span></span>ethernet cfm pbb-te server-ais</div><div id="ww1049955" class="Body"><span></span>Use this command to configure a MEP server for AIS.</div><div id="ww1049956" class="Heading3"><span></span>Command Syntax</div><div id="ww1049957" class="CmdMaster">ethernet cfm pbb-te server-ais status (enable|disable) level LEVEL<br>(interval TX_INTERVAL|) bridge backbone</div><div id="ww1049958" class="Heading3"><span></span>Parameters</div><div id="ww1049959" class="CmdHead1">status</div><div id="ww1049960" class="Cmd1">Set the status of a MEP server</div><div id="ww1049961" class="CmdHead2">disable</div><div id="ww1049962" class="Cmd1">Set to disable a MEP server for AIS</div><div id="ww1049963" class="CmdHead2">enable</div><div id="ww1049964" class="Cmd1">Set to enable MEP server for AIS</div><div id="ww1049965" class="CmdHead1">level</div><div id="ww1049966" class="Cmd1">The level at which AIS frames are to be sent.</div><div id="ww1049967" class="CmdHead2">LEVEL</div><div id="ww1049968" class="Cmd1">Set the level at which AIS frames are to be sent &lt;1-7&gt;.</div><div id="ww1049969" class="CmdHead1">interval</div><div id="ww1049970" class="Cmd1">The transmission interval for AIS frames.</div><div id="ww1049971" class="CmdHead2">TX_INTERVAL</div><div id="ww1049972" class="Cmd1">Set a transmission interval for AIS frames &lt;1-10&gt;.</div><div id="ww1049973" class="Heading3"><span></span>Command Mode</div><div id="ww1049974" class="Body"><span></span>Interface mode</div><div id="ww1049975" class="Heading3"><span></span>Examples</div><div id="ww1049976" class="CmdExample">(config)#interface eth1</div><div id="ww1049977" class="CmdExample">(config-if)#ethernet cfm pbb-te server-ais status disable level 1 interval 1 bridge backbone</div><div id="ww1049978" class="CmdExample">(config-if)#ethernet cfm pbb-te server-ais status enable level 1 bridge backbone</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

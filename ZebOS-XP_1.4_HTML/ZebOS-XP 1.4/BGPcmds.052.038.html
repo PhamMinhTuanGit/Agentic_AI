@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bgp update-delay</title><link rel="Prev" href="BGPcmds.052.037.html" title="Previous"><link rel="Next" href="BGPcmds.052.039.html" title="Next"><link rel="StyleSheet" href="css/BGPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BGPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BGPcmds.052.038.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pBQtdilbgpvRN3LO4pEjzYg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BGPcmds.052.038.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.049.2.html#wwconnect_header">Border Gateway Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGPcmds.052.001.html#wwconnect_header">CHAPTER 2	BGP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bgp update-delay</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1472242" class="Heading1NewPage"><span></span>bgp update-delay</div><div id="ww1472238" class="Body"><span></span>Use this command to specify the update-delay value for a graceful-restart capable router. The update-delay value is the maximum time a graceful-restart capable router, which is restarting, will defer route-selection and advertisements to all its graceful-restart capable neighbors. This maximum time starts from the instance the first neighbor attains established state after restart. The restarting router prematurely terminates this timer when end-of-rib markers are received from all its graceful-restart capable neighbors.</div><div id="ww1249002" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to revert to the default update-delay value.</div><div id="ww1249003" class="Heading3"><span></span>Command Syntax</div><div id="ww1277268" class="CmdMaster">bgp update-delay &lt;1-3600&gt;</div><div id="ww1441780" class="CmdMaster">no bgp update-delay</div><div id="ww1449783" class="CmdMaster">no bgp update-delay &lt;1-3600&gt;</div><div id="ww1441781" class="Heading3"><span></span>Parameters</div><div id="ww1367281" class="CmdHead2">&lt;1-3600&gt;</div><div id="ww1335766" class="Cmd1">Delay interval in seconds</div><div id="ww1282075" class="Heading3"><span></span>Default</div><div id="ww1282114" class="Body"><span></span>The default update-delay value is 120 seconds.</div><div id="ww1282059" class="Heading3"><span></span>Command Mode</div><div id="ww1282060" class="Body"><span></span>Router mode</div><div id="ww1249011" class="Heading3"><span></span>Example</div><div id="ww1249012" class="CmdExample">#configure terminal</div><div id="ww1249013" class="CmdExample">(config)#router bgp 10</div><div id="ww1450613" class="CmdExample">(config-router)#bgp update-delay 345</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ipv6 pim register-rate-limit</title><link rel="Prev" href="PIM%20IPv6%20Commands.479.32.html" title="Previous"><link rel="Next" href="PIM%20IPv6%20Commands.479.34.html" title="Next"><link rel="StyleSheet" href="css/PIM%20IPv6%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PIM%20IPv6%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PIM%20IPv6%20Commands.479.33.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pFNhSM_002f9_002bHgiKLxK_002bcvcrqg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PIM%20IPv6%20Commands.479.33.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.475.2.html#wwconnect_header">Protocol Independent Multicasting Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PIM%20IPv6%20Commands.479.01.html#wwconnect_header">CHAPTER 3	PIMv6 Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ipv6 pim register-rate-limit</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww498765" class="Heading1NewPage"><span></span>ipv6 pim register-rate-limit</div><div id="ww498766" class="Body"><span></span>Use this command to configure the rate of Register packets sent by this designated router (DR), in number of packets per second.</div><div id="ww498767" class="Body"><span></span>Use the no option to remove the register-rate-limit configuration.</div><div id="ww516874" class="Note1"><span class="WebWorks_Number" style="width: 36pt"><span>Note:	</span></span>The configured rate is per (S,G) state, and is not a system-wide rate.</div><div id="ww513577" class="Heading3"><span></span>Command Syntax</div><div id="ww513578" class="CmdMaster">ipv6 pim register-rate-limit &lt;1-65535&gt;</div><div id="ww545806" class="CmdMaster">ipv6 pim (vrf NAME|) register-rate-limit &lt;1-65535&gt;</div><div id="ww545828" class="CmdMaster">no ipv6 pim register-rate-limit</div><div id="ww545831" class="CmdMaster">no ipv6 pim (vrf NAME|) register-rate-limit</div><div id="ww513574" class="Heading3"><span></span>Parameters</div><div id="ww555126" class="CmdHead1">vrf</div><div id="ww555127" class="Cmd1">The VPN routing/forwarding instance</div><div id="ww555128" class="CmdHead2">NAME</div><div id="ww555129" class="Cmd1">Specify the name of the VPN routing/forwarding instance</div><div id="ww539569" class="CmdHead1"><span class="Parameter">&lt;1-65535&gt;</span></div><div id="ww539570" class="Cmd1">Range of values for packets to send per second </div><div id="ww498772" class="Heading3"><span></span>Command mode</div><div id="ww498773" class="Body"><span></span>Configure mode</div><div id="ww498774" class="Heading3"><span></span>Example</div><div id="ww498775" class="CmdExample">#configure terminal</div><div id="ww498761" class="CmdExample">(config)#ipv6 pim register-rate-limit 3444</div><div id="ww507825" class="CmdExample">&nbsp;</div><div id="ww507840" class="CmdExample">#configure terminal</div><div id="ww507832" class="CmdExample">(config)#no ipv6 pim register-rate-limit</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Multiple BVIDs per Maintenance Association</title><link rel="Prev" href="ProviderBackboneBridging.127.35.html" title="Previous"><link rel="Next" href="ProviderBackboneBridging.127.37.html" title="Next"><link rel="StyleSheet" href="css/ProviderBackboneBridging.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ProviderBackboneBridging_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ProviderBackboneBridging.127.36.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN6l_002fXgCUlbhnE1PFgCl3rJQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ProviderBackboneBridging.127.36.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.122.2.html#wwconnect_header">Carrier Ethernet Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ProviderBackboneBridging.127.01.html#wwconnect_header">CHAPTER 4	Provider Backbone Bridging</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ProviderBackboneBridging.127.34.html#wwconnect_header">CFM in Provider Backbone Bridges</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Multiple BVIDs per Maintenance Association</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1006449" class="Heading2"><span></span>Multiple BVIDs per Maintenance Association</div><div id="ww1006450" class="Body"><span></span>Connectivity Fault Management in Provider Backbone Bridges supports multiple BVID per BVLa MEP. This means that when a BVLAN domain is configured, multiple BVIDs can be monitored using a single MEP. However, on a CBP where Up MEP stacking takes place, the concept of a Primary ISID and a Secondary ISID is introduced.</div><div id="ww1006451" class="Body"><span></span>Concepts of Primary and Secondary VIDs are introduced in Chapter 5. Each Service Domain MEP — either an Up MEP at a Customer Backbone Port or a Down MEP at a Provider Instance Port — is able to monitor multiple ISIDs. It can send frames only via the Primary ISID, but can receive frames from any Secondary ISID. At a CBP, it must be ensured that all secondary ISIDs, identified by a primary ISID, are mapped to the same BVID. Since ISID-to-BVID mapping information is managed in the NSM, the check for mapping Primary to Secondary ISIDs is located in the NSM module, and no error message is sent to the operator from the OAM Network Management Daemon (ONMD).</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

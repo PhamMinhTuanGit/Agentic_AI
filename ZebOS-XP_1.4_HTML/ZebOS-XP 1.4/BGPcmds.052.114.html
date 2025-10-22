@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>neighbor transparent-nexthop</title><link rel="Prev" href="BGPcmds.052.113.html" title="Previous"><link rel="Next" href="BGPcmds.052.115.html" title="Next"><link rel="StyleSheet" href="css/BGPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BGPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BGPcmds.052.114.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pdms3C9s42fgawnBmM0AD9Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BGPcmds.052.114.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.049.2.html#wwconnect_header">Border Gateway Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGPcmds.052.001.html#wwconnect_header">CHAPTER 2	BGP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">neighbor transparent-nexthop</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1250799" class="Heading1NewPage"><span></span>neighbor transparent-nexthop</div><div id="ww1250800" class="Body"><span></span>Use this command to keep the nexthop value of the route even if the peer is an eBGP peer.</div><div id="ww1250801" class="Heading3"><span></span>Command Syntax</div><div id="ww1250802" class="CmdMaster">neighbor (A.B.C.D|X:X::X:X|WORD) transparent-nexthop</div><div id="ww1305072" class="Heading3"><span></span>Parameters</div><div id="ww1373445" class="CmdHead1">A.B.C.D</div><div id="ww1373446" class="Cmd1">Address of the BGP neighbor in an IPv4 format</div><div id="ww1373447" class="CmdHead1">X:X::X:X</div><div id="ww1373448" class="Cmd1">Address of the BGP neighbor in an IPv6 format</div><div id="ww1373449" class="CmdHead1">WORD</div><div id="ww1373450" class="Cmd1">Name of the BGP peer group</div><div id="ww1373451" class="Note2"><span class="WebWorks_Number" style="width: 36pt"><span>Note:	</span></span>For information about how to create peer groups, refer to the neighbor peer-group and neighbor remote-as commands. When this parameter is used with a command, the command applies to all peers in the group.</div><div id="ww1305077" class="Heading3"><span></span>Command Mode</div><div id="ww1250808" class="Body"><span></span>Router mode</div><div id="ww1250809" class="Heading3"><span></span>Examples</div><div id="ww1250810" class="CmdExample">#configure terminal</div><div id="ww1250811" class="CmdExample">(config)#router bgp 12</div><div id="ww1250812" class="CmdExample">(config-router)#neighbor 10.10.10.10 transparent-nexthop</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

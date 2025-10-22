@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>set mvrp registration</title><link rel="Prev" href="MVRPCLIcmds.261.07.html" title="Previous"><link rel="Next" href="MVRPCLIcmds.261.09.html" title="Next"><link rel="StyleSheet" href="css/MVRPCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MVRPCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MVRPCLIcmds.261.08.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pEqEJSb5jb0mcAKKWvZvd3Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MVRPCLIcmds.261.08.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MVRPCLIcmds.261.01.html#wwconnect_header">CHAPTER 12	MVRP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">set mvrp registration</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww999844" class="Heading1NewPage"><span></span>set mvrp registration</div><div id="ww999845" class="Body"><span></span>Use this command to set the MVRP registration mode to fixed.</div><div id="ww999846" class="Heading3"><span></span>Command Syntax</div><div id="ww1006998" class="CmdMaster">set mvrp registration fixed IF_NAME</div><div id="ww1006999" class="CmdMaster">set mvrp registration forbidden IF_NAME</div><div id="ww1007000" class="CmdMaster">set mvrp registration normal IF_NAME</div><div id="ww1002555" class="Heading3"><span></span>Parameters</div><div id="ww1002556" class="CmdHead1">fixed</div><div id="ww1003771" class="Cmd1">Determine that the multicast groups currently registered on the switch are applied to the port, but that subsequent registrations or de-registrations do not affect the port. This means that none of the registered multicast groups on the port are to be de-registered based on GARP timers.</div><div id="ww1002557" class="CmdHead1">forbidden</div><div id="ww1003778" class="Cmd1">Indicates that all MVRP multicasts are de-registered, and prevents further MVRP multicast registration on the port.</div><div id="ww1002558" class="CmdHead1">normal</div><div id="ww1003785" class="Cmd1">Set dynamic MVRP multicast registration and de-registration on the port.</div><div id="ww1002559" class="CmdHead2">IF_NAME</div><div id="ww1003792" class="Cmd1">Defines a text string used as the name of the interface in ASCII format. Valid number of characters is between 1 and 16.</div><div id="ww1002560" class="Heading3"><span></span>Default</div><div id="ww1002595" class="Body"><span></span>The default MVRP registration mode is normal.</div><div id="ww1002562" class="Heading3"><span></span>Command Mode</div><div id="ww1002563" class="Body"><span></span>Configure mode</div><div id="ww999855" class="Heading3"><span></span>Examples</div><div id="ww999856" class="CmdExample">#configure terminal</div><div id="ww999857" class="CmdExample">(config)#set mvrp registration fixed eth1</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

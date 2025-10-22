@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Overview</title><link rel="Prev" href="ProviderBridging.126.10.html" title="Previous"><link rel="Next" href="ProviderBridging.126.12.html" title="Next"><link rel="StyleSheet" href="css/ProviderBridging.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ProviderBridging_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ProviderBridging.126.11.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pBN_002b_002fQeicH8Ege9pors0pkQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ProviderBridging.126.11.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.122.2.html#wwconnect_header">Carrier Ethernet Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ProviderBridging.126.01.html#wwconnect_header">CHAPTER 3	Provider Bridging</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ProviderBridging.126.10.html#wwconnect_header">CFM in a Provider Edge Bridge Network.</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Overview</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1006315" class="Heading2"><span></span>Overview</div><div id="ww1006316" class="Body"><span></span>When there is a C-VLAN and an S-VLAN mapping located on a PEB, sent frames are relayed toward the PN port, where there is an S-VLAN (EVC) configured and where the frames enter the PB core (that is, bridge 3, 4, etc.). If this mapping is not present at OAM Network Management Daemon (ONMD), the relay function of CFM attempts to relay the frame towards the PB core with the received C-VID (Customer VLAN Identifier), since the C-VLAN is not configured on any of the PNPs the frame is not relayed and it is dropped. A user can create multiple maintenance C-VLANs if they are confident that the provider can carry each C-VLAN to the correct S-VLAN. The user must create one maintenance C-VLAN per provider service instance (S-VLAN), thus creating one maintenance C-VLAN per PE port in the C-VLAN. </div><div id="ww1006317" class="Body"><span></span>By configuring each PE Port to pass a C-VLAN untagged frame to a corresponding Customer Network (CN) port in the S-VLAN component, the Protocol Data Unit (PDU) of the CFM in one Maintenance Association (MA) is visible to the S-VLAN component. Moreover, the provider can then configure a Maintenance Intermediate Point (MIP) for each S-VID (Service VLAN Identifier) that is visible to the MA of the user. This allows the user to have one MA protecting each service instance.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

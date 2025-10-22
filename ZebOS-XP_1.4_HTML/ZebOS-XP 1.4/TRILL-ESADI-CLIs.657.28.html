@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>trill_esadi_frame_send</title><link rel="Prev" href="TRILL-ESADI-CLIs.657.27.html" title="Previous"><link rel="Next" href="TRILL-ESADI-CLIs.657.29.html" title="Next"><link rel="StyleSheet" href="css/TRILL-ESADI-CLIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/TRILL-ESADI-CLIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/TRILL-ESADI-CLIs.657.28.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN4tMyv_002bATuJ1gMmKDKYN7Iw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/TRILL-ESADI-CLIs.657.28.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.645.2.html#wwconnect_header">Transparent Interconnection of Lots of Links Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/TRILL-ESADI-CLIs.657.01.html#wwconnect_header">CHAPTER 11	TRILL ESADI</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/TRILL-ESADI-CLIs.657.08.html#wwconnect_header">TRILL ESADI API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">trill_esadi_frame_send</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww599550" class="Heading2"><span></span>trill_esadi_frame_send</div><div id="ww600303" class="Body"><span></span>This function sends ESADI PDUs to an interface. The Interface list will be received from the TRILL module for a VLAN and Dtree and will encapsulates the ESADI frame within the TRILL packet. In addition, it sets the m-bit in the TRILL header if the frame is sent on a multicast address. Finally, it sends the TRILL data frame on the TRILL interface socket.</div><div id="ww600179" class="Heading3"><span></span>Syntax</div><div id="ww600222" class="PseudoCode"><span></span>int</div><div id="ww600223" class="PseudoCode"><span></span>trill_esadi_frame_send (struct trill_interface *isi,</div><div id="ww600224" class="PseudoCode"><span></span>                            struct esadi_packet *pkt)</div><div id="ww600184" class="Heading3"><span></span>Input Parameters</div><div id="ww600274" class="CmdHead1">*isi</div><div id="ww600275" class="Cmd1">Pointer to the interface on which a frame was received.</div><div id="ww600276" class="CmdHead1">*pkt</div><div id="ww600277" class="Cmd1">Received data packet.</div><div id="ww600192" class="Heading3"><span></span>Output Parameters</div><div id="ww600193" class="Body"><span></span>None</div><div id="ww600194" class="Heading3"><span></span>Return Value</div><div id="ww600195" class="Body"><span></span>TRILL_PDU_LSP_ERROR</div><div id="ww600196" class="Body"><span></span>TRILL_PDU_CSNP_ERR_RECEIVED_NON_DRB</div><div id="ww600197" class="Body"><span></span>TRILL_PDU_CSNP_ERR_INVALID_PDU_LENGTH</div><div id="ww600198" class="Body"><span></span>TRILL_PDU_SUCCESS</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Overview</title><link rel="Prev" href="Layer-2-Gateway.270.01.html" title="Previous"><link rel="Next" href="Layer-2-Gateway.270.03.html" title="Next"><link rel="StyleSheet" href="css/Layer-2-Gateway.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Layer-2-Gateway_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Layer-2-Gateway.270.02.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pr2_002fJF_002bysx9C_002f6K1a2QUjng" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Layer-2-Gateway.270.02.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.264.2.html#wwconnect_header">Layer 2 Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Layer-2-Gateway.270.01.html#wwconnect_header">CHAPTER 5	Layer 2 Gateway Port</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Overview</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1003435" class="Heading1"><span></span>Overview</div><div id="ww1005231" class="Body"><span></span>The L2GP solution helps separate different STP domains. In this solution, the user configures one or more ports as layer-two gateway ports, with each port defining the border of a domain in which the STP algorithm is active. The L2GP solution implements STP as a hello protocol and defines an L2GP as a regular port. A bridged network can be redundantly attached to a Provider Backbone Bridged Network (PBBN) by more than one layer two gateway ports. By communicating within their region and without influence from the PBBN, these ports connect to the PBBN through a single layer two gateway port, avoiding any bridging loops between the PBBN and the instance.</div><div id="ww1002826" class="Body"><span></span><span class="hypertext"><a href="../ZebOS-XP%201.4/Layer-2-Gateway.270.02.html#ww1000958" title="Overview">Figure&nbsp;5-1</a></span> is an example of an L2GP configuration. In this configuration, ports 1 and 2 are configured with a bridge IDs of router 1 and router 2, respectively. Router 1 is better than router 2 and router 2 is better than any bridge in the A domain. As a result, port 1 is the forwarding (root) port, since its bridge continually receives the best BPDUs. Port 2 is then designated as the discarding port.</div><div class="ww_skin_page_overflow"><div id="ww1001253" class="AnchorImage"><img class="Default" src="../ZebOS-XP%201.4/images/L2GP.jpg" width="413" height="183" style="display: inline; left: 0.0; top: 0.0" alt=""></div></div><div id="ww1000958" class="FigureTitle"><span>Figure 5-1: </span>L2GP Configuration</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

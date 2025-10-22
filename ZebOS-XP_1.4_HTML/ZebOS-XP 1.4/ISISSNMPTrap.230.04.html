@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>isisAttemptToExceedMaxSequence</title><link rel="Prev" href="ISISSNMPTrap.230.03.html" title="Previous"><link rel="Next" href="ISISSNMPTrap.230.05.html" title="Next"><link rel="StyleSheet" href="css/ISISSNMPTrap.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISISSNMPTrap_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISISSNMPTrap.230.04.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pxe6SFUEQe_002b8JVNIXQkUGVw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISISSNMPTrap.230.04.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.218.2.html#wwconnect_header">Intermediate System to Intermediate System Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISISSNMPTrap.230.01.html#wwconnect_header">CHAPTER 11	IS-IS SNMP Traps</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">isisAttemptToExceedMaxSequence</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww568624" class="Heading2"><span></span>isisAttemptToExceedMaxSequence</div><div id="ww568625" class="Body"><span></span>This notification is sent when the sequence number on a generated LSP wraps the 32-bit sequence counter. ZebOS-XP purges and waits to re-announce this information, and will generate an event each time this action happens.</div><div id="ww563472" class="Heading3"><span></span>Definition</div><div id="ww565254" class="CmdExample"> isisNotifications ::= { isisMIB 2 }</div><div id="ww565255" class="CmdExample">   isisTrapPrefix ::= { isisNotifications 0 }</div><div id="ww565256" class="CmdExample">   isisAttemptToExceedMaxSequence</div><div id="ww565257" class="CmdExample">     OBJECTS {</div><div id="ww565258" class="CmdExample">       isisSystemInstance,</div><div id="ww565259" class="CmdExample">       isisSystemLevel,</div><div id="ww565260" class="CmdExample">       isisTrapLSPID }</div><div id="ww565261" class="CmdExample">     ::= { isisTrapPrefix 4 } */</div><div id="ww563446" class="CmdExample">&nbsp;</div><div id="ww565249" class="CmdExample">void</div><div id="ww563447" class="CmdExample">isisAttemptToExceedMaxSequence (struct isis_lsp *lsp)</div><div id="ww563448" class="CmdExample">{</div><div id="ww563449" class="CmdExample">  oid *ptr;</div><div id="ww563450" class="CmdExample">  int index, namelen;</div><div id="ww563451" class="CmdExample">  SNMP_TRAP_CALLBACK func;</div><div id="ww563452" class="CmdExample">  struct snmp_trap_object obj[3];</div><div id="ww563453" class="CmdExample">  int spec_trap_val = ISISATTEMPTTOEXCEEDMAXSEQUENCE;</div><div id="ww563454" class="CmdExample">  u_int32_t instance = lsp-&gt;il-&gt;top-&gt;instance_id;</div><div id="ww563455" class="CmdExample">  u_int32_t level = INDEX2LEVEL (lsp-&gt;il-&gt;index);</div><div id="ww563456" class="CmdExample">  struct isis_lspid lspid;</div><div id="ww563457" class="CmdExample">  struct isis_master *im = lsp-&gt;il-&gt;top-&gt;im;</div><div id="ww563458" class="CmdExample">&nbsp;</div><div id="ww563459" class="CmdExample">  namelen = sizeof (isis_oid) / sizeof (oid);</div><div id="ww565276" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

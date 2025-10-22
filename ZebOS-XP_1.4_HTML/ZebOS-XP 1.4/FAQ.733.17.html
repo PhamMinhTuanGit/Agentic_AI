@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Diff-Serv</title><link rel="Prev" href="FAQ.733.16.html" title="Previous"><link rel="Next" href="FAQ.733.18.html" title="Next"><link rel="StyleSheet" href="css/FAQ.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/FAQ_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/FAQ.733.17.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN0_002fBN_002f2d9nUj8b4QBQrO8lA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/FAQ.733.17.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.723.2.html#wwconnect_header">Troubleshooting Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/FAQ.733.01.html#wwconnect_header">CHAPTER 9	Frequently-Asked Questions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Diff-Serv</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1068314" class="Heading1"><span></span>Diff-Serv</div><div id="ww1092586" class="Heading3"><span></span>Q: In Diff-Serv, only 7, instead of 8, classes are available as parameters with the “primary elsp-signaled” command.</div><div id="ww1068293" class="Body"><span></span>Specifying a class with the <span class="Command">primary elsp-signaled</span> command means that the specified subgroup-class will be used for this E-LSP. If you want to select all 8 classes for an E-LSP, you do not need to specify a sub-group; simply do not specify a parameter with the <span class="Command">primary elsp-signaled</span> command.</div><div id="ww1092608" class="Heading3"><span></span>Q: In Diff-Serv, I can create a preconfigured E-LSP even when no PHBs are supported at ingress (not even “be”). Is this a desired behavior?</div><div id="ww1068297" class="Body"><span></span>Yes. According to RFC 3270, in case the preconfigured EXP-PHB mapping is not configured, the LSR should use a preconfigured EXP-PHB mapping, which maps all EXP values to the Default PHB.</div><div id="ww1068298" class="Body"><span></span>The ZebOS-XP implementation allows the setting up of pre-configured E-LSPs, in all cases. In case there is no support for classes, and a preconfigured LSP is set up, then all incoming IP DSCPs are mapped to “be”.</div><div id="ww1068299" class="Body"><span></span>When only PHB “be” is supported, and a preconfigured LSP is set up, this LSP carries only “be”. Packets with incoming IP DSCP of “be” are forwarded on this LSP, and other incoming IP DSCPs are dropped.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

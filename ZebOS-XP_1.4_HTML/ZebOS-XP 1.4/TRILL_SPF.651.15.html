@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>trill_channel_frame_process_transit</title><link rel="Prev" href="TRILL_SPF.651.14.html" title="Previous"><link rel="Next" href="TRILL_SPF.651.16.html" title="Next"><link rel="StyleSheet" href="css/TRILL_SPF.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/TRILL_SPF_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/TRILL_SPF.651.15.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="po0HeGF2uQPbK3LrwFDoyjQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/TRILL_SPF.651.15.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.645.2.html#wwconnect_header">Transparent Interconnection of Lots of Links Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/TRILL_SPF.651.01.html#wwconnect_header">CHAPTER 5	TRILL OAM</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/TRILL_SPF.651.11.html#wwconnect_header">Supported APIs</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">trill_channel_frame_process_transit</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww509715" class="Heading2"><span></span>trill_channel_frame_process_transit</div><div id="ww509776" class="Body"><span></span>This function processes channel frame that are not intended for itself In addition, it checks the hop count and forward the message properly. It is contained in the file trill_oam.c:</div><div id="ww509717" class="Heading3"><span></span>Syntax</div><div id="ww509747" class="PseudoCode"><span></span>int</div><div id="ww509748" class="PseudoCode"><span></span>trill_channel_frame_process_transit (struct trill_channel_packet *dpkt,</div><div id="ww509720" class="PseudoCode"><span></span>                                     struct trill_interface *isi)</div><div id="ww509721" class="Heading3"><span></span>Input Parameters</div><div id="ww509722" class="CmdHead1">*dpkt</div><div id="ww509723" class="Cmd1">Received channel data packet.</div><div id="ww509724" class="CmdHead1">*isi</div><div id="ww509725" class="Cmd1">Pointer to the interface on which a frame was received.</div><div id="ww509726" class="Heading3"><span></span>Output Parameters</div><div id="ww509727" class="Body"><span></span>None</div><div id="ww509728" class="Heading3"><span></span>Return Values</div><div id="ww509729" class="Body"><span></span>0: Indicates the function call executed properly.</div><div id="ww509730" class="Body"><span></span>TRILL_CHANNEL_FAIL</div><div id="ww509731" class="Body"><span></span>TRILL_CHANNEL_SUCCESS</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

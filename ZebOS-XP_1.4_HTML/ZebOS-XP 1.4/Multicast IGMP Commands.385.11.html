@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ip igmp mroute-proxy</title><link rel="Prev" href="Multicast%20IGMP%20Commands.385.10.html" title="Previous"><link rel="Next" href="Multicast%20IGMP%20Commands.385.12.html" title="Next"><link rel="StyleSheet" href="css/Multicast%20IGMP%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Multicast%20IGMP%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Multicast%20IGMP%20Commands.385.11.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="ph_002fd59jLwjlYaIzhBPlDJ4A" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Multicast%20IGMP%20Commands.385.11.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.381.2.html#wwconnect_header">Multicast Routing Information Base Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Multicast%20IGMP%20Commands.385.01.html#wwconnect_header">CHAPTER 3	L3 IGMP Multicast Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ip igmp mroute-proxy</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1058918" class="Heading1NewPage"><span></span>ip igmp mroute-proxy</div><div id="ww1058919" class="Body"><span></span>Use this command to specify the IGMP Proxy service (upstream host-side) interface with which to be associated. IGMP router-side protocol operation is enabled only when the specified upstream proxy-service interface is functional. </div><div id="ww1071442" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>This command should not be used when configuring interfaces enabled for IGMP in association with a multicast routing protocol, otherwise the behavior will be undefined.</div><div id="ww1061211" class="Body"><span></span>Use the <span style="font-family: &quot;Courier New&quot;; font-size: 10.5pt">no</span> parameter with this command to remove the association with the proxy-service interface.</div><div id="ww1058932" class="Heading3"><span></span>Command Syntax</div><div id="ww1058933" class="CmdMaster">ip igmp mroute-proxy IFNAME</div><div id="ww1058934" class="CmdMaster">no ip igmp mroute-proxy</div><div id="ww1071383" class="Heading3"><span></span>Parameter</div><div id="ww1071463" class="CmdHead1">IFNAME</div><div id="ww1071482" class="Cmd1">Specify an interface name.</div><div id="ww1071396" class="Heading3"><span></span>Command Mode</div><div id="ww1071397" class="Body"><span></span>Interface mode</div><div id="ww1058937" class="Heading3"><span></span>Example</div><div id="ww1058938" class="Body"><span></span>The following example configures the eth0 interface as the upstream proxy-service interface for the downstream router-side interface, eth1.</div><div id="ww1058942" class="CmdExample">#configure terminal</div><div id="ww1058943" class="CmdExample">(config)#interface eth1</div><div id="ww1058944" class="CmdExample">(config-if)#ip igmp mroute-proxy eth0</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

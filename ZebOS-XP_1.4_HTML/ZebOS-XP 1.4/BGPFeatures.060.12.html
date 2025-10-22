@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Graceful Shutdown</title><link rel="Prev" href="BGPFeatures.060.11.html" title="Previous"><link rel="Next" href="BGPFeatures.060.13.html" title="Next"><link rel="StyleSheet" href="css/BGPFeatures.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BGPFeatures_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BGPFeatures.060.12.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN2DW5jI4aJtYNeZmZkpSupw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BGPFeatures.060.12.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.057.2.html#wwconnect_header">Border Gateway Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGPFeatures.060.01.html#wwconnect_header">CHAPTER 2	BGP Features</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Graceful Shutdown</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww517145" class="Heading1"><span></span>Graceful Shutdown</div><div id="ww517515" class="Body"><span></span>The ZebOS-XP BGP graceful shutdown feature is based on IETF draft "draft-ietf-grow-bgp-gshut-03", Graceful BGP Session Shutdown.</div><div id="ww517532" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>ZebOS-XP does not support graceful shutdown for iBGP sessions.</div><div id="ww517148" class="Body"><span></span>Without the use of the BGP graceful shutdown feature, when an autonomous system border router (ASBR) with an eBGP peering session with another ASBR is shut down for maintenance, the router removes the routes and sets off the BGP convergence on its BGP peers by withdrawing its routes. The results are packet loss due to the BGP routers being unreachable during the convergence. The BGP graceful shutdown feature allows for a planned shutdown of ASBRs to take place with minimal or no loss of traffic. Packet loss is minimized by keeping the route to the affected router undisturbed even after shutdown. This is achieved by lowering the local preference value (LOCAL_PREF attribute) of a BGP router to be shut down so that the other routers residing in the same autonomous system can still use this route during the convergence until these routers become aware of alternative routes.</div><div id="ww517150" class="Body"><span></span>The local preference value is used to indicate the preferred route when there are multiple routes to the same destination in a single routing database. The route having a lower preference value is used to indicate to the local autonomous system that this route is not preferred. The route that is propagated to all of the routers and access servers in the local autonomous system is the route with the highest local preference value. Using the local preference value, the BGP graceful shutdown feature gives the BGP routers a valid route to use during BGP convergence.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

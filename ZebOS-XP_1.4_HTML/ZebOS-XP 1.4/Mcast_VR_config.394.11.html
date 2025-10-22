@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Save VR Configuration</title><link rel="Prev" href="Mcast_VR_config.394.10.html" title="Previous"><link rel="Next" href="Mcast_VR_config.394.12.html" title="Next"><link rel="StyleSheet" href="css/Mcast_VR_config.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Mcast_VR_config_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Mcast_VR_config.394.11.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pGiw8h2usXOGw8fMEI9Xe1Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Mcast_VR_config.394.11.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.389.2.html#wwconnect_header">Multicast Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Mcast_VR_config.394.01.html#wwconnect_header">CHAPTER 4	Multicast Virtual Routing Configuration</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Save VR Configuration</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1062941" class="Heading1"><span></span>Save VR Configuration</div><div id="ww1062956" class="Body"><span></span>By default, GMA configuration statements are stored in the <span class="Parameter">ZebOS.conf</span> file in the <span class="Parameter">/usr/local/etc</span> directory. </div><div id="ww1075076" class="Body"><span></span>By default, VR configuration statements are stored in the <span class="Parameter">ZebOS.conf</span> file in the <span class="Parameter">/usr/local/etc/&lt;VR-Name&gt;</span> directory. In this location, <span class="Parameter">&lt;VR-Name&gt;</span> is the name of the specific VR configured. A directory for each VR is created automatically whenever a new VR is initiated.</div><div id="ww1062957" class="Body"><span></span>To store a configuration in a different file, enter the file name using the <span class="Parameter">configuration file</span> command, which creates a new file in the directory related to the VR. No other directory can be specified for storing configuration.</div><div id="ww1062958" class="CmdExample">configuration file First.conf</div><div id="ww1062959" class="Body"><span></span>where <span class="Parameter">First.conf</span> is the name of the file to store the configuration statements.</div><div id="ww1062960" class="Body"><span></span>To display the current running configuration for each VR, execute the following command in the VR context:</div><div id="ww1062961" class="CmdExample">show running-config</div><div id="ww1062962" class="Body"><span></span>To save the running configuration to startup configuration, execute the following command in the VR context:</div><div id="ww1062963" class="CmdExample">write file</div><div id="ww1062964" class="Body"><span></span>or</div><div id="ww1062965" class="CmdExample">write memory</div><div id="ww1062966" class="Body"><span></span>The configuration is saved to the file specified using the <span class="Parameter">configuration file</span> command (<span class="Parameter">First.conf</span> in the example above) or in the default <span class="Parameter">ZebOS.conf</span> file.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

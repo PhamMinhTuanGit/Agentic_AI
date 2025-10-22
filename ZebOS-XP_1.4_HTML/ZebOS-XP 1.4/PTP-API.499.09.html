@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ptp_port_clock</title><link rel="Prev" href="PTP-API.499.08.html" title="Previous"><link rel="Next" href="PTP-API.499.10.html" title="Next"><link rel="StyleSheet" href="css/PTP-API.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PTP-API_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PTP-API.499.09.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pgNsy9Y2pWXm_002fA_002bTJUAH2vA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PTP-API.499.09.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.497.2.html#wwconnect_header">Precision Time Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PTP-API.499.01.html#wwconnect_header">CHAPTER 1	Precision Time Protocol API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PTP-API.499.04.html#wwconnect_header">Data Structures</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ptp_port_clock</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1025982" class="Heading2"><span></span>ptp_port_clock</div><div id="ww1045645" class="CmdExample">struct ptp_port_clock</div><div id="ww1045646" class="CmdExample">{</div><div id="ww1045647" class="CmdExample">  u_int16_t  number_foreign_records;</div><div id="ww1045648" class="CmdExample">  s_int32_t   ifindex;</div><div id="ww1045649" class="CmdExample">  u_int8_t mac[6]; /* TO DO */</div><div id="ww1045650" class="CmdExample">  pal_sock_handle_t sockfd;</div><div id="ww1045651" class="CmdExample">  pal_sock_handle_t sockfd_gen;</div><div id="ww1045652" class="CmdExample">  struct ptp_port_ds   ptp_port_ds;</div><div id="ww1045653" class="CmdExample">  struct ptp_transparent_clock_port_default_ds   ptp_tc_cport_ds;</div><div id="ww1045654" class="CmdExample">  struct ptp_foreign_master_ds  ptp_fmds[PTP_NUM_FOREIGN_RECS];</div><div id="ww1045655" class="CmdExample">  struct ptp_protocol_ds ptp_proto_ds;</div><div id="ww1045656" class="CmdExample">  struct ptp_timestamp last_sync_send_time;</div><div id="ww1045657" class="CmdExample">  struct ptp_timestamp last_pdr_send_time;</div><div id="ww1045658" class="CmdExample">  struct ptp_timestamp last_dresp_send_time;</div><div id="ww1045659" class="CmdExample">  struct ptp_timestamp last_pdreq_recv_time;</div><div id="ww1045660" class="CmdExample">  struct ptp_timestamp last_dreq_recv_time;</div><div id="ww1045661" class="CmdExample">  struct ptp_timestamp last_delay_req_send_time;</div><div id="ww1045662" class="CmdExample">  struct thread *ptp_rcv_thread;</div><div id="ww1045663" class="CmdExample">  struct thread *ptp_rcv_thread_gen;</div><div id="ww1045664" class="CmdExample">  u_int8_t transport_type;</div><div id="ww1025952" class="CmdExample">};</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

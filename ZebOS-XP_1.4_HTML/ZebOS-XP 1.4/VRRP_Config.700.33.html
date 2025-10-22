@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Validation</title><link rel="Prev" href="VRRP_Config.700.32.html" title="Previous"><link rel="Next" href="VRRP_Config.700.34.html" title="Next"><link rel="StyleSheet" href="css/VRRP_Config.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VRRP_Config_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VRRP_Config.700.33.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pd2_002fMuEYYHJ_002f1wSX_002bkPD5yA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VRRP_Config.700.33.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.698.2.html#wwconnect_header">Virtual Router Redundancy Protocol Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRRP_Config.700.01.html#wwconnect_header">CHAPTER 1	VRRP Configuration</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRRP_Config.700.30.html#wwconnect_header">VRRP-Backward Compatibility</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Validation</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1067250" class="Heading2"><span></span>Validation</div><div id="ww1067251" class="CmdExample">DUT# sh vrrp</div><div id="ww1067252" class="CmdExample">VRRP Version: 3</div><div id="ww1067253" class="CmdExample">VMAC enabled</div><div id="ww1067254" class="CmdExample">Backward Compatibility enabled</div><div id="ww1067255" class="CmdExample">Address family IPv4</div><div id="ww1067256" class="CmdExample">VRRP Id: 20 on interface: eth1</div><div id="ww1067257" class="CmdExample"> State: AdminUp   - Master</div><div id="ww1067258" class="CmdExample"> Virtual IP address: 5.5.5.190 (Not-Owner)</div><div id="ww1067259" class="CmdExample"> Priority is 100</div><div id="ww1067260" class="CmdExample"> Advertisement interval: 100 centi sec</div><div id="ww1067261" class="CmdExample"> Master Advertisement interval: 100 centi sec</div><div id="ww1067262" class="CmdExample"> Skew time: 0 centi sec</div><div id="ww1067263" class="CmdExample"> Accept mode: FALSE</div><div id="ww1067264" class="CmdExample"> Preempt mode: TRUE</div><div id="ww1067265" class="CmdExample"> Multicast membership on IPv4 interface eth1: JOINED</div><div id="ww1067266" class="CmdExample">&nbsp;</div><div id="ww1067267" class="CmdExample">SD-1#sh vrrp</div><div id="ww1067268" class="CmdExample">VRRP Version: 2</div><div id="ww1067269" class="CmdExample">VMAC enabled</div><div id="ww1067270" class="CmdExample">Address family IPv4</div><div id="ww1067271" class="CmdExample">VRRP Id: 20 on interface: eth1</div><div id="ww1067272" class="CmdExample"> State: AdminUp   - Backup</div><div id="ww1067273" class="CmdExample"> Virtual IP address: 5.5.5.190 (Not-owner)</div><div id="ww1067274" class="CmdExample"> Priority is 100</div><div id="ww1067275" class="CmdExample"> Advertisement interval: 1 sec</div><div id="ww1067276" class="CmdExample"> Preempt mode: TRUE</div><div id="ww1067277" class="CmdExample"> Multicast membership on IPv4 interface eth1: JOINED</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

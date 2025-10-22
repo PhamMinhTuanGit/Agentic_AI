@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>hal_igmp_snooping_delete_entry</title><link rel="Prev" href="Messaging.194.30.html" title="Previous"><link rel="Next" href="Messaging.194.32.html" title="Next"><link rel="StyleSheet" href="css/Messaging.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Messaging_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Messaging.194.31.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="poepgfNTC_002bd3a5iiYv9a_002fBw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Messaging.194.31.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.188.2.html#wwconnect_header">Platform Integration Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Messaging.194.01.html#wwconnect_header">CHAPTER 5	System Messages</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Messaging.194.24.html#wwconnect_header">Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">hal_igmp_snooping_delete_entry</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww496881" class="Heading2"><span></span>hal_igmp_snooping_delete_entry</div><div id="ww496882" class="Body"><span></span>This API deletes a multicast entry for a (source, group) for a given VLAN. If the group doesn't exist, an error is returned. If the group exists, the list of ports are deleted from the multicast entry. If it is the last port for the multicast entry, this multicast entry is deleted as well.</div><div id="ww496883" class="Heading3"><span></span>Syntax</div><div id="ww496884" class="PseudoCode"><span></span>int hal_igmp_snooping_delete_entry (char *bridge_name, struct hal_in4_addr *src, struct hal_in4_addr *group, char is_exclude, int vid, int svid, int count,u_int32_t *ifindexes);</div><div id="ww496885" class="PseudoCode"><span></span>&nbsp;</div><div id="ww496886" class="Heading3"><span></span>Input Parameters</div><div id="ww496887" class="CmdHead1">bridge_name</div><div id="ww496888" class="Cmd1">Bridge Name</div><div id="ww496889" class="CmdHead1">src</div><div id="ww496890" class="Cmd1">Multicast source address</div><div id="ww496891" class="CmdHead1">group</div><div id="ww496892" class="Cmd1">Multicast group address</div><div id="ww496893" class="CmdHead1">vlan	</div><div id="ww496894" class="Cmd1">VLAN ID</div><div id="ww496895" class="CmdHead1">count		</div><div id="ww496896" class="Cmd1">Count of ports to add</div><div id="ww496897" class="CmdHead1">ifindexes	</div><div id="ww496898" class="Cmd1">array of ports to add</div><div id="ww496899" class="Cmd1">&nbsp;</div><div id="ww496900" class="Heading3"><span></span>Output Parameters</div><div id="ww496901" class="Body"><span></span>None</div><div id="ww496902" class="Heading3"><span></span>Return Values</div><div id="ww496903" class="Body"><span></span>HAL_ERR_IGMP_SNOOPING_ENTRY_ERR when the multicast delete for the source, group for a given VLAN is not a success</div><div id="ww496904" class="Body"><span></span>HAL_SUCCESS when the function succeeds</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

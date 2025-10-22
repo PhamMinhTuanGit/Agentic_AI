@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>evb-station</title><link rel="Prev" href="EVB_Cmds.184.12.html" title="Previous"><link rel="Next" href="EVB_Cmds.184.14.html" title="Next"><link rel="StyleSheet" href="css/EVB_Cmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/EVB_Cmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/EVB_Cmds.184.13.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pL7_002f7_002fXOrmKra8o5XIJJFxg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/EVB_Cmds.184.13.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.181.2.html#wwconnect_header">Edge Virtual Bridging Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/EVB_Cmds.184.01.html#wwconnect_header">CHAPTER 2	Edge Virtual Bridging Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">evb-station</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww508617" class="Heading1NewPage"><span></span>evb-station</div><div id="ww508618" class="Body"><span></span>Use this command to configure an EVB station. </div><div id="ww508794" class="Heading3"><span></span>Command Syntax</div><div id="ww508795" class="CmdMaster">evb-station max-retries &lt;0-7&gt; acktimer &lt;10-20&gt; rwd &lt;0-31&gt; rka &lt;0-31&gt; ref-relay (enable|disable)</div><div id="ww508621" class="Heading3"><span></span>Parameters</div><div id="ww508622" class="CmdHead1">max-retries</div><div id="ww508623" class="Cmd1">Maximum number of Edge Control Protocol (ECP) retries</div><div id="ww508624" class="CmdHead1">acktimer</div><div id="ww508625" class="Cmd1">ECP acknowledgment time</div><div id="ww508698" class="CmdHead1">rwd</div><div id="ww508699" class="Cmd1">VDP (VSI Discovery and Configuration Protocol) resource wait delay</div><div id="ww508711" class="CmdHead1">rka</div><div id="ww508712" class="Cmd1">VDP keep alive time</div><div id="ww508724" class="CmdHead1">ref-relay</div><div id="ww508725" class="Cmd1">Whether to enable or disable reflective relay</div><div id="ww508626" class="Heading3"><span></span>Command Mode</div><div id="ww508627" class="Body"><span></span>Interface mode</div><div id="ww508628" class="Heading3"><span></span>Examples</div><div id="ww508971" class="CmdExample">#configure terminal</div><div id="ww508972" class="CmdExample">(config)#interface eth3</div><div id="ww508973" class="CmdExample">(config-if)#<span style="font-size: 10.0pt">evb-station max-retries 5 acktimer 15 rwd 15 rka 15 ref-relay enable</span></div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

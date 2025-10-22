@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Valid Label Ranges</title><link rel="Prev" href="MPLS%20Forwarder.377.3.html" title="Previous"><link rel="Next" href="MPLS%20Forwarder.377.5.html" title="Next"><link rel="StyleSheet" href="css/MPLS%20Forwarder.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MPLS%20Forwarder_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MPLS%20Forwarder.377.4.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pky3lhEkBNub5u_002fMoBZNqSw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MPLS%20Forwarder.377.4.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.375.2.html#wwconnect_header">Multi-Protocol Label Switching Forwarder Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS%20Forwarder.377.1.html#wwconnect_header">CHAPTER 1	ZebOS-XP MPLS Forwarder</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS%20Forwarder.377.3.html#wwconnect_header">Operational Codes </a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Valid Label Ranges</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww491243" class="Heading2"><span></span>Valid Label Ranges</div><div id="ww491244" class="Body"><span></span>In the scheme of labels, there are several reserved labels and reserved label ranges. For the detailed explanation of these see RFC 3032 section 2.1.</div><div id="ww491245" class="Body"><span></span>The range 0-3 is reserved for the following uses:</div><div id="ww491247" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>0 is the IPv4 Explicit NULL Label. When the Forwarder receives a packet with this label value at the bottom of the label stack, the stack pops the label value; it bases all forwarding of this packet on the IPv4 header.</div><div id="ww491249" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>1 is the Router Alert Label.  When the Forwarder receives a packet with this label value at the top of the label stack,  the forwarder uses the next label beneath it in the stack.  The Router Alert Label is pushed on top of the stack if further forwarding is required.</div><div id="ww491250" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>2 is the IPv6 Explicit NULL Label. When the Forwarder receives a packet with this label value at the bottom of the label stack, it pops the label stack and forwards the packet based on the IPv6 header.</div><div id="ww491252" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>3 is the Implicit NULL Label.  When the Forwarder receives a packet with this label value at the top of the label stack, the LSR pops the stack.</div><div id="ww491253" class="Body"><span></span>The range 4-15 is reserved for future use. </div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

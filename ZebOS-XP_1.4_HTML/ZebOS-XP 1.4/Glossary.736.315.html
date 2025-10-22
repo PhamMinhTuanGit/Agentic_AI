@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Provider Bridging (PB)</title><link rel="Prev" href="Glossary.736.314.html" title="Previous"><link rel="Next" href="Glossary.736.316.html" title="Next"><link rel="StyleSheet" href="css/Glossary_2.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Glossary_IE7_2.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Glossary.736.315.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="psuT_002fDZF3J_002bZDrUMpSAb_002bMw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Glossary.736.315.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.html#ww1008824">Glossary</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Glossary.736.001.html#wwconnect_header">Terms</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Provider Bridging (PB)</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww542341" class="GlossaryHead"><span></span>Provider Bridging (PB)</div><div id="ww542342" class="Body"><span></span>A technique that enables a service provider to use the architecture and protocols of 802.Q to offer the equivalent of separate LANs, bridged LANs, or VLANs to multiple customers. Provider bridging requires no active cooperation between customers and requires minimal cooperation between an individual customer and the service provider.</div><div id="ww542343" class="Body"><span></span>When VLANs were originally defined in 802.1Q, the number of unique VLAN identifiers was limited to 4096. In large provider networks, each subscriber needs a separate address, so this limit could prevent a provider from having more than 4096 subscribers. </div><div id="ww542344" class="Body"><span></span>To overcome this limit, 802.1ad inserts an additional VLAN tag into a single 802.1Q <span class="hypertext"><a href="../ZebOS-XP%201.4/Glossary.736.146.html#wwconnect_header" title="Ethernet">Ethernet</a></span> frame. Frames passing through the provider network are doubly tagged with:</div><div id="ww551881" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span><span class="hypertext"><a href="../ZebOS-XP%201.4/Glossary.736.108.html#wwconnect_header" title="customer VLAN (C-VLAN)">customer VLAN (C-VLAN)</a></span> tag which identifies the customer network VLAN</div><div id="ww551882" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span><span class="hypertext"><a href="../ZebOS-XP%201.4/Glossary.736.351.html#wwconnect_header" title="service VLAN (S-VLAN)">service VLAN (S-VLAN)</a></span> tag which identifies the service provider network VLAN</div><div id="ww551900" class="Body"><span></span>With two VLAN identifiers in combination for each provider-customer pair, it is possible to define up to 16,777,216 VLANs.</div><div id="ww588477" class="Body"><span></span>The frame format for 802.1ad is also called Q-in-Q, double tagged, stacked VLANs, or VLAN stacking. </div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

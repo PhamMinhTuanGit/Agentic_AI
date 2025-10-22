@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>rsvp_api_path_hop_add</title><link rel="Prev" href="RSVP%20CLI%20API.539.003.html" title="Previous"><link rel="Next" href="RSVP%20CLI%20API.539.005.html" title="Next"><link rel="StyleSheet" href="css/RSVP%20CLI%20API.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/RSVP%20CLI%20API_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/RSVP%20CLI%20API.539.004.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pMVyPqNzCwm5psrpht7bBKA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/RSVP%20CLI%20API.539.004.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.525.2.html#wwconnect_header">RSVP-TE Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RSVP%20CLI%20API.539.001.html#wwconnect_header">CHAPTER 13	Command API </a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">rsvp_api_path_hop_add</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1254289" class="Heading2"><span></span>rsvp_api_path_hop_add</div><div id="ww1254290" class="Body"><span></span>This call adds a hop to the ERO path.</div><div id="ww1254291" class="Heading3"><span></span>Syntax</div><div id="ww1254292" class="PseudoCode"><span></span>int </div><div id="ww1254293" class="PseudoCode"><span></span>rsvp_api_path_hop_add (struct rsvp_path *path, struct rsvp_path_ero *ero,</div><div id="ww1254294" class="PseudoCode"><span></span>							struct prefix *p, u_char is_strict, u_char add_to_top)</div><div id="ww1254295" class="Heading3"><span></span>Input Parameters</div><div id="ww1254296" class="CmdHead1"><span class="Parameter">path</span> </div><div id="ww1259004" class="Cmd1">RSVP path </div><div id="ww1254297" class="CmdHead1"><span class="Parameter">ero</span></div><div id="ww1259007" class="Cmd1">ERO path</div><div id="ww1254298" class="CmdHead1"><span class="Parameter">p</span> </div><div id="ww1259010" class="Cmd1">Prefix</div><div id="ww1254299" class="CmdHead1"><span class="Parameter">is_strict</span> </div><div id="ww1259013" class="Cmd1">Flag to indicate when the hop is Strict or Loose</div><div id="ww1254300" class="CmdHead1"><span class="Parameter">add_to_top</span></div><div id="ww1259016" class="Cmd1">Flag to indicate if this hop is to be added to the top of list or not</div><div id="ww1254301" class="Heading3"><span></span>Output Parameters</div><div id="ww1254302" class="Body"><span></span>None</div><div id="ww1254303" class="Heading3"><span></span>Return Value</div><div id="ww1254304" class="Body"><span></span>RSVP_ERR_PATH_HOP_EXISTS when the path hop already exists</div><div id="ww1254305" class="Body"><span></span>RSVP_SUCCESS when the hop is successfully added to the ERO path</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

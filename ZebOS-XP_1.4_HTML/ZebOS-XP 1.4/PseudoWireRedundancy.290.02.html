@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Multi-Momed CE PW Redundancy</title><link rel="Prev" href="PseudoWireRedundancy.290.01.html" title="Previous"><link rel="Next" href="PseudoWireRedundancy.290.03.html" title="Next"><link rel="StyleSheet" href="css/PseudoWireRedundancy.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PseudoWireRedundancy_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PseudoWireRedundancy.290.02.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pTt17C7AuZNWrQuVvAqXwpQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PseudoWireRedundancy.290.02.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.282.2.html#wwconnect_header">Label Distribution Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PseudoWireRedundancy.290.01.html#wwconnect_header">CHAPTER 7	Pseudowire Redundancy</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Multi-Momed CE PW Redundancy</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww999652" class="Heading1"><span></span>Multi-Momed CE PW Redundancy</div><div id="ww999697" class="Body"><span></span>The logic diagram on the next page depicts two Multi-homed CE devices connected to two PE devices with Access Circuits (AC). In this scenario, CE1 is dual-homed to PE1 and PE2, and CE2 is dual-homed to PE3 and PE. As a consequence, multiple pseudowires need to be signaled: PW1 between PE1 and PE3; PW2 between PE1 and PE4; PW4 between PE2 and PE3; PW4 between PE2 and PE4.</div><div id="ww999776" class="Body"><span></span>Simultaneously, only one PE node can be chosen as Active for a CE; the other PE node acts as Standby. A protocol is required to communicate between a CE and the PEs to designate which PE is the Active node and which is the Standby node. The solution ZebOS-XP LDP provides is a command that simulates switchover between the PE devices. Executing the command results in PE node runtime-mode changes between Active and Standby status.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

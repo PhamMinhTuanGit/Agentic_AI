@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Overview</title><link rel="Prev" href="ISIS-TE.223.01.html" title="Previous"><link rel="Next" href="ISIS-TE.223.03.html" title="Next"><link rel="StyleSheet" href="css/ISIS-TE.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISIS-TE_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISIS-TE.223.02.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pV7TQJ3PiX_002bRcH_002f9VwnjDNA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISIS-TE.223.02.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.218.2.html#wwconnect_header">Intermediate System to Intermediate System Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISIS-TE.223.01.html#wwconnect_header">CHAPTER 4	IS-IS Traffic Engineering</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Overview</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1005944" class="Heading1"><span></span>Overview</div><div id="ww1010908" class="Body"><span></span>ZebOS-XP IS-IS supports intra-area traffic engineering, where TE information is flooded in the respective level. An IS-IS router can be configured as Level-1, Level-2 or Level-1-2 router. If a router is Level-1 or Level-2, it maintains LSDB (link state database) only for that level. Therefore, for Level-1 or Level-2 Routers, TE information can be flooded in their respective levels and TE tunnels can be set up in their respective levels only.</div><div id="ww1010909" class="Body"><span></span>However, a Level-1-2 router maintains two LSDBs, one for each level and therefore can compute route for destination in its area in Level-1 or to a Level-2 router. ZebOS-XP allows TE information to be flooded in both Level-1 and Level-2. This allows Level-1-2 router to set up tunnels in Level-1 as well as in Level-2. ZebOS-XP does not support inter-area TE for IS-IS. The following is a sample topology of IS-IS TE support. </div><div class="ww_skin_page_overflow"><div id="ww1006452" class="AnchorImage"><img class="Default" src="../ZebOS-XP%201.4/images/ISIS-TE.jpg" width="576" height="375" style="display: inline; left: 0.0; top: 0.0" alt=""></div></div><div id="ww1006455" class="FigureTitle"><span>Figure 4-1: </span>Sample Topology</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

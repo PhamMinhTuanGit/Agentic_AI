@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ignore-lsp-errors</title><link rel="Prev" href="ISIScmds.216.26.html" title="Previous"><link rel="Next" href="ISIScmds.216.28.html" title="Next"><link rel="StyleSheet" href="css/ISIScmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISIScmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISIScmds.216.27.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pXhrSm4a7OrP8zIAArGu7Ow" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISIScmds.216.27.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.213.2.html#wwconnect_header">Intermediate System to Intermediate System Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISIScmds.216.01.html#wwconnect_header">CHAPTER 2	IS-IS Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ignore-lsp-errors</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww516036" class="Heading1NewPage"><span></span>ignore-lsp-errors</div><div id="ww511166" class="Body"><span></span>Use this command to ignore LSPs with checksum errors. By default, ISIS validates checksum for LSP whenever it receives LSPs and if the checksum has an error, the LSP will be dropped. Configuring this command to ignore the LSP checksum error and treat it as if checksum is passed.</div><div id="ww535098" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter to turn off this function.</div><div id="ww493037" class="Heading3"><span></span>Command Syntax</div><div id="ww491166" class="CmdMaster">ignore-lsp-errors</div><div id="ww535049" class="CmdMaster">no ignore-lsp-errors</div><div id="ww535023" class="Heading3"><span></span>Parameters</div><div id="ww535024" class="Body"><span></span>None</div><div id="ww535025" class="Heading3"><span></span>Default</div><div id="ww535076" class="Body"><span></span>By default, the LSP checksum is checked on receipt.</div><div id="ww535027" class="Heading3"><span></span>Command Mode</div><div id="ww535028" class="Body"><span></span>Router mode</div><div id="ww511182" class="Heading3"><span></span>Example</div><div id="ww495002" class="Body"><span></span>In this sample, rtr1 does not drop LSP packets with bad checksum.</div><div id="ww511191" class="CmdExample">#configure terminal</div><div id="ww511192" class="CmdExample">(config)#router isis bb</div><div id="ww511201" class="CmdExample">(config-router)#ignore-lsp-errors</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

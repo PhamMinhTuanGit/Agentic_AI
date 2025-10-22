@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>isis restart-hello-interval</title><link rel="Prev" href="ISIScmds.216.46.html" title="Previous"><link rel="Next" href="ISIScmds.216.48.html" title="Next"><link rel="StyleSheet" href="css/ISIScmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISIScmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISIScmds.216.47.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pyD4Tbfh0x_002bRS97h6_002faYL9Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISIScmds.216.47.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.213.2.html#wwconnect_header">Intermediate System to Intermediate System Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISIScmds.216.01.html#wwconnect_header">CHAPTER 2	IS-IS Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">isis restart-hello-interval</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww512418" class="Heading1NewPage"><span></span>isis restart-hello-interval</div><div id="ww517153" class="Body"><span></span>Use this command to configure the T1 timer, interval of ISIS Hello packet with restart TLV. </div><div id="ww537707" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter to use the default value.</div><div id="ww517148" class="Heading3"><span></span>Command Syntax </div><div id="ww561342" class="CmdMaster">isis restart-hello-interval &lt;1-65535&gt; (level-1|level-2|)</div><div id="ww561370" class="CmdMaster">no isis restart-hello-interval &lt;1-65535&gt; (level-1|level-2|)</div><div id="ww517117" class="CmdMaster">no isis restart-hello-interval (level-1|level-2|)</div><div id="ww537669" class="Heading3"><span></span>Parameters</div><div id="ww543414" class="CmdHead1">&lt;1-65535&gt;</div><div id="ww543420" class="Cmd1">Specify the number of seconds in the interval.</div><div id="ww543429" class="CmdHead2">level-1</div><div id="ww547664" class="Cmd1">Specify the hello-interval for level-1 IIHs.</div><div id="ww537670" class="CmdHead2">level-2</div><div id="ww547681" class="Cmd1">Specify the hello-interval for level-1 IIHs.</div><div id="ww537671" class="Heading3"><span></span>Default</div><div id="ww537717" class="Body"><span></span>By default, ISIS uses 3 seconds for the hello value, and the interval is applied to both level-1 and level-2.</div><div id="ww537673" class="Heading3"><span></span>Command Mode</div><div id="ww537674" class="Body"><span></span>Interface mode</div><div id="ww537736" class="Heading3"><span></span>Example</div><div id="ww579224" class="Body"><span></span>The following example enables and then disables a restart hello interval at 123 seconds for a level 1 interface.</div><div id="ww537737" class="CmdExample">#configure terminal</div><div id="ww537738" class="CmdExample">(config)#interface eth0</div><div id="ww579262" class="CmdExample">(config-if)#isis restart-hello-interval 123 level-1</div><div id="ww579267" class="CmdExample">&nbsp;</div><div id="ww579270" class="CmdExample">(config-if)#no isis restart-hello-interval 123 level-1</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

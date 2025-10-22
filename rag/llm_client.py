@@ -179,7 +179,9 @@ Answer:"""
                 system_prompt: Optional[str] = None,
                 stream: bool = False,
                 output_format: str = "default",
-                session_type: str = "general") -> Dict[str, Any]:
+                session_type: str = "general",
+                use_cot: bool = False,
+                cot_prompt: Optional[str] = None) -> Dict[str, Any]:
         """
         Generate answer using LLM
         
@@ -190,6 +192,8 @@ Answer:"""
             stream: Enable streaming response
             output_format: Output format (default, single_code_block)
             session_type: Type of session (general, router, switch, topology)
+            use_cot: Enable Chain-of-Thought reasoning
+            cot_prompt: Pre-generated CoT prompt (if use_cot=True)
         
         Returns:
             Dict with answer and metadata
@@ -198,9 +202,16 @@ Answer:"""
         start_time = time.time()
         
         try:
+            # Use Chain-of-Thought prompt if provided
+            if use_cot and cot_prompt:
+                prompt = cot_prompt
+                logger.info("🧠 Using Chain-of-Thought reasoning")
             # Use CLI output config for single_code_block format
-            if output_format == "single_code_block":
-                prompt = create_cli_prompt(query, context, session_type)
+            elif output_format == "single_code_block":
+                prompt = create_cli_prompt(query, context, session_type, output_type='single_code_block')
+            elif output_format == "multi_code_block":
+                prompt = create_cli_prompt(query, context, session_type, output_type='multi_code_block')
+
             else:
                 # Build prompt using default format
                 prompt = self._build_prompt(query, context, system_prompt)

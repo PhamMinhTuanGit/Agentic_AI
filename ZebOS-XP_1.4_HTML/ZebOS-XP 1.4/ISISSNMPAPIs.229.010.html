@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>isis_set_sys_max_area_addrs</title><link rel="Prev" href="ISISSNMPAPIs.229.009.html" title="Previous"><link rel="Next" href="ISISSNMPAPIs.229.011.html" title="Next"><link rel="StyleSheet" href="css/ISISSNMPAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISISSNMPAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISISSNMPAPIs.229.010.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="paI0GLZFJ9_002f79_002f4R11bL6Aw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISISSNMPAPIs.229.010.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.218.2.html#wwconnect_header">Intermediate System to Intermediate System Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISISSNMPAPIs.229.001.html#wwconnect_header">CHAPTER 10	IS-IS SNMP API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">isis_set_sys_max_area_addrs</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww589493" class="Heading2"><span></span>isis_set_sys_max_area_addrs</div><div id="ww589494" class="Body"><span></span>This call sets the maximum number of area addresses to be permitted for this instance of the IS-IS protocol. Only the default value can be set.</div><div id="ww596571" class="Heading3"><span></span>Syntax</div><div id="ww596580" class="PseudoCode"><span></span>int</div><div id="ww596581" class="PseudoCode"><span></span>isis_set_sys_max_area_addrs (u_int32_t vr_id, u_int32_t instance,</div><div id="ww596582" class="PseudoCode"><span></span>                             u_int32_t val)</div><div id="ww596573" class="Heading3"><span></span>Input Parameter</div><div id="ww596574" class="CmdHead1"><span class="Parameter">vr_id </span></div><div id="ww589522" class="Cmd1">Virtual Router ID. The default value is 0. For non-VR implementation, pass 0 for vr_id.</div><div id="ww589523" class="CmdHead1"><span class="Parameter">instance</span></div><div id="ww589524" class="Cmd1">IS-IS instance ID.</div><div id="ww589500" class="CmdHead1"><span class="Parameter">val</span></div><div id="ww589537" class="Cmd1">Maximum number of area addresses.</div><div id="ww593677" class="Heading3"><span></span>Output Parameter</div><div id="ww593678" class="Body"><span></span>None</div><div id="ww589501" class="Heading3"><span></span>Return Value</div><div id="ww589502" class="Body"><span></span>ISIS_API_SET_ERR_VR_NOT_EXIST if Virtual Router does not exist.</div><div id="ww589503" class="Body"><span></span>ISIS_API_SET_ERR_INSTANCE_NOT_EXIST if the IS-IS instance does not exist.</div><div id="ww589504" class="Body"><span></span>ISIS_API_SET_ERR_INVALID_VALUE if the given area is not in the range of 3 – 254.</div><div id="ww589505" class="Body"><span></span>ISIS_API_SET_ERR_TOO_MANY_AREA_ADDRESSES if there are more areas than the maximum.</div><div id="ww589506" class="Body"><span></span>ISIS_API_SET_SUCCESS for set complete.</div><div id="ww589507" class="Body"><span></span>ISIS_API_SET_ERROR for set not complete; instance not found.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

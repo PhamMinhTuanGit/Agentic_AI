@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Definition</title><link rel="Prev" href="data-structures.141.22.html" title="Previous"><link rel="Next" href="data-structures.141.24.html" title="Next"><link rel="StyleSheet" href="css/data-structures.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/data-structures_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/data-structures.141.23.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pUNzcXuDMDRF_002bLiWlKq3odQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/data-structures.141.23.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.139.2.html#wwconnect_header">Common Data Structures Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/data-structures.141.01.html#wwconnect_header">CHAPTER 1	Common Data Structures</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/data-structures.141.22.html#wwconnect_header">prefix</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Definition</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww560758" class="Heading2"><span></span>Definition</div><div id="ww560759" class="PseudoCode"><span></span>struct prefix</div><div id="ww560760" class="PseudoCode"><span></span>{</div><div id="ww560761" class="PseudoCode"><span></span>  u_int8_t family;</div><div id="ww560762" class="PseudoCode"><span></span>  u_int8_t prefixlen;</div><div id="ww560763" class="PseudoCode"><span></span>  u_int8_t prefix_style;</div><div id="ww560764" class="PseudoCode"><span></span>  u_int8_t pad1;</div><div id="ww560765" class="PseudoCode"><span></span>  union</div><div id="ww560766" class="PseudoCode"><span></span>  {</div><div id="ww560767" class="PseudoCode"><span></span>    u_int8_t prefix;</div><div id="ww560768" class="PseudoCode"><span></span>    struct pal_in4_addr prefix4;</div><div id="ww560769" class="PseudoCode"><span></span>#ifdef HAVE_IPV6</div><div id="ww560770" class="PseudoCode"><span></span>    struct pal_in6_addr prefix6;</div><div id="ww560771" class="PseudoCode"><span></span>#endif /* HAVE_IPV6 */</div><div id="ww560772" class="PseudoCode"><span></span>    struct</div><div id="ww560773" class="PseudoCode"><span></span>    {</div><div id="ww560774" class="PseudoCode"><span></span>      struct pal_in4_addr id;</div><div id="ww560775" class="PseudoCode"><span></span>      struct pal_in4_addr adv_router;</div><div id="ww560776" class="PseudoCode"><span></span>    } lp;</div><div id="ww560777" class="PseudoCode"><span></span>    u_int8_t val[9];</div><div id="ww560778" class="PseudoCode"><span></span>  } u;</div><div id="ww560779" class="PseudoCode"><span></span>};</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bgp g-shut-local-preference</title><link rel="Prev" href="BGPcmds.052.028.html" title="Previous"><link rel="Next" href="BGPcmds.052.030.html" title="Next"><link rel="StyleSheet" href="css/BGPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BGPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BGPcmds.052.029.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pNXEg8nbOF6Dy_002bwQvFKPfKQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BGPcmds.052.029.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.049.2.html#wwconnect_header">Border Gateway Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGPcmds.052.001.html#wwconnect_header">CHAPTER 2	BGP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bgp g-shut-local-preference</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1439443" class="Heading1NewPage"><span></span>bgp g-shut-local-preference</div><div id="ww1439444" class="Body"><span></span>Use this command to configure the local preference value of the router to be used during graceful shutdown. The local preference value is used to indicate the preferred path when there are multiple paths to the same destination in a single routing database. The path having a higher preference value is the preferred one. The preferred path is sent to all routers and access servers in the local autonomous system.</div><div id="ww1439445" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to revert to the default setting.</div><div id="ww1439446" class="Heading3"><span></span>Command Syntax</div><div id="ww1439447" class="CmdMaster">bgp g-shut-local-preference &lt;0-4294967295&gt;</div><div id="ww1439448" class="CmdMaster">no bgp g-shut-local-preference</div><div id="ww1439449" class="Heading3"><span></span>Parameters</div><div id="ww1439450" class="CmdHead1">&lt;0-4294967295&gt;</div><div id="ww1439451" class="Cmd1">Local preference value</div><div id="ww1439452" class="Heading3"><span></span>Default</div><div id="ww1439453" class="Body"><span></span>By default, the local preference value is set to 0.</div><div id="ww1439454" class="Heading3"><span></span>Command Mode</div><div id="ww1439455" class="Body"><span></span>Router mode</div><div id="ww1439456" class="Heading3"><span></span>Examples</div><div id="ww1439457" class="CmdExample">#configure terminal</div><div id="ww1439458" class="CmdExample">(config)#router bgp 100</div><div id="ww1439459" class="CmdExample">(config-router)#bgp g-shut-local-preference 22</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

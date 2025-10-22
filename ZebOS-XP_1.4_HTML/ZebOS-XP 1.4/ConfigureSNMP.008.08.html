@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>OSPFv3</title><link rel="Prev" href="ConfigureSNMP.008.07.html" title="Previous"><link rel="Next" href="ConfigureSNMP.008.09.html" title="Next"><link rel="StyleSheet" href="css/ConfigureSNMP.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ConfigureSNMP_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ConfigureSNMP.008.08.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pROXDlOGUkG5hGeNlY2UnAw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ConfigureSNMP.008.08.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Titlepage.001.2.html#wwconnect_header">ZebOS-XP Install Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ConfigureSNMP.008.01.html#wwconnect_header">Appendix D	Configure SNMP</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ConfigureSNMP.008.06.html#wwconnect_header">SNMP Utilities</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">OSPFv3</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww966649" class="Heading2"><span></span>OSPFv3</div><div id="ww966651" class="Heading3"><span></span>snmpget</div><div id="ww966653" class="Body"><span></span>From the client or management, execute <span class="Parameter">snmpget</span> to get the value from the OSPFv3 MIB.</div><div id="ww966654" class="CmdMaster">snmpget -c test 10.10.10.50 .1.3.6.1.3.122.1.1.2.0</div><div id="ww966655" class="Cmd1"><span class="Parameter">.1.3.6.1.3.122.1.1.2.0 </span>  is the Object ID of the variable <span class="Parameter">ospfAdminStat</span>.</div><div id="ww968656" class="Heading3"><span></span>snmpgetnext</div><div id="ww968658" class="Body"><span></span>From the client or management, execute <span class="Parameter">snmpgetnext</span> to get the next value from the OSPFv3 MIB.</div><div id="ww968659" class="CmdMaster">snmpgetnext -c test 10.10.10.50 .1.3.6.1.3.122.1.1.1.0</div><div id="ww968653" class="Body"><span></span>Executing this command returns <span class="Parameter">ospfAdminStat</span> <span class="Parameter">.1.3.6.1.3.122.1.1.2.0</span>, the next Object ID from <span class="Parameter">ospfGeneralGroup</span> table.</div><div id="ww966657" class="Heading3"><span></span>snmpwalk</div><div id="ww966658" class="Body"><span></span>Execute <span class="Parameter">snmpwalk</span> to walk through each table in the OSPFv3 MIB.</div><div id="ww966659" class="CmdMaster">snmpwalk -c test 10.10.10.50 .1.3.6.1.3.122.1.1.3.0 </div><div id="ww966660" class="Cmd1"><span class="Parameter">.1.3.6.1.3.122.1.1.3.0</span> is the Object ID for the variable <span class="Parameter">ospfVersionNumber.</span></div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

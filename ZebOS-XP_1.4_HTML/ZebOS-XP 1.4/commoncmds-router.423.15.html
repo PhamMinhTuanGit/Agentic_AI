@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>match ipv6 peer</title><link rel="Prev" href="commoncmds-router.423.14.html" title="Previous"><link rel="Next" href="commoncmds-router.423.16.html" title="Next"><link rel="StyleSheet" href="css/commoncmds-router.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/commoncmds-router_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/commoncmds-router.423.15.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pme1r96JYGLnXzVTbiJN1pw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/commoncmds-router.423.15.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.418.2.html#wwconnect_header">Network Services Module Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/commoncmds-router.423.01.html#wwconnect_header">CHAPTER 4	Common Router-map Mode Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">match ipv6 peer</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1050938" class="Heading1NewPage"><span></span>match ipv6 peer</div><div id="ww1050939" class="Body"><span></span>Use this command to specify the match peer IPv6 address of a route.</div><div id="ww1050940" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to remove the specified match criterion.</div><div id="ww1050941" class="Heading3"><span></span>Command Syntax </div><div id="ww1050942" class="CmdMaster">match ipv6 peer (&lt;1-199&gt;|&lt;1300-2699&gt;|WORD)</div><div id="ww1050943" class="CmdMaster">no match ipv6 peer (&lt;1-199&gt;|&lt;1300-2699&gt;|WORD|)</div><div id="ww1050944" class="Heading3"><span></span>Parameter</div><div id="ww1050945" class="CmdHead1"><span class="Parameter">WORD</span></div><div id="ww1050946" class="Cmd1">Specify the IP access-list name.</div><div id="ww1050947" class="CmdHead1"><span class="Parameter">&lt;1-199&gt;</span></div><div id="ww1050948" class="Cmd1">Specify the IP access-list number (standard range).</div><div id="ww1050949" class="CmdHead1"><span class="Parameter">&lt;1300-2699&gt;</span></div><div id="ww1050950" class="Cmd1">Specify the IP access-list number (expanded range).</div><div id="ww1050951" class="Heading3"><span></span>Command Mode</div><div id="ww1050952" class="Body"><span></span>Route-map mode</div><div id="ww1050953" class="Heading3"><span></span>Examples</div><div id="ww1050954" class="CmdExample">#configure terminal</div><div id="ww1050955" class="CmdExample">(config)#route-map mymap permit 3</div><div id="ww1050956" class="CmdExample">(config-route-map)#match ipv6 peer 123</div><div id="ww1050957" class="CmdExample">&nbsp;</div><div id="ww1050958" class="CmdExample">(config-route-map)#no match ipv6 peer 123</div><div id="ww1050932" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

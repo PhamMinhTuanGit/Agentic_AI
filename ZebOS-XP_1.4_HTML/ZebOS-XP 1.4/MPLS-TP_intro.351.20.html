@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Sending BFD Packets</title><link rel="Prev" href="MPLS-TP_intro.351.19.html" title="Previous"><link rel="Next" href="MPLS-TP_intro.351.21.html" title="Next"><link rel="StyleSheet" href="css/MPLS-TP_intro.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MPLS-TP_intro_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MPLS-TP_intro.351.20.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pQX6qy7YIcAhCTa20NlAxSw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MPLS-TP_intro.351.20.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.346.2.html#wwconnect_header">Multi-Protocol Label Switching Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP_intro.351.01.html#wwconnect_header">CHAPTER 4	MPLS Transport Profile</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP_intro.351.18.html#wwconnect_header">BFD for MPLS-TP LSPs and PWs</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Sending BFD Packets</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1012042" class="Heading2"><span></span>Sending BFD Packets</div><div id="ww1012043" class="Body"><span></span>The following steps provide a summary of how BFD packets are delivered.</div><div id="ww1012044" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">1.	</span></span>The first BFD packet for the session is constructed with the remote discriminator set to zero.</div><div id="ww1012045" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">2.	</span></span>When the BFD session learns the peer’s discriminator value, the BFD packets that follow are constructed with the valid remote discriminator field. </div><div id="ww1012046" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">3.	</span></span>For BFD Connectivity Verification (CV) packets, the source MEP TLV is included in the BFD packet.</div><div id="ww1012047" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">4.	</span></span>The BFD packet is then encapsulated with a G-ACh header.</div><div id="ww1012048" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">5.	</span></span>The channel type in the ACH header is filled for BFD Control Channel (CC) and Connectivity Verification (CV) packets.</div><div id="ww1012049" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">6.	</span></span>The constructed BFD packet is sent to the MPLS forwarder with the NHLFE index. The forwarder then adds the VC label and/or Tunnel labels to the packet; the packet is then sent out.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

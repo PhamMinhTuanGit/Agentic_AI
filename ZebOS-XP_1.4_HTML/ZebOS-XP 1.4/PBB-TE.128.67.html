@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>cfm_pbb_te_throughput_rx_enable</title><link rel="Prev" href="PBB-TE.128.66.html" title="Previous"><link rel="Next" href="PBB-TE.128.68.html" title="Next"><link rel="StyleSheet" href="css/PBB-TE.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PBB-TE_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PBB-TE.128.67.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pVk1t6U6OGy6PaZuvTb3eow" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PBB-TE.128.67.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.122.2.html#wwconnect_header">Carrier Ethernet Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PBB-TE.128.01.html#wwconnect_header">CHAPTER 5	Provider Backbone Bridge - Traffic Engineering </a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PBB-TE.128.39.html#wwconnect_header">Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">cfm_pbb_te_throughput_rx_enable</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1023936" class="Heading2"><span></span>cfm_pbb_te_throughput_rx_enable</div><div id="ww1023937" class="Body"><span></span>This function enables throughput frame reception on a local MEP on a PBB-TE bridge.</div><div id="ww1014071" class="Heading3"><span></span>Syntax</div><div id="ww1014072" class="PseudoCode"><span></span>struct cfm_tput_reception *</div><div id="ww1014073" class="PseudoCode"><span></span>cfm_pbb_te_throughput_rx_enable (struct onmd_bridge *bridge,</div><div id="ww1014074" class="PseudoCode"><span></span>                                 u_int32_t mepid, u_int8_t duration,</div><div id="ww1014075" class="PseudoCode"><span></span>                                 u_int8_t *md_name, u_int32_t te_sid)</div><div id="ww1014076" class="Heading3"><span></span>Input Parameters</div><div id="ww1014077" class="CmdHead1"><span class="Command">bridge</span> </div><div id="ww1014078" class="Cmd1">Identity of the bridge</div><div id="ww1014079" class="CmdHead1"><span class="Command">mepid</span> </div><div id="ww1014080" class="Cmd1">Source MEP ID &lt;1-8191&gt;</div><div id="ww1014081" class="CmdHead1"><span class="Command">duration</span> </div><div id="ww1014082" class="Cmd1">Duration of throughput-frame reception &lt;1-10&gt;</div><div id="ww1014083" class="CmdHead1"><span class="Command">md_name</span> </div><div id="ww1014084" class="Cmd1">Maintenance domain name</div><div id="ww1014085" class="CmdHead1"><span class="Command">te_sid</span> </div><div id="ww1014086" class="Cmd1">TE service instance ID &lt;1-42949675&gt;</div><div id="ww1014087" class="Heading3"><span></span>Return Values</div><div id="ww1014088" class="Body"><span></span>Pointer to the <span style="font-family: &quot;Courier New&quot;">cfm_tput_reception</span> structure when the function succeeds</div><div id="ww1024049" class="Body"><span></span>NULL when the function fails</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

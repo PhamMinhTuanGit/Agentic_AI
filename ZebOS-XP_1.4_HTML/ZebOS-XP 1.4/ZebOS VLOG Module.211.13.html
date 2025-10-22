@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>IMISH Builds</title><link rel="Prev" href="ZebOS%20VLOG%20Module.211.12.html" title="Previous"><link rel="Next" href="ZebOS%20VLOG%20Module.211.14.html" title="Next"><link rel="StyleSheet" href="css/ZebOS%20VLOG%20Module.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ZebOS%20VLOG%20Module_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ZebOS%20VLOG%20Module.211.13.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pC4DbVz_002f23JGIr6KhHArZIg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ZebOS%20VLOG%20Module.211.13.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.206.2.html#wwconnect_header">Integrated Management Interface Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ZebOS%20VLOG%20Module.211.01.html#wwconnect_header">CHAPTER 4	VLOG Module</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ZebOS%20VLOG%20Module.211.10.html#wwconnect_header">System Domain</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">IMISH Builds</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1000706" class="Heading2"><span></span>IMISH Builds</div><div id="ww1000842" class="Body"><span></span>In an IMISH build, a user connects to IMI via IMISH. When required, the IMISH/IMI validates user credentials. The user may start a debugging session by issuing the <span class="Command">terminal monito</span>r command.</div><div id="ww1000843" class="Body"><span></span>IMI retrieves the current IMISH TTY device name and the identity of the VR that needs to be monitored, and forwards the information to <span class="Command">VLOGD</span>. The <span class="Command">VLOGD</span> opens the terminal device, binds the terminal to the monitored VR log output, and starts forwarding log messages to the user terminal.</div><div id="ww1000845" class="Body"><span></span>A PVR user may issue several <span class="Command">terminal monitor</span> commands, each requesting binding to another VR. A PVR user may also request binding to all VRs at once. When using the latter option, any new VR that is added to the configuration during the debug session is automatically bound to the PVR user terminal.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

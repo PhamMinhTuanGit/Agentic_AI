@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>isis wide-metric</title><link rel="Prev" href="ISIScmds.216.51.html" title="Previous"><link rel="Next" href="ISIScmds.216.53.html" title="Next"><link rel="StyleSheet" href="css/ISIScmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISIScmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISIScmds.216.52.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pTf_002bsZveggy7_002fW2r9KCjlkw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISIScmds.216.52.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.213.2.html#wwconnect_header">Intermediate System to Intermediate System Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISIScmds.216.01.html#wwconnect_header">CHAPTER 2	IS-IS Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">isis wide-metric</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww513910" class="Heading1NewPage"><span></span>isis wide-metric</div><div id="ww513931" class="Body"><span></span>Use this command to set wide metric for the interface.</div><div id="ww538069" class="Body"><span></span>Interface wide-metric is put into Extended IP reachability TLVs, Extended IS reachability TLVs and IPv6 reachability TLVs in LSPs. The value is used for SPF calculation. This value is applied when metric-style is configured as 'wide'.</div><div id="ww529491" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter to set wide metric to the default.</div><div id="ww513933" class="Heading3"><span></span>Command Syntax </div><div id="ww561433" class="CmdMaster">isis wide-metric &lt;1-16777214&gt; (level-1|level-2|)</div><div id="ww561466" class="CmdMaster">no isis wide-metric &lt;1-16777214&gt; (level-1|level-2|)</div><div id="ww513934" class="CmdMaster">no isis wide-metric (level-1|level-2|)</div><div id="ww537988" class="Heading3"><span></span>Parameters</div><div id="ww538009" class="CmdHead1">&lt;1-16777214&gt;</div><div id="ww543466" class="Cmd1">Specify a wide metric.</div><div id="ww538010" class="CmdHead1">level-1</div><div id="ww543473" class="Cmd1">Specify the wide metric for level-1 circuit.</div><div id="ww537989" class="CmdHead1">level-2</div><div id="ww543480" class="Cmd1">Specify the wide metric for level-2 circuit.</div><div id="ww537990" class="Heading3"><span></span>Default</div><div id="ww538048" class="Body"><span></span>By default, ISIS uses 10 for the metric value and the metric is applied to both level-1 and level-2.</div><div id="ww537992" class="Heading3"><span></span>Command Mode</div><div id="ww537993" class="Body"><span></span>Interface mode</div><div id="ww513948" class="Heading3"><span></span>Examples</div><div id="ww513949" class="CmdExample">#configure terminal</div><div id="ww513950" class="CmdExample">(config)#interface eth0</div><div id="ww513951" class="CmdExample">(config-if)#isis wide-metric 100</div><div id="ww551218" class="CmdExample">&nbsp;</div><div id="ww551233" class="CmdExample">(config)#interface eth0</div><div id="ww551225" class="CmdExample">(config-if)#no isis wide-metric 100</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

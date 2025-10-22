@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>dmm</title><link rel="Prev" href="Ethernet%20CFM%20CLI%20Commands.104.15.html" title="Previous"><link rel="Next" href="Ethernet%20CFM%20CLI%20Commands.104.17.html" title="Next"><link rel="StyleSheet" href="css/Ethernet%20CFM%20CLI%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Ethernet%20CFM%20CLI%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Ethernet%20CFM%20CLI%20Commands.104.16.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN75byQOfgIiZ_002b5Of5Z_002fhu7w" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Ethernet%20CFM%20CLI%20Commands.104.16.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Ethernet%20CFM%20CLI%20Commands.104.01.html#wwconnect_header">CHAPTER 2	Ethernet CFM Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">dmm</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1064173" class="Heading1NewPage"><span></span>dmm</div><div id="ww1064174" class="Body"><span></span>Use this command to configure two-way delay measurement (DMM) for a MEP.</div><div id="ww1064175" class="Heading3"><span></span>Command Syntax</div><div id="ww1064176" class="CmdMaster">dmm (unicast (rmpid MEPID)|multicast) duration DURATION ((interval (1 | 2 | 3 | 4))|)</div><div id="ww1064177" class="Heading3"><span></span>Parameters</div><div id="ww1064178" class="CmdHead1">unicast</div><div id="ww1064179" class="Cmd1">Specify the unicast delay measurement.</div><div id="ww1064180" class="CmdHead2">rmpid</div><div id="ww1064181" class="Cmd1">Specify the MEPID of remote MEP.</div><div id="ww1064182" class="CmdHead1">multicast</div><div id="ww1064183" class="Cmd1">Specify the multicast delay measurement.</div><div id="ww1064184" class="CmdHead1">duration</div><div id="ww1064185" class="Cmd1">Specify an integer that sets the delay measurement duration &lt;5-60&gt;.</div><div id="ww1064186" class="CmdHead1">interval</div><div id="ww1064187" class="Cmd1">Specify a DMM transmission interval.</div><div id="ww1064188" class="CmdHead2">1</div><div id="ww1064189" class="Cmd1">Specify a DM Transmission interval &lt;100 ms&gt;.</div><div id="ww1064190" class="CmdHead2">2</div><div id="ww1064191" class="Cmd1">Specify a DM Transmission interval &lt;10 ms&gt;.</div><div id="ww1064192" class="CmdHead2">3</div><div id="ww1064193" class="Cmd1">Specify a DM Transmission interval &lt;1 second&gt;.</div><div id="ww1064194" class="CmdHead2">4</div><div id="ww1064195" class="Cmd1">Specify a DM Transmission interval &lt;10 seconds&gt;.</div><div id="ww1064196" class="Heading3"><span></span>Command Mode</div><div id="ww1064197" class="Body"><span></span>Ethernet CFM MEP configuration mode</div><div id="ww1064198" class="Heading3"><span></span>Example</div><div id="ww1064199" class="CmdExample">(config-cfm-mep)#dmm multicast duration 12 interval 1</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

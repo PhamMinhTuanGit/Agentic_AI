@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Hold Time Calculation Algorithm</title><link rel="Prev" href="OSPFOptimization.457.11.html" title="Previous"><link rel="Next" href="OSPFOptimization.457.13.html" title="Next"><link rel="StyleSheet" href="css/OSPFOptimization.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/OSPFOptimization_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/OSPFOptimization.457.12.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pSlZCBhJZvh3eknVGXWjHfg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/OSPFOptimization.457.12.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.453.2.html#wwconnect_header">Open Shortest Path First Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/OSPFOptimization.457.01.html#wwconnect_header">CHAPTER 3	Optimization</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/OSPFOptimization.457.11.html#wwconnect_header">SPF Exponential Hold-Time Backoff</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Hold Time Calculation Algorithm</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww514159" class="Heading2"><span></span>Hold Time Calculation Algorithm</div><div id="ww514160" class="Body"><span></span>The hold time delay calculation uses an exponential mechanism, as follows.</div><div id="ww514161" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">1.	</span></span>The CurrHold value indicates the current hold time to use. At the start of processing, the CurrHold value is initialized to the value of the MinHold. </div><div id="ww514162" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">2.	</span></span>If a topology change notification is received before the CurrHold time, the SPF calculation is delayed by either the MinHold time, or the CurrHold time since the last SPF calculation, whichever is less. The CurrHold value becomes either the SPF incremental value of its current value, or MaxHold, whichever is less.</div><div id="ww514163" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">3.	</span></span>If the topology change notification is received after the CurrHold time into the SPF incremental value, the CurrHold time becomes the value of the MinHold time. </div><div id="ww514164" class="Body"><span></span>In these cases, the SPF is delayed by the MinHold time, or CurrHold time since the last SPF calculation, which ever is lesser.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

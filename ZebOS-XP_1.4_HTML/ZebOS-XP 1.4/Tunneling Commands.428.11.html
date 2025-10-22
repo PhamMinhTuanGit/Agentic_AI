@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>tunnel ttl</title><link rel="Prev" href="Tunneling%20Commands.428.10.html" title="Previous"><link rel="Next" href="IPSec%20Commands.429.01.html" title="Next"><link rel="StyleSheet" href="css/Tunneling%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Tunneling%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Tunneling%20Commands.428.11.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pMQFkles43gV4BX_002f01qkByA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Tunneling%20Commands.428.11.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.418.2.html#wwconnect_header">Network Services Module Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Tunneling%20Commands.428.01.html#wwconnect_header">CHAPTER 9	Tunneling Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">tunnel ttl</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww507934" class="Heading1NewPage"><span></span>tunnel ttl</div><div id="ww511150" class="Body"><span></span>Use this command to specify a value of Time to Live (TTL) in the tunnel IPv4 encapsulation header. Enable the <span class="Parameter">path-mtu-discovery</span> before setting the TTL value. However, the first time you set the TTL value, and the <span class="Parameter">path-mtu-discovery</span> is not set, the system automatically enables the <span class="Parameter">path-mtu-discovery</span>. </div><div id="ww511151" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter to inheriting the underlying physical interface value by default.</div><div id="ww511152" class="Heading3"><span></span>Command Syntax</div><div id="ww510900" class="CmdMaster">tunnel ttl &lt;1-255&gt;</div><div id="ww513961" class="CmdMaster">no tunnel ttl &lt;1-255&gt;</div><div id="ww513933" class="Heading3"><span></span>Parameter</div><div id="ww513934" class="CmdHead1">&lt;1-255&gt;</div><div id="ww513935" class="Cmd1">Specify a Time to Live integer.</div><div id="ww513936" class="Heading3"><span></span>Default</div><div id="ww513937" class="Body"><span></span>By default, physical interface value is inherited.</div><div id="ww513938" class="Heading3"><span></span>Command Mode</div><div id="ww513939" class="Body"><span></span>Interface mode</div><div id="ww507957" class="Heading3"><span></span>Example</div><div id="ww507959" class="CmdExample">    #configure terminal</div><div id="ww507960" class="CmdExample">    (config)#interface tunnel 0</div><div id="ww507961" class="CmdExample">    (config-if)#tunnel mode gre</div><div id="ww507962" class="CmdExample">    (config-if)#tunnel destination 192.168.128.1</div><div id="ww507963" class="CmdExample">    (config-if)#tunnel source 192.168.0.1</div><div id="ww507964" class="CmdExample">    (config-if)#tunnel ttl 255</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

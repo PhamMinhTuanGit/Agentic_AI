@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ip igmp querier-timeout</title><link rel="Prev" href="Multicast%20IGMP%20Commands.385.14.html" title="Previous"><link rel="Next" href="Multicast%20IGMP%20Commands.385.16.html" title="Next"><link rel="StyleSheet" href="css/Multicast%20IGMP%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Multicast%20IGMP%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Multicast%20IGMP%20Commands.385.15.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="puQWcPRHx8l9B66P3K3gx3A" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Multicast%20IGMP%20Commands.385.15.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.381.2.html#wwconnect_header">Multicast Routing Information Base Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Multicast%20IGMP%20Commands.385.01.html#wwconnect_header">CHAPTER 3	L3 IGMP Multicast Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ip igmp querier-timeout</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1057635" class="Heading1NewPage"><span></span>ip igmp querier-timeout</div><div id="ww1071649" class="Body"><span></span>Use this command to set the timeout period before the router takes over as the querier for the interface after the previous querier has stopped querying. This command applies to interfaces configured for IGMP Layer-3 multicast protocols and IGMP Proxy.</div><div id="ww1062465" class="Body"><span></span>To restore the default value, use the <span style="font-family: &quot;Courier New&quot;">no</span> parameter with this command.</div><div id="ww1057637" class="Heading3"><span></span>Command Syntax</div><div id="ww1057638" class="CmdMaster">ip igmp querier-timeout <span class="Parameter">&lt;60-300&gt;</span> </div><div id="ww1057639" class="CmdMaster">no ip igmp querier-timeout</div><div id="ww1071564" class="Heading3"><span></span>Parameter</div><div id="ww1071565" class="CmdHead1"><span class="Parameter">&lt;60-300&gt;</span></div><div id="ww1071599" class="Cmd1">Number of seconds that the router waits after the previous querier has stopped querying before it takes over as the querier.</div><div id="ww1071625" class="Heading3"><span></span>Default</div><div id="ww1071639" class="Body"><span></span>255 seconds</div><div id="ww1071566" class="Heading3"><span></span>Command Mode</div><div id="ww1071567" class="Body"><span></span>Interface mode</div><div id="ww1057645" class="Heading3"><span></span>Example</div><div id="ww1057646" class="Body"><span></span>The following example configures the router to wait 120 seconds from the time it received the last query before it takes over as the querier for the interface: </div><div id="ww1057647" class="CmdExample">#configure terminal</div><div id="ww1057648" class="CmdExample">(config)#interface eth0</div><div id="ww1057649" class="CmdExample">(config-if)#ip igmp querier-timeout 120 </div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

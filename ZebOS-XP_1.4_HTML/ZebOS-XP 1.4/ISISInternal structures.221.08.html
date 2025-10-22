@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>isis_packet</title><link rel="Prev" href="ISISInternal%20structures.221.07.html" title="Previous"><link rel="Next" href="ISISInternal%20structures.221.09.html" title="Next"><link rel="StyleSheet" href="css/ISISInternal%20structures.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISISInternal%20structures_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISISInternal%20structures.221.08.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pPzoyObbMCDTUa1_002bftpj6BA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISISInternal%20structures.221.08.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.218.2.html#wwconnect_header">Intermediate System to Intermediate System Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISISInternal%20structures.221.01.html#wwconnect_header">CHAPTER 2	Data Structures and Databases</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISISInternal%20structures.221.02.html#wwconnect_header">Data Structures</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">isis_packet</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww504796" class="Heading2"><span></span>isis_packet</div><div id="ww504791" class="Body"><span></span>This data structure contains IS-IS packet-related information, and a pointer to the RAW packet data stream.</div><div id="ww505642" class="Heading3"><span></span>Definition</div><div id="ww505702" class="CmdExample">struct isis_packet</div><div id="ww505703" class="CmdExample">{</div><div id="ww505704" class="CmdExample">  /* Pointer of next packet. */</div><div id="ww505705" class="CmdExample">  struct isis_packet *next;</div><div id="ww505706" class="CmdExample">&nbsp;</div><div id="ww505707" class="CmdExample">  /* In/Out buffer. */</div><div id="ww505708" class="CmdExample">  struct stream *buf;</div><div id="ww505709" class="CmdExample">&nbsp;</div><div id="ww505710" class="CmdExample">  /* TLV vector. */</div><div id="ww505711" class="CmdExample">  vector tlvvec;</div><div id="ww505712" class="CmdExample">&nbsp;</div><div id="ww505713" class="CmdExample">  /* Source MAC address. */</div><div id="ww505714" class="CmdExample">  u_char mac_src[ETHER_ADDR_LEN];</div><div id="ww505715" class="CmdExample">&nbsp;</div><div id="ww505716" class="CmdExample">  /* Level Index. */</div><div id="ww505717" class="CmdExample">  u_char index;</div><div id="ww505718" class="CmdExample">};</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

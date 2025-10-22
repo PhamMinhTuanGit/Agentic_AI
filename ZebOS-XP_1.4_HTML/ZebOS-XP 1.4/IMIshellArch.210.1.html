@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CHAPTER 3 IMI Shell</title><link rel="Prev" href="IMI%20Components.209.5.html" title="Previous"><link rel="Next" href="IMIshellArch.210.2.html" title="Next"><link rel="StyleSheet" href="css/IMIshellArch.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/IMIshellArch_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/IMIshellArch.210.1.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pMUYrJUYnx3vZ_002fQ_002ftwSUYgA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/IMIshellArch.210.1.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.206.2.html#wwconnect_header">Integrated Management Interface Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">CHAPTER 3	IMI Shell </span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww529710" class="ChapterTitle"><span class="WebWorks_Number" style="width: 72pt"><span class="chapter">CHAPTER 3	</span></span>IMI Shell </div><div id="ww529711" class="Body"><span></span>The IMI Shell (IMISH) resides in its own layer on top of IMI and facilitates user access to both the IMI CLI and operating system commands including:</div><div id="ww528922" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>telnet</div><div id="ww528923" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>shell</div><div id="ww528924" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>ping</div><div id="ww528925" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>traceroute</div><div id="ww528929" class="Body"><span></span>A separate instance of the IMISH is instantiated for each user of the system. The order of operations is as follows:</div><div id="ww528930" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">1.	</span></span>User connects to the device.</div><div id="ww528931" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">2.	</span></span>IMISH is executed.</div><div id="ww528932" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">3.	</span></span>User authentication is performed using IMISH or system.</div><div id="ww528933" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">4.	</span></span>IMISH establishes a connection with ZebOS-XP through the IMI.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -286,8 +286,8 @@ def main():
     parser.add_argument(
         '--temperature',
         type=float,
-        default=0.7,
-        help='LLM temperature (default: 0.7)'
+        default=0.1,
+        help='LLM temperature (default: 0.1)'
     )
     
     args = parser.parse_args()

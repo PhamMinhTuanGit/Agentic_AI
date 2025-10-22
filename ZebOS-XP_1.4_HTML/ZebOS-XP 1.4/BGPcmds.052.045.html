@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>clear bgp flap-statistics</title><link rel="Prev" href="BGPcmds.052.044.html" title="Previous"><link rel="Next" href="BGPcmds.052.046.html" title="Next"><link rel="StyleSheet" href="css/BGPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BGPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BGPcmds.052.045.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pC5ygN_002b1XD4g1dBYYDFIGnw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BGPcmds.052.045.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.049.2.html#wwconnect_header">Border Gateway Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGPcmds.052.001.html#wwconnect_header">CHAPTER 2	BGP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">clear bgp flap-statistics</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1465688" class="Heading1NewPage"><span></span>clear bgp flap-statistics</div><div id="ww1465689" class="Body"><span></span>Use this command to reset BGP flap statistics.</div><div id="ww1465690" class="Heading3"><span></span>Command Syntax</div><div id="ww1465691" class="CmdMaster">clear bgp ipv4 (unicast|multicast) flap-statistics</div><div id="ww1465692" class="CmdMaster">clear bgp ipv4 (unicast|multicast) flap-statistics A.B.C.D</div><div id="ww1465693" class="CmdMaster">clear bgp ipv4 (unicast|multicast) flap-statistics A.B.C.D/M</div><div id="ww1465694" class="CmdMaster">clear ip bgp flap-statistics</div><div id="ww1465695" class="CmdMaster">clear ip bgp flap statistics A.B.C.D</div><div id="ww1465696" class="CmdMaster">clear ip bgp flap-statistics A.B.C.D/M</div><div id="ww1465697" class="CmdMaster">clear ip bgp ipv4 (unicast|multicast) flap-statistics</div><div id="ww1465698" class="CmdMaster">clear ip bgp ipv4 (unicast|multicast) flap-statistics A.B.C.D</div><div id="ww1465699" class="CmdMaster">clear ip bgp ipv4 (unicast|multicast) flap-statistics A.B.C.D/M</div><div id="ww1465700" class="Heading3"><span></span>Parameters</div><div id="ww1465701" class="CmdHead1">ipv4</div><div id="ww1465702" class="Cmd1">IPv4 address family.</div><div id="ww1465703" class="CmdHead2">multicast</div><div id="ww1465704" class="Cmd1">Multicast prefixes.</div><div id="ww1465705" class="CmdHead2">unicast</div><div id="ww1465706" class="Cmd1">Unicast prefixes.</div><div id="ww1465707" class="CmdHead1">A.B.C.D</div><div id="ww1465708" class="Cmd1">IP prefix (network) for example, 35.0.0.0</div><div id="ww1465709" class="CmdHead1">A.B.C.D/M</div><div id="ww1465710" class="Cmd1">IP prefix (network/length), for example, 35.0.0.0/8</div><div id="ww1465711" class="Heading3"><span></span>Command Mode</div><div id="ww1465712" class="Body"><span></span>Privileged Exec mode</div><div id="ww1465713" class="Heading3"><span></span>Examples</div><div id="ww1465714" class="CmdExample">#clear ip bgp flap-statistics 10.10.0.121</div><div id="ww1465715" class="CmdExample">#clear ip bgp ipv4 unicast flap-statistics</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

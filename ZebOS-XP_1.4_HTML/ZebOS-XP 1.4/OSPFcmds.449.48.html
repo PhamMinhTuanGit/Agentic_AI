@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ip ospf hello-interval</title><link rel="Prev" href="OSPFcmds.449.47.html" title="Previous"><link rel="Next" href="OSPFcmds.449.49.html" title="Next"><link rel="StyleSheet" href="css/OSPFcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/OSPFcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/OSPFcmds.449.48.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN35ttOjx91SBD4OrzhUyHdw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/OSPFcmds.449.48.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.446.2.html#wwconnect_header">Open Shortest Path First Command Reference </a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/OSPFcmds.449.01.html#wwconnect_header">CHAPTER 2	OSPFv2 Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ip ospf hello-interval</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1123313" class="Heading1NewPage"><span></span>ip ospf hello-interval</div><div id="ww1123314" class="Body"><span></span>Use this command to specify the interval between hello packets. </div><div id="ww1123319" class="Body"><span></span>The hello-interval is advertised in the hello packets. Configure the same hello-interval for all routers on a specific network. A shorter hello interval ensures faster detection of topological changes but results in more routing traffic.</div><div id="ww1103811" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to return to the default time.</div><div id="ww1141301" class="Heading3"><span></span>Command Syntax</div><div id="ww1141302" class="CmdMaster">ip ospf (A.B.C.D|) hello-interval &lt;1-65535&gt;</div><div id="ww1141303" class="CmdMaster">no ip ospf (A.B.C.D|) hello-interval</div><div id="ww1123244" class="Heading3"><span></span>Parameters</div><div id="ww1103815" class="CmdHead1"><span class="Parameter">A.B.C.D</span></div><div id="ww1123260" class="Cmd1">The IP address of the interface.</div><div id="ww1151286" class="CmdHead1"><span class="Parameter">hello-interval</span></div><div id="ww1151287" class="Cmd1">Specify the interval.</div><div id="ww1103816" class="CmdHead2"><span class="Parameter">&lt;1-65535&gt;</span></div><div id="ww1123267" class="Cmd1">Specify the interval in seconds. The default interval is 10 seconds.</div><div id="ww1103817" class="Heading3"><span></span>Command Mode</div><div id="ww1103818" class="Body"><span></span>Interface mode</div><div id="ww1103821" class="Heading3"><span></span>Examples</div><div id="ww1103822" class="Body"><span></span>The following example shows setting the hello-interval for 3 seconds on interface eth0.</div><div id="ww1103823" class="CmdExample">#configure terminal</div><div id="ww1103824" class="CmdExample">(config)#interface eth0</div><div id="ww1103825" class="CmdExample">(config-if)#ip ospf hello-interval 3</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

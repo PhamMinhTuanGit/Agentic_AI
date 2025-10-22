@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>restart-timer</title><link rel="Prev" href="ISIScmds.216.74.html" title="Previous"><link rel="Next" href="ISIScmds.216.76.html" title="Next"><link rel="StyleSheet" href="css/ISIScmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISIScmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISIScmds.216.75.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN3_002bpxCY_002fPjg5CYyne000UQg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISIScmds.216.75.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.213.2.html#wwconnect_header">Intermediate System to Intermediate System Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISIScmds.216.01.html#wwconnect_header">CHAPTER 2	IS-IS Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">restart-timer</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww549939" class="Heading1NewPage"><span></span>restart-timer</div><div id="ww549940" class="Body"><span></span>Use this command to restart the ISIS timer.</div><div id="ww552850" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to negate this command.</div><div id="ww549941" class="Heading3"><span></span>Command Syntax</div><div id="ww562516" class="CmdMaster">restart-timer &lt;5-65535&gt; (level-1|level-1-2|level-2|)</div><div id="ww562570" class="CmdMaster">no restart-timer (level-1|level-1-2|level-2|)</div><div id="ww564686" class="CmdMaster">no restart-timer &lt;5-65535&gt; (level-1|level-1-2|level-2|)</div><div id="ww549943" class="Heading3"><span></span>Parameters</div><div id="ww552700" class="CmdHead1">&lt;5-65535&gt;</div><div id="ww552663" class="CmdHead1">&nbsp;</div><div id="ww552664" class="Cmd1">Specify the restart timer in seconds</div><div id="ww552665" class="CmdHead1">level-1</div><div id="ww552666" class="Cmd1">Specify that restart is only for Level-1.</div><div id="ww552667" class="CmdHead1">level-1-2</div><div id="ww552668" class="Cmd1">Specify that restart is for both Level-1 and Level-2.</div><div id="ww552669" class="CmdHead1">level-2</div><div id="ww552670" class="Cmd1">Specify that restart is only for Level-2.</div><div id="ww550009" class="Heading3"><span></span>Command Mode</div><div id="ww549949" class="Body"><span></span>Router mode</div><div id="ww549950" class="Heading3"><span></span>Example</div><div id="ww579136" class="Body"><span></span>The following example enables and then disables the restart timer at 555 seconds for a level 2 interface.</div><div id="ww549998" class="CmdExample">#configure terminal</div><div id="ww552795" class="CmdExample">(config)#router isis bb</div><div id="ww552796" class="CmdExample">(config-router)#<span style="font-size: 10.0pt">restart-timer</span> 555 level-2</div><div id="ww552797" class="CmdExample">&nbsp;</div><div id="ww552798" class="CmdExample">(config)#router isis bb</div><div id="ww552799" class="CmdExample">(config-router)#no <span style="font-size: 10.0pt">restart-timer</span> 555 level-2</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

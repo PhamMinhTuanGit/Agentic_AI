@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>nsm_vlan_set_hybrid_port</title><link rel="Prev" href="VLANCLIcmdsAPIs.272.46.html" title="Previous"><link rel="Next" href="VLANCLIcmdsAPIs.272.48.html" title="Next"><link rel="StyleSheet" href="css/VLANCLIcmdsAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VLANCLIcmdsAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.47.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pdWdgB_002fZeuhSwTgZChxZk0w" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.47.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.264.2.html#wwconnect_header">Layer 2 Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.01.html#wwconnect_header">CHAPTER 7	Virtual LANs</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.09.html#wwconnect_header">API Definitions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">nsm_vlan_set_hybrid_port</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww512625" class="Heading2"><span></span>nsm_vlan_set_hybrid_port</div><div id="ww500377" class="Body"><span></span>This function sets the default VLAN for a hybrid port. </div><div id="ww505780" class="Heading3"><span></span>Syntax</div><div id="ww505788" class="CmdExample">int</div><div id="ww505789" class="CmdExample">nsm_vlan_set_hybrid_port (struct interface *ifp, nsm_vid_t pvid,</div><div id="ww505790" class="CmdExample">                          bool_t iterate_members, bool_t notify_kernel)</div><div id="ww497614" class="Heading3"><span></span>Input Parameters</div><div id="ww497615" class="CmdHead1"><span class="Parameter">ifp </span></div><div id="ww502740" class="Cmd1">Interface pointer.</div><div id="ww497616" class="CmdHead1"><span class="Parameter">pvid </span></div><div id="ww502756" class="Cmd1">Port default VLAN ID to be configured.</div><div id="ww500343" class="CmdHead1"><span class="Parameter">iterate_members</span></div><div id="ww502779" class="Cmd1"> Will be set to 1 = PAL_TRUE when the command is given for an aggregator.</div><div id="ww500344" class="CmdHead1"><span class="Parameter">notify_kernel</span></div><div id="ww502797" class="Cmd1">Will be set to true when the HAL call has to be called for the configuration.</div><div id="ww497618" class="Heading3"><span></span>Output Parameters</div><div id="ww497619" class="Body"><span></span>None</div><div id="ww497621" class="Heading3"><span></span>Return Values</div><div id="ww497622" class="Body"><span></span>0 when function succeeds.</div><div id="ww520680" class="Body"><span></span>NSM_VLAN_ERR_CVLAN_PORT_REG_EXIST</div><div id="ww520681" class="Body"><span></span>NSM_VLAN_ERR_IFP_NOT_BOUND when NSM local interface is not found</div><div id="ww520682" class="Body"><span></span>NSM_VLAN_ERR_VLAN_NOT_IN_PORT</div><div id="ww520683" class="Body"><span></span>NSM_VLAN_ERR_INVALID_MODE</div><div id="ww520684" class="Body"><span></span>NSM_VLAN_ERR_NATIVE_VID</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

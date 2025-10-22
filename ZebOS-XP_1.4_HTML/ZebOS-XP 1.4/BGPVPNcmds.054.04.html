@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>clear ip bgp * vpnv6</title><link rel="Prev" href="BGPVPNcmds.054.03.html" title="Previous"><link rel="Next" href="BGPVPNcmds.054.05.html" title="Next"><link rel="StyleSheet" href="css/BGPVPNcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BGPVPNcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BGPVPNcmds.054.04.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN_002bq9S8mjauYEB4BqHbw68OQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BGPVPNcmds.054.04.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.049.2.html#wwconnect_header">Border Gateway Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGPVPNcmds.054.01.html#wwconnect_header">CHAPTER 4	BGP Virtual Private Network Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">clear ip bgp * vpnv6</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1078772" class="Heading1NewPage"><span></span>clear ip bgp * vpnv6</div><div id="ww1078774" class="Body"><span></span>Use this command to reset a VPNv6 BGP connection for all peers. This command clears the BGP connection and dynamically resets the outbound routing table. This frees up additional memory required for storing updates to generate new updates.</div><div id="ww1067327" class="Heading3"><span></span>Command Syntax</div><div id="ww1085090" class="CmdMaster">clear ip bgp * vpnv6 unicast in</div><div id="ww1087682" class="CmdMaster">clear ip bgp * vpnv6 unicast out</div><div id="ww1085085" class="CmdMaster">clear ip bgp * vpnv6 unicast soft</div><div id="ww1085068" class="CmdMaster">clear ip bgp * vpnv6 unicast soft in</div><div id="ww1085032" class="CmdMaster">clear ip bgp * vpnv6 unicast soft out</div><div id="ww1067385" class="Heading3"><span></span>Parameters</div><div id="ww1085113" class="CmdHead1">in</div><div id="ww1085114" class="Cmd1">Clear incoming advertised routes</div><div id="ww1085115" class="CmdHead1">out</div><div id="ww1085116" class="Cmd1">Clear outgoing advertised routes</div><div id="ww1085117" class="CmdHead1">soft</div><div id="ww1085118" class="Cmd1">Clear both incoming and outgoing routes</div><div id="ww1085119" class="CmdHead2">in</div><div id="ww1085120" class="Cmd1">Soft reconfig inbound update</div><div id="ww1085121" class="CmdHead2">out</div><div id="ww1085122" class="Cmd1">Soft reconfig outbound update</div><div id="ww1067630" class="Heading3"><span></span>Command Mode</div><div id="ww1067631" class="Body"><span></span>Privileged Exec mode</div><div id="ww1067632" class="Heading3"><span></span>Examples</div><div id="ww1067633" class="CmdExample">#clear ip bgp * </div><div id="ww1067634" class="CmdExample">#clear ip bgp * vpnv6 unicast out</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

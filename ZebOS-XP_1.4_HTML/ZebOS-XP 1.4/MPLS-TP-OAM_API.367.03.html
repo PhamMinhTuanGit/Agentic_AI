@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>oam_mplstp_api_meg_delete</title><link rel="Prev" href="MPLS-TP-OAM_API.367.02.html" title="Previous"><link rel="Next" href="MPLS-TP-OAM_API.367.04.html" title="Next"><link rel="StyleSheet" href="css/MPLS-TP-OAM_API.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MPLS-TP-OAM_API_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MPLS-TP-OAM_API.367.03.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pK17cGarifCfpYpiEePPyLQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MPLS-TP-OAM_API.367.03.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.346.2.html#wwconnect_header">Multi-Protocol Label Switching Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP-OAM_API.367.01.html#wwconnect_header">CHAPTER 20	MPLS-TP OAM Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">oam_mplstp_api_meg_delete</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww510254" class="Heading2"><span></span>oam_mplstp_api_meg_delete</div><div id="ww510255" class="Body"><span></span>This function deletes the MPLS-TP Maintenance Entity Group. If the MEG is not already created, an error is returned.</div><div id="ww510256" class="Body"><span></span>This function is called by the <span class="Command">no ietf meg</span> command.</div><div id="ww510257" class="PseudoCode"><span></span>Syntax</div><div id="ww510258" class="PseudoCode"><span></span>s_int32_t</div><div id="ww510259" class="PseudoCode"><span></span>oam_mplstp_api_meg_delete (u_int32_t vr_id, char *meg_name);</div><div id="ww510260" class="Heading3"><span></span>Input Parameters</div><div id="ww510261" class="Cmd1">The virtual router (VR) instance ID</div><div id="ww510262" class="CmdHead1">meg_name</div><div id="ww510263" class="Cmd1">Character pointer containing the MEG name</div><div id="ww510264" class="Heading3"><span></span>Output Parameters</div><div id="ww510265" class="Body"><span></span>None</div><div id="ww510266" class="Heading3"><span></span>Return Values</div><div id="ww510267" class="Body"><span></span>MPLSTP_API_SUCCESS when the function succeeds</div><div id="ww519692" class="Body"><span></span>MPLSTP_ERR_VR_NOT_EXISTS when the virtual router cannot be found</div><div id="ww523873" class="Body"><span></span>MPLSTP_ERR_MEG_NAME_INVALID when <span class="Command">meg_name</span> is NULL</div><div id="ww522037" class="Body"><span></span>MPLSTP_ERR_MEG_NAME_EXCEEDS_MAX_LEN when the MEG name exceeds the maximum length</div><div id="ww510271" class="Body"><span></span>MPLSTP_ERR_MEG_ENTRY_NOT_EXISTS when the MEG entry cannot be found</div><div id="ww510272" class="Body"><span></span>MPLSTP_ERR_ME_ENTRY_EXISTS when the ME entry does not exist</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

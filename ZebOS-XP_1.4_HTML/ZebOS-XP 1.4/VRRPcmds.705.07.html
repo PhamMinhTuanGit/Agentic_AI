@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>enable</title><link rel="Prev" href="VRRPcmds.705.06.html" title="Previous"><link rel="Next" href="VRRPcmds.705.08.html" title="Next"><link rel="StyleSheet" href="css/VRRPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VRRPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VRRPcmds.705.07.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pNeXiCguWmf28kqWSw1O30Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VRRPcmds.705.07.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.702.2.html#wwconnect_header">Virtual Router Redundancy Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRRPcmds.705.01.html#wwconnect_header">CHAPTER 2	VRRP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">enable</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1024005" class="Heading1NewPage"><span></span>enable</div><div id="ww1024006" class="Body"><span></span>Use this command to enable a VRRP session on the router (to make it participate in virtual routing). To make any changes to the VRRP configuration, first disable the router from participating in virtual routing using the <span class="Command">disable</span> command.</div><div id="ww1036126" class="Note1"><span class="WebWorks_Number" style="width: 36pt"><span>Note:	</span></span>Configure the virtual IP address and define an interface for the VRRP session (using the <span class="Parameter">virtual-ip</span> and <span class="Parameter">interface</span> commands) before using this command.</div><div id="ww1019044" class="Heading3"><span></span>Command Syntax</div><div id="ww1019045" class="CmdMaster">enable</div><div id="ww1036106" class="Heading3"><span></span>Parameters</div><div id="ww1036152" class="Body"><span></span>None</div><div id="ww1019047" class="Heading3"><span></span>Command Mode</div><div id="ww1019048" class="Body"><span></span>Router mode</div><div id="ww1023811" class="Heading3"><span></span>Example</div><div id="ww1032989" class="Body"><span></span>The example below shows how to enable a VRRP session with VR ID 1 on interface eth0.</div><div id="ww1019050" class="CmdExample">#configure terminal</div><div id="ww1024021" class="CmdExample">(config)#router vrrp 1 eth0</div><div id="ww1023420" class="CmdExample">(config-router)#enable</div><div id="ww1019291" class="Heading3"><span></span>Related Commands</div><div id="ww1019292" class="Body"><span></span>disable</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

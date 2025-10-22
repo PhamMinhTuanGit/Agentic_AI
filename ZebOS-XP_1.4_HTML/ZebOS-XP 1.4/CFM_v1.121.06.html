@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ethernet cfm cc multicast</title><link rel="Prev" href="CFM_v1.121.05.html" title="Previous"><link rel="Next" href="CFM_v1.121.07.html" title="Next"><link rel="StyleSheet" href="css/CFM_v1.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/CFM_v1_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/CFM_v1.121.06.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pYojVFsxgZ1P_002fB0ayD54kqg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/CFM_v1.121.06.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/CFM_v1.121.01.html#wwconnect_header">Appendix A	CFM Version 1 Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ethernet cfm cc multicast</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1029884" class="Heading1NewPage"><span></span>ethernet cfm cc multicast</div><div id="ww1029885" class="Body"><span></span>Use this command to enable or disable multicast <span class="Description">CC</span><span class="chapter"> </span>on a specific MEP. When the continuity checking state is set to <span class="Command">enable</span>, the MEP sends periodic multicast frames. When the status is set to <span class="Command">disable</span>, the MEP stops sending multicast frames.</div><div id="ww1029886" class="Heading3"><span></span>Command Syntax</div><div id="ww1054666" class="CmdMaster">ethernet cfm cc multicast state (enable|disable) domain DOMAIN_NAME mepid MEPID (vlan VLAN_ID|) (bridge &lt;1-32&gt;|)</div><div id="ww1029888" class="Heading3"><span></span>Parameters</div><div id="ww1029889" class="CmdHead1">state</div><div id="ww1029890" class="Cmd1">Specify to either enable or disable CFM multicast continuity checking.</div><div id="ww1029891" class="CmdHead2">domain</div><div id="ww1029892" class="Cmd1">Specify the name of the maintenance domain.</div><div id="ww1029893" class="CmdHead2">mepid</div><div id="ww1029894" class="Cmd1">Specify the MEPID ranging from &lt;1-8191&gt;</div><div id="ww1029895" class="CmdHead3">vlan</div><div id="ww1029896" class="Cmd1">Specify the primary-VID of the MA.</div><div id="ww1029897" class="CmdHead3">bridge</div><div id="ww1029898" class="Cmd1">Specify the bridge group name used for bridging &lt;1-32&gt;.</div><div id="ww1029899" class="Heading3"><span></span>Command Mode</div><div id="ww1029900" class="Body"><span></span>Interface mode</div><div id="ww1029901" class="Heading3"><span></span>Examples</div><div id="ww1029902" class="CmdExample">#configure terminal</div><div id="ww1029903" class="CmdExample">(config)#interface eth1</div><div id="ww1029904" class="CmdExample">(config-if)#ethernet cfm cc multicast state enable domain abc mepid 23 vlan 3 bridge 1</div><div id="ww1029905" class="CmdExample">(config-if)#ethernet cfm cc multicast state enable domain abc mepid 23 bridge 1</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

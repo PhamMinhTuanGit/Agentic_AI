@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>spb_nsm_send_loop_mitign</title><link rel="Prev" href="SPB_CLI_API.575.53.html" title="Previous"><link rel="Next" href="SPB_CLI_API.575.55.html" title="Next"><link rel="StyleSheet" href="css/SPB_CLI_API.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SPB_CLI_API_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SPB_CLI_API.575.54.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pnHdvM2ceA6sxHsNLu6tUjg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SPB_CLI_API.575.54.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.572.2.html#wwconnect_header">Shortest Path Bridging Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SPB_CLI_API.575.01.html#wwconnect_header">CHAPTER 2	Shortest Path Bridging Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SPB_CLI_API.575.05.html#wwconnect_header">Functions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">spb_nsm_send_loop_mitign</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww575943" class="Heading2"><span></span>spb_nsm_send_loop_mitign</div><div id="ww575944" class="Body"><span></span>This function enables or disables loop mitigation.</div><div id="ww575945" class="Body"><span></span>This function implements the <span style="font-family: &quot;Courier New&quot;">bridge (&lt;1-32&gt; | backbone) loop-mitigation</span> command.</div><div id="ww575946" class="Heading3"><span></span>Syntax</div><div id="ww575947" class="PseudoCode"><span></span>#include "spbd/spb_nsm.h"</div><div id="ww575985" class="PseudoCode"><span></span>s_int32_t</div><div id="ww575949" class="PseudoCode"><span></span>spb_nsm_send_loop_mitign (char *bridge_name, u_char value)</div><div id="ww575950" class="Heading3"><span></span>Input Parameters</div><div id="ww575951" class="CmdHead1">bridge_name</div><div id="ww575952" class="Cmd1">Bridge name</div><div id="ww575953" class="CmdHead1">value</div><div id="ww575954" class="Cmd1">Whether to enable or disable loop mitigation:</div><div id="ww576250" class="CmdHead2">PAL_TRUE</div><div id="ww576260" class="Cmd1">Enable loop mitigation</div><div id="ww576262" class="CmdHead2">PAL_FALSE</div><div id="ww576277" class="Cmd1">Disable loop mitigation</div><div id="ww575955" class="Heading3"><span></span>Output Parameters</div><div id="ww575956" class="Body"><span></span>None</div><div id="ww575957" class="Heading3"><span></span>Return Value</div><div id="ww575958" class="Body"><span></span>Less than zero when the function fails</div><div id="ww576085" class="Body"><span></span>Greater than zero when the function succeeds</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

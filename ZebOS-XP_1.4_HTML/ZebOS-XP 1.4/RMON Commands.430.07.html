@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>rmon event</title><link rel="Prev" href="RMON%20Commands.430.06.html" title="Previous"><link rel="Next" href="RMON%20Commands.430.08.html" title="Next"><link rel="StyleSheet" href="css/RMON%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/RMON%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/RMON%20Commands.430.07.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="peZw08CbJVMsXnVJLkTa_002fQw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/RMON%20Commands.430.07.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.418.2.html#wwconnect_header">Network Services Module Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RMON%20Commands.430.01.html#wwconnect_header">CHAPTER 11	Remote Monitoring Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">rmon event</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1053019" class="Heading1NewPage"><span></span>rmon event</div><div id="ww1055868" class="Body"><span></span>Use this command to configure event parameters, such as, event type, description, and the community string corresponding to the trap if the event type is trap. The configured trap community does not take effect as the trap sending is handled by the SNMP daemon.</div><div id="ww1052092" class="Body"><span></span>Use the <span style="font-family: &quot;Courier New&quot;">no</span> form of this command to remove the event configuration.</div><div id="ww1052094" class="Heading3"><span></span>Command Syntax</div><div id="ww1057769" class="CmdMaster">rmon event &lt;1-65535&gt; (log |)(trap WORD |) (description WORD|) (owner WORD|)</div><div id="ww1052099" class="CmdMaster">no rmon event &lt;1-65535&gt;</div><div id="ww1055734" class="Heading3"><span></span>Parameters</div><div id="ww1055773" class="CmdHead1">&lt;1-65535&gt;</div><div id="ww1055802" class="Cmd1">Event entry index value.</div><div id="ww1055775" class="CmdHead1">log</div><div id="ww1055816" class="Cmd1">Log event type</div><div id="ww1055776" class="CmdHead1">trap</div><div id="ww1055823" class="Cmd1">Trap event type</div><div id="ww1055779" class="CmdHead1">description</div><div id="ww1055844" class="Cmd1">Event entry description</div><div id="ww1055737" class="CmdHead1">owner</div><div id="ww1055738" class="Cmd1">Owner name to identify entry.</div><div id="ww1056636" class="CmdHead2">WORD</div><div id="ww1056628" class="Cmd1">Community string corresponding to the trap</div><div id="ww1055739" class="Heading3"><span></span>Default</div><div id="ww1055854" class="Body"><span></span>No default event is created.</div><div id="ww1055741" class="Heading3"><span></span>Command Mode</div><div id="ww1055742" class="Body"><span></span>Configure mode</div><div id="ww1052107" class="Heading3"><span></span>Example</div><div id="ww1053205" class="CmdExample">#configure terminal</div><div id="ww1053206" class="CmdExample">(config)#rmon event 299 log description cond3 <span style="font-size: 10.0pt">owner </span>alfred</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

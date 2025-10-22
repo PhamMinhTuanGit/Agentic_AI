@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>pbb-te aps-group</title><link rel="Prev" href="PBB-TE-EPS%20CLI%20Commands.116.3.html" title="Previous"><link rel="Next" href="PBB-TE-EPS%20CLI%20Commands.116.5.html" title="Next"><link rel="StyleSheet" href="css/PBB-TE-EPS%20CLI%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PBB-TE-EPS%20CLI%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PBB-TE-EPS%20CLI%20Commands.116.4.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pNVQxO7bU3nfrF_002b4nOELHDg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PBB-TE-EPS%20CLI%20Commands.116.4.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PBB-TE-EPS%20CLI%20Commands.116.1.html#wwconnect_header">CHAPTER 14	PBB-TE APS Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">pbb-te aps-group</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1017163" class="Heading1NewPage"><span></span>pbb-te aps-group</div><div id="ww1017164" class="Body"><span></span>Use this command to create or delete a PBB-TE protection group with an Automatic Protection Switching (APS) ID. If the named APS ID does not already exist, it is created and associated with a working and a protection Traffic Engineering Service Instance (TESI). Once created, TESI protection group members cannot be changed. Rather, the APS group must be deleted and then re-created with new TESI member associations.</div><div id="ww1017165" class="Body"><span></span>Use the <span class="Command">no</span> form of this command to remove an APS protection group.</div><div id="ww1017166" class="Heading3"><span></span>Command Syntax</div><div id="ww1017167" class="CmdMaster">pbb-te aps-group APSID working-tesi TESID protection-tesi TESID</div><div id="ww1017168" class="CmdMaster">no pbb-te aps-group APSID</div><div id="ww1017169" class="Heading3"><span></span>Parameters</div><div id="ww1017170" class="CmdHead1">aps-group</div><div id="ww1017171" class="Cmd1">Automatic protection group</div><div id="ww1017172" class="CmdHead2">APS-ID</div><div id="ww1017173" class="Cmd1">Automatic protection group ID &lt;1-4094&gt;. The APS group ID must to be unique per IB-BEB.</div><div id="ww1017174" class="CmdHead1">working-tesi</div><div id="ww1017175" class="Cmd1">Specify the service instance ID.</div><div id="ww1017176" class="CmdHead2">TESID</div><div id="ww1017177" class="Cmd1">Specify the service instance ID &lt;1-42949675&gt;.</div><div id="ww1017178" class="Heading3"><span></span>Command Mode</div><div id="ww1017179" class="Body"><span></span>Configure mode</div><div id="ww1017180" class="Heading3"><span></span>Examples</div><div id="ww1017181" class="CmdExample">#configure terminal</div><div id="ww1017182" class="CmdExample">(config)#pbb-te aps-group 1 cbp cbp001 working-tesi 1 protection-tesi 2 </div><div id="ww1017183" class="CmdExample">(config)#no pbb-te aps-group 1 </div><div id="ww1017184" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -59,13 +59,30 @@ class LLMReranker:
             documents: List of documents with text and rank
         
         Returns:
-            Prompt string
+            Prompt string for the reranker model
         """
-        doc_text = ""
-        for i, doc in enumerate(documents, 1):
-            doc_text += f"[DOC {i}]\n{doc['text'][:200]}...\n\n"
+        # Check if using specialized reranker model
+        is_reranker_model = "reranker" in self.model.lower()
         
-        prompt = f"""You are a document relevance scorer. Given a query and a list of documents, score each document's relevance to the query from 0-100.
+        if is_reranker_model:
+            # Format for Qwen3-Reranker - simpler format
+            doc_text = ""
+            for i, doc in enumerate(documents, 1):
+                doc_text += f"[{i}] {doc['text'][:150]}\n"
+            
+            prompt = f"""Query: {query}
+
+Documents:
+{doc_text}
+
+Score each document's relevance to the query (0-100). Return ONLY JSON array of scores."""
+        else:
+            # Format for general LLMs
+            doc_text = ""
+            for i, doc in enumerate(documents, 1):
+                doc_text += f"[DOC {i}]\n{doc['text'][:200]}...\n\n"
+            
+            prompt = f"""You are a document g scorer. Given a query and a list of documents, score each document's relevance to the query from 0-100.
 
 Query: {query}
 
@@ -135,6 +152,10 @@ Important: Return ONLY the JSON array, nothing else."""
             LLM response or None if error
         """
         try:
+            logger.debug(f"🔄 Calling LLM: {self.model}")
+            logger.debug(f"   API: {self.api_url}")
+            logger.debug(f"   Prompt length: {len(prompt)} chars")
+            
             response = requests.post(
                 self.api_url,
                 json={
@@ -145,19 +166,32 @@ Important: Return ONLY the JSON array, nothing else."""
                 },
                 timeout=self.timeout
             )
-            response.raise_for_status()
+            
+            # Log response status
+            logger.debug(f"   Response status: {response.status_code}")
+            
+            if response.status_code != 200:
+                logger.error(f"❌ LLM API returned {response.status_code}")
+                logger.error(f"   Response: {response.text[:200]}")
+                return None
             
             result = response.json()
-            return result.get("response", "")
+            llm_response = result.get("response", "")
+            logger.debug(f"   Response length: {len(llm_response)} chars")
+            return llm_response
         
         except requests.exceptions.Timeout:
             logger.error(f"❌ LLM request timeout ({self.timeout}s)")
+            logger.error(f"   Model: {self.model}")
             return None
         except requests.exceptions.ConnectionError:
             logger.error(f"❌ Failed to connect to LLM API: {self.api_url}")
+            logger.error(f"   Model: {self.model}")
             return None
         except Exception as e:
-            logger.error(f"❌ Error calling LLM: {e}")
+            logger.error(f"❌ Error calling LLM: {type(e).__name__}: {e}")
+            logger.error(f"   Model: {self.model}")
+            logger.error(f"   API: {self.api_url}")
             return None
     
     def rerank(self, 

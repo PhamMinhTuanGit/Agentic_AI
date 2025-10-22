@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>nsm_cvlan_reg_tab_entry_add</title><link rel="Prev" href="VLANCLIcmdsAPIs.272.11.html" title="Previous"><link rel="Next" href="VLANCLIcmdsAPIs.272.13.html" title="Next"><link rel="StyleSheet" href="css/VLANCLIcmdsAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VLANCLIcmdsAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.12.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pLHr7Dd8afWKkgNWhNlWK0g" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.12.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.264.2.html#wwconnect_header">Layer 2 Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.01.html#wwconnect_header">CHAPTER 7	Virtual LANs</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.09.html#wwconnect_header">API Definitions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">nsm_cvlan_reg_tab_entry_add</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww510696" class="Heading2"><span></span>nsm_cvlan_reg_tab_entry_add</div><div id="ww510697" class="Body"><span></span>This function adds a CVLAN registration entry to a CVLAN registration table.</div><div id="ww510698" class="Heading3"><span></span>Syntax</div><div id="ww510699" class="CmdExample">s_int32_t</div><div id="ww510700" class="CmdExample">nsm_cvlan_reg_tab_entry_add (struct nsm_cvlan_reg_tab *regtab, u_int16_t cvid,</div><div id="ww510701" class="CmdExample">                             u_int16_t svid)</div><div id="ww510702" class="Heading3"><span></span>Input Parameters</div><div id="ww510703" class="CmdHead1">regtab</div><div id="ww510704" class="Cmd1">The registration table to which the CVLAN registration table entry is to be added.</div><div id="ww510705" class="CmdHead1">cvid </div><div id="ww510706" class="Cmd1">CVLAN ID to be translated.</div><div id="ww510707" class="CmdHead1">svid </div><div id="ww510708" class="Cmd1">SVLAN ID to be translated.</div><div id="ww510709" class="Heading3"><span></span>Output Parameters</div><div id="ww510710" class="Body"><span></span>None</div><div id="ww510711" class="Heading3"><span></span>Return Values</div><div id="ww519847" class="Body"><span></span>NSM_PRO_VLAN_ERR_CVLAN_PORT_NOT_FOUND</div><div id="ww519848" class="Body"><span></span>NSM_PRO_VLAN_ERR_CVLAN_MAP_ERR</div><div id="ww519849" class="Body"><span></span>NSM_PRO_VLAN_ERR_CVLAN_MAP_EXISTS</div><div id="ww519850" class="Body"><span></span>NSM_VLAN_ERR_BRIDGE_NOT_FOUND when a specified bridge is not found</div><div id="ww519851" class="Body"><span></span>NSM_VLAN_ERR_NOT_EDGE_BRIDGE</div><div id="ww519852" class="Body"><span></span>NSM_VLAN_ERR_VLAN_NOT_FOUND</div><div id="ww519853" class="Body"><span></span>NSM_VLAN_ERR_SVLAN_NOT_FOUND</div><div id="ww519854" class="Body"><span></span>NSM_L2_ERR_MEM</div><div id="ww519855" class="Body"><span></span>NSM_PRO_VLAN_ERR_CVLAN_REGIS_HAL_ERR</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

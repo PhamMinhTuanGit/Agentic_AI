@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>isis_tlv</title><link rel="Prev" href="ISISInternal%20structures.221.12.html" title="Previous"><link rel="Next" href="ISISInternal%20structures.221.14.html" title="Next"><link rel="StyleSheet" href="css/ISISInternal%20structures.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ISISInternal%20structures_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ISISInternal%20structures.221.13.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pD_002fYKRxE8inDEQEDuNBAlRg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ISISInternal%20structures.221.13.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.218.2.html#wwconnect_header">Intermediate System to Intermediate System Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISISInternal%20structures.221.01.html#wwconnect_header">CHAPTER 2	Data Structures and Databases</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ISISInternal%20structures.221.02.html#wwconnect_header">Data Structures</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">isis_tlv</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww504645" class="Heading2"><span></span>isis_tlv</div><div id="ww506654" class="Body"><span></span>This data structure contains time length values.</div><div id="ww506592" class="Heading3"><span></span>Definition</div><div id="ww506607" class="CmdExample">struct isis_tlv</div><div id="ww506608" class="CmdExample">{</div><div id="ww506609" class="CmdExample">  /* TLV type. */</div><div id="ww506610" class="CmdExample">  u_char type;</div><div id="ww506612" class="CmdExample">  /* TLV length. */</div><div id="ww506613" class="CmdExample">  u_char len;</div><div id="ww506615" class="CmdExample">  /* TLV length not committed. */</div><div id="ww506616" class="CmdExample">  u_char len_tmp;</div><div id="ww506618" class="CmdExample">  /* TLV flags. */</div><div id="ww506619" class="CmdExample">  u_char flags:3;</div><div id="ww506620" class="CmdExample">#define ISIS_TLV_SELF           (1 &lt;&lt; 0)</div><div id="ww506621" class="CmdExample">#define ISIS_TLV_LSP_ATTACHED   (1 &lt;&lt; 1)</div><div id="ww506623" class="CmdExample">  /* Allocated slot -- (slot + 1) * 8 octets. */</div><div id="ww506624" class="CmdExample">  u_char slot:5;</div><div id="ww506625" class="CmdExample">#define ISIS_TLV_DATA_BYTES(T)          (((T)-&gt;slot + 1) * 8)</div><div id="ww506626" class="CmdExample">#define ISIS_TLV_DATA_SLOTS(O)          (((O) - 1) / 8)</div><div id="ww506628" class="CmdExample">  /* Pointer to parent LSP. */</div><div id="ww506629" class="CmdExample">  struct isis_lsp *lsp;</div><div id="ww506631" class="CmdExample">  /* TLV body. */</div><div id="ww506632" class="CmdExample">  u_char *data;</div><div id="ww506633" class="CmdExample">};</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

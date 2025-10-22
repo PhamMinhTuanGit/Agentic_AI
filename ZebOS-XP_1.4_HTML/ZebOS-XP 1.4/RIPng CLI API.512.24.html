@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ripng_recvbuf_size_set</title><link rel="Prev" href="RIPng%20CLI%20API.512.23.html" title="Previous"><link rel="Next" href="RIPng%20CLI%20API.512.25.html" title="Next"><link rel="StyleSheet" href="css/RIPng%20CLI%20API.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/RIPng%20CLI%20API_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/RIPng%20CLI%20API.512.24.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="puKVU3_002bMmlk8SJPoxwvpywQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/RIPng%20CLI%20API.512.24.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.507.2.html#wwconnect_header">Routing Information Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RIPng%20CLI%20API.512.01.html#wwconnect_header">CHAPTER 4	RIPng Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RIPng%20CLI%20API.512.02.html#wwconnect_header">RIPng API Functions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ripng_recvbuf_size_set</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww543122" class="Heading2"><span></span>ripng_recvbuf_size_set</div><div id="ww545099" class="Body"><span></span>This function sets the specified size of the RIP UDP buffer.</div><div id="ww545100" class="Body"><span></span>This function is called by the following command:</div><div id="ww545101" class="Pseudocode1"><span></span>recv-buffer-size</div><div id="ww543124" class="Heading3"><span></span>Syntax</div><div id="ww543125" class="PseudoCode"><span></span>int </div><div id="ww543126" class="PseudoCode"><span></span>ripng_recvbuf_size_set (u_int32_t vr_id, int instance, u_int32_t bufsize);</div><div id="ww543127" class="Heading3"><span></span>Input Parameters</div><div id="ww543128" class="CmdHead1"><span class="Parameter">vr_id</span>  </div><div id="ww543129" class="Cmd1">The Virtual Router ID. Its default value is 0. For a non-VR implementation, pass 0 for this parameter.</div><div id="ww543130" class="CmdHead1"><span class="Parameter">instance</span> </div><div id="ww543131" class="Cmd1">The number of the instance</div><div id="ww543132" class="CmdHead1"><span class="Parameter">bufsize</span> </div><div id="ww543133" class="Cmd1">The size of the receiving buffer</div><div id="ww543134" class="Heading3"><span></span>Output Parameters</div><div id="ww543135" class="Body"><span></span>None</div><div id="ww543136" class="Heading3"><span></span>Return Values</div><div id="ww562056" class="Body"><span></span>RIP_API_SET_ERR_CANT_CHANGE_BUFFER_SIZE when the buffer size cannot be set by the lower layer, such as kernel</div><div id="ww543138" class="Body"><span></span>RIP_API_SET_ERR_PROCESS_NOT_EXIST when the instance cannot be found</div><div id="ww562033" class="Body"><span></span>RIP_API_SET_ERR_VR_NOT_EXIST when <span class="Parameter">vr_id</span> does not exist</div><div id="ww543140" class="Body"><span></span>RIP_API_SET_SUCCESS when it is successful</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

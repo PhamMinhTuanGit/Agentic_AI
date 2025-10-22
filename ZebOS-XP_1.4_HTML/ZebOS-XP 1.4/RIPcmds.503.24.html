@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>network</title><link rel="Prev" href="RIPcmds.503.23.html" title="Previous"><link rel="Next" href="RIPcmds.503.25.html" title="Next"><link rel="StyleSheet" href="css/RIPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/RIPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/RIPcmds.503.24.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN7s55XycQgaxhbY_002f_002fJnbBPw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/RIPcmds.503.24.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.500.2.html#wwconnect_header">Routing Information Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RIPcmds.503.01.html#wwconnect_header">CHAPTER 2	Routing Information Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">network</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1005398" class="Heading1NewPage"><span></span>network</div><div id="ww1057191" class="Body"><span></span>Use this command to specify a network as one that runs RIP. This command specifies the networks to which routing updates will be sent and received. If a network is not specified, the interfaces in that network will not be advertised in any RIP update.</div><div id="ww1006281" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to remove the specified network as one that runs RIP.</div><div id="ww1006043" class="Heading3"><span></span>Command Syntax</div><div id="ww1006322" class="CmdMaster">network A.B.C.D/M</div><div id="ww1092701" class="CmdMaster">network IFNAME</div><div id="ww1092716" class="CmdMaster">no network A.B.C.D/M</div><div id="ww1092719" class="CmdMaster">no network IFNAME</div><div id="ww1066006" class="Heading3"><span></span>Parameters</div><div id="ww1015348" class="CmdHead1">A.B.C.D/M</div><div id="ww1066079" class="Cmd1">The IP address prefix and length of this IP network.</div><div id="ww1015340" class="CmdHead1">IFNAME</div><div id="ww1066086" class="Cmd1">Alphanumeric string that defines the interface name.</div><div id="ww1006045" class="Heading3"><span></span>Default</div><div id="ww1024997" class="Body"><span></span>Disabled</div><div id="ww1087896" class="Heading3"><span></span>Command Mode</div><div id="ww1095098" class="Body"><span></span>Router mode</div><div id="ww1095101" class="Heading3"><span></span>Examples</div><div id="ww1024323" class="CmdExample">#configure terminal</div><div id="ww1024324" class="CmdExample">(config)#router rip </div><div id="ww1012485" class="CmdExample">(config-router)#network 10.0.0.0/8</div><div id="ww1017818" class="CmdExample">(config-router)#network eth0</div><div id="ww1096448" class="CmdExample">&nbsp;</div><div id="ww1096451" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

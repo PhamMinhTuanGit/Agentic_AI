@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Using the weight Command</title><link rel="Prev" href="Routeserv.068.07.html" title="Previous"><link rel="Next" href="Routeserv.068.09.html" title="Next"><link rel="StyleSheet" href="css/Routeserv.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Routeserv_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Routeserv.068.08.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pMHWPZT0qImH7z8D_002fZF4jyg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Routeserv.068.08.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.057.2.html#wwconnect_header">Border Gateway Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Routeserv.068.01.html#wwconnect_header">CHAPTER 10	Route Server, Filtering, and Load Balancing</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Routeserv.068.07.html#wwconnect_header">Weight Command</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Using the weight Command</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww514046" class="Heading2"><span></span>Using the weight Command</div><div id="ww514049" class="Body"><span></span>The value of the weight attribute is used to assign a best path. The weight is assigned locally to each individual router, and the value is only understood by that particular router. The value is neither propagated nor carried through in route updates. </div><div id="ww514051" class="Body"><span></span>A weight can be any integer from 0 to 65,535. Routes learned through another BGP peer have a default weight of 0, and routes sourced by the local router—the paths that the router originates—have a default weight of 32768. Routes with a higher weight value have preference when there are multiple routes to the same destination. </div><div id="ww514054" class="Body"><span></span>If a BGP peer group is specified using the peer-group-name argument, all of the members of the peer group will inherit the characteristic configured with this command.</div><div id="ww514056" class="Body"><span></span>The <span class="Command">no</span> form of this command removes the command from the running configuration. However, route selection is not done on the basis of the default weight, because the default weight that should be applied when the weight is unconfigured is only applied to the fresh routes, but not to the previously present routes. To apply the default weight, use either a soft reset command or the <span class="Command">clear ip bgp peer-group</span> command.</div><div id="ww514057" class="Body"><span></span>The weights assigned with the <span class="Command">set weight</span> command override the weights assigned using the <span class="Command">neighbor weight</span> command.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

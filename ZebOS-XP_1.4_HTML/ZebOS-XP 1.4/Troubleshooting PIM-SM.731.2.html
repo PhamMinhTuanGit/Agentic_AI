@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>No PIM adjacency</title><link rel="Prev" href="Troubleshooting%20PIM-SM.731.1.html" title="Previous"><link rel="Next" href="Troubleshooting%20PIM-SM.731.3.html" title="Next"><link rel="StyleSheet" href="css/Troubleshooting%20PIM-SM.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Troubleshooting%20PIM-SM_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Troubleshooting%20PIM-SM.731.2.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pq69MgAqJ34msAbMIIxpgLQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Troubleshooting%20PIM-SM.731.2.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.723.2.html#wwconnect_header">Troubleshooting Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Troubleshooting%20PIM-SM.731.1.html#wwconnect_header">CHAPTER 7	Troubleshooting PIM</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">No PIM adjacency</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1045846" class="Heading1"><span></span>No PIM adjacency</div><div id="ww1051116" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">1.	</span></span>Use the <span class="Parameter">show run</span> command to make sure that the interface is not administratively shutdown. If <span class="Parameter">shutdown</span> is configured, remove this configuration with the <span class="Parameter">no shutdown</span> command. </div><div id="ww1051117" class="CmdExample"># configure terminal</div><div id="ww1051118" class="CmdExample">(config)# interface eth0</div><div id="ww1051119" class="CmdExample">(config-if)# no shutdown</div><div id="ww1051120" class="Body1"><span></span>Use the <span class="Parameter">show interface</span> command to make sure that the interface is up.</div><div id="ww1051122" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">2.	</span></span>Make sure that PIM is enabled on the interface by using the <span class="Parameter">show ip pim sparse-mode interface</span> command. </div><div id="ww1051124" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">3.	</span></span>If you are trying to establish adjacency between ZebOS-XP and Cisco and are not successful, use the <span class="Parameter">ip pim exclude-genid</span> command on the interface. Some old Cisco IOS do not recognize the <span class="Parameter">GenID</span> option in the PIM Hello packet and discard the packet. </div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

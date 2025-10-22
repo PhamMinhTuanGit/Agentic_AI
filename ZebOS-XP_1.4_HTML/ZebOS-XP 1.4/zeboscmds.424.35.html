@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ipv6 neighbor</title><link rel="Prev" href="zeboscmds.424.34.html" title="Previous"><link rel="Next" href="zeboscmds.424.36.html" title="Next"><link rel="StyleSheet" href="css/zeboscmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/zeboscmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/zeboscmds.424.35.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pkELal0SSOm0yB1LC8v0F_002bw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/zeboscmds.424.35.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.418.2.html#wwconnect_header">Network Services Module Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/zeboscmds.424.01.html#wwconnect_header">CHAPTER 5	Interface Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ipv6 neighbor</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1067329" class="Heading1NewPage"><span></span>ipv6 neighbor</div><div id="ww1067330" class="Body"><span></span>Use this command to add an IPv6 neighbor entry. </div><div id="ww1067331" class="Body"><span></span>Use the <span class="Parameter">no</span> form of this command to an IPv6 neighbor entry.</div><div id="ww1067332" class="Heading3"><span></span>Command Syntax</div><div id="ww1067333" class="CmdMaster">ipv6 neighbor X:X::X:X IFNAME MAC</div><div id="ww1067334" class="CmdMaster">no ipv6 neighbor X:X::X:X IFNAME</div><div id="ww1067335" class="Heading3"><span></span>Parameters</div><div id="ww1067336" class="CmdHead1"><span class="Parameter">X</span><span class="parameter">:X::X:X</span></div><div id="ww1067337" class="Cmd1">Specify the neighbor’s IPv6 address.</div><div id="ww1067338" class="CmdHead1">IFNAME</div><div id="ww1067339" class="Cmd1">Specify the name of the interface.</div><div id="ww1067340" class="CmdHead1"><span class="Parameter">MAC</span></div><div id="ww1067341" class="Cmd1">Specify the MAC hardware address &lt;HHHH.HHHH.HHHH&gt;.</div><div id="ww1067342" class="Heading3"><span></span>Command Mode</div><div id="ww1067343" class="Body"><span></span>Configure mode</div><div id="ww1067344" class="Heading3"><span></span>Examples</div><div id="ww1085697" class="CmdExample">#configure terminal</div><div id="ww1085698" class="CmdExample">(config)#ipv6 neighbor 2000::3 eth1 0010.1842.3dc1</div><div id="ww1067032" class="CmdExample">(config)#no ipv6 neighbor 2000::3 eth1</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

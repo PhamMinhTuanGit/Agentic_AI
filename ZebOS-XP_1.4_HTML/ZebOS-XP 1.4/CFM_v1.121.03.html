@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ethernet cfm 1dm receive</title><link rel="Prev" href="CFM_v1.121.02.html" title="Previous"><link rel="Next" href="CFM_v1.121.04.html" title="Next"><link rel="StyleSheet" href="css/CFM_v1.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/CFM_v1_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/CFM_v1.121.03.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="prTfupPfunws3zCrZ_002fuDADg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/CFM_v1.121.03.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/CFM_v1.121.01.html#wwconnect_header">Appendix A	CFM Version 1 Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ethernet cfm 1dm receive</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1027508" class="Heading1NewPage"><span></span>ethernet cfm 1dm receive</div><div id="ww1027509" class="Body"><span></span>Use this command to configure reception of one-way delay measurement (1DM) frames for the host MEP, set the duration, associate the MEP to an <span class="Command">DOMAIN_NAME</span>, and optionally, to a <span class="Command">VID</span> and a <span class="Command">bridge</span>.</div><div id="ww1027510" class="Heading3"><span></span>Command Syntax</div><div id="ww1027511" class="CmdMaster">ethernet cfm 1dm receive mepid MEPID duration DURATION domain DOMAIN<br>(vlan VLAN_ID|) (bridge &lt;1-32&gt;|)</div><div id="ww1027512" class="Heading3"><span></span>Parameters</div><div id="ww1027513" class="CmdHead1">mepid</div><div id="ww1027514" class="Cmd1">Specify the host MEP.</div><div id="ww1027515" class="CmdHead1">duration</div><div id="ww1027516" class="Cmd1">Specify an integer in the range of &lt;5-60&gt; that sets the delay measurement duration.</div><div id="ww1027517" class="CmdHead1">domain</div><div id="ww1027518" class="Cmd1">Specify the maintenance domain name.</div><div id="ww1027519" class="CmdHead2">vlan</div><div id="ww1027520" class="Cmd1">Specify an integer that identifies a VLAN.</div><div id="ww1027521" class="CmdHead2">bridge</div><div id="ww1027522" class="Cmd1">Specify an ID of a bridge in the range of &lt;1-32&gt;.</div><div id="ww1027523" class="Heading3"><span></span>Command Mode</div><div id="ww1027524" class="Body"><span></span>Exec mode and Privileged Exec mode</div><div id="ww1027525" class="Heading3"><span></span>Example</div><div id="ww1027526" class="CmdExample">#ethernet cfm 1dm receive mepid 4 duration 7 domain 1 bridge 1</div><div id="ww1027527" class="CmdExample">#</div><div id="ww1027528" class="CmdExample">#ethernet cfm 1dm receive mepid 23 duration 5 domain abc bridge 1</div><div id="ww1027529" class="CmdExample">#</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

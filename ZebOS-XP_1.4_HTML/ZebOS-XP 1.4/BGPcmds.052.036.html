@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bgp router-id</title><link rel="Prev" href="BGPcmds.052.035.html" title="Previous"><link rel="Next" href="BGPcmds.052.037.html" title="Next"><link rel="StyleSheet" href="css/BGPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BGPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BGPcmds.052.036.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="poAuz3_002b8XUr_002b0lm5BU2Xz4Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BGPcmds.052.036.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.049.2.html#wwconnect_header">Border Gateway Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BGPcmds.052.001.html#wwconnect_header">CHAPTER 2	BGP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bgp router-id</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1248967" class="Heading1NewPage"><span></span>bgp router-id</div><div id="ww1281914" class="Body"><span></span>Use this command to manually configure a fixed router ID as a BGP router identifier. When this command is used to configure a fixed router ID, the current router identifier is overridden and the peers are reset.</div><div id="ww1248969" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to remove a manually configured fixed router ID.</div><div id="ww1248970" class="Heading3"><span></span>Command Syntax</div><div id="ww1277226" class="CmdMaster">bgp router-id A.B.C.D</div><div id="ww1394342" class="CmdMaster">no bgp router-id</div><div id="ww1449729" class="CmdMaster">no bgp router-id A.B.C.D</div><div id="ww1298950" class="Heading3"><span></span>Parameter</div><div id="ww1350702" class="CmdHead2">A.B.C.D</div><div id="ww1298957" class="Cmd1">Router ID in an IPv4 address format</div><div id="ww1350886" class="Heading3"><span></span>Default</div><div id="ww1350887" class="Body"><span></span>When a loopback interface is configured, the router ID is set to the IP address of the loopback interface. If no loopback interface is configured, the highest IP address is the router-id.</div><div id="ww1281860" class="Heading3"><span></span>Command Mode</div><div id="ww1281900" class="Body"><span></span>Router mode</div><div id="ww1248979" class="Heading3"><span></span>Examples</div><div id="ww1248980" class="CmdExample">#configure terminal</div><div id="ww1248981" class="CmdExample">(config)#router bgp 100</div><div id="ww1248982" class="CmdExample">(config-router)#bgp router-id 10.1.2.7</div><div id="ww1339628" class="CmdExample">&nbsp;</div><div id="ww1339647" class="CmdExample">(config)#router bgp 100</div><div id="ww1339639" class="CmdExample">(config-router)#no bgp router-id 10.1.2.7</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

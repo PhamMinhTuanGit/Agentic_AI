@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Client-Server IPC</title><link rel="Prev" href="SoftwareArchitecture.036.05.html" title="Previous"><link rel="Next" href="SoftwareArchitecture.036.07.html" title="Next"><link rel="StyleSheet" href="css/SoftwareArchitecture.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SoftwareArchitecture_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SoftwareArchitecture.036.06.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pstbxZJFDHYlb_002fOvi_002bDyvhw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SoftwareArchitecture.036.06.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.033.2.html#wwconnect_header">Bidirectional Forwarding Detection Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SoftwareArchitecture.036.01.html#wwconnect_header">CHAPTER 2	BFD Software Architecture</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SoftwareArchitecture.036.05.html#wwconnect_header">BFD Client Module</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Client-Server IPC</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww999793" class="Heading2"><span></span>Client-Server IPC</div><div id="ww1002096" class="Body"><span></span>BFD solution provides a modularized architecture by separating protocol-specific functions (BFD client) from the core BFD module (BFD server). This ensures that CPU-intensive BFD operations do not affect the main task of a protocol module. Communication between the BFD server and the BFD client is handled through a standard client-server IPC. BFD server creates a socket and waits for the connection requests from the BFD clients. BFD clients, on the other hand, initiate a connection during the start-up phase, and make sure that the connection is up by doing a connection retry just in case the BFD server is not up and running. After connection set-up, the BFD client issues BFD message (session add and the session delete) to the BFD server so that it starts track reachability. When the BFD server identifies a state change in a BFD session, for example, session up or session down, it propagates this to BFD clients via the BFD client-server IPC. The IPC is closed when either the BFD client or server terminates their process.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

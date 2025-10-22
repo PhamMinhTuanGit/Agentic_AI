@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Data Link OAM Sessions</title><link rel="Prev" href="MPLS-TP_intro.351.23.html" title="Previous"><link rel="Next" href="MPLS-TP_intro.351.25.html" title="Next"><link rel="StyleSheet" href="css/MPLS-TP_intro.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MPLS-TP_intro_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MPLS-TP_intro.351.24.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN3KgifHN_002fHMjnt_002bfNxyog0Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MPLS-TP_intro.351.24.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.346.2.html#wwconnect_header">Multi-Protocol Label Switching Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP_intro.351.01.html#wwconnect_header">CHAPTER 4	MPLS Transport Profile</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP_intro.351.18.html#wwconnect_header">BFD for MPLS-TP LSPs and PWs</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Data Link OAM Sessions</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1012104" class="Heading2"><span></span>Data Link OAM Sessions</div><div id="ww1012105" class="Body"><span></span>Following is an overview of how OAM data link sessions are set up.Datalink OAM sessions are used to monitor the link status of a point-to-point MPLS provider interface</div><div id="ww1012107" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">1.	</span></span>The Datalink OAM BFD session information is stored in an AVL Tree with a key as an interface index.</div><div id="ww1012108" class="Bulleted1"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>BFD runs in active mode on both ends for datalink OAM sessions.</div><div id="ww1012110" class="Bulleted1"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>OAMD also constructs and adds the G-ACh headers, and sends the packet to the forwarder.</div><div id="ww1012111" class="Numbered"><span class="WebWorks_Number" style="width: 18pt"><span class="StepNumber">2.	</span></span>The forwarder forwards the OAM packet to the Egress side.</div><div id="ww1012112" class="Bulleted1"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>In the Egress node, if the label is a GAL label, the forwarder classifies the packet as data link OAM packet.</div><div class="ww_skin_page_overflow"><div id="ww1012116" class="AnchorImage"><img class="Default" src="../ZebOS-XP%201.4/images/7418.jpg" width="426" height="283" style="display: inline; left: 0.0; top: 0.0" alt=""></div></div><div id="ww1012117" class="FigureTitle"><span>Figure 4-11: </span>MPLS TP Datalink OAM Support, Ingress or Egress</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

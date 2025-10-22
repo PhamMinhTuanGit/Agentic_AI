@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>set tag</title><link rel="Prev" href="commoncmds-router.423.35.html" title="Previous"><link rel="Next" href="commoncmds-router.423.37.html" title="Next"><link rel="StyleSheet" href="css/commoncmds-router.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/commoncmds-router_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/commoncmds-router.423.36.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pzX9YiZj6_002fjlM0zeALAFDjw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/commoncmds-router.423.36.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.418.2.html#wwconnect_header">Network Services Module Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/commoncmds-router.423.01.html#wwconnect_header">CHAPTER 4	Common Router-map Mode Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">set tag</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1049901" class="Heading1NewPage"><span></span>set tag</div><div id="ww1062514" class="Body"><span></span>Use this command to set a tag value. The parameter is the route tag that is labeled by another routing protocol (BGP or other IGP when redistributing), because AS-external-LSA has a route-tag field in its LSAs. In addition, when using route-map, ZebOS-XP can tag the LSAs with the appropriate tag value. Sometimes the tag matches with using route-map, and sometimes, the value may be used by another application.</div><div id="ww1049903" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to return to the default.</div><div id="ww1049904" class="Heading3"><span></span>Command Syntax</div><div id="ww1049905" class="CmdMaster">set tag <span class="Parameter">&lt;0-4294967295&gt;</span></div><div id="ww1049906" class="CmdMaster"><span class="Parameter">no set tag (&lt;0-4294967295&gt;|)</span></div><div id="ww1049907" class="Heading3"><span></span>Parameter</div><div id="ww1049908" class="CmdHead1"><span class="Parameter">&lt;0-4294967295&gt;</span></div><div id="ww1049909" class="Cmd1">Specify the tag value for destination routing protocol.</div><div id="ww1049910" class="Heading3"><span></span>Command Mode</div><div id="ww1049911" class="Body"><span></span>Route-map mode</div><div id="ww1049912" class="Heading3"><span></span>Example</div><div id="ww1049913" class="Body"><span></span>In the following example the tag value of the destination routing protocol is set to 6:</div><div id="ww1049914" class="CmdExample">#configure terminal</div><div id="ww1049915" class="CmdExample">(config)#route-map rmap1 permit 3</div><div id="ww1049916" class="CmdExample">(config-route-map)#set tag 6 </div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

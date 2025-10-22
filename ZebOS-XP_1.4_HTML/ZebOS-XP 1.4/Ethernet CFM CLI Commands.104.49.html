@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>show ethernet cfm active-levels</title><link rel="Prev" href="Ethernet%20CFM%20CLI%20Commands.104.48.html" title="Previous"><link rel="Next" href="Ethernet%20CFM%20CLI%20Commands.104.50.html" title="Next"><link rel="StyleSheet" href="css/Ethernet%20CFM%20CLI%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Ethernet%20CFM%20CLI%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Ethernet%20CFM%20CLI%20Commands.104.49.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pyXdlsucCodbQjVuNmt1yCA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Ethernet%20CFM%20CLI%20Commands.104.49.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Ethernet%20CFM%20CLI%20Commands.104.01.html#wwconnect_header">CHAPTER 2	Ethernet CFM Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">show ethernet cfm active-levels</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1088803" class="Heading1NewPage"><span></span>show ethernet cfm active-levels</div><div id="ww1088804" class="Body"><span></span>Use this command to display active levels for a VID on a specific interface. One active level is selected for MIP creation.</div><div id="ww1088805" class="Heading3"><span></span>Command Syntax</div><div id="ww1088806" class="CmdMaster">show ethernet cfm active-levels vid VID (interface IF_NAME|)<br>((bridge &lt;1-32&gt; | backbone)|)</div><div id="ww1088807" class="Heading3"><span></span>Parameters</div><div id="ww1088808" class="CmdHead1">vid</div><div id="ww1088809" class="Cmd1">Specify the VLAN.</div><div id="ww1088810" class="CmdHead2">VID</div><div id="ww1088811" class="Cmd1">Specify the VLAN ID &lt;2-4094&gt;.</div><div id="ww1088812" class="CmdHead1">interface</div><div id="ww1088813" class="Cmd1">Specify the interface.</div><div id="ww1088814" class="CmdHead2">IF_NAME</div><div id="ww1088815" class="Cmd1">Specify the interface name.</div><div id="ww1088816" class="CmdHead1">bridge</div><div id="ww1088817" class="Cmd1">Specify a bridge.</div><div id="ww1088818" class="CmdHead2">&lt;1-32&gt;</div><div id="ww1088819" class="Cmd1">Specify a bridge ID.</div><div id="ww1088820" class="CmdHead2">backbone</div><div id="ww1088821" class="Cmd1">Backbone bridge.</div><div id="ww1088822" class="Heading3"><span></span>Command Mode</div><div id="ww1088823" class="Body"><span></span>Exec mode and Privileged Exec mode</div><div id="ww1088824" class="Heading3"><span></span>Example</div><div id="ww1088825" class="CmdExample">#show ethernet cfm active-levels vid 3 interface eth1 bridge 1</div><div id="ww1088826" class="CmdExample">#show ethernet cfm active-levels vid 3 bridge 1</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

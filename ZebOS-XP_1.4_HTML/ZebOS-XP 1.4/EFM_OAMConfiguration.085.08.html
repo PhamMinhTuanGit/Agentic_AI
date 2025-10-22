@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Validation</title><link rel="Prev" href="EFM_OAMConfiguration.085.07.html" title="Previous"><link rel="Next" href="EFM_OAMConfiguration.085.09.html" title="Next"><link rel="StyleSheet" href="css/EFM_OAMConfiguration.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/EFM_OAMConfiguration_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/EFM_OAMConfiguration.085.08.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pVV7uvzSkMeSM9zZ7lCgwcA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/EFM_OAMConfiguration.085.08.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.081.2.html#wwconnect_header">Carrier Ethernet Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/EFM_OAMConfiguration.085.01.html#wwconnect_header">CHAPTER 3	Ethernet to the First Mile OAM Configuration</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/EFM_OAMConfiguration.085.07.html#wwconnect_header">Remote Loopback</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Validation</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww999916" class="Heading2"><span></span>Validation</div><div id="ww1000045" class="Body"><span></span>An OAM entity can put its remote entity into loopback mode using a loopback control OAMPDU. In loopback mode, every frame received is transmitted back on that same port except for OAMPDUs. The periodic exchange of OAMPDUs must continue during loopback state to maintain the OAM session. Once we enable remote loopback in ZebOS1, it sends out a loopback control OAMPDU with Enable remote loopback command. When ZebOS2 receives it, it changes its parser state to Loopback and MUX state to discard and then sends out information OAMPDU with updated state information.</div><div id="ww999952" class="PseudoCode"><span></span>ZebOS1#show ethernet oam eth2</div><div id="ww999953" class="PseudoCode"><span></span>eth2</div><div id="ww999954" class="PseudoCode"><span></span>Discovery State Machine Details:</div><div id="ww999956" class="PseudoCode"><span></span>EFM Discovery Machine State:      Send Any</div><div id="ww999957" class="PseudoCode"><span></span>Local Parser State:               Discard</div><div id="ww999958" class="PseudoCode"><span></span>Local Multiplexer State:          Forward</div><div id="ww999959" class="PseudoCode"><span></span>Remote Parser State:              Loopback</div><div id="ww999960" class="PseudoCode"><span></span>Remote Multiplexer State:         Invalid</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

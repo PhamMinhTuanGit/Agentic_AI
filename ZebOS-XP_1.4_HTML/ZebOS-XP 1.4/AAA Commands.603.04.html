@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>aaa authentication login console</title><link rel="Prev" href="AAA%20Commands.603.03.html" title="Previous"><link rel="Next" href="AAA%20Commands.603.05.html" title="Next"><link rel="StyleSheet" href="css/AAA%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/AAA%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/AAA%20Commands.603.04.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pV_002bnOpeC9aThhcSLtRzbghg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/AAA%20Commands.603.04.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.600.2.html#wwconnect_header">System Management Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/AAA%20Commands.603.01.html#wwconnect_header">CHAPTER 2	Authentication, Authorization, and Accounting</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">aaa authentication login console</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww529506" class="Heading1NewPage"><span></span>aaa authentication login console</div><div id="ww529507" class="Body"><span></span>Use this command to set the AAA authentication methods for console log ins.</div><div id="ww528196" class="Body"><span></span>Use the <span class="Command">no</span> form of this command to set the default AAA authentication method (local).</div><div id="ww528197" class="Heading3"><span></span>Command Syntax</div><div id="ww528198" class="CmdMaster">aaa authentication login console ((group LINE) | local | none)</div><div id="ww528199" class="CmdMaster">no aaa authentication login console ((group LINE) | local | none)</div><div id="ww528200" class="Heading3"><span></span>Parameters</div><div id="ww528201" class="CmdHead1">group</div><div id="ww528202" class="Cmd1">Use a server group list for authentication</div><div id="ww528203" class="CmdHead2">LINE</div><div id="ww528204" class="Cmd1">Specify a space-separated list of up to 8 configured RADIUS, TACACS+, or LDAP server group names followed by <span class="Command">local</span> or <span class="Command">none</span> or both <span class="Command">local</span> and <span class="Command">none</span>. The list can also include:</div><div id="ww528205" class="CmdHead3">radius</div><div id="ww528206" class="Cmd1">All configured RADIUS servers</div><div id="ww528207" class="CmdHead3">tacacs+</div><div id="ww528208" class="Cmd1">All configured TACACS+ servers</div><div id="ww528209" class="CmdHead3">ldap</div><div id="ww528210" class="Cmd1">All configured LDAP servers</div><div id="ww528211" class="CmdHead1">local</div><div id="ww528212" class="Cmd1">Use local authentication</div><div id="ww528213" class="CmdHead1">none</div><div id="ww528214" class="Cmd1">No authentication</div><div id="ww528215" class="Heading3"><span></span>Command Mode</div><div id="ww528216" class="Body"><span></span>Configure mode</div><div id="ww528217" class="Heading3"><span></span>Examples</div><div id="ww528218" class="CmdExample">#configure terminal</div><div id="ww528219" class="CmdExample">(config)#aaa authentication login console group radius</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

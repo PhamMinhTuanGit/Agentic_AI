@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>vlan classifier rule mac</title><link rel="Prev" href="VLANandPVLANCLICmds.262.26.html" title="Previous"><link rel="Next" href="VLANandPVLANCLICmds.262.28.html" title="Next"><link rel="StyleSheet" href="css/VLANandPVLANCLICmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VLANandPVLANCLICmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VLANandPVLANCLICmds.262.27.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pmH1REohGTIG4dauO6rFY3w" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VLANandPVLANCLICmds.262.27.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLANandPVLANCLICmds.262.01.html#wwconnect_header">CHAPTER 13	VLAN and Private VLAN Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">vlan classifier rule mac</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1015221" class="Heading1NewPage"><span></span>vlan classifier rule mac</div><div id="ww1015222" class="Body"><span></span>Use this command to create a subnet-based VLAN classifier rule and map it to a specific VLAN.</div><div id="ww1015223" class="Body"><span></span>If the source IP address matches the IP subnet specified in the VLAN classifier rule, received packets are mapped to the designated VLAN.</div><div id="ww1024432" class="Heading3"><span></span>Command Syntax</div><div id="ww1024433" class="CmdMaster">vlan classifier rule &lt;1-256&gt; mac WORD vlan &lt;2-4094&gt;</div><div id="ww1024434" class="CmdMaster">no vlan classifier rule &lt;1-256&gt;</div><div id="ww1015229" class="Heading3"><span></span>Parameters</div><div id="ww1015234" class="CmdHead1">WORD</div><div id="ww1015506" class="Cmd1">Indicate the Mac address classification. Enter the address in HHHH.HHHH.HHHH format.</div><div id="ww1015507" class="CmdHead1">vlan</div><div id="ww1015508" class="Cmd1">Indicates the VLAN to which an untagged packet is mapped &lt;2-4094&gt;.</div><div id="ww1015304" class="Heading3"><span></span>Command Mode</div><div id="ww1015305" class="Body"><span></span>Configure mode</div><div id="ww1015306" class="Heading3"><span></span>Command Example</div><div id="ww1015311" class="CmdExample">#configure terminal</div><div id="ww1015312" class="CmdExample">(config)#vlan classifier rule 2 mac fe80::22e::b5ff:fee8:6/64 vlan 2</div><div id="ww1015313" class="CmdExample">(config)#no vlan classifier rule 2</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

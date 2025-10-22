@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>mrib_snmp_api_get_next_mrt_expirytime</title><link rel="Prev" href="McastRoutingMIBAPIs.410.34.html" title="Previous"><link rel="Next" href="McastRoutingMIBAPIs.410.36.html" title="Next"><link rel="StyleSheet" href="css/McastRoutingMIBAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/McastRoutingMIBAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/McastRoutingMIBAPIs.410.35.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pV05J2JNUzinBVFHKMLCPXQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/McastRoutingMIBAPIs.410.35.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.402.2.html#wwconnect_header">Multicast Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/McastRoutingMIBAPIs.410.01.html#wwconnect_header">CHAPTER 7	Multicast Routing MIB API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/McastRoutingMIBAPIs.410.07.html#wwconnect_header">API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">mrib_snmp_api_get_next_mrt_expirytime</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1234040" class="Heading2"><span></span>mrib_snmp_api_get_next_mrt_expirytime</div><div id="ww1234145" class="Body"><span></span>This function gets the minimum amount of time remaining before the next entry is aged out. The value 0 indicates that the entry is not subject to aging.</div><div id="ww1233958" class="Heading3"><span></span>Syntax</div><div id="ww1234047" class="PseudoCode"><span></span>int</div><div id="ww1234048" class="PseudoCode"><span></span>mrib_snmp_api_get_next_mrt_expirytime (const u_int32_t vr_id,</div><div id="ww1234049" class="PseudoCode"><span></span>                                       const vrf_id_t vrf_id,</div><div id="ww1234050" class="PseudoCode"><span></span>                                       struct mrib_snmp_api_mrt_index *index,</div><div id="ww1233962" class="PseudoCode"><span></span>                                       u_int32_t *val);</div><div id="ww1233963" class="Heading3"><span></span>Input Parameters</div><div id="ww1233964" class="CmdHead1">vr_id</div><div id="ww1233965" class="Cmd1">Virtual router ID</div><div id="ww1233966" class="CmdHead1">vrf_id</div><div id="ww1233967" class="Cmd1">VPN routing/forwarding instance ID</div><div id="ww1233968" class="Heading3"><span></span>Output Parameters</div><div id="ww1233969" class="CmdHead1"><span class="Command">index</span></div><div id="ww1233970" class="Cmd1"><span class="Description">Index to the entry in the multicast next hop table</span></div><div id="ww1245049" class="CmdHead1"><span class="Command">val</span></div><div id="ww1245050" class="Cmd1">The expiration time</div><div id="ww1233973" class="Heading3"><span></span>Return Values</div><div id="ww1241174" class="Body"><span></span>MRIB_API_GET_SUCCESS when the function succeeds</div><div id="ww1233974" class="Body"><span></span>MRIB_API_GET_ERROR when the function fails</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

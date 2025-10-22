@@ -306,7 +306,7 @@ def get_session_manager() -> SessionCLIManager:
     return _session_manager
 
 
-def create_cli_prompt(query: str, context: str, session_type: str = "general") -> str:
+def create_cli_prompt(query: str, context: str, session_type: str = "general", output_type: str = "default") -> str:
     """
     Create a complete prompt for CLI generation in single code block format
     
@@ -319,7 +319,12 @@ def create_cli_prompt(query: str, context: str, session_type: str = "general") -
         Complete prompt
     """
     system_prompt = CLIOutputConfig.get_prompt_for_context(session_type)
-    
+    if output_type == "single_code_block":
+        system_prompt += "\nRemember: Generate ALL commands in a SINGLE code block. Do not create multiple code blocks."
+    if output_type == "multi_code_block":
+        system_prompt += "\nRemember: You can create MULTIPLE code blocks if needed for different devices or sections."
+    else:
+        pass
     prompt = f"""{system_prompt}
 
 Context:
@@ -327,7 +332,6 @@ Context:
 
 Question: {query}
 
-Remember: Generate ALL commands in a SINGLE code block. Do not create multiple code blocks.
 
 Answer:"""
     

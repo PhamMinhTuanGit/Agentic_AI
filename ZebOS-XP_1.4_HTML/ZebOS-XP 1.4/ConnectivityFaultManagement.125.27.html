@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Link-Level Maintenance End Point</title><link rel="Prev" href="ConnectivityFaultManagement.125.26.html" title="Previous"><link rel="Next" href="ConnectivityFaultManagement.125.28.html" title="Next"><link rel="StyleSheet" href="css/ConnectivityFaultManagement.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ConnectivityFaultManagement_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ConnectivityFaultManagement.125.27.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pNzhjIU9zihlKxcFi6_002bj3Pg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ConnectivityFaultManagement.125.27.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.122.2.html#wwconnect_header">Carrier Ethernet Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ConnectivityFaultManagement.125.01.html#wwconnect_header">CHAPTER 2	Connectivity Fault Management</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Link-Level Maintenance End Point</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1005636" class="Heading1"><span></span>Link-Level Maintenance End Point</div><div id="ww1013175" class="Body"><span></span>A link-level MEP does not monitor VLANs. Instead, it monitors the health of the physical link. In the figure, the link-level MEP is the Down MEP in position 5.</div><div id="ww1013161" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>Down MEPs are indicated by the shaded&nbsp;inverted triangles. </div><div class="ww_skin_page_overflow"><div id="ww1011851" class="AnchorImage"><img class="Default" src="../ZebOS-XP%201.4/images/LL_MEP.jpg" width="340" height="364" style="display: inline; left: 0.0; top: 0.0" alt=""></div></div><div id="ww1011993" class="FigureTitle"><span>Figure 2-2: </span>Illustration of Link-Level MEP</div><div id="ww1005657" class="Body"><span></span>In order to configure a Down MEP in position 5, an MA needs to be created.The identifier for a link-level MEP is not the MD level 0, but an MA for which no VID has been configured.</div><div id="ww1005793" class="Body"><span></span>A link-level MEP sends out only untagged frames. The ZebOS-XP Layer 2 Forwarder allows untagged CFM frames to be sent when the VLAN identifier is 0, regardless of whether the port has been configured as a trunk or an access port.</div><div id="ww1005795" class="Body"><span></span>Upon receiving an untagged frame, the L2 forwarder adds the PVID of the port, and passes the frame to the CFM module. In <span class="Command">onmd</span>, the frame is received as a tagged frame. When <span class="Command">onmd</span> receives an untagged frame, a bit is set so that when the frame is received by CFM, the protocol recognizes it as an untagged link-level frame.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

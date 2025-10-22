@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>efm_oam_err_frame_window_get</title><link rel="Prev" href="EFM.133.28.html" title="Previous"><link rel="Next" href="EFM.133.30.html" title="Next"><link rel="StyleSheet" href="css/EFM.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/EFM_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/EFM.133.29.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pdhH_002bujDmg5PRMvCCvnbr0w" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/EFM.133.29.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.122.2.html#wwconnect_header">Carrier Ethernet Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/EFM.133.01.html#wwconnect_header">CHAPTER 10	Ethernet to the First Mile</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/EFM.133.09.html#wwconnect_header">EFM OAM API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">efm_oam_err_frame_window_get</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1004368" class="Heading2"><span></span>efm_oam_err_frame_window_get</div><div id="ww1004369" class="Body"><span></span>This function gets the window size of the errored frame event.</div><div id="ww1004370" class="Body"><span></span>The EFM MIB support calls this function.</div><div id="ww1004371" class="Heading3"><span></span>Syntax</div><div id="ww1004372" class="PseudoCode"><span></span>s_int32_t</div><div id="ww1004373" class="PseudoCode"><span></span>efm_oam_err_frame_window_get(struct interface *ifp, u_int32_t* window)</div><div id="ww1004374" class="Heading3"><span></span>Input Parameters</div><div id="ww1004375" class="CmdHead1"><span class="Command">ifp</span> </div><div id="ww1004376" class="Cmd1">Pointer to the interface structure</div><div id="ww1004377" class="Heading3"><span></span>Output Parameters</div><div id="ww1004378" class="CmdHead1">window </div><div id="ww1004379" class="Cmd1">The size of the window for the errored frame event</div><div id="ww1004380" class="Heading3"><span></span>Return</div><div id="ww1004381" class="Body"><span></span>EFM_OAM_ERR_IF_NOT_FOUND when the onmd interface is not found</div><div id="ww1004382" class="Body"><span></span>EFM_OAM_ERR_NOT_ENABLED when EFM is not enabled for the interface</div><div id="ww1004383" class="Body"><span></span>EFM_OAM_ERR_INTERNAL when there is an internal error</div><div id="ww1004384" class="Body"><span></span>EFM_SUCCESS when the function succeeds</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

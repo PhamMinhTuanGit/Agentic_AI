@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>cfm_find_ma_mep_connectivity_status</title><link rel="Prev" href="ConnectivityFaultManagement.125.67.html" title="Previous"><link rel="Next" href="ConnectivityFaultManagement.125.69.html" title="Next"><link rel="StyleSheet" href="css/ConnectivityFaultManagement.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ConnectivityFaultManagement_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ConnectivityFaultManagement.125.68.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pTZtrq4jg81bt1U12VQsGOg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ConnectivityFaultManagement.125.68.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.122.2.html#wwconnect_header">Carrier Ethernet Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ConnectivityFaultManagement.125.01.html#wwconnect_header">CHAPTER 2	Connectivity Fault Management</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ConnectivityFaultManagement.125.44.html#wwconnect_header">Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">cfm_find_ma_mep_connectivity_status</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1019283" class="Heading2"><span></span>cfm_find_ma_mep_connectivity_status</div><div id="ww1019284" class="Body"><span></span>This function finds the connectivity status of an MA and all the MEPS in the MA.</div><div id="ww1019287" class="Heading3"><span></span>Syntax</div><div id="ww1050569" class="PseudoCode"><span></span>#include "cfm_api.h"</div><div id="ww1020954" class="PseudoCode"><span></span>enum cfm_ma_status</div><div id="ww1019288" class="PseudoCode"><span></span>cfm_find_ma_mep_connectivity_status (struct cfm_ma *ma, u_int8_t *pbuf)</div><div id="ww1019289" class="Heading3"><span></span>Input Parameters</div><div id="ww1019290" class="CmdHead1"><span class="Command">ma</span> </div><div id="ww1019291" class="Cmd1">Pointer to the MA </div><div id="ww1019292" class="CmdHead1"><span class="Command">pbuf</span> </div><div id="ww1019293" class="Cmd1">Pointer to the buffer where the connectivity status of MEPs is copied.</div><div id="ww1019294" class="Heading3"><span></span>Output Parameters</div><div id="ww1019295" class="Body"><span></span>None</div><div id="ww1019296" class="Heading3"><span></span>Return Values</div><div id="ww1047656" class="Body"><span></span>CFM_MA_STATUS_NOT_ACTIVE when the MA is not active</div><div id="ww1047657" class="Body"><span></span>CFM_MA_STATUS_ACTIVE when the MA is active</div><div id="ww1047658" class="Body"><span></span>CFM_MA_STATUS_PARTIALLY_ACTIVE when the MA is partially active</div><div id="ww1019297" class="Body"><span></span>CFM_MA_STATUS_ERROR when the function fails</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

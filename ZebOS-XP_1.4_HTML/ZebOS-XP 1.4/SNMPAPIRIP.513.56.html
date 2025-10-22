@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>rip2_get_next_peer_rcv_bad_routes</title><link rel="Prev" href="SNMPAPIRIP.513.55.html" title="Previous"><link rel="Next" href="DataInfo.514.1.html" title="Next"><link rel="StyleSheet" href="css/SNMPAPIRIP.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SNMPAPIRIP_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SNMPAPIRIP.513.56.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pNOUo40122vj3Hgc6yTTjMQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SNMPAPIRIP.513.56.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.507.2.html#wwconnect_header">Routing Information Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SNMPAPIRIP.513.01.html#wwconnect_header">CHAPTER 5	SNMP API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SNMPAPIRIP.513.06.html#wwconnect_header">API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">rip2_get_next_peer_rcv_bad_routes</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1178354" class="Heading2"><span></span>rip2_get_next_peer_rcv_bad_routes</div><div id="ww1178355" class="Body"><span></span>This function returns the number of routes from the next peer that were ignored because the entry format was invalid.</div><div id="ww1178356" class="Heading3"><span></span>Syntax</div><div id="ww1178357" class="PseudoCode"><span></span>int </div><div id="ww1178358" class="PseudoCode"><span></span>rip2_get_next_peer_rcv_bad_routes(int pid, struct pal_in4_addr *addr, int indexlen, </div><div id="ww1178359" class="PseudoCode"><span></span>int *value);</div><div id="ww1178360" class="Heading3"><span></span>Input Parameters</div><div id="ww1178361" class="CmdHead1"><span class="Parameter">pid</span>  </div><div id="ww1178362" class="Cmd1">The RIP Process ID</div><div id="ww1178363" class="CmdHead1"><span class="Parameter">addr</span> </div><div id="ww1178364" class="Cmd1">The peer address</div><div id="ww1178365" class="CmdHead1"><span class="Parameter">indexlen</span>  </div><div id="ww1178366" class="Cmd1">Reserved for future use</div><div id="ww1178367" class="Heading3"><span></span>Output Parameters</div><div id="ww1178368" class="CmdHead1"><span class="Parameter">value</span>  </div><div id="ww1178369" class="Cmd1">The number of ignored routes</div><div id="ww1178370" class="Heading3"><span></span>Return Values</div><div id="ww1178371" class="Body"><span></span>RIP_API_GET_ERROR when the call does not find the number of ignored routes</div><div id="ww1175442" class="Body"><span></span>RIP_API_GET_SUCCESS when the call finds the number of ignored routes</div><div id="ww1178500" class="Body"><span></span>&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

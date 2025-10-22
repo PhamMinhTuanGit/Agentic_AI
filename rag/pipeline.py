@@ -33,7 +33,8 @@ from agent.retriever import HybridRetriever
 from agent.reranker import LLMReranker
 from rag.cache import CacheManager
 from rag.llm_client import LLMClient
-from rag.cli_output_config import CLIOutputConfig
+from rag.cli_output_config import CLIOutputConfig, create_cli_prompt
+from rag.chain_of_thought import ChainOfThought
 from network_stat.topology_parser import TopologyParser
 from network_stat.network_rag import NetworkTopologyRAG
 
@@ -63,11 +64,11 @@ class RAGPipeline:
                  
                  # Reranker config
                  reranker_top_k: int = 5,
-                 rerank_model: str = "qwen2.5-coder:3b",
+                 rerank_model: str = "dengcao/Qwen3-Reranker-4B:Q4_K_M",
                  
                  # LLM config
                  llm_model: str = "qwen2.5-coder:3b",
-                 llm_temperature: float = 0.3,
+                 llm_temperature: float = 0.1,
                  llm_max_tokens: int = 4096,
                  
                  # Cache config
@@ -81,7 +82,11 @@ class RAGPipeline:
                  
                  # CLI Output config
                  enable_cli_format: bool = True,
-                 cli_output_format: str = "single_code_block"):
+                 cli_output_format: str = "multi_code_block",
+                 
+                 # Chain-of-Thought config
+                 enable_cot: bool = True,
+                 cot_debug: bool = True):
         """
         Initialize RAG Pipeline
         
@@ -115,7 +120,7 @@ class RAGPipeline:
         self.cli_output_format = cli_output_format
         self.cli_config = CLIOutputConfig() if enable_cli_format else None
         
-        # Initialize topology if enabled
+        # Initialize topology if enabledoutput_format
         logger.info("\n[0/5] 🌐 Initializing Network Topology...")
         self.topology_parser = None
         self.network_rag = None
@@ -179,6 +184,15 @@ class RAGPipeline:
             ttl_hours=cache_ttl_hours,
             enable_cache=enable_cache
         )
+        
+        logger.info("\n[5/5] 🧠 Initializing Chain-of-Thought...")
+        self.enable_cot = enable_cot
+        self.cot = ChainOfThought(debug=cot_debug) if enable_cot else None
+        
+        if self.enable_cot:
+            logger.info(f"✅ Chain-of-Thought enabled (debug={cot_debug})")
+        else:
+            logger.info("ℹ️  Chain-of-Thought disabled")
         
         # Pipeline statistics
         self.stats = {
@@ -326,10 +340,40 @@ class RAGPipeline:
             logger.error("❌ Reranking failed!")
             reranked_docs = retrieved_docs[:self.reranker_top_k]
         
-        # Step 4: Build context
-        logger.info("\n[STEP 4/5] 📝 Building context...")
-        context = self._build_context(reranked_docs)
-        logger.info(f"✅ Context built: {len(context)} characters")
+        # Step 4: Chain-of-Thought Reasoning (if enabled)
+        cot_prompt = None
+        if self.enable_cot and self.cot:
+            logger.info(f"\n[STEP 4/5] 🧠 Chain-of-Thought Reasoning...")
+            cot_start = time.time()
+            
+            # Run CoT analysis steps
+            analysis = self.cot.analyze_question(question)
+            evaluated_docs = self.cot.evaluate_documents(question, reranked_docs)
+            synthesis = self.cot.synthesize_information(question, evaluated_docs)
+            plan = self.cot.plan_answer(question, synthesis)
+            
+            # Build context
+            context = self._build_context(reranked_docs)
+            
+            # Generate CoT-enhanced prompt
+            cot_prompt = self.cot.generate_cot_prompt(question, context, analysis, synthesis, plan)
+            
+            cot_time = time.time() - cot_start
+            logger.info(f"✅ Chain-of-Thought generated in {cot_time:.2f}s")
+            logger.info(f"   Reasoning trace length: {len(self.cot.get_thoughts_summary())} characters")
+            
+            # Print thoughts for debugging
+            logger.info("\n📋 REASONING THOUGHTS:")
+            print("\n" + "=" * 70)
+            print("📋 CHAIN-OF-THOUGHT REASONING TRACE")
+            print("=" * 70)
+            print(self.cot.get_thoughts_summary())
+            print("=" * 70 + "\n")
+        else:
+            # Step 4: Build context (without CoT)
+            logger.info(f"\n[STEP 4/5] 📝 Building context...")
+            context = self._build_context(reranked_docs)
+            logger.info(f"✅ Context built: {len(context)} characters")
         
         # Step 5: Generate answer
         logger.info(f"\n[STEP 5/5] 💬 Generating answer with {self.llm_client.model}...")
@@ -339,12 +383,23 @@ class RAGPipeline:
         # Determine session type based on topology
         session_type = "topology" if self.enable_topology else "general"
         
-        llm_result = self.llm_client.generate(
-            query=question,
-            context=context,
-            output_format=output_format,
-            session_type=session_type
-        )
+        # Use CoT prompt if available
+        if cot_prompt:
+            llm_result = self.llm_client.generate(
+                query=question,
+                context=context,
+                output_format=output_format,
+                session_type=session_type,
+                use_cot=True,
+                cot_prompt=cot_prompt
+            )
+        else:
+            llm_result = self.llm_client.generate(
+                query=question,
+                context=context,
+                output_format=output_format,
+                session_type=session_type
+            )
         
         generation_time = time.time() - generation_start
         logger.info(f"✅ Answer generated in {generation_time:.2f}s")
@@ -405,7 +460,8 @@ class RAGPipeline:
         if return_sources:
             result['sources'] = [
                 {
-                    'text': doc['text'][:200] + '...',
+                    #'text': doc['text'][:200] + '...',
+                    'text': doc['text'] + '...',
                     'llm_score': doc.get('llm_score', 0),
                     'retriever_score': doc.get('score', 0),
                     'rank': doc.get('reranked_rank', 0)
@@ -455,7 +511,7 @@ class RAGPipeline:
         # Calculate averages
         if stats['total_queries'] > 0:
             stats['avg_total_time'] = stats['total_time'] / stats['total_queries']
-            stats['cache_hit_rate'] = (stats['cache_hits'] / stats['total_queries']) * 100
+            stats['cache_hit_rate'] = (stats['cach:e_hits'] / stats['total_queries']) * 100
         else:
             stats['avg_total_time'] = 0.0
             stats['cache_hit_rate'] = 0.0

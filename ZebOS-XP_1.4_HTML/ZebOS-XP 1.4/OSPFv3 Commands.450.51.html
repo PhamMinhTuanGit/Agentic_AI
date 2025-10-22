@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>max-concurrent-dd</title><link rel="Prev" href="OSPFv3%20Commands.450.50.html" title="Previous"><link rel="Next" href="OSPFv3%20Commands.450.52.html" title="Next"><link rel="StyleSheet" href="css/OSPFv3%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/OSPFv3%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/OSPFv3%20Commands.450.51.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pEpC0UL7ua4BFaWEhML4cQw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/OSPFv3%20Commands.450.51.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.446.2.html#wwconnect_header">Open Shortest Path First Command Reference </a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/OSPFv3%20Commands.450.01.html#wwconnect_header">CHAPTER 3	OSPFv3 Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">max-concurrent-dd</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1091287" class="Heading1NewPage"><span></span>max-concurrent-dd</div><div id="ww1091288" class="Body"><span></span>Use this command to limit the number of Database Descriptors (DD) that can be processed concurrently.</div><div id="ww1091292" class="Body"><span></span>This command is useful when a router's performance is affected from simultaneously bringing up several OSPFv3 adjacencies. This command limits the maximum number of DD exchanges that can occur concurrently per OSPFv3 instance, thus allowing for all of the adjacencies to come up.</div><div id="ww1064461" class="Body"><span></span>Use the <span class="Command">no</span> option with this command to remove the limit.</div><div id="ww1062372" class="Heading3"><span></span>Command Syntax</div><div id="ww1062373" class="CmdMaster">max-concurrent-dd &lt;1-65535&gt;</div><div id="ww1064470" class="CmdMaster">no max-concurrent-dd</div><div id="ww1071384" class="Heading3"><span></span>Parameters</div><div id="ww1062374" class="CmdHead1"><span class="Parameter">&lt;1-65535&gt;</span> </div><div id="ww1074035" class="Cmd1">Specify the number of DD processes.</div><div id="ww1062375" class="Heading3"><span></span>Command Mode</div><div id="ww1062376" class="Body"><span></span>Router mode</div><div id="ww1062379" class="Heading3"><span></span>Examples</div><div id="ww1090080" class="Body"><span></span>The following example set the <span class="Command">max-concurrent-dd</span> value to 4.</div><div id="ww1062381" class="CmdExample">#configure terminal</div><div id="ww1062382" class="CmdExample">(config)#router ipv6 ospf</div><div id="ww1103807" class="CmdExample">(config-router)#max-concurrent-dd 4</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

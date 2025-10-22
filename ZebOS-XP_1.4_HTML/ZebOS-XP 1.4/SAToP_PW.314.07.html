@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Validation</title><link rel="Prev" href="SAToP_PW.314.06.html" title="Previous"><link rel="Next" href="SAToP_PW.314.08.html" title="Next"><link rel="StyleSheet" href="css/SAToP_PW.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SAToP_PW_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SAToP_PW.314.07.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pOR3M1B4CK4WFnZKgoaxc8Q" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SAToP_PW.314.07.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.295.2.html#wwconnect_header">Multi-Protocol Label Switching Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SAToP_PW.314.01.html#wwconnect_header">CHAPTER 18	SAToP Configuration</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SAToP_PW.314.02.html#wwconnect_header">SAToP Pseudowire Creation</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Validation</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww502580" class="Heading2"><span></span>Validation</div><div id="ww502582" class="Body"><span></span>Verify on Rtr1 or Rtr3 that the LDP session is operating and that the PW is set-up successfully.</div><div id="ww502584" class="PseudoCode"><span></span>rtr1#show ldp session</div><div id="ww502585" class="PseudoCode"><span></span>Peer IP Address           IF Name    My Role            State                     KeepAlive</div><div id="ww502586" class="PseudoCode"><span></span>4.4.4.4                  eth7       Passive           OPERATIONAL             30</div><div id="ww502587" class="PseudoCode"><span></span>3.3.3.3                  eth7       Passive           OPERATIONAL             30</div><div id="ww504194" class="PseudoCode"><span></span>rtr1#show ldp mpls-l2-circuit</div><div id="ww504195" class="PseudoCode"><span></span>Transport Client    VC          VC             Local         Remote        Destination</div><div id="ww502591" class="PseudoCode"><span></span>VC ID     Binding   State       Type           VC Label      VC Label      Address</div><div id="ww502592" class="PseudoCode"><span></span>10        tdm5      UP          tdm-E1         16            16            4.4.4.4</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

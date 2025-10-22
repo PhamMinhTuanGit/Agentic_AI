@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>trill_get_rbridgebase_port_p2phellos</title><link rel="Prev" href="TRILL_MIB.660.044.html" title="Previous"><link rel="Next" href="TRILL_MIB.660.046.html" title="Next"><link rel="StyleSheet" href="css/TRILL_MIB.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/TRILL_MIB_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/TRILL_MIB.660.045.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN9NmHC5WFY_002bg_002fstOHz0DfrA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/TRILL_MIB.660.045.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.645.2.html#wwconnect_header">Transparent Interconnection of Lots of Links Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/TRILL_MIB.660.001.html#wwconnect_header">CHAPTER 14	TRILL Management Information Base</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/TRILL_MIB.660.003.html#wwconnect_header">SNMP API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">trill_get_rbridgebase_port_p2phellos</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww552932" class="Heading2"><span></span>trill_get_rbridgebase_port_p2phellos</div><div id="ww552933" class="Body"><span></span>This call gets the status of port, to know whether IS-IS P2P Hellos is supported or not. </div><div id="ww559937" class="Heading3"><span></span>Syntax</div><div id="ww559976" class="PseudoCode"><span></span>int</div><div id="ww559977" class="PseudoCode"><span></span>trill_get_rbridgebase_port_p2phellos (u_int32_t vr_id, u_int32_t instance,</div><div id="ww559978" class="PseudoCode"><span></span>                                      u_int32_t baseport, u_int32_t  *ret)</div><div id="ww559941" class="Heading3"><span></span>Input Parameters</div><div id="ww559942" class="CmdHead1">vr_id</div><div id="ww559943" class="Cmd1">An integer that contains the TRILL VR identifier. </div><div id="ww559944" class="CmdHead1">instance</div><div id="ww559945" class="Cmd1">An integer that contains the TRILL instance ID.</div><div id="ww559946" class="CmdHead1">baseport</div><div id="ww559947" class="Cmd1">Port number for which this entry contains RBridge management information.</div><div id="ww559948" class="Heading3"><span></span>Output Parameters</div><div id="ww559949" class="CmdHead1">ret</div><div id="ww559950" class="Cmd1">Pointer to the status of port, to support IS-IS P2P hellos.</div><div id="ww559951" class="CmdHead2">0</div><div id="ww559952" class="Cmd1">False</div><div id="ww559953" class="CmdHead2">1</div><div id="ww559954" class="Cmd1">True</div><div id="ww560013" class="Heading3"><span></span>Return Value</div><div id="ww552949" class="Body"><span></span>TRILL_API_GET_SUCCESS for valid Instance ID and Port Number.</div><div id="ww552950" class="Body"><span></span>TRILL_API_GET_ERROR for valid Instance ID and Port Number not found.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

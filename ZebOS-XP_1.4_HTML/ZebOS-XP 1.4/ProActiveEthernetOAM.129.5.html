@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Reception of ETH-LM in CCM</title><link rel="Prev" href="ProActiveEthernetOAM.129.4.html" title="Previous"><link rel="Next" href="SOAM.130.01.html" title="Next"><link rel="StyleSheet" href="css/ProActiveEthernetOAM.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ProActiveEthernetOAM_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ProActiveEthernetOAM.129.5.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="phwgwDtxho5YKw3889T6hgA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ProActiveEthernetOAM.129.5.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.122.2.html#wwconnect_header">Carrier Ethernet Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ProActiveEthernetOAM.129.1.html#wwconnect_header">CHAPTER 6	Proactive Ethernet OAM</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ProActiveEthernetOAM.129.3.html#wwconnect_header">System Design</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Reception of ETH-LM in CCM</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1008472" class="Heading2"><span></span>Reception of ETH-LM in CCM</div><div id="ww1008920" class="Body"><span></span>Reception of ETH-LM in CCM is accomplished using the MEP CCM reception framework. When the ETH-LM information is received in an Eth-CCM frame, the information is processed only if the MEP is enable for dual-ended ETH-LM. Otherwise, the ETH-LM is not used. When configured for proactive loss measurement, a MEP uses the following values to make near-end and far-end loss measurements when it receives a CCM frame:</div><div id="ww1008539" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Received CCM frames TxFCf, RxFCb, and TxFCb values and local counter RxFCl value when receiving this CCM frame. These values are represented as TxFCf[tc], RxFCb[tc], TxFCb[tc], and RxFCl[tc], where “tc” is the reception time of the current frame.</div><div id="ww1008597" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Previous CCM frames TxFCf, RxFCb, and TxFCb values and local counter RxFCl value at the time the previous CCM frame was received. These values are represented as TxFCf[tp], RxFCb[tp], TxFCb[tp], and RxFCl[tp], where “tp” is the reception time of the previous frame.</div><div id="ww1008624" class="CmdMaster">Frame Lossfar-end = |TxFCb[tc] - TxFCb[tp]| - |RxFCb[tc] - RxFCb[tp]|</div><div id="ww1008625" class="CmdMaster">Frame Lossnear-end = |TxFCf[tc] - TxFCf[tp]| - |RxFCl[tc] - RxFCl[tp]|</div><div id="ww1008616" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>If the Period field value in the received CCM frame is different from the one configured for the MEP CCM transmission period, the MEP detects an unexpected period defect condition, in which case frame loss measurements not carried out.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

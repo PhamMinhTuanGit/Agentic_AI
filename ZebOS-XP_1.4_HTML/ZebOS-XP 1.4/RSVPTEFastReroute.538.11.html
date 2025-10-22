@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Facility Backup Scenario</title><link rel="Prev" href="RSVPTEFastReroute.538.10.html" title="Previous"><link rel="Next" href="RSVPTEFastReroute.538.12.html" title="Next"><link rel="StyleSheet" href="css/RSVPTEFastReroute.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/RSVPTEFastReroute_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/RSVPTEFastReroute.538.11.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pDPEIqCn1ucFad9HIeFkjTw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/RSVPTEFastReroute.538.11.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.525.2.html#wwconnect_header">RSVP-TE Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RSVPTEFastReroute.538.01.html#wwconnect_header">CHAPTER 12	Fast Reroute</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RSVPTEFastReroute.538.07.html#wwconnect_header">Local Repair Techniques</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Facility Backup Scenario</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww500841" class="Heading2"><span></span>Facility Backup Scenario</div><div id="ww500842" class="Body"><span></span>This section contains an overview of the events and actions taken by the modules that support FRR procedures when using the facility backup scenario.</div><div id="ww500843" class="Body"><span></span>An LSP is configured on the ingress node using the related Fast Reroute commands. Use the  <span class="Parameter">fast-reroute protection</span> command to designate that the facility backup FRR mechanism is desired.</div><div id="ww500844" class="Body"><span></span>The operator should specify the desired attributes of the LSP using the attribute commands related to the one-to-one protection method. See the <span class="Emphasis">RSVP-TE Command Reference</span> for facility backup protection command details. If no attributes are assigned, a backup LSP is created with the same attributes as the protected LSP. These attributes are signaled for detour LSPs and also in the protected LSP using the Fast Reroute (FRR) object.</div><div id="ww500845" class="Body"><span></span>The selection of a bypass tunnel for a protected LSP is performed by the PLR when the LSP is first set up. The PATH messages for the protected LSP contain the FRR object that is used by downstream nodes, along the path of the protected LSP, to signal the bypass tunnel. Bypass tunnels should merge with the protected LSP downstream of the failure. If the FRR object changes, then the PLR propagates the new attributes when signaling the bypass LSP.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

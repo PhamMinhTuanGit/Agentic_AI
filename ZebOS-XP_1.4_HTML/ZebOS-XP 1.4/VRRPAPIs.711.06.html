@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>vrrp_api_del_session_by_ifname</title><link rel="Prev" href="VRRPAPIs.711.05.html" title="Previous"><link rel="Next" href="VRRPAPIs.711.07.html" title="Next"><link rel="StyleSheet" href="css/VRRPAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VRRPAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VRRPAPIs.711.06.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pz5ooVSD_002b27dixzTIx4iTqA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VRRPAPIs.711.06.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.707.2.html#wwconnect_header">Virtual Router Redundancy Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRRPAPIs.711.01.html#wwconnect_header">CHAPTER 3	VRRP API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRRPAPIs.711.02.html#wwconnect_header">VRRP Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">vrrp_api_del_session_by_ifname</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww533475" class="Heading2"><span></span>vrrp_api_del_session_by_ifname</div><div id="ww533476" class="Body"><span></span>This function deletes the VRRP session from a specific interface associated with the provided Virtual Router ID (VR ID). Only disabled sessions can be deleted. This function deallocates the memory for the session.</div><div id="ww533477" class="Heading3"><span></span>Syntax</div><div id="ww533478" class="PseudoCode"><span></span>int vrrp_api_del_session_by_ifname (int ipi_vrid, u_int8_t af_type, int vrid,</div><div id="ww533479" class="PseudoCode"><span></span>                                    char *ifname);                      </div><div id="ww533480" class="Heading3"><span></span>Input Parameters</div><div id="ww536301" class="CmdHead1"><span class="Parameter">ipi_vrid</span></div><div id="ww536302" class="Cmd1">Virtual router ID</div><div id="ww536303" class="CmdHead1"><span class="Parameter">af_type</span></div><div id="ww533484" class="Cmd1">Address family. AF_INET (IPv4) or AF_INET6 (IPv6)</div><div id="ww533485" class="CmdHead1">vrid</div><div id="ww533486" class="Cmd1">VRRP session virtual router ID (1 -255)</div><div id="ww533487" class="CmdHead1">ifname</div><div id="ww533488" class="Cmd1">Interface name</div><div id="ww533489" class="Heading3"><span></span>Output Parameters</div><div id="ww533490" class="Body"><span></span>None</div><div id="ww533491" class="Heading3"><span></span>Return Values</div><div id="ww533492" class="Body"><span></span>VRRP_API_SET_ERR_NO_SUCH_INTERFACE when no VRRP session is found</div><div id="ww533493" class="Body"><span></span>VRRP_API_SET_ERR_NO_EXIST when the VR ID does not exist</div><div id="ww533494" class="Body"><span></span>VRRP_API_SET_ERR_ENABLED disable the VRRP session first</div><div id="ww533495" class="Body"><span></span>VRRP_OK when the VRRP session is deleted from a specific interface</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

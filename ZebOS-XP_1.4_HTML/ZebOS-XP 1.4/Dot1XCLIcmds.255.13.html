@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>dot1x quiet-period</title><link rel="Prev" href="Dot1XCLIcmds.255.12.html" title="Previous"><link rel="Next" href="Dot1XCLIcmds.255.14.html" title="Next"><link rel="StyleSheet" href="css/Dot1XCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Dot1XCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Dot1XCLIcmds.255.13.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="ps780UBNELtVOL71v5Ikdyw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Dot1XCLIcmds.255.13.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Dot1XCLIcmds.255.01.html#wwconnect_header">CHAPTER 6	802.1x Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">dot1x quiet-period</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww501331" class="Heading1NewPage"><span></span>dot1x quiet-period</div><div id="ww501332" class="Body"><span></span>Use this command to set the quiet-period time interval.</div><div id="ww506616" class="Body"><span></span>When a switch cannot authenticate a client, the switch remains idle for a quiet-period interval of time, then tries again. By administratively changing the quiet-period interval, by entering a lower number than the default, a faster response time can be provided.</div><div id="ww506579" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to set the configured quiet period to the default (60 seconds).</div><div id="ww516369" class="Heading3"><span></span>Command Syntax</div><div id="ww516370" class="CmdMaster">dot1x quiet-period &lt;1-65535&gt;</div><div id="ww516371" class="CmdMaster">no dot1x quiet-period</div><div id="ww506652" class="Heading3"><span></span>Parameter</div><div id="ww506588" class="CmdHead1">&lt;1-65535&gt;</div><div id="ww510770" class="Cmd1">Seconds between the retrial of authentication.</div><div id="ww506589" class="Heading3"><span></span>Default</div><div id="ww506590" class="Body"><span></span>The default dot1x protocol version is 2.</div><div id="ww506591" class="Heading3"><span></span>Command Mode</div><div id="ww506592" class="Body"><span></span>Interface mode</div><div id="ww501337" class="Heading3"><span></span>Example</div><div id="ww501338" class="CmdExample">#configure terminal</div><div id="ww501339" class="CmdExample">(config)#interface eth0</div><div id="ww501340" class="CmdExample">(config-if)#dot1x quiet-period 200</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

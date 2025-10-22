@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>channel-group mode</title><link rel="Prev" href="LACPCLIcmds.256.01.html" title="Previous"><link rel="Next" href="LACPCLIcmds.256.03.html" title="Next"><link rel="StyleSheet" href="css/LACPCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/LACPCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/LACPCLIcmds.256.02.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pPnbk9oF_002bDTY6VFvmTynkcQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/LACPCLIcmds.256.02.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/LACPCLIcmds.256.01.html#wwconnect_header">CHAPTER 7	Link Aggregation Control Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">channel-group mode</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww508795" class="Heading1NewPage"><span></span>channel-group mode</div><div id="ww514498" class="Body"><span></span>Use this command to create a link aggregation group or to add an interface to an link aggregation group.</div><div id="ww514534" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to remove an interface from a link aggregation group.</div><div id="ww508798" class="Heading3"><span></span>Command Syntax</div><div id="ww508799" class="CmdMaster">channel-group &lt;1-65535&gt; mode (active|passive)</div><div id="ww508800" class="CmdMaster">channel-group &lt;1-16383&gt; mode (active|passive)</div><div id="ww514125" class="CmdMaster">no channel-group</div><div id="ww508801" class="Heading3"><span></span>Parameters</div><div id="ww508802" class="CmdHead1"><span class="Parameter">&lt;1-65535&gt;</span></div><div id="ww508803" class="Cmd1">Specify a channel group number (without DRNI).</div><div id="ww514129" class="CmdHead1">&lt;1-16383&gt;</div><div id="ww514130" class="Cmd1">Specify a channel group number (with DRNI).</div><div id="ww508804" class="CmdHead1">mode</div><div id="ww508805" class="Cmd1">Specify a channel mode.</div><div id="ww508806" class="CmdHead2"><span class="Parameter">active</span></div><div id="ww508807" class="Cmd1">Enable LACP negotiation.</div><div id="ww508808" class="CmdHead2"><span class="Parameter">passive</span></div><div id="ww508809" class="Cmd1">Disable LACP negotiation.</div><div id="ww508810" class="Heading3"><span></span>Command Mode</div><div id="ww508811" class="Body"><span></span>Interface mode</div><div id="ww511234" class="Heading3"><span></span>Examples</div><div id="ww511235" class="CmdExample">#configure terminal</div><div id="ww511236" class="CmdExample">(config)#interface eth0</div><div id="ww511231" class="CmdExample">(config-if)#channel-group 4 mode active</div><div id="ww508816" class="CmdExample">&nbsp;</div><div id="ww508817" class="CmdExample">#configure terminal</div><div id="ww508818" class="CmdExample">(config)#interface eht0</div><div id="ww508819" class="CmdExample">(config-if)#no channel-group</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

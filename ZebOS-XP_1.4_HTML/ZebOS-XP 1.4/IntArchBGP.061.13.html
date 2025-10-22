@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Aggregating Route Information</title><link rel="Prev" href="IntArchBGP.061.12.html" title="Previous"><link rel="Next" href="IntArchBGP.061.14.html" title="Next"><link rel="StyleSheet" href="css/IntArchBGP.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/IntArchBGP_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/IntArchBGP.061.13.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pt_002bowZktG3xjvdYtPrFvX3w" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/IntArchBGP.061.13.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.057.2.html#wwconnect_header">Border Gateway Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/IntArchBGP.061.01.html#wwconnect_header">CHAPTER 3	BGP Module Internal Architecture </a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/IntArchBGP.061.02.html#wwconnect_header">RFC 4271 Support</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Aggregating Route Information</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww511957" class="Heading2"><span></span>Aggregating Route Information</div><div id="ww511958" class="Body"><span></span>ZebOS-XP BGP handles aggregating route information per RFC 4271, Section 9.2.2.2.</div><div id="ww512675" class="Body"><span></span>Routes with the same MED are aggregated, even if the next hops are different. BGP checks for the same next-hop while aggregating the routes. While aggregating, checking for the same MEDs is done only when the BGP_CFLAG_REMOVE_MED flag is not set. The following is an example of this feature using the topology below.</div><div id="ww512697" class="Body"><span></span>                   BGP1 ----- BGP2 ------- BGP3</div><div id="ww512698" class="Body"><span></span>                                          |</div><div id="ww512699" class="Body"><span></span>                                      BGP4</div><div id="ww512711" class="Body"><span></span>Case 1: From BGP1, a route (for example, 10.10.10.0 with MED 10) is sent to BGP2; from BGP3 a route (for example, 10.10.0.0 with MED 20) is sent to BGP2. BGP2 is configured to aggregate the routes to 10.0.0.0. BGP2 does not aggregate the routes (because the MEDs are different), installs both routes, and sends both routes to BGP4.</div><div id="ww512712" class="Body"><span></span>Case 2: From BGP1, a route (for example, 10.10.10.0 with MED 10) is sent to BGP2; from BGP3, a route (for example, 10.10.0.0 with MED 10) is sent to BGP2. BGP2 is configured to aggregate the routes to 10.0.0.0. BGP2 installs the aggregated route (10.0.0.0) and send this route to BGP4.</div><div id="ww512713" class="Body"><span></span>Case 3: The above test cases also apply to different attributes, such as NEXT-HOP, ORIGIN, AS_PATH.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bridge region</title><link rel="Prev" href="SpanningTreeCLIcmds.253.10.html" title="Previous"><link rel="Next" href="SpanningTreeCLIcmds.253.12.html" title="Next"><link rel="StyleSheet" href="css/SpanningTreeCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SpanningTreeCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.11.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN4GTMQt38DnI86oyCGMV9Vg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.11.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SpanningTreeCLIcmds.253.01.html#wwconnect_header">CHAPTER 4	Spanning Tree Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bridge region</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww535024" class="Heading1NewPage"><span></span>bridge region</div><div id="ww535025" class="Body"><span></span>Use this command to create an MST region and specify its name. MST bridges of a region form different spanning trees for different VLANs. </div><div id="ww535026" class="Body"><span></span>Use the <span class="Command">no</span> form of the command to disable the Rapid Spanning Tree protocol on a region.</div><div id="ww535027" class="Heading3"><span></span>Command Syntax</div><div id="ww535028" class="CmdMaster">bridge &lt;1-32&gt; region REGION_NAME</div><div id="ww535029" class="CmdMaster">no bridge &lt;1-32&gt; region</div><div id="ww535030" class="Heading3"><span></span>Parameters</div><div id="ww535031" class="CmdHead1">&lt;1-32&gt;</div><div id="ww535032" class="Cmd1">Specify the bridge group ID.</div><div id="ww535033" class="CmdHead1">REGION_NAME</div><div id="ww535034" class="Cmd1">Specify the name of the region.</div><div id="ww535035" class="Heading3"><span></span>Default</div><div id="ww535036" class="Body"><span></span>By default, each MST bridge starts with the region name as its bridge address. This means each MST bridge is a region by itself, unless specifically added to one.</div><div id="ww535037" class="Heading3"><span></span>Command Mode</div><div id="ww560549" class="Body"><span></span>MST configure mode</div><div id="ww535039" class="Heading3"><span></span>Examples</div><div id="ww535040" class="CmdExample">#configure terminal</div><div id="ww535041" class="CmdExample">(config)#spanning-tree mst configuration</div><div id="ww535042" class="CmdExample">(config-mst)#bridge 3 region IPI</div><div id="ww535043" class="CmdExample">&nbsp;</div><div id="ww535044" class="CmdExample">(config)#spanning-tree mst configuration</div><div id="ww535010" class="CmdExample">(config-mst)#no bridge 3 region</div><div id="ww552315" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

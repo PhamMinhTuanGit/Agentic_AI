@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bridge max-hops</title><link rel="Prev" href="BridgeCLIcmds.252.08.html" title="Previous"><link rel="Next" href="BridgeCLIcmds.252.10.html" title="Next"><link rel="StyleSheet" href="css/BridgeCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BridgeCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BridgeCLIcmds.252.09.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pAUD52h7ZR9JFrbA_002bwlE9Bg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BridgeCLIcmds.252.09.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BridgeCLIcmds.252.01.html#wwconnect_header">CHAPTER 3	Bridge Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bridge max-hops</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1007291" class="Heading1NewPage"><span></span>bridge max-hops</div><div id="ww1007292" class="Body"><span></span>Use this command to specify the maximum allowed hops for a BPDU in an MST region. This parameter is used by all the instances of the MST. Specifying the maximum hops for a BPDU prevents the messages from looping indefinitely in the network. When a bridge receives an MST BPDU that has exceeded the allowed maximum hops, it discards the BPDU.</div><div id="ww1007294" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to restore the default value.</div><div id="ww1007295" class="Heading3"><span></span>Command Syntax</div><div id="ww1007296" class="CmdMaster">bridge &lt;1-32&gt; max-hops &lt;1-40&gt;</div><div id="ww1007297" class="CmdMaster">no bridge &lt;1-32&gt; max-hops</div><div id="ww1007298" class="Heading3"><span></span>Parameters</div><div id="ww1007299" class="CmdHead1">&lt;1-32&gt;</div><div id="ww1007300" class="Cmd1">Specify the bridge-group ID.</div><div id="ww1007301" class="CmdHead1">&lt;1-40&gt;</div><div id="ww1007302" class="Cmd1">Specify the maximum hops for which the BPDU will be valid &lt;1-40&gt;.</div><div id="ww1007303" class="Heading3"><span></span>Default</div><div id="ww1007304" class="Body"><span></span>The default maximum hops in an MST region are 20.</div><div id="ww1007305" class="Heading3"><span></span>Command Mode</div><div id="ww1007306" class="Body"><span></span>Configure mode</div><div id="ww1007307" class="Heading3"><span></span>Examples</div><div id="ww1007308" class="CmdExample">#configure terminal</div><div id="ww1007309" class="CmdExample">(config)#bridge 3 max-hops 25</div><div id="ww1007310" class="CmdExample">&nbsp;</div><div id="ww1007311" class="CmdExample">#configure terminal</div><div id="ww1007312" class="CmdExample">(config)#no bridge 3 max-hops</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

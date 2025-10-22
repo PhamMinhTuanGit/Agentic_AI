@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>set mmrp timer</title><link rel="Prev" href="MMRPCLIcmds.260.08.html" title="Previous"><link rel="Next" href="MMRPCLIcmds.260.10.html" title="Next"><link rel="StyleSheet" href="css/MMRPCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MMRPCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MMRPCLIcmds.260.09.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN2H_002fFTmJ_002bWYyU1a4pqzW8vg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MMRPCLIcmds.260.09.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MMRPCLIcmds.260.01.html#wwconnect_header">CHAPTER 11	MMRP Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">set mmrp timer</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1003527" class="Heading1NewPage"><span></span>set mmrp timer</div><div id="ww1003536" class="Body"><span></span>Use this command to set the values for the MMRP Join, Leave, and Leaveall timers for a specified bridge. The relationship for the timer values are as follows:</div><div id="ww1003537" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Leave timer must be greater than, or equal to, three times the join timer.</div><div id="ww1003553" class="Bulleted"><span class="WebWorks_Number" style="width: 18pt"><span class="BulletSymbol">•	</span></span>Leaveall timer must be greater than the leave timer.</div><div id="ww1008635" class="Heading3"><span></span>Command Syntax</div><div id="ww1008636" class="CmdMaster">set mmrp timer join TIMER_VALUE IF_NAME</div><div id="ww1008637" class="CmdMaster">set mmrp timer leave TIMER_VALUE IF_NAME</div><div id="ww1008168" class="CmdMaster">set mmrp timer leaveall TIMER_VALUE IF_NAME</div><div id="ww1002905" class="Heading3"><span></span>Parameters</div><div id="ww1004677" class="CmdHead1">join</div><div id="ww1004678" class="Cmd1">Specify the timer for joining the group.</div><div id="ww1004679" class="CmdHead1">leave</div><div id="ww1004680" class="Cmd1">Specify the timer for leaving a group.</div><div id="ww1004681" class="CmdHead1">leaveall</div><div id="ww1004682" class="Cmd1">Specify the timer for leaving all groups.</div><div id="ww1004683" class="CmdHead2">TIMER_VALUE</div><div id="ww1004684" class="Cmd1">Specify the timer value in hundredths of a second.</div><div id="ww1004685" class="CmdHead2">IF_NAME</div><div id="ww1004686" class="Cmd1">Specify the name of the interface.</div><div id="ww1002911" class="Heading3"><span></span>Default</div><div id="ww1002912" class="Body"><span></span>Default for the join timer is 200 milliseconds (ms).</div><div id="ww1002913" class="Heading3"><span></span>Command Mode</div><div id="ww1002914" class="Body"><span></span>Configure mode</div><div id="ww1002917" class="Heading3"><span></span>Examples</div><div id="ww1002918" class="CmdExample">#configure terminal</div><div id="ww1002919" class="CmdExample">(config)#set mmrp timer join 300 eth1</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

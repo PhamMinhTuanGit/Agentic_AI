@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ip rip split-horizon</title><link rel="Prev" href="RIPcmds.503.16.html" title="Previous"><link rel="Next" href="RIPcmds.503.18.html" title="Next"><link rel="StyleSheet" href="css/RIPcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/RIPcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/RIPcmds.503.17.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pbpE4vr_002b6xWW_002blD_002f2lFyRGg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/RIPcmds.503.17.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.500.2.html#wwconnect_header">Routing Information Protocol Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RIPcmds.503.01.html#wwconnect_header">CHAPTER 2	Routing Information Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ip rip split-horizon</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1005743" class="Heading1NewPage"><span></span>ip rip split-horizon</div><div id="ww1092587" class="Body"><span></span>Use this command to perform the split-horizon action on the interface</div><div id="ww1092588" class="Body"><span></span>This command helps avoid including routes in updates sent to the same gateway from which they were learned. Using the <span style="font-family: &quot;Courier New&quot;">split horizon </span>command omits routes learned from one neighbor, in updates sent to that neighbor. Using the <span style="font-family: &quot;Courier New&quot;">poisoned </span>parameter with this command includes such routes in updates, but sets their metrics to infinity. Thus, advertising that these routes are not reachable.</div><div id="ww1092582" class="Body"><span></span>Use the <span style="font-family: &quot;Courier New&quot;">no </span>parameter with this command to disable this function.</div><div id="ww1015227" class="Heading3"><span></span>Command Syntax</div><div id="ww1092568" class="CmdMaster">ip rip split-horizon</div><div id="ww1092563" class="CmdMaster">ip rip split-horizon poisoned</div><div id="ww1061166" class="CmdMaster">no ip rip split-horizon</div><div id="ww1065445" class="Heading3"><span></span>Parameter</div><div id="ww1085292" class="CmdHead1">poisoned</div><div id="ww1097632" class="Cmd1">Performs split-horizon with poisoned reverse.</div><div id="ww1023596" class="Heading3"><span></span>Default</div><div id="ww1024995" class="Body"><span></span>Split horizon poisoned</div><div id="ww1087744" class="Heading3"><span></span>Command Mode</div><div id="ww1087761" class="Body"><span></span>Interface mode</div><div id="ww1026286" class="Heading3"><span></span>Examples</div><div id="ww1092473" class="CmdExample">#configure terminal</div><div id="ww1092474" class="CmdExample">(config)#interface eth0</div><div id="ww1092475" class="CmdExample">(config-if)#ip rip split-horizon poisoned</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

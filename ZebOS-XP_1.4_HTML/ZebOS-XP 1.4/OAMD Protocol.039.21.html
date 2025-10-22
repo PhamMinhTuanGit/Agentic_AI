@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>nsm_mpls_bfd_api_vccv_trigger</title><link rel="Prev" href="OAMD%20Protocol.039.20.html" title="Previous"><link rel="Next" href="BFDandNSM.040.01.html" title="Next"><link rel="StyleSheet" href="css/OAMD%20Protocol.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/OAMD%20Protocol_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/OAMD%20Protocol.039.21.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="puUq1eeRe3iL4xgeg9PHOOw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/OAMD%20Protocol.039.21.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.033.2.html#wwconnect_header">Bidirectional Forwarding Detection Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/OAMD%20Protocol.039.01.html#wwconnect_header">CHAPTER 5	OAM for BFD and MPLS</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/OAMD%20Protocol.039.15.html#wwconnect_header">Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">nsm_mpls_bfd_api_vccv_trigger</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww501312" class="Heading2"><span></span>nsm_mpls_bfd_api_vccv_trigger</div><div id="ww500033" class="Body"><span></span>This function starts or stops the BFD VCCV session for a VC based on the specified operation. </div><div id="ww500034" class="Heading3"><span></span>Syntax</div><div id="ww500035" class="PseudoCode"><span></span>int</div><div id="ww500036" class="PseudoCode"><span></span>nsm_mpls_bfd_api_vccv_trigger (struct nsm_master *nm, uint32_t vc_id, u_char op)</div><div id="ww500037" class="Heading3"><span></span>Input Parameters</div><div id="ww500038" class="CmdHead1"><span class="Command">nm</span></div><div id="ww500039" class="Cmd1">A pointer to NSM master structure</div><div id="ww500040" class="CmdHead1">vc_id</div><div id="ww500041" class="Cmd1">Virtual circuit ID</div><div id="ww500042" class="CmdHead1"><span class="Command">op</span></div><div id="ww500043" class="Cmd1">Indicates start or stop operation</div><div id="ww503043" class="Heading3"><span></span>Output Parameters</div><div id="ww503674" class="Body"><span></span>None</div><div id="ww503501" class="Heading3"><span></span>Return Values</div><div id="ww503525" class="Body"><span></span>NSM_ERR_VC_ID_NOT_FOUND when the virtual circuit is not found</div><div id="ww503535" class="Body"><span></span>NSM_MPLS_BFD_VCCV_ERR_SESS_EXISTS when the BFD VCCV session already exists</div><div id="ww503536" class="Body"><span></span>NSM_MPLS_BFD_VCCV_ERR_NOT_CONFIGURED when the BFD VCCV session configuration fails</div><div id="ww503537" class="Body"><span></span>NSM_MPLS_BFD_VCCV_ERR_SESS_NOT_EXISTS when the BFD BCCV session does not exists</div><div id="ww503538" class="Body"><span></span>NSM_FAILURE when a generic error occurs</div><div id="ww503478" class="Body"><span></span>NSM_SUCCESS when the function succeeds</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

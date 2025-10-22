@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CHAPTER 2 SPB MST Configuration</title><link rel="Prev" href="BEB-BCB.562.12.html" title="Previous"><link rel="Next" href="MST.563.2.html" title="Next"><link rel="StyleSheet" href="css/MST.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MST_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MST.563.1.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pAvw_002bjBDyTHEKynNG1JoMWw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MST.563.1.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.560.2.html#wwconnect_header">Shortest Path Bridging Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">CHAPTER 2	SPB MST Configuration</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww491512" class="ChapterTitle"><span class="WebWorks_Number" style="width: 72pt"><span class="chapter">CHAPTER 2	</span></span>SPB MST Configuration</div><div id="ww495809" class="Body"><span></span>This chapter shows how to configure MSTP (Multiple Spanning Tree Protocol) to work with SPB.</div><div id="ww503476" class="Body"><span></span>MSTP and SPB connect all bridges with a single Common and Internal Spanning Tree (CIST) that supports the automatic determination of each region, choosing its maximum possible extent. The connectivity calculated for the CIST provides the CST (Common Spanning Tree) for interconnecting the regions, and an Internal Spanning Tree (IST) within each region. MSTP calculates a number of independent Multiple Spanning Tree Instances (MSTIs) within each region, and ensures that frames with a given VLAN identifier (VID) are assigned to one and only one of the MSTIs or the IST within the region. SPB calculates symmetric sets of Shortest Path Trees (SPTs), each rooted at a bridge within a region, and ensures that frames for any given VLAN are assigned to the same symmetric SPT set within the region.</div><div id="ww504193" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>You must perform the procedures in this chapter <span class="Emphasis">in addition to</span> those in <span class="hypertext"><a href="../ZebOS-XP%201.4/BEB-BCB.562.01.html#wwconnect_header" title="CHAPTER 1 Shortest Path Bridging - MAC Configuration">Chapter&nbsp;1, </a></span><span class="Emphasis"><a href="../ZebOS-XP%201.4/BEB-BCB.562.01.html#wwconnect_header" title="CHAPTER 1 Shortest Path Bridging - MAC Configuration">Shortest Path Bridging - MAC Configuration</a></span>.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

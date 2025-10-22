@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>lldp_set_port_msg_tx_interval</title><link rel="Prev" href="LLDP.134.17.html" title="Previous"><link rel="Next" href="LLDP.134.19.html" title="Next"><link rel="StyleSheet" href="css/LLDP.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/LLDP_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/LLDP.134.18.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pfi80K3LxOn_002bkjC5n_002bsVqgQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/LLDP.134.18.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.122.2.html#wwconnect_header">Carrier Ethernet Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/LLDP.134.01.html#wwconnect_header">CHAPTER 11	Link Layer Discovery Protocol</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/LLDP.134.11.html#wwconnect_header">LLDP Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">lldp_set_port_msg_tx_interval</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1018718" class="Heading2"><span></span>lldp_set_port_msg_tx_interval</div><div id="ww1018719" class="Body"><span></span>This function is called to set the message transmit interval on the port.</div><div id="ww1018720" class="Heading3"><span></span>Syntax</div><div id="ww1018721" class="PseudoCode"><span></span>#include "lldp_api.h"</div><div id="ww1018722" class="PseudoCode"><span></span>s_int32_t</div><div id="ww1018723" class="PseudoCode"><span></span>lldp_set_port_msg_tx_interval (struct interface *ifp, u_int32_t value</div><div id="ww1018724" class="Heading3"><span></span>Input Parameters</div><div id="ww1018725" class="CmdHead1"><span class="Command">ifp</span> </div><div id="ww1018726" class="Cmd1">Interface structure</div><div id="ww1018727" class="CmdHead1"><span class="Command">value</span> </div><div id="ww1018728" class="Cmd1">Message transmit interval &lt;5-32768&gt;</div><div id="ww1018729" class="Heading3"><span></span>Output Parameters</div><div id="ww1018730" class="Body"><span></span>None</div><div id="ww1018731" class="Heading3"><span></span>Return Values</div><div id="ww1018732" class="Body"><span></span>LLDP_API_SUCCESS when the function succeeds</div><div id="ww1018733" class="Body"><span></span>LLDP_API_ERR_ONM_IF_NOT_EXIST when <span class="Command">onmd</span> is not found</div><div id="ww1018734" class="Body"><span></span>LLDP_API_ERR_LLDP_IF_NOT_EXIST when the LLDP interface is not found</div><div id="ww1018735" class="Body"><span></span>LLDP_API_ERR_MSG_TX_INTERVAL_ERR when the transmit interval is invalid</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

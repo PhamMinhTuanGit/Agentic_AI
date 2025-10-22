@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ipi_mpls_local_pkt_handle</title><link rel="Prev" href="ftnVRFapis.380.15.html" title="Previous"><link rel="Next" href="ftnVRFapis.380.17.html" title="Next"><link rel="StyleSheet" href="css/ftnVRFapis.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/ftnVRFapis_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/ftnVRFapis.380.16.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pqu6xDY3xxoM_002bSb7uLd4d0w" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/ftnVRFapis.380.16.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.375.2.html#wwconnect_header">Multi-Protocol Label Switching Forwarder Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ftnVRFapis.380.01.html#wwconnect_header">CHAPTER 4	FTN and VRF Label Interface APIs</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/ftnVRFapis.380.02.html#wwconnect_header">Incoming Label Mapping/FTN APIs</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ipi_mpls_local_pkt_handle</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1033063" class="Heading2"><span></span>ipi_mpls_local_pkt_handle</div><div id="ww1033064" class="Body"><span></span>This function enables or disables the labeling of locally generated TCP packets by the forwarder. </div><div id="ww1042723" class="Heading3"><span></span>Syntax</div><div id="ww1048022" class="PseudoCode"><span></span>int</div><div id="ww1048023" class="PseudoCode"><span></span>ipi_mpls_local_pkt_handle (u_char protocol, int enable)</div><div id="ww1042725" class="Heading3"><span></span>Input Parameters</div><div id="ww1041684" class="CmdHead1"><span class="Parameter">protocol</span></div><div id="ww1048042" class="Cmd1">Protocol that owns the entries</div><div id="ww1041685" class="Cmd1"><span class="Parameter">IPI_PROTO_NSM</span> </div><div id="ww1041686" class="Cmd1"><span class="Parameter">IPI_PROTO_LDP</span> </div><div id="ww1041687" class="Cmd1"><span class="Parameter">IPI_PROTO_BGP</span></div><div id="ww1033069" class="Cmd1"><span class="Parameter">IPI_PROTO_RSVP</span> </div><div id="ww1041886" class="CmdHead1"><span class="Parameter">enable</span></div><div id="ww1048051" class="Cmd1">Flag to enable or disable forwarding of locally generated packets over LSPs.</div><div id="ww1041888" class="CmdHead2">    <span class="Parameter">TRUE</span></div><div id="ww1048057" class="Cmd1">Enable</div><div id="ww1041890" class="CmdHead2">    <span class="Parameter">FALSE</span></div><div id="ww1048060" class="Cmd1">Disable</div><div id="ww1033073" class="Heading3"><span></span>Output Parameters</div><div id="ww1033074" class="Body"><span></span>No data is returned by this call.</div><div id="ww1033075" class="Heading3"><span></span>Return Value</div><div id="ww1033076" class="Body"><span></span>The status of this call is 0 if the call is successful.</div><div id="ww1033077" class="Body"><span></span>The status of this call is -1 if the named interface data could not be disabled.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

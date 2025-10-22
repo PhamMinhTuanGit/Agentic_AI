@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bridge cisco-interoperability</title><link rel="Prev" href="SpanningTreeCLIcmds.253.01.html" title="Previous"><link rel="Next" href="SpanningTreeCLIcmds.253.03.html" title="Next"><link rel="StyleSheet" href="css/SpanningTreeCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SpanningTreeCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.02.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="psWYfoTyd7hzh_002falavCfMaw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.02.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SpanningTreeCLIcmds.253.01.html#wwconnect_header">CHAPTER 4	Spanning Tree Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bridge cisco-interoperability</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww535125" class="Heading1NewPage"><span></span>bridge cisco-interoperability</div><div id="ww562428" class="Body"><span></span>Use this command to enable/disable Cisco interoperability for MSTP (Multiple Spanning Tree Protocol).</div><div id="ww562429" class="Body"><span></span>If Cisco interoperability is required, all ZebOS-XP devices in the switched LAN must be Cisco-interoperability enabled. When ZebOS-XP interoperates with Cisco, the only criteria used to classify a region are the region name and revision level. VLAN-to-instance mapping is not used to classify regions when interoperating with Cisco.</div><div id="ww535128" class="Heading3"><span></span>Command Syntax</div><div id="ww544488" class="CmdMaster">bridge &lt;1-32&gt; cisco-interoperability (enable | disable)</div><div id="ww535130" class="Heading3"><span></span>Parameters</div><div id="ww535131" class="CmdHead1">&lt;1-32&gt;</div><div id="ww535132" class="Cmd1">Specify the bridge group ID</div><div id="ww535133" class="CmdHead1">enable</div><div id="ww535134" class="Cmd1">Enable Cisco interoperability for MSTP bridge</div><div id="ww535135" class="CmdHead1">disable</div><div id="ww535136" class="Cmd1">Disable Cisco interoperability for MSTP bridge</div><div id="ww535137" class="Heading3"><span></span>Default</div><div id="ww535138" class="Body"><span></span>Cisco interoperability is disabled.</div><div id="ww535139" class="Heading3"><span></span>Command Mode</div><div id="ww535140" class="Body"><span></span>Configure mode</div><div id="ww535141" class="Heading3"><span></span>Examples</div><div id="ww535142" class="Body"><span></span>To enable Cisco interoperability on a switch for a bridge:</div><div id="ww535143" class="CmdExample">#configure terminal</div><div id="ww535144" class="CmdExample">(config)#bridge 2 cisco-interoperability enable </div><div id="ww535145" class="Body"><span></span>To disable Cisco interoperability on a switch for a particular bridge:</div><div id="ww535146" class="CmdExample">#configure terminal</div><div id="ww535147" class="CmdExample">(config)#bridge 2 cisco-interoperability disable</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

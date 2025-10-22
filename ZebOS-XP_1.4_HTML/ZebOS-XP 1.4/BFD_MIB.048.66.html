@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>bfd_sess_lookup_by_disc_map_index</title><link rel="Prev" href="BFD_MIB.048.65.html" title="Previous"><link rel="Next" href="BFD_MIB.048.67.html" title="Next"><link rel="StyleSheet" href="css/BFD_MIB.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/BFD_MIB_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/BFD_MIB.048.66.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN4oPzYLOR5Y2GlKKfV5pUNA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/BFD_MIB.048.66.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.033.2.html#wwconnect_header">Bidirectional Forwarding Detection Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BFD_MIB.048.01.html#wwconnect_header">CHAPTER 14	BFD MIB Support</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/BFD_MIB.048.04.html#wwconnect_header">APIs</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">bfd_sess_lookup_by_disc_map_index</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww538084" class="Heading2"><span></span>bfd_sess_lookup_by_disc_map_index</div><div id="ww533550" class="Body"><span></span>This function loops through the BFD sessions for SNMP Get request based on the session local discriminator.</div><div id="ww533551" class="Heading3"><span></span>Syntax</div><div id="ww533552" class="PseudoCode"><span></span>struct bfd_session *</div><div id="ww533553" class="PseudoCode"><span></span>bfd_sess_lookup_by_disc_map_index (u_int32_t loc_disc, </div><div id="ww533554" class="PseudoCode"><span></span>                                   u_int8_t exact, struct bfd *bfd)</div><div id="ww533555" class="Heading3"><span></span>Input Parameters</div><div id="ww533556" class="CmdHead1"><span class="Command">loc_disc</span></div><div id="ww533557" class="Cmd1">Local discriminator</div><div id="ww533558" class="CmdHead1"><span class="Command">exact</span></div><div id="ww533559" class="Cmd1">Exact value</div><div id="ww533560" class="CmdHead1"><span class="Command">bfd</span></div><div id="ww533561" class="Cmd1">A pointer to BFD structure</div><div id="ww535091" class="Heading3"><span></span>Output Parameters</div><div id="ww535092" class="Body"><span></span>None</div><div id="ww533562" class="Heading3"><span></span>Return Values</div><div id="ww547025" class="Body"><span></span>BFD session structure from the session tree based on the local discriminator if it exists; otherwise, NULL is returned.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

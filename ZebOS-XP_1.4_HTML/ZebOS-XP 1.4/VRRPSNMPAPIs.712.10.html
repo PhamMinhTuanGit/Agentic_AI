@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>vrrp_set_asso_storage_type</title><link rel="Prev" href="VRRPSNMPAPIs.712.09.html" title="Previous"><link rel="Next" href="VRRPSNMPAPIs.712.11.html" title="Next"><link rel="StyleSheet" href="css/VRRPSNMPAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VRRPSNMPAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VRRPSNMPAPIs.712.10.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN_002b6ihJ9IzkumiJKFJaWKzQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VRRPSNMPAPIs.712.10.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.707.2.html#wwconnect_header">Virtual Router Redundancy Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRRPSNMPAPIs.712.01.html#wwconnect_header">CHAPTER 4	VRRP SNMP API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRRPSNMPAPIs.712.07.html#wwconnect_header">MIB Functions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">vrrp_set_asso_storage_type</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww525411" class="Heading2NewPage"><span></span>vrrp_set_asso_storage_type</div><div id="ww525412" class="Body"><span></span>This function sets the value of the storage type for associated IP address entry.</div><div id="ww525413" class="Heading3"><span></span>Syntax</div><div id="ww525414" class="PseudoCode"><span></span>int vrrp_set_asso_storage_type (int ipi_vrid, u_int8_t aftype, u_int8_t vrid, </div><div id="ww525415" class="PseudoCode"><span></span>u_int32_t ifindex, u_int8_t *ipaddr, int val);</div><div id="ww525416" class="Heading3"><span></span>Input Parameters</div><div id="ww525417" class="CmdHead1">ipi_vrid</div><div id="ww525418" class="Cmd1">Virtual router ID</div><div id="ww525419" class="CmdHead1">aftype</div><div id="ww525420" class="Cmd1">Address family type (AF_INET or AF_INET6)</div><div id="ww525421" class="CmdHead1">vrid</div><div id="ww525422" class="Cmd1">VRRP virtual router ID (1 - 255)</div><div id="ww525423" class="CmdHead1">ifindex</div><div id="ww525424" class="Cmd1">Interface index</div><div id="ww525425" class="CmdHead1">ipaddr</div><div id="ww525426" class="Cmd1">Associated IP address</div><div id="ww525427" class="CmdHead1">val</div><div id="ww525428" class="Cmd1">Storage type:</div><div id="ww525429" class="Cmd1">1 - other</div><div id="ww525430" class="Cmd1">2 - volatile</div><div id="ww525431" class="Cmd1">3 - nonVolatile (default)</div><div id="ww525432" class="Cmd1">4 - permanent</div><div id="ww525433" class="Cmd1">5 - readOnly</div><div id="ww525434" class="Heading3"><span></span>Output Parameters</div><div id="ww525435" class="Body"><span></span>None</div><div id="ww525436" class="Heading3"><span></span>Return Values</div><div id="ww525454" class="Body"><span></span>VRRP_API_SET_SUCCESS when the function succeeds</div><div id="ww525467" class="Body"><span></span>VRRP_API_SET_ERROR when the function fails</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

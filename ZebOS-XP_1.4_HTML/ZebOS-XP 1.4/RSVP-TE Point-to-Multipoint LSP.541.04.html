@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Point-to-Multipoint Tunnels</title><link rel="Prev" href="RSVP-TE%20Point-to-Multipoint%20LSP.541.03.html" title="Previous"><link rel="Next" href="RSVP-TE%20Point-to-Multipoint%20LSP.541.05.html" title="Next"><link rel="StyleSheet" href="css/RSVP-TE%20Point-to-Multipoint%20LSP.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/RSVP-TE%20Point-to-Multipoint%20LSP_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/RSVP-TE%20Point-to-Multipoint%20LSP.541.04.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pdQn5bR1ZBmvxRbyikRNmbA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/RSVP-TE%20Point-to-Multipoint%20LSP.541.04.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.525.2.html#wwconnect_header">RSVP-TE Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RSVP-TE%20Point-to-Multipoint%20LSP.541.01.html#wwconnect_header">CHAPTER 15	Point-to-Multipoint Services</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RSVP-TE%20Point-to-Multipoint%20LSP.541.03.html#wwconnect_header">Architecture</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Point-to-Multipoint Tunnels</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1002039" class="Heading2NewPage"><span></span>Point-to-Multipoint Tunnels</div><div id="ww1015937" class="Body"><span></span>Unlike P2P tunnels, P2MP tunnels do not contain egress information. Instead, egress information is a property of each source-to-leaf (S2L) sub-LSP. Each ingress node also generates a unique P2MP ID for each P2MP trunk. P2MP tunnels are indexed by the tuple (Ingress, Trunk ID, P2MP ID) in the global trunk table.</div><div id="ww1015938" class="Body"><span></span>The reservation style used for P2P and stored per-LSP is a per-tunnel property in P2MP. Two structures, the main session list and the MBB (make-before-break) session list store data associated with P2MP tunnels..</div><div id="ww1015939" class="Body"><span></span>P2MP tunnels share their name space and identifier space with P2P tunnels. The Ingress, Transit Upstream, Transit Downstream, and Egress FSM used for signaling P2MP LSP, are the same as those used for P2P. P2MP utilizes the same interfaces between RSVP-TE and CSPF, RSVP-TE and NSM QoS, and RSVP-TE and the Label Manager as P2P LSP.</div><div id="ww1016806" class="Body"><span></span>The operational status of a P2MP tunnel requires that at least one of its LSPs is up, in order to declare itself as operationally UP.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

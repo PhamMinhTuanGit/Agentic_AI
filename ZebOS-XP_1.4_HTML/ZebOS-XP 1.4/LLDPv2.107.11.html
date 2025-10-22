@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>set lldp med-devtype</title><link rel="Prev" href="LLDPv2.107.10.html" title="Previous"><link rel="Next" href="LLDPv2.107.12.html" title="Next"><link rel="StyleSheet" href="css/LLDPv2.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/LLDPv2_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/LLDPv2.107.11.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pmMPSN_002bt_002f1RnqyHSsdHH8VQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/LLDPv2.107.11.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/LLDPv2.107.01.html#wwconnect_header">CHAPTER 5	Link Layer Discovery Protocol v2 Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">set lldp med-devtype</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1026202" class="Heading1NewPage"><span></span>set lldp med-devtype</div><div id="ww1021286" class="Body"><span></span>Use this command to configure the LLDP device type as Network-Connectivity/ End-Point Class1/ End-Point Class2/ End-Point Class3 device.</div><div id="ww1021287" class="Body"><span></span>Use the <span class="Command">no</span> parameter to un set the configured LLDP device type.</div><div id="ww1021288" class="Heading3"><span></span>Command Syntax</div><div id="ww1021551" class="CmdMaster">set lldp med-devtype (net-connect| ep-class1| ep-class2| ep-class3)</div><div id="ww1021552" class="CmdMaster">no lldp med-devtype (net-connect| ep-class1| ep-class2| ep-class3)</div><div id="ww1021553" class="Heading3"><span></span>Parameters</div><div id="ww1020570" class="CmdHead1">net-connect</div><div id="ww1020571" class="Cmd1">Set device type as Network-Connectivity</div><div id="ww1020572" class="CmdHead1">ep-class1</div><div id="ww1020573" class="Cmd1">Set device type as End-Point Class1</div><div id="ww1020574" class="CmdHead1">ep-class2</div><div id="ww1020575" class="Cmd1">Set device type as End-Point Class2</div><div id="ww1020576" class="CmdHead1">ep-class3</div><div id="ww1020577" class="Cmd1">Set device type as End-Point Class3</div><div id="ww1020578" class="Heading3"><span></span>Default</div><div id="ww1020579" class="Body"><span></span>None</div><div id="ww1020580" class="Heading3"><span></span>Command Mode</div><div id="ww1020581" class="Body"><span></span>Interface mode</div><div id="ww1020582" class="Heading3"><span></span>Examples</div><div id="ww1021083" class="CmdExample">#configure terminal</div><div id="ww1021084" class="CmdExample">(config)#int eth0</div><div id="ww1021085" class="CmdExample">(config-if)#set lldp med-devtype ep-class1</div><div id="ww1021086" class="CmdExample">(config-if)#exit</div><div id="ww1021087" class="CmdExample">&nbsp;</div><div id="ww1021088" class="CmdExample">#configure terminal</div><div id="ww1021089" class="CmdExample">(config)#int eth0</div><div id="ww1021090" class="CmdExample">(config-if)#no set lldp med-devtyp</div><div id="ww1020591" class="CmdExample">(config-if)#exit</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

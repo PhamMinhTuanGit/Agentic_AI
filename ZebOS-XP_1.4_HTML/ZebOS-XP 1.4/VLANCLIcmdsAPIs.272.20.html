@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>nsm_pvlan_associate_clear_all</title><link rel="Prev" href="VLANCLIcmdsAPIs.272.19.html" title="Previous"><link rel="Next" href="VLANCLIcmdsAPIs.272.21.html" title="Next"><link rel="StyleSheet" href="css/VLANCLIcmdsAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VLANCLIcmdsAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.20.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="piEybBPFK4xBNUdtyMv2J1w" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.20.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.264.2.html#wwconnect_header">Layer 2 Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.01.html#wwconnect_header">CHAPTER 7	Virtual LANs</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLANCLIcmdsAPIs.272.09.html#wwconnect_header">API Definitions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">nsm_pvlan_associate_clear_all</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww511151" class="Heading2"><span></span>nsm_pvlan_associate_clear_all</div><div id="ww511152" class="Body"><span></span>This function removes an association of all secondary VLANs from a primary VLAN.</div><div id="ww511153" class="Heading3"><span></span>Syntax</div><div id="ww511154" class="CmdExample">int</div><div id="ww511155" class="CmdExample">nsm_pvlan_associate_clear_all (struct nsm_bridge_master *master,</div><div id="ww511156" class="CmdExample">                               char *brname, u_int16_t vid)</div><div id="ww511157" class="Heading3"><span></span>Input Parameters</div><div id="ww511158" class="CmdHead1">master</div><div id="ww511159" class="Cmd1">Reference to the NSM bridge master structure.</div><div id="ww511160" class="CmdHead1">brname</div><div id="ww511161" class="Cmd1">Name of the bridge.</div><div id="ww511162" class="CmdHead1">vid</div><div id="ww511163" class="Cmd1">Primary VLAN ID to be configured.</div><div id="ww511164" class="Heading3"><span></span>Output Parameters</div><div id="ww511165" class="Body"><span></span>None</div><div id="ww511166" class="Heading3"><span></span>Return Values</div><div id="ww511167" class="Body"><span></span>RESULT_OK when function succeeds.</div><div id="ww520023" class="Body"><span></span>NSM_VLAN_ERR_BRIDGE_NOT_FOUND when a specified bridge is not found</div><div id="ww520024" class="Body"><span></span>NSM_VLAN_ERR_BRIDGE_NOT_VLAN_AWARE when bridge is not aware of VLAN	 </div><div id="ww520025" class="Body"><span></span>NSM_NO_VLAN_CONFIGURED</div><div id="ww520026" class="Body"><span></span>NSM_PVLAN_ERR_PROVIDER_BRIDGE</div><div id="ww520027" class="Body"><span></span>NSM_VLAN_ERR_VLAN_NOT_FOUND</div><div id="ww520073" class="Body"><span></span>NSM_PVLAN_NOT_CONFIGURED</div><div id="ww520074" class="Body"><span></span>NSM_PVLAN_ERR_NOT_PRIMARY_VLAN</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

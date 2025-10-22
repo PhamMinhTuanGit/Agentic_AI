@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ais status</title><link rel="Prev" href="PBB-TE-Measurement%20CLI.115.04.html" title="Previous"><link rel="Next" href="PBB-TE-Measurement%20CLI.115.06.html" title="Next"><link rel="StyleSheet" href="css/PBB-TE-Measurement%20CLI.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PBB-TE-Measurement%20CLI_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PBB-TE-Measurement%20CLI.115.05.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pzJ1NZm6WEpiXfXpUjemPHQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PBB-TE-Measurement%20CLI.115.05.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.101.2.html#wwconnect_header">Carrier Ethernet Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PBB-TE-Measurement%20CLI.115.01.html#wwconnect_header">CHAPTER 13	PBB-TE Measurement Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ais status</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1022499" class="Heading1NewPage"><span></span>ais status</div><div id="ww1022500" class="Body"><span></span>Use this command to enable or disable AIS frame transmission for a MEP. AIS frames are triggered by Ethernet down events.</div><div id="ww1022501" class="Body"><span></span>An internal counter is maintained for each AIS instance that is running. The maximum number of instances supported is eight.</div><div id="ww1022502" class="Heading3"><span></span>Command Syntax</div><div id="ww1022503" class="CmdMaster">ais status (enable | disable) (unicast RMEP_MAC | multicast) level &lt;0-7&gt;</div><div id="ww1022504" class="Heading3"><span></span>Parameters</div><div id="ww1022505" class="CmdHead1">enable</div><div id="ww1022506" class="Cmd1">Enable AIS frame monitoring</div><div id="ww1022507" class="CmdHead1">disable</div><div id="ww1022508" class="Cmd1">Disable AIS frame monitoring</div><div id="ww1022509" class="CmdHead1">unicast</div><div id="ww1022510" class="Cmd1">Specify the unicast ais frame to be sent</div><div id="ww1022511" class="CmdHead2">RMEP_MAC</div><div id="ww1022512" class="Cmd1">Specify a remote MEP MAC address in the format HHHH.HHHH.HHHH.</div><div id="ww1022513" class="CmdHead1">multicast</div><div id="ww1022514" class="Cmd1">Specify the multicast ais frame to be sent</div><div id="ww1022515" class="CmdHead1">level</div><div id="ww1022516" class="Cmd1">Specify the level for AIS transmission.</div><div id="ww1022517" class="Heading3"><span></span>Command Mode</div><div id="ww1022518" class="Body"><span></span>Ethernet CFM PBB-TE MEP configuration mode</div><div id="ww1022519" class="Heading3"><span></span>ExampleS</div><div id="ww1022520" class="Body"><span></span><span class="Description">This example enables AIS 5 for unicast frames at the specified MAC address at level 3:</span></div><div id="ww1022521" class="CmdExample">(config-cfm-pbb-te-mep)#ais status enable level 1 unicast 2222.1111.432a</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

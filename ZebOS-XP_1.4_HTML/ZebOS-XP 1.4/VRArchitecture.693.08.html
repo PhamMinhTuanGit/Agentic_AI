@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Interactions with Other ZebOS-XP Components</title><link rel="Prev" href="VRArchitecture.693.07.html" title="Previous"><link rel="Next" href="VRArchitecture.693.09.html" title="Next"><link rel="StyleSheet" href="css/VRArchitecture.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VRArchitecture_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VRArchitecture.693.08.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pmjfEDg6hmLjmrjC5wdiaJw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VRArchitecture.693.08.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.691.2.html#wwconnect_header">Virtual Routing Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRArchitecture.693.01.html#wwconnect_header">CHAPTER 1	About Virtual Routing</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Interactions with Other ZebOS-XP Components </span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww504112" class="Heading1"><span></span>Interactions with Other ZebOS-XP Components </div><div id="ww504113" class="Body"><span></span>The Integrated Management Interface shell (IMISH) interacts directly with the IMI module, which provides the service or passes the request for service to the Network Services Manager (NSM). IMISH offloads some processing from the NSM module. The Virtual Teletype Terminal (VTY) requires direct interaction with the NSM.</div><div class="ww_skin_page_overflow"><div id="ww504117" class="AnchorImage"><img class="Default" src="../ZebOS-XP%201.4/images/VRintro.jpg" width="396" height="291" style="display: inline; left: 0.0; top: 0.0" alt=""></div></div><div id="ww504118" class="FigureTitle"><span>Figure 1-6: </span>Basic Virtual Router Architecture including IMISH, IMI, NSM and VTY</div><div id="ww504119" class="Body"><span></span>Throughout the system, the Virtual-Router ID (VR-ID) must be tracked on a per-user basis. This permits the virtualization to be shielded from the user. The VR-ID is determined during login (based on the IP address that the user connects to), and is maintained by the VTY library or IMISH. Each VTY library or IMISH instance keeps the VR-ID during the session, and it is passed as the header of messages.</div><div id="ww504120" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>In “line” messages, the reserved field is used. For “show” messages, no header is provided, so the VR-ID is simply encoded and decoded at the beginning of the message.</div><div id="ww504121" class="Body"><span></span>In addition to an IMISH connection, it is necessary to maintain VR-ID whenever messages are passed between the daemons for configuration get/set purposes. </div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

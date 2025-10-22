@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ldp_api_targeted_peer_add</title><link rel="Prev" href="LDP_API.292.40.html" title="Previous"><link rel="Next" href="LDP_API.292.42.html" title="Next"><link rel="StyleSheet" href="css/LDP_API.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/LDP_API_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/LDP_API.292.41.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pgYB3y15rUYuYCMfrQUPS1g" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/LDP_API.292.41.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.282.2.html#wwconnect_header">Label Distribution Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/LDP_API.292.01.html#wwconnect_header">CHAPTER 9	LDP API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ldp_api_targeted_peer_add</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1071858" class="Heading2NewPage"><span></span>ldp_api_targeted_peer_add</div><div id="ww1071859" class="Body"><span></span>This call creates a targeted peer.</div><div id="ww1071860" class="Heading3"><span></span>Syntax</div><div id="ww1082443" class="PseudoCode"><span></span>int</div><div id="ww1082444" class="PseudoCode"><span></span>ldp_api_targeted_peer_add (struct ldp *ldp, struct prefix *p,</div><div id="ww1071862" class="PseudoCode"><span></span>                           struct ldp_entity *entity, int src)</div><div id="ww1071863" class="Heading3"><span></span>Input Parameters</div><div id="ww1071864" class="CmdHead1"><span class="Parameter">ldp</span></div><div id="ww1082458" class="Cmd1">LDP instance</div><div id="ww1071865" class="CmdHead1"><span class="Parameter">p</span></div><div id="ww1082460" class="Cmd1">Prefix</div><div id="ww1071866" class="CmdHead1"><span class="Parameter">entity</span></div><div id="ww1082463" class="Cmd1">LDP entity</div><div id="ww1071867" class="CmdHead1"><span class="Parameter">src</span></div><div id="ww1082465" class="Cmd1">Source, either CLI or SNMP</div><div id="ww1071868" class="Heading3"><span></span>Output Parameters</div><div id="ww1071869" class="Body"><span></span>None</div><div id="ww1071870" class="Heading3"><span></span>Return Values</div><div id="ww1071871" class="Body"><span></span>LDP_SUCCESS    If the targeted peer is successfully added</div><div id="ww1071872" class="Body"><span></span>LDP_ERR_TARGETED_PEER_DEFINED    If the targeted peer is already defined</div><div id="ww1071873" class="Body"><span></span>LDP_ERR_MEM_ALLOC_FAILURE    Memory allocation failure while creating a new targeted peer</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

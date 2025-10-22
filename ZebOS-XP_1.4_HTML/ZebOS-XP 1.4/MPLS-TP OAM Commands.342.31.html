@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>rmep-id</title><link rel="Prev" href="MPLS-TP%20OAM%20Commands.342.30.html" title="Previous"><link rel="Next" href="MPLS-TP%20OAM%20Commands.342.32.html" title="Next"><link rel="StyleSheet" href="css/MPLS-TP%20OAM%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MPLS-TP%20OAM%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MPLS-TP%20OAM%20Commands.342.31.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pscUpX2uYWvvpoTdiCl06HA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MPLS-TP%20OAM%20Commands.342.31.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.333.2.html#wwconnect_header">Multi-Protocol Label Switching Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MPLS-TP%20OAM%20Commands.342.01.html#wwconnect_header">CHAPTER 8	MPLS-TP OAM Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">rmep-id</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1031944" class="Heading1NewPage"><span></span>rmep-id</div><div id="ww1031945" class="Body"><span></span>Use this command to configure a Remote Maintenance Entity Group End Point (RMEP).</div><div id="ww1031946" class="Heading3"><span></span>Command Syntax</div><div id="ww1031947" class="CmdMaster">rmep-id &lt;1-8191&gt; cc CC-NAME icc ICC-NAME umc UMC (fwd|rev)</div><div id="ww1031948" class="CmdMaster">no rmep-id &lt;1-8191&gt; cc CC-NAME icc ICC-NAME umc UMC</div><div id="ww1031949" class="Heading3"><span></span>Parameters</div><div id="ww1031950" class="CmdHead1">&lt;1-8191&gt;</div><div id="ww1031951" class="Cmd1">RMEP identifier.</div><div id="ww1031954" class="CmdHead1">CC-NAME</div><div id="ww1031955" class="Cmd1">Country code: two alphabetic characters, upper case (A-Z).</div><div id="ww1031958" class="CmdHead1">ICC-NAME</div><div id="ww1031959" class="Cmd1">ITU carrier code: 1-6 characters, alphabetic (A-Z) or numeric (0-9).</div><div id="ww1040222" class="CmdHead1">UMC</div><div id="ww1040223" class="Cmd1">Unique MEG code: 1-5 characters, excluding a forward slash (/).</div><div id="ww1040224" class="CmdHead1">fwd</div><div id="ww1040225" class="Cmd1">Forward RMEP.</div><div id="ww1031966" class="CmdHead1">rev</div><div id="ww1031967" class="Cmd1">Reverse RMEP.</div><div id="ww1031968" class="Heading3"><span></span>Command Mode</div><div id="ww1031969" class="Body"><span></span>ITUT MIP mode</div><div id="ww1031970" class="Heading3"><span></span>Examples</div><div id="ww1031971" class="CmdExample">#configure terminal</div><div id="ww1031972" class="CmdExample">(config)#itut meg new12 level 1</div><div id="ww1031973" class="CmdExample">(config-itut-meg)#mep-id 12</div><div id="ww1031974" class="CmdExample">(config-itut-mp)#rmep-id 1 cc US icc 123456 umc new fwd</div><div id="ww1031975" class="CmdExample">&nbsp;</div><div id="ww1031976" class="CmdExample">(config-itut-mp)#no rmep-id 1 cc US icc 123456 umc new</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

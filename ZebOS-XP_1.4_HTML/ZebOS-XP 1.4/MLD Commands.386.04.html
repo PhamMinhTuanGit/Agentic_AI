@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>ipv6 mld</title><link rel="Prev" href="MLD%20Commands.386.03.html" title="Previous"><link rel="Next" href="MLD%20Commands.386.05.html" title="Next"><link rel="StyleSheet" href="css/MLD%20Commands.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/MLD%20Commands_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/MLD%20Commands.386.04.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN3Imc4YE501h6yskfmshpw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/MLD%20Commands.386.04.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.381.2.html#wwconnect_header">Multicast Routing Information Base Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/MLD%20Commands.386.01.html#wwconnect_header">CHAPTER 4	MLD Multicast Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">ipv6 mld</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1059478" class="Heading1NewPage"><span></span>ipv6 mld</div><div id="ww1070011" class="Body"><span></span>Use this command to enable the MLD protocol operation on an interface. This command enables MLD protocol operation in stand-alone mode, and can be used to learn local-membership information prior to enabling a multicast routing protocol on the interface. This command will has no effect on interfaces configured for MLD Proxy.</div><div id="ww1070036" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>This command can only be issued on VLAN interfaces.</div><div id="ww1062202" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to return all MLD related configuration to the default (including MLD Snooping or MLD Proxy service).</div><div id="ww1059480" class="Heading3"><span></span>Command Syntax</div><div id="ww1059481" class="CmdMaster">ipv6 mld</div><div id="ww1070075" class="CmdMaster">no ipv6 mld</div><div id="ww1070076" class="Heading3"><span></span>Parameters</div><div id="ww1070077" class="Body"><span></span>None</div><div id="ww1070078" class="Heading3"><span></span>Default</div><div id="ww1070079" class="Body"><span></span>Disabled</div><div id="ww1070080" class="Heading3"><span></span>Command Mode</div><div id="ww1070081" class="Body"><span></span>Interface mode for VLAN interface</div><div id="ww1070084" class="Heading3"><span></span>Example</div><div id="ww1059485" class="CmdExample">#configure terminal</div><div id="ww1059486" class="CmdExample">(config)#interface eth1</div><div id="ww1059487" class="CmdExample">(config-if)#ipv6 mld</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

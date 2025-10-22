@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>hal_ipv6_mc_get_sg_count</title><link rel="Prev" href="HAL.191.185.html" title="Previous"><link rel="Next" href="HAL.191.187.html" title="Next"><link rel="StyleSheet" href="css/HAL.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/HAL_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/HAL.191.186.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN0stz0e_002fO9EQYdcWxLZYx_002bw" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/HAL.191.186.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.188.2.html#wwconnect_header">Platform Integration Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/HAL.191.001.html#wwconnect_header">CHAPTER 2	Hardware Abstraction Layer</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/HAL.191.157.html#wwconnect_header">IPv6 API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">hal_ipv6_mc_get_sg_count</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww583923" class="Heading2"><span></span>hal_ipv6_mc_get_sg_count</div><div id="ww583924" class="Body"><span></span>This function gets the various counters per (S, G) entry.</div><div id="ww583925" class="Heading3"><span></span>Syntax</div><div id="ww583926" class="PseudoCode"><span></span>int</div><div id="ww583927" class="PseudoCode"><span></span>hal_ipv6_mc_get_sg_count (struct hal_in6_addr *source,</div><div id="ww583928" class="PseudoCode"><span></span>                          struct hal_in6_addr *group,</div><div id="ww583929" class="PseudoCode"><span></span>                          u_int32_t iif_vif,</div><div id="ww583930" class="PseudoCode"><span></span>                          u_int32_t *pktcnt,</div><div id="ww583931" class="PseudoCode"><span></span>                          u_int32_t *bytecnt,</div><div id="ww583932" class="PseudoCode"><span></span>                          u_int32_t *wrong_vif)</div><div id="ww583933" class="Heading3"><span></span>Input Parameters</div><div id="ww583934" class="CmdHead1">source </div><div id="ww583935" class="Cmd1">Source address</div><div id="ww583936" class="CmdHead1">group </div><div id="ww583937" class="Cmd1">Group address</div><div id="ww583938" class="CmdHead1"><span class="Command">iif_vif</span> </div><div id="ww583939" class="Cmd1">Incoming VIF</div><div id="ww583940" class="CmdHead1">pktcnt </div><div id="ww583941" class="Cmd1">Packet count</div><div id="ww583942" class="CmdHead1">bytecnt </div><div id="ww583943" class="Cmd1">Byte count</div><div id="ww583944" class="CmdHead1">wrong_vif </div><div id="ww583945" class="Cmd1">Wrong VIFs</div><div id="ww583946" class="Heading3"><span></span>Output Parameters</div><div id="ww583947" class="Body"><span></span>None</div><div id="ww583948" class="Heading3"><span></span>Return Value</div><div id="ww583949" class="Body"><span></span>&lt; 0 when function fails</div><div id="ww584107" class="Body"><span></span>HAL_SUCCESS when function succeeds</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

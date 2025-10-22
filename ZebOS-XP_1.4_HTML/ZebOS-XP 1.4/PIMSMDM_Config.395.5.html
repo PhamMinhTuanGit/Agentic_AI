@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Validation</title><link rel="Prev" href="PIMSMDM_Config.395.4.html" title="Previous"><link rel="Next" href="PIMSMDM_Config.395.6.html" title="Next"><link rel="StyleSheet" href="css/PIMSMDM_Config.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PIMSMDM_Config_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PIMSMDM_Config.395.5.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pePSPyQGwjdYk3Z1hEBGOow" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PIMSMDM_Config.395.5.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.389.2.html#wwconnect_header">Multicast Configuration Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PIMSMDM_Config.395.1.html#wwconnect_header">CHAPTER 5	 PIM Sparse-Dense Mode Configuration</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PIMSMDM_Config.395.4.html#wwconnect_header">Enabling PIM-SMDM</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Validation</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1079864" class="Heading2"><span></span>Validation</div><div id="ww1083490" class="Body"><span></span>Here is the sample configuration for <span class="Parameter">Router_C:</span></div><div id="ww1083491" class="Pseudocode1"><span></span>hostname Router_C</div><div id="ww1083492" class="Pseudocode1"><span></span>!</div><div id="ww1083493" class="Pseudocode1"><span></span>interface eth0</div><div id="ww1083494" class="Pseudocode1"><span></span>!</div><div id="ww1083495" class="Pseudocode1"><span></span>interface eth1</div><div id="ww1083496" class="Pseudocode1"><span></span> ip pim sparse-dense-mode</div><div id="ww1083497" class="Pseudocode1"><span></span>!</div><div id="ww1083498" class="Pseudocode1"><span></span>interface eth2</div><div id="ww1083499" class="Pseudocode1"><span></span> ip pim sparse-dense-mode</div><div id="ww1083500" class="Pseudocode1"><span></span>!</div><div id="ww1083501" class="Pseudocode1"><span></span>interface lo</div><div id="ww1083502" class="Pseudocode1"><span></span>!</div><div id="ww1083503" class="Pseudocode1"><span></span>!</div><div id="ww1083504" class="Pseudocode1"><span></span>ip multicast-routing</div><div id="ww1079906" class="Body"><span></span>The <span class="Command">show ip pim interface</span> command displays the interface details for Router_C.</div><div id="ww1079952" class="Pseudocode1"><span></span>Router_C#show ip pim interface</div><div id="ww1081071" class="Pseudocode1"><span></span>                   </div><div id="ww1081072" class="Pseudocode1"><span></span>Address	            Interface          VIFindex Ver/	  Nbr</div><div id="ww1081073" class="Pseudocode1"><span></span>	                                               Mode	  Count</div><div id="ww1081074" class="Pseudocode1"><span></span>192.168.1.10	        eth1	                0	      v2/SD	  0</div><div id="ww1081075" class="Pseudocode1"><span></span>172.16.1.10	         eth2	                2	      v2/SD	  1</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

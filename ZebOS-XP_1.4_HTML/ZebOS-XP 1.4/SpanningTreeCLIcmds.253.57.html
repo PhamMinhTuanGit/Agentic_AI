@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>spanning-tree link-type</title><link rel="Prev" href="SpanningTreeCLIcmds.253.56.html" title="Previous"><link rel="Next" href="SpanningTreeCLIcmds.253.58.html" title="Next"><link rel="StyleSheet" href="css/SpanningTreeCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SpanningTreeCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.57.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="poyfAigKEsBUdSdYoPq6P0g" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.57.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SpanningTreeCLIcmds.253.01.html#wwconnect_header">CHAPTER 4	Spanning Tree Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">spanning-tree link-type</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww509691" class="Heading1NewPage"><span></span>spanning-tree link-type</div><div id="ww509692" class="Body"><span></span>Use this command to enable or disable point-to-point or shared link types. </div><div id="ww522736" class="Body"><span></span>RSTP has a backward-compatible STP mode, <span class="parameter">spanning-tree link-type shared</span>. An alternative is the <span class="parameter">spanning-tree force-version 0</span>.</div><div id="ww509693" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter with this command to disable rapid transition.</div><div id="ww509694" class="Heading3"><span></span>Command Syntax</div><div id="ww509695" class="CmdMaster">spanning-tree link-type auto</div><div id="ww548443" class="CmdMaster">spanning-tree link-type point-to-point</div><div id="ww548428" class="CmdMaster">spanning-tree link-type shared</div><div id="ww548493" class="CmdMaster">no spanning-tree link-type</div><div id="ww548494" class="Heading3"><span></span>Parameters</div><div id="ww522776" class="CmdHead1">auto</div><div id="ww527109" class="Cmd1">Sets to either point-to-point or shared based on duplex state.</div><div id="ww522817" class="CmdHead1">point-to-point</div><div id="ww527116" class="Cmd1"> Enables rapid transition.</div><div id="ww522768" class="CmdHead1">shared</div><div id="ww527123" class="Cmd1">Disables rapid transition.</div><div id="ww522671" class="Heading3"><span></span>Command Mode</div><div id="ww522672" class="Body"><span></span>Interface mode</div><div id="ww509703" class="Heading3"><span></span>Examples</div><div id="ww509704" class="CmdExample">#configure terminal</div><div id="ww509705" class="CmdExample">(config)#interface eth0</div><div id="ww509706" class="CmdExample">(config-if)#spanning-tree link-type point-to-point</div><div id="ww539285" class="CmdExample">&nbsp;</div><div id="ww539304" class="CmdExample">(config-if)#no spanning-tree link-type</div><div id="ww539496" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

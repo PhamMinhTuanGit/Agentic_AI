@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>spanning-tree guard</title><link rel="Prev" href="SpanningTreeCLIcmds.253.52.html" title="Previous"><link rel="Next" href="SpanningTreeCLIcmds.253.54.html" title="Next"><link rel="StyleSheet" href="css/SpanningTreeCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SpanningTreeCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.53.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pOtk5SeLoH25EEwZeeNeP6A" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SpanningTreeCLIcmds.253.53.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SpanningTreeCLIcmds.253.01.html#wwconnect_header">CHAPTER 4	Spanning Tree Protocol Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">spanning-tree guard</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww509576" class="Heading1NewPage"><span></span>spanning-tree guard</div><div id="ww509577" class="Body"><span></span>Use this command to enable the root guard feature for the port. This feature disables reception of superior BPDUs.</div><div id="ww522063" class="Body"><span></span>The root guard feature makes sure that the port on which it is enabled is a designated port. If the root guard enabled port receives a superior BPDU, it goes to a Listening state (for STP) or discarding state (for RSTP and MSTP). </div><div id="ww509578" class="Body"><span></span>Use the <span style="font-family: &quot;Courier New&quot;">no</span> parameter with this command to disable the root guard feature for the port.</div><div id="ww509579" class="Heading3"><span></span>Command Syntax</div><div id="ww509580" class="CmdMaster">spanning-tree guard root</div><div id="ww548244" class="CmdMaster">no spanning-tree guard root</div><div id="ww521988" class="Heading3"><span></span>Parameters</div><div id="ww538949" class="CmdHead1">root</div><div id="ww538966" class="Cmd1">Set to disable reception of superior BPDUs</div><div id="ww521993" class="Heading3"><span></span>Command Mode</div><div id="ww521994" class="Body"><span></span>Interface mode</div><div id="ww509585" class="Heading3"><span></span>Example</div><div id="ww509586" class="CmdExample">#configure terminal</div><div id="ww509587" class="CmdExample">(config)#interface eth0</div><div id="ww538973" class="CmdExample">(config-if)#spanning-tree guard root</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

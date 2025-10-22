@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>clear rsvp session</title><link rel="Prev" href="RSVPTECmds.518.002.html" title="Previous"><link rel="Next" href="RSVPTECmds.518.004.html" title="Next"><link rel="StyleSheet" href="css/RSVPTECmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/RSVPTECmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/RSVPTECmds.518.003.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pUMnJmDkvwPfpCLmZ2eJ69A" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/RSVPTECmds.518.003.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.515.2.html#wwconnect_header">RSVP-TE Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/RSVPTECmds.518.001.html#wwconnect_header">CHAPTER 2	RSVP-TE Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">clear rsvp session</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww578149" class="Heading1NewPage"><span></span>clear rsvp session</div><div id="ww489343" class="Body"><span></span>Use this command to reset either all or specified sessions originating from a specific ingress and terminating on the specific egress.</div><div id="ww540230" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>If the affected session originates from the router where the command is issued, it is stopped and started. If the affected session does not originate from the router where the command is issued, it is stopped and deleted.</div><div id="ww489355" class="Heading3"><span></span>Command Syntax</div><div id="ww594915" class="Note"><span class="WebWorks_Number" style="width: 34.488pt"><span>Note:	</span></span>When RSVP Point-to-Multipoint (P2MP) sessions are configured, only the <span class="Command">clear rsvp session * </span>syntax is valid.</div><div id="ww489356" class="CmdMaster">clear rsvp session TUNNEL-ID LSP-ID INGRESS EGRESS</div><div id="ww569498" class="CmdMaster">clear rsvp session *</div><div id="ww552569" class="Heading3"><span></span>Parameters</div><div id="ww489363" class="CmdHead1"><span class="Parameter">* </span></div><div id="ww552588" class="Cmd1">Clear all RSVP sessions configured</div><div id="ww542825" class="CmdHead1"><span class="Parameter">TUNNELID</span></div><div id="ww552602" class="Cmd1">Clear tunnel ID sessions</div><div id="ww542847" class="CmdHead1"><span class="Parameter">LSP-ID</span></div><div id="ww572303" class="Cmd1">Clear LSP ID sessions</div><div id="ww578135" class="CmdHead1"><span class="Parameter">INGRESS</span></div><div id="ww578136" class="Cmd1">Clear ingress sessions</div><div id="ww578152" class="CmdHead1"><span class="Parameter">EGRESS</span></div><div id="ww578153" class="Cmd1">Clear egress sessions</div><div id="ww578154" class="Heading3"><span></span>Command Mode</div><div id="ww514251" class="Body"><span></span>Exec mode and Privileged Exec mode</div><div id="ww501204" class="Heading3"><span></span>Examples</div><div id="ww501205" class="CmdExample">#clear rsvp session *</div><div id="ww542831" class="CmdExample">#clear rsvp session 1 1 1.2.3.4 192.168.1.1</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

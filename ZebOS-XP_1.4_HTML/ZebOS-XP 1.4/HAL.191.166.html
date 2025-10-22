@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>hal_ipv6_uc_route_add</title><link rel="Prev" href="HAL.191.165.html" title="Previous"><link rel="Next" href="HAL.191.167.html" title="Next"><link rel="StyleSheet" href="css/HAL.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/HAL_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/HAL.191.166.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pcJuFk_002fS_002b8FAmJihYafhYAg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/HAL.191.166.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.188.2.html#wwconnect_header">Platform Integration Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/HAL.191.001.html#wwconnect_header">CHAPTER 2	Hardware Abstraction Layer</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/HAL.191.157.html#wwconnect_header">IPv6 API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">hal_ipv6_uc_route_add</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww583514" class="Heading2"><span></span>hal_ipv6_uc_route_add</div><div id="ww583515" class="Body"><span></span>This function adds an IPv6 unicast route to the forwarding plane. </div><div id="ww583516" class="Heading3"><span></span>Syntax</div><div id="ww583517" class="PseudoCode"><span></span>int</div><div id="ww583518" class="PseudoCode"><span></span>hal_ipv6_uc_route_add (unsigned short fib,</div><div id="ww583519" class="PseudoCode"><span></span>                       struct pal_in6_addr *ipaddr,</div><div id="ww583520" class="PseudoCode"><span></span>                       unsigned char ipmask,</div><div id="ww583521" class="PseudoCode"><span></span>                       unsigned short num, struct hal_ipv6uc_nexthop *nexthops)</div><div id="ww583522" class="Heading3"><span></span>Input Parameters</div><div id="ww583523" class="CmdHead1">fib </div><div id="ww583524" class="Cmd1">FIB ID</div><div id="ww583525" class="CmdHead1">ipaddr </div><div id="ww583526" class="Cmd1">IP address</div><div id="ww583527" class="CmdHead1">ipmask </div><div id="ww583528" class="Cmd1">IP mask length</div><div id="ww583529" class="CmdHead1">num </div><div id="ww583530" class="Cmd1">Number of nexthops</div><div id="ww583531" class="CmdHead1">nexthops </div><div id="ww583532" class="Cmd1">List of nexthops</div><div id="ww583533" class="Heading3"><span></span>Output Parameters</div><div id="ww583534" class="Body"><span></span>None</div><div id="ww583535" class="Heading3"><span></span>Return Value</div><div id="ww583536" class="Body"><span></span>HAL_IP_FIB_NOT_EXIST</div><div id="ww583537" class="Body"><span></span>&lt; 0 when function fails</div><div id="ww583538" class="Body"><span></span>HAL_SUCCESS when function succeeds</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

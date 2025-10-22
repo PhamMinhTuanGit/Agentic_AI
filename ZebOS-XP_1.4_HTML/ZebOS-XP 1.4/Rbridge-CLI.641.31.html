@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>number-of-mtu-probes</title><link rel="Prev" href="Rbridge-CLI.641.30.html" title="Previous"><link rel="Next" href="Rbridge-CLI.641.32.html" title="Next"><link rel="StyleSheet" href="css/Rbridge-CLI.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/Rbridge-CLI_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/Rbridge-CLI.641.31.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pwlKIrNlizNb_002f33Bi_002bZhOsQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/Rbridge-CLI.641.31.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.638.2.html#wwconnect_header">Transparent Interconnection of Lots of Links Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/Rbridge-CLI.641.01.html#wwconnect_header">CHAPTER 2	RBridge Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">number-of-mtu-probes</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1355755" class="Heading1NewPage"><span></span>number-of-mtu-probes</div><div id="ww1355756" class="Body"><span></span>Use this command set the number of MTU probes. This value is the maximum number of probes that can be used by an RBridge before determining that a neighboring RBridge does not support a published MTU. </div><div id="ww1355757" class="Body"><span></span>Use the no parameter with this command to reset the configuration to the default value: 3.</div><div id="ww1355758" class="Heading3"><span></span>Command Syntax</div><div id="ww1355759" class="CmdMaster">number-of-mtu-probes &lt;1-255&gt;</div><div id="ww1355760" class="CmdMaster">no number-of-mtu-probes</div><div id="ww1355761" class="Heading3"><span></span>Parameters</div><div id="ww1355762" class="CmdHead1">&lt;1-255&gt;</div><div id="ww1355763" class="Cmd1">Specify the maximum number of MTU probes.</div><div id="ww1355764" class="Heading3"><span></span>Command Mode</div><div id="ww1355765" class="Body"><span></span>RBridge mode</div><div id="ww1361092" class="Heading3"><span></span>Default</div><div id="ww1361087" class="Body"><span></span>3 MTU probes</div><div id="ww1355766" class="Heading3"><span></span>Examples</div><div id="ww1355767" class="CmdExample">&gt;enable</div><div id="ww1355768" class="CmdExample">#configure terminal</div><div id="ww1355769" class="CmdExample">(config)#bridge 1 protocol trill</div><div id="ww1355770" class="CmdExample">(config)#rbridge trill 1</div><div id="ww1355771" class="CmdExample">(config-rb)#number-of-mtu-probes 225</div><div id="ww1361172" class="CmdExample">&nbsp;</div><div id="ww1355817" class="CmdExample">(config-rb)#no number-of-mtu-probes</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

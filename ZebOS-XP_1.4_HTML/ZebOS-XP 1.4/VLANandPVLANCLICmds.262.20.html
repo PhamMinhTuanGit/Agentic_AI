@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>switchport trunk native</title><link rel="Prev" href="VLANandPVLANCLICmds.262.19.html" title="Previous"><link rel="Next" href="VLANandPVLANCLICmds.262.21.html" title="Next"><link rel="StyleSheet" href="css/VLANandPVLANCLICmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VLANandPVLANCLICmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VLANandPVLANCLICmds.262.20.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pN_002bkTkc_002b0W5BkDekSZ0JmlGg" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VLANandPVLANCLICmds.262.20.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.248.2.html#wwconnect_header">Layer 2 Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VLANandPVLANCLICmds.262.01.html#wwconnect_header">CHAPTER 13	VLAN and Private VLAN Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">switchport trunk native</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww1007965" class="Heading1NewPage"><span></span>switchport trunk native</div><div id="ww1031426" class="Body"><span></span>Use this command to configure native VLANs for this port. The native VLAN is used for classifying the incoming untagged packets. </div><div id="ww1031427" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter to revert the native VLAN to the default VLAN identifier 1.</div><div id="ww1031428" class="Heading3"><span></span>Command Syntax</div><div id="ww999938" class="CmdMaster">switchport trunk native vlan VLAN_ID</div><div id="ww1021214" class="CmdMaster">no switchport trunk native vlan</div><div id="ww1007992" class="Heading3"><span></span>Parameter</div><div id="ww1007993" class="CmdHead1">VLAN_ID</div><div id="ww1007994" class="Cmd1">VLAN identifier(s) &lt;2-4094&gt;. You can specify a single VLAN, a VLAN range, or a VLAN list.</div><div id="ww1030358" class="Cmd1">For a VLAN range, specify two VLAN identifiers: the lowest and then the highest separated by a hyphen. For a VLAN list, specify the VLAN identifiers separated by commas. Do not enter spaces between the hyphens or commas.</div><div id="ww1008005" class="Heading3"><span></span>Default</div><div id="ww1008006" class="Body"><span></span>The default is that ingress filtering is off and all frame types are classified and accepted.</div><div id="ww1008007" class="Heading3"><span></span>Command Mode</div><div id="ww1008008" class="Body"><span></span>Interface mode</div><div id="ww999943" class="Heading3"><span></span>Examples</div><div id="ww999944" class="CmdExample">#configure terminal</div><div id="ww999945" class="CmdExample">(config)#interface eth0</div><div id="ww999946" class="CmdExample">(config-if)#switchport trunk native vlan 2</div><div id="ww1017428" class="CmdExample">&nbsp;</div><div id="ww1017447" class="CmdExample">(config)#interface eth0</div><div id="ww1017439" class="CmdExample">(config-if)#no switchport trunk native vlan</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

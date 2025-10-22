@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>virtual-router forwarding</title><link rel="Prev" href="VRCLIcmds.689.15.html" title="Previous"><link rel="Next" href="LSRCLIcmd.690.01.html" title="Next"><link rel="StyleSheet" href="css/VRCLIcmds.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/VRCLIcmds_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/VRCLIcmds.689.16.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pnLXYbBTx81r0c5G1y_002fzBKA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/VRCLIcmds.689.16.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.686.2.html#wwconnect_header">Virtual Routing Command Reference</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/VRCLIcmds.689.01.html#wwconnect_header">CHAPTER 2	Virtual Routing Commands</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">virtual-router forwarding</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww505883" class="Heading1NewPage"><span></span>virtual-router forwarding</div><div id="ww505884" class="Body"><span></span>Use this command to bind an interface name to the virtual router name. This command informs all ZebOS-XP clients about it.</div><div id="ww503977" class="Body"><span></span>Use the <span class="Parameter">no</span> parameter to remove the association.</div><div id="ww503978" class="Heading3"><span></span>Command Syntax</div><div id="ww503979" class="CmdMaster">virtual-router forwarding WORD</div><div id="ww503980" class="CmdMaster">no virtual-router forwarding WORD</div><div id="ww503981" class="Heading3"><span></span>Parameters</div><div id="ww503982" class="CmdHead1"><span class="Parameter">WORD</span></div><div id="ww503983" class="Cmd1">Specify the name of the virtual router.</div><div id="ww503984" class="Heading3"><span></span>Command Mode</div><div id="ww503985" class="Body"><span></span>Interface mode</div><div id="ww503986" class="Heading3"><span></span>Example</div><div id="ww503987" class="Body"><span></span>In this configuration, interface <span class="Parameter">eth1</span> is bound to the Virtual Router <span class="Parameter">VR1</span>.</div><div id="ww503988" class="CmdExample">#configure terminal</div><div id="ww503989" class="CmdExample">(config)#interface eth1</div><div id="ww503990" class="CmdExample">(config-if)#virtual-router forwarding VR1</div><div id="ww503991" class="CmdExample">&nbsp;</div><div id="ww503992" class="CmdExample">(config)#interface eth1</div><div id="ww503993" class="CmdExample">(config-if)#no virtual-router forwarding VR1</div><div id="ww503572" class="CmdExample">&nbsp;</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

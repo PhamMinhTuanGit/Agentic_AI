@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>rib_ip_vrf_isid_set</title><link rel="Prev" href="SPB_CLI_API.575.06.html" title="Previous"><link rel="Next" href="SPB_CLI_API.575.08.html" title="Next"><link rel="StyleSheet" href="css/SPB_CLI_API.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/SPB_CLI_API_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/SPB_CLI_API.575.07.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pyFGQHWrDANAHmZA8eEfOoA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/SPB_CLI_API.575.07.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.572.2.html#wwconnect_header">Shortest Path Bridging Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SPB_CLI_API.575.01.html#wwconnect_header">CHAPTER 2	Shortest Path Bridging Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/SPB_CLI_API.575.05.html#wwconnect_header">Functions</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">rib_ip_vrf_isid_set</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww588311" class="Heading2"><span></span>rib_ip_vrf_isid_set</div><div id="ww588312" class="Body"><span></span>This function creates a VRF (Virtual Routing and Forwarding) instance associated with an I-SID (service instance identifier) that needs to advertise its routes over an SPB network. </div><div id="ww588313" class="Body"><span></span>This function implements the <span style="font-family: &quot;Courier New&quot;">ip vrf WORD isid</span> command.</div><div id="ww588314" class="Heading3"><span></span>Syntax</div><div id="ww588315" class="PseudoCode"><span></span>#include "ribd/rib_api.h"</div><div id="ww588316" class="PseudoCode"><span></span>int</div><div id="ww588317" class="PseudoCode"><span></span>rib_ip_vrf_isid_set (struct ipi_vr *vr, char *name, u_int32_t isid)</div><div id="ww588318" class="Heading3"><span></span>Input Parameters</div><div id="ww588319" class="CmdHead1">vr</div><div id="ww588320" class="Cmd1">VRF instance</div><div id="ww588321" class="CmdHead1">name</div><div id="ww588322" class="Cmd1">VRF name</div><div id="ww588323" class="CmdHead1">isid</div><div id="ww588324" class="Cmd1">Service instance identifier</div><div id="ww588325" class="Heading3"><span></span>Output Parameters</div><div id="ww588326" class="Body"><span></span>None</div><div id="ww588327" class="Heading3"><span></span>Return Value</div><div id="ww588328" class="Body"><span></span><span class="Command">RIB_API_SET_ERR_VRF_NAME_TOO_LONG</span> when <span class="Command">name</span> is more than 64 characters</div><div id="ww588329" class="Body"><span></span><span class="Command">RIB_API_VRF_ISID_ALREADY_MAPPED</span> when <span class="Command">name</span> is already mapped to an I-SID</div><div id="ww588330" class="Body"><span></span><span class="Command">RIB_API_SET_ERR_VRF_CANT_CREATE</span> when a system resource limit is exceeded</div><div id="ww588331" class="Body"><span></span><span class="Command">RIB_API_SET_SUCCESS</span> when the function succeeds</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

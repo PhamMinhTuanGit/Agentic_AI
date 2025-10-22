@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>hal_l2_fdb_unicast_get</title><link rel="Prev" href="HAL.191.202.html" title="Previous"><link rel="Next" href="HAL.191.204.html" title="Next"><link rel="StyleSheet" href="css/HAL.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/HAL_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/HAL.191.203.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pJCBRHixxiwjtsNbDbDgixA" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/HAL.191.203.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.188.2.html#wwconnect_header">Platform Integration Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/HAL.191.001.html#wwconnect_header">CHAPTER 2	Hardware Abstraction Layer</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/HAL.191.198.html#wwconnect_header">Layer 2 Forwarding Database API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">hal_l2_fdb_unicast_get</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww581661" class="Heading2"><span></span>hal_l2_fdb_unicast_get</div><div id="ww581662" class="Body"><span></span>This function gets the unicast HAL FDB entry starting at the next address of the MAC address and specified VLAN ID. This function gets the count number of entries. Returns the actual number of entries found as the return parameter. It is expected that the memory is allocated by the caller before calling this API.</div><div id="ww581663" class="Heading3"><span></span>Syntax</div><div id="ww581664" class="PseudoCode"><span></span>int</div><div id="ww581665" class="PseudoCode"><span></span>hal_l2_fdb_unicast_get (char *name, char *mac_addr, unsigned short vid,</div><div id="ww581666" class="PseudoCode"><span></span>                        u_int16_t count, struct hal_fdb_entry *fdb_entry)</div><div id="ww581667" class="Heading3"><span></span>Input Parameters</div><div id="ww581668" class="CmdHead1"><span class="Parameter">name</span> </div><div id="ww581669" class="Cmd1">Bridge name</div><div id="ww581670" class="CmdHead1"><span class="Parameter">mac_addr</span> </div><div id="ww581671" class="Cmd1">FDB entry after this MAC address</div><div id="ww581672" class="CmdHead1"><span class="Parameter">vid</span> </div><div id="ww581673" class="Cmd1">FDB entry after this VLAN ID</div><div id="ww581674" class="CmdHead1"><span class="Parameter">count</span> </div><div id="ww581675" class="Cmd1">Number of FDB entries to be returned</div><div id="ww581676" class="Heading3"><span></span>Output Parameters</div><div id="ww581677" class="CmdHead1"><span class="Parameter">fdb_entry</span> </div><div id="ww581678" class="Cmd1">Array of FDB entries returned</div><div id="ww581679" class="Heading3"><span></span>Return Value</div><div id="ww581680" class="Body"><span></span>HAL_ERR_L2_FDB_ENTRY number of entries. Can be 0 for no entries.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

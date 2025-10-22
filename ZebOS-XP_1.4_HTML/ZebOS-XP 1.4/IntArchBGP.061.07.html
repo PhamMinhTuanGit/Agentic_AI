@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Next-Hop Calculation</title><link rel="Prev" href="IntArchBGP.061.06.html" title="Previous"><link rel="Next" href="IntArchBGP.061.08.html" title="Next"><link rel="StyleSheet" href="css/IntArchBGP.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/IntArchBGP_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/IntArchBGP.061.07.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pQn6jfcCI6VvN3h9_002fm3gs8g" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/IntArchBGP.061.07.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.057.2.html#wwconnect_header">Border Gateway Protocol Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/IntArchBGP.061.01.html#wwconnect_header">CHAPTER 3	BGP Module Internal Architecture </a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/IntArchBGP.061.02.html#wwconnect_header">RFC 4271 Support</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">Next-Hop Calculation</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww511945" class="Heading2"><span></span>Next-Hop Calculation</div><div id="ww511946" class="Body"><span></span>Next-hop calculation is supported per RFC 4271, Section 5.1.3. The following is an example of this calculation using the topology below.</div><div id="ww512366" class="Body"><span></span>   iBGP                |        eBGP </div><div id="ww512367" class="Body"><span></span>BGP1 ---------   BGP2 ------------ BGP3</div><div id="ww512368" class="Body"><span></span>                           |</div><div id="ww513464" class="Body"><span></span>Case 1: If BGP2 learns a route from BGP1 (iBGP route), or the route to be announced is locally generated, BGP2 checks whether BGP3 has the same subnet as that of the received next-hop. If BGP3 has the same subnet, BGP2 sends the update unchanged to BGP3. The constraint is that BGP3 should have advertised all its connected routes to BGP2 earlier. BGP2 uses BGP1’s interface address as the next hop while sending an update to BGP3.</div><div id="ww513465" class="Body"><span></span>Case 2: Consider the above topology, but there is an eBGP session between BGP1 and BGP2. If BGP2 receives an update from BGP1 (which is an external peer), BGP2 checks whether BGP3 has the same subnet as that of the received next‑hop: if so, BGP2 sends an update with an unchanged next-hop to BGP3. The constraint is that BGP3 should have advertised all its connected routes to BGP2 earlier. BGP2 uses BGP1’s interface address as next-hop while sending an update to BGP3.</div><div id="ww512375" class="Body"><span></span>Case 3: BGP2 sends one of its interface’s address as the next hop in an UPDATE message to BGP3, provided that BGP3 also has a similar subnet on one of its interfaces. Because no two interfaces can be configured with same subnet in one router, the outgoing interface is always used as the next hop.</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html ><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta http-equiv="Content-Style-Type" content="text/css"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>lpim6_api_vif_unbind_bundle</title><link rel="Prev" href="PIMv6CLIAPIs.486.122.html" title="Previous"><link rel="Next" href="PIMv6CLIAPIs.486.124.html" title="Next"><link rel="StyleSheet" href="css/PIMv6CLIAPIs.css" type="text/css" media="all"><link rel="StyleSheet" href="css/skin.css" type="text/css" media="all"><link rel="StyleSheet" href="css/social.css" type="text/css" media="all"><link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all"><!--[if IE 7]><link rel="StyleSheet" href="css/PIMv6CLIAPIs_IE7.css" type="text/css" media="all"><![endif]--><link rel="StyleSheet" href="css/print.css" type="text/css" media="print"><script type="text/javascript">
+    'use strict';
+
+    var redirect_url, page_hash;
+
+    if (window === window.top) {
+        // Redirect
+        //
+        redirect_url = "../index.html#page/ZebOS-XP%201.4/PIMv6CLIAPIs.486.123.html";
+        if (window.document.location.hash.length > 1) {
+            // Sanitize and append it
+            //
+            page_hash = window.document.location.hash.substring(1);
+            page_hash = page_hash.replace(/[\\><:;"]|%5C|%3C|%3E|%3A|%3B|%22/gi, '');
+            redirect_url += '#' + page_hash;
+        }
+        window.document.location.replace(redirect_url);
+    }
+</script><script type="text/javascript" src="scripts/common.js"></script><script type="text/javascript" src="scripts/page.js"></script><script type="text/javascript" src="scripts/search-client.js"></script><script type="text/javascript" src="scripts/unidata.js"></script><script type="text/javascript" src="scripts/unibreak.js"></script><script type="text/javascript"><!--
+        var disqus_developer = 1;
+      // --></script></head><body id="pKuFAiAAYlUK0Y05s_002bBnePQ" class="ww_skin_page_body" onload="Page.OnLoad('../index.html#page/ZebOS-XP%201.4/PIMv6CLIAPIs.486.123.html');"><header id="wwconnect_header"><div class="ww_skin_breadcrumbs"><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/titlepage.480.2.html#wwconnect_header">Protocol Independent Multicasting Developer Guide</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_parent"><a href="../ZebOS-XP%201.4/PIMv6CLIAPIs.486.001.html#wwconnect_header">CHAPTER 5	PIM6 Command API</a></span><span class="ww_skin_breadcrumbs_divider"> : </span><span class="ww_skin_breadcrumbs_current">lpim6_api_vif_unbind_bundle</span></div><div class="ww_skin_page_toolbar"><a class="ww_behavior_print ww_skin ww_skin_print" title="Print" href="#">&nbsp;</a><a class="ww_behavior_email ww_skin ww_skin_email" title="E-Mail" href="#">&nbsp;</a></div></header><div id="ww542700" class="Heading2"><span></span><span style="font-size: 10.0pt; font-weight: normal">l</span>pim6_api_vif_unbind_bundle</div><div id="ww542701" class="Body"><span></span>This function unbinds the interface to an ECMP Bundle.</div><div id="ww542702" class="Heading3"><span></span>Syntax</div><div id="ww542703" class="CmdExample">int</div><div id="ww542704" class="CmdExample">pim6_api_vif_unbind_bundle (u_int32_t vr_id, char *ifname, char *bundle_name)</div><div id="ww542705" class="Heading3"><span></span>Input Parameters</div><div id="ww542706" class="CmdHead1">vr_id</div><div id="ww542707" class="Cmd1">Virtual router ID (0-255)</div><div id="ww542708" class="CmdHead1"><span class="Parameter">vrf_id</span></div><div id="ww542709" class="Cmd1">VPN Routing/Forwarding Instance ID</div><div id="ww542710" class="CmdHead1"><span class="Parameter">ifname</span></div><div id="ww542711" class="Cmd1">Interface Name</div><div id="ww542712" class="CmdHead1"><span class="Parameter">bundle_name</span></div><div id="ww542713" class="Cmd1">ECMP Bundle name</div><div id="ww542714" class="Heading3"><span></span>Output Parameters</div><div id="ww542715" class="Body"><span></span>None </div><div id="ww542716" class="Heading3"><span></span>Return Values</div><div id="ww542717" class="Body"><span></span>PIM_API_SET_ERR_WRONG_VR when the interface name does not exists</div><div id="ww542719" class="Body"><span></span>PIM_API_SET_ERR_VIF_NOT_EXIST when the PIM VIF has not been created for the interface</div><div id="ww542720" class="Body"><span></span>PIM_API_SET_ERR_COMMAND_NOT_CONFIGURED The interface has not been bound to any bundle.</div><div id="ww542721" class="Body"><span></span>PIM_API_SET_ERR_NO_MATCH_FOR_CONFIGURED_VALUE when the bundle name does not match the configured value</div><div id="ww542722" class="Body"><span></span>PIM_API_SUCCESS when the function executes properly</div><footer><!-- Related Topics --><!--                --><!-- Back to Top --><!--             --><!-- Disqus --><!--        --><!-- Google Translation --><!--                    --><div class="ww_skin_page_globalization"><div id="google_translate_element">&nbsp;</div><script><!--
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({
+                  pageLanguage: '',
+                  autoDisplay: true
+                }, 'google_translate_element');
+            }
+// --></script></div><br></footer></body></html>
