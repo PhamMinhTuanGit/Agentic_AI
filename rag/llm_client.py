@@ -162,12 +162,29 @@ R1#show interface brief
 ```
 """
         
-        prompt = f"""{system_prompt}
+        # Add reasoning prompts to encourage step-by-step thinking
+        reasoning_prompt = """
+## Reasoning Instructions:
+**Hãy suy nghĩ từng bước một.** (Think step by step.)
+
+When answering:
+1. **Phân tích câu hỏi** (Analyze the question) - Break down what's being asked
+2. **Xác định thông tin cần thiết** (Identify necessary information) - What information from context is relevant?
+3. **Suy luận từng bước** (Reason step by step) - How does the information connect?
+4. **Giải thích lý do** (Explain your reasoning) - Why is this the answer?
+5. **Xây dựng câu trả lời** (Construct the answer) - Provide the complete, verified answer
+
+**Show your thinking in your response.**
+"""
+        
+        prompt = f"""{system_prompt}{reasoning_prompt}
 
 Context:
 {context}
 
 Question: {query}
+
+**Hãy suy nghĩ từng bước một. (Let me think step by step.)**
 
 Answer:"""
         

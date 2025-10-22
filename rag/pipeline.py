@@ -64,7 +64,7 @@ class RAGPipeline:
                  
                  # Reranker config
                  reranker_top_k: int = 5,
-                 rerank_model: str = "dengcao/Qwen3-Reranker-4B:Q4_K_M",
+                 rerank_model: str = "qwen2.5-coder:3b",
                  
                  # LLM config
                  llm_model: str = "qwen2.5-coder:3b",

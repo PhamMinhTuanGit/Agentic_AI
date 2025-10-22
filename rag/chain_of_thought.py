@@ -229,34 +229,67 @@ class ChainOfThought:
 - Structure: {' → '.join(plan['structure'])}
 - Key Topics: {', '.join(plan['key_sections'])}
 
-## INSTRUCTION
-Think step-by-step:
+## 🧠 CHAIN-OF-THOUGHT REASONING INSTRUCTIONS
 
-1. **Understand the Question**: Confirm what is being asked
-2. **Identify Relevant Information**: Which parts of the context are relevant?
-3. **Break Down the Problem**: What sub-questions need to be answered?
-4. **Synthesize Information**: How do the relevant pieces connect?
-5. **Construct Answer**: Build the complete answer following the planned structure
-6. **Validate**: Does the answer fully address the question?
+**Key Prompts to Encourage Step-by-Step Thinking:**
+
+- **Hãy suy nghĩ từng bước một.** (Think step by step.)
+- **Giải thích lý do bạn đưa ra câu trả lời.** (Explain your reasoning for the answer.)
+- **Suy luận từng bước.** (Reason through each step.)
+- **Tại sao bạn kết luận như vậy?** (Why do you conclude that?)
+- **Hãy liệt kê các bước để tìm ra câu trả lời.** (List the steps to reach the answer.)
+
+## STEP-BY-STEP PROCESS:
+
+1. **Understand the Question** (Hiểu câu hỏi): Confirm what is being asked
+2. **Identify Relevant Information** (Xác định thông tin liên quan): Which parts of the context are relevant?
+3. **Break Down the Problem** (Phân tích vấn đề): What sub-questions need to be answered?
+4. **Synthesize Information** (Kết hợp thông tin): How do the relevant pieces connect?
+5. **Construct Answer** (Xây dựng câu trả lời): Build the complete answer following the planned structure
+6. **Validate** (Xác thực): Does the answer fully address the question?
+
+---
 
 Question: {question}
 
-**Start your reasoning process:**
+**Hãy suy nghĩ từng bước một. Giải thích lý do bạn đưa ra câu trả lời.**
+(Let me think step by step. Explain the reasoning behind your answer.)
 
-Let me think through this step-by-step:
+---
 
-1. **Understanding the question**: I need to address: {', '.join(analysis['keywords'])}
+My reasoning process:
 
-2. **Relevant information from context**: 
-   [Identify and list relevant excerpts from the context]
+1. **Understanding the question** (Hiểu câu hỏi): 
+   - Main focus: {', '.join(analysis['keywords'])}
+   - What needs to be clarified: [Your analysis here]
 
-3. **Key considerations**:
-   [List important points to keep in mind]
+2. **Relevant information from context** (Thông tin liên quan):
+   - Key facts: [Extract relevant information]
+   - Important details: [Note critical points]
 
-4. **Reasoning steps**:
-   [Walk through your reasoning logically]
+3. **Breaking down the problem** (Phân tích vấn đề):
+   - Sub-question 1: [Identify sub-questions]
+   - Sub-question 2: [Break down complexity]
+   - Dependencies: [Note how pieces relate]
 
-5. **Answer**:
+4. **Synthesizing information** (Kết hợp thông tin):
+   - Connection between facts: [Explain relationships]
+   - Logical flow: [Describe the reasoning chain]
+   - Supporting evidence: [Reference context]
+
+5. **Constructing the answer** (Xây dựng câu trả lời):
+   - Step 1: [First action/consideration]
+   - Step 2: [Next action/consideration]
+   - Step 3+: [Continue logically]
+
+6. **Validation** (Xác thực):
+   - Does this address: {', '.join(analysis['keywords'])}?
+   - Is it consistent with the context?
+   - Are all aspects covered?
+
+---
+
+**Final Answer:**
 """
         
         step_thought = f"""

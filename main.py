@@ -280,8 +280,8 @@ def main():
     parser.add_argument(
         '--model',
         type=str,
-        default='qwen2.5-coder:3b',
-        help='LLM model name (default: qwen2.5-coder:3b)'
+        default='qwen3:4b',
+        help='LLM model name (default: qwen3:4b)'
     )
     parser.add_argument(
         '--temperature',
