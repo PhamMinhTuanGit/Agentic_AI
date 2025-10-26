@@ -1,0 +1,395 @@
+[
+  {
+    "name": "CHAPTER 2 Authentication, Authorization, and Accounting",
+    "description": "This chapter is a reference for the authentication, authorization, and accounting (AAA) commands: The AAA feature allows you to verify the identity of, grant access to, and track the actions of users managing devices. The AAA feature works with the access control protocols as described in these chapters:",
+    "syntax": [],
+    "parameters": [],
+    "mode": "",
+    "examples": [],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.01.html",
+    "chapter": null
+  },
+  {
+    "name": "aaa accounting default",
+    "description": "Use this command to set the AAA methods for accounting. Configure mode",
+    "syntax": [
+      "aaa accounting default ((group LINE) | local)",
+      "no aaa accounting default ((group LINE) | local)"
+    ],
+    "parameters": [
+      {
+        "name": "group",
+        "description": "Use a server group list for authentication"
+      },
+      {
+        "name": "LINE",
+        "description": "Specify a space-separated list of up to 8 configured RADIUS or TACACS+ server group names followed bylocal. The list can also include:"
+      },
+      {
+        "name": "radius",
+        "description": "All configured RADIUS servers"
+      },
+      {
+        "name": "local",
+        "description": "Use local authentication"
+      }
+    ],
+    "mode": "Configure mode",
+    "examples": [
+      "#configure terminal",
+      "(config)#aaa accounting default group radius"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.02.html",
+    "chapter": null
+  },
+  {
+    "name": "aaa authentication login",
+    "description": "Use this command to set login authentication behavior. Configure mode",
+    "syntax": [
+      "aaa authentication login (error-enable | (mschap enable))",
+      "no aaa authentication login (error-enable | (mschap enable))"
+    ],
+    "parameters": [
+      {
+        "name": "error-enable",
+        "description": "Display login failure messages"
+      },
+      {
+        "name": "mschap enable",
+        "description": "Enable Microsoft Challenge Handshake Authentication Protocol (MS-CHAP) authentication"
+      }
+    ],
+    "mode": "Configure mode",
+    "examples": [
+      "#configure terminal",
+      "(config)#aaa authentication login error-enable"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.03.html",
+    "chapter": null
+  },
+  {
+    "name": "aaa authentication login console",
+    "description": "Use this command to set the AAA authentication methods for console log ins. Configure mode",
+    "syntax": [
+      "aaa authentication login console ((group LINE) | local | none)",
+      "no aaa authentication login console ((group LINE) | local | none)"
+    ],
+    "parameters": [
+      {
+        "name": "group",
+        "description": "Use a server group list for authentication"
+      },
+      {
+        "name": "LINE",
+        "description": "Specify a space-separated list of up to 8 configured RADIUS, TACACS+, or LDAP server group names followed bylocalornoneor bothlocalandnone. The list can also include:"
+      },
+      {
+        "name": "radius",
+        "description": "All configured RADIUS servers"
+      },
+      {
+        "name": "tacacs+",
+        "description": "All configured TACACS+ servers"
+      },
+      {
+        "name": "ldap",
+        "description": "All configured LDAP servers"
+      },
+      {
+        "name": "local",
+        "description": "Use local authentication"
+      },
+      {
+        "name": "none",
+        "description": "No authentication"
+      }
+    ],
+    "mode": "Configure mode",
+    "examples": [
+      "#configure terminal",
+      "(config)#aaa authentication login console group radius"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.04.html",
+    "chapter": null
+  },
+  {
+    "name": "aaa authentication login default",
+    "description": "Use this command to set the AAA authentication methods. Configure mode",
+    "syntax": [
+      "aaa authentication login default ((group LINE) | local | none)",
+      "no aaa authentication login default ((group LINE) | local | none)"
+    ],
+    "parameters": [
+      {
+        "name": "group",
+        "description": "Use a server group list for authentication"
+      },
+      {
+        "name": "LINE",
+        "description": "Specify a space-separated list of up to 8 configured RADIUS, TACACS+, or LDAP server group names followed bylocalornoneor bothlocalandnone. The list can also include:"
+      },
+      {
+        "name": "radius",
+        "description": "All configured RADIUS servers"
+      },
+      {
+        "name": "tacacs+",
+        "description": "All configured TACACS+ servers"
+      },
+      {
+        "name": "ldap",
+        "description": "All configured LDAP servers"
+      },
+      {
+        "name": "local",
+        "description": "Use local authentication"
+      },
+      {
+        "name": "none",
+        "description": "No authentication"
+      }
+    ],
+    "mode": "Configure mode",
+    "examples": [
+      "#configure terminal",
+      "(config)#aaa authentication login default group radius"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.05.html",
+    "chapter": null
+  },
+  {
+    "name": "aaa authentication login default fallback error",
+    "description": "Use this command to enable fallback to local authentication for the default login if remote authentication is configured and all AAA servers are unreachable. None",
+    "syntax": [
+      "aaa authentication login default fallback error local",
+      "no aaa authentication login default fallback error local"
+    ],
+    "parameters": [],
+    "mode": "Configure mode",
+    "examples": [
+      "#configure terminal",
+      "(config)#aaa authentication login default fallback error local"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.06.html",
+    "chapter": null
+  },
+  {
+    "name": "aaa group server",
+    "description": "Use this command to create a server group and enter server group configuration mode. Configure mode",
+    "syntax": [
+      "aaa group server (radius|tacacs+|ldap) WORD",
+      "no aaa group server (radius|tacacs+|ldap) WORD"
+    ],
+    "parameters": [
+      {
+        "name": "radius",
+        "description": "RADIUS server group"
+      },
+      {
+        "name": "tacacs+",
+        "description": "TACACS+ server group"
+      },
+      {
+        "name": "ldap",
+        "description": "LDAP server group"
+      },
+      {
+        "name": "WORD",
+        "description": "Server group name; maximum 127 characters"
+      }
+    ],
+    "mode": "Configure mode",
+    "examples": [
+      "#configure terminal",
+      "(config)#aaa group server ldap LdapGroup6",
+      "(config-ldap)#"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.07.html",
+    "chapter": null
+  },
+  {
+    "name": "aaa local authentication attempts max-fail",
+    "description": "Use this command to set the number of unsuccessful authentication attempts before a user is locked out. Configure mode",
+    "syntax": [
+      "aaa local authentication attempts max-fail <1-25>",
+      "no aaa local authentication attempts max-fail <1-25>"
+    ],
+    "parameters": [
+      {
+        "name": "<1-25>",
+        "description": "Range of number of unsuccessful authentication attempts"
+      }
+    ],
+    "mode": "Configure mode",
+    "examples": [
+      "#configure terminal",
+      "(config)#aaa local authentication attempts max-fail 2"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.08.html",
+    "chapter": null
+  },
+  {
+    "name": "debug aaa",
+    "description": "Use this command to display AAA debugging information. Executive mode and configure mode",
+    "syntax": [
+      "debug aaa (aaa-requests | all | conf-events | errors | events | mts)",
+      "no debug aaa (aaa-requests | all | conf-events | errors | events | mts)"
+    ],
+    "parameters": [
+      {
+        "name": "aaa-requests",
+        "description": "AAA requests"
+      },
+      {
+        "name": "all",
+        "description": "All"
+      },
+      {
+        "name": "conf-events",
+        "description": "AAA configuration events"
+      },
+      {
+        "name": "errors",
+        "description": "AAA errors"
+      },
+      {
+        "name": "events",
+        "description": "AAA events"
+      },
+      {
+        "name": "mts",
+        "description": "AAA transmit and receive MTS packets"
+      }
+    ],
+    "mode": "Executive mode and configure mode",
+    "examples": [
+      "#debug aaa"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.09.html",
+    "chapter": null
+  },
+  {
+    "name": "server",
+    "description": "Use this command to add a server to a server group. RADlUS server group configure mode",
+    "syntax": [
+      "server (A.B.C.D | X:X::X:X | HOSTNAME)",
+      "no server (A.B.C.D | X:X::X:X | HOSTNAME)"
+    ],
+    "parameters": [
+      {
+        "name": "A.B.C.D",
+        "description": "IPv4 address"
+      },
+      {
+        "name": "X:X::X:X",
+        "description": "IPv6 address"
+      },
+      {
+        "name": "HOSTNAME",
+        "description": "LDAP server group"
+      }
+    ],
+    "mode": "RADlUS server group configure mode",
+    "examples": [
+      "#configure terminal",
+      "(config)#feature tacacs+",
+      "(config)#aaa group server tacacs+ TacacsGroup4",
+      "(config-tacacs)#server 203.0.113.127"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.10.html",
+    "chapter": null
+  },
+  {
+    "name": "show aaa",
+    "description": "Use this command to display AAA server groups or user default role. Executive mode",
+    "syntax": [
+      "show aaa (groups | (user default-role))"
+    ],
+    "parameters": [
+      {
+        "name": "groups",
+        "description": "Server groups"
+      },
+      {
+        "name": "user default-role",
+        "description": "User default role"
+      }
+    ],
+    "mode": "Executive mode",
+    "examples": [
+      "#show aaa user default-role"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.11.html",
+    "chapter": null
+  },
+  {
+    "name": "show aaa accounting",
+    "description": "Use this command to display AAA accounting configuration. None",
+    "syntax": [
+      "show aaa accounting"
+    ],
+    "parameters": [],
+    "mode": "Executive mode",
+    "examples": [
+      "#show aaa accounting"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.12.html",
+    "chapter": null
+  },
+  {
+    "name": "show aaa authentication",
+    "description": "Use this command to display AAA authentication configuration. None",
+    "syntax": [
+      "show aaa authentication"
+    ],
+    "parameters": [],
+    "mode": "Executive mode",
+    "examples": [
+      "#show aaa authentication"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.13.html",
+    "chapter": null
+  },
+  {
+    "name": "show aaa authentication login",
+    "description": "Use this command to display AAA authentication configuration for login default and login console. Executive mode",
+    "syntax": [
+      "show aaa authentication login (error-enable | mschap)"
+    ],
+    "parameters": [
+      {
+        "name": "error-enable",
+        "description": "Display setting for login failure messages"
+      },
+      {
+        "name": "mschap",
+        "description": "Display setting for Microsoft Challenge Handshake Authentication Protocol (MS-CHAP) authentication"
+      }
+    ],
+    "mode": "Executive mode",
+    "examples": [
+      "#show aaa authentication login error-enable"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.14.html",
+    "chapter": null
+  },
+  {
+    "name": "show running-config aaa",
+    "description": "Use this command to display AAA settings in the running configuration. Executive mode",
+    "syntax": [
+      "show running-config aaa (|all)"
+    ],
+    "parameters": [
+      {
+        "name": "all",
+        "description": "Display both configured and default settings"
+      }
+    ],
+    "mode": "Executive mode",
+    "examples": [
+      "#show running-config aaa"
+    ],
+    "file_path": "ZebOS-XP 1.4/AAA Commands.603.15.html",
+    "chapter": null
+  }
+]
