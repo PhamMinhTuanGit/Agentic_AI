@@ -31,6 +31,7 @@ sys.path.insert(0, str(project_root))
 
 from agent.retriever import HybridRetriever
 from agent.reranker import LLMReranker
+from agent.multi_index_retriever import MultiIndexRetriever
 from rag.cache import CacheManager
 from rag.llm_client import LLMClient
 from rag.cli_output_config import CLIOutputConfig, create_cli_prompt
@@ -61,6 +62,11 @@ class RAGPipeline:
                  metadata_path: str = "database/document/hybrid_docs_metadata.json",
                  tfidf_path: str = "database/document/tfidf_vectorizer.pkl",
                  svd_path: str = "database/document/svd_transformer.pkl",
+                 
+                 # Multi-index retriever config
+                 enable_multi_index: bool = True,
+                 commands_index_dir: str = "database/commands",
+                 commands_weight: float = 0.4,
                  
                  # Reranker config
                  reranker_top_k: int = 5,
@@ -153,16 +159,42 @@ class RAGPipeline:
         else:
             logger.info("ℹ️  Topology integration disabled")
         
-        # Initialize components
+        # Initialize components - Multi-index or single retriever
         logger.info("\n[1/4] 🔍 Initializing Retriever...")
-        self.retriever = HybridRetriever(
-            faiss_index_path=faiss_index_path,
-            metadata_path=metadata_path,
-            tfidf_path=tfidf_path,
-            svd_path=svd_path,
-            embedding_model=embedding_model,
-            top_k=retriever_top_k
-        )
+        self.enable_multi_index = enable_multi_index
+        
+        if enable_multi_index:
+            # Use multi-index retriever (main docs + commands)
+            try:
+                self.retriever = MultiIndexRetriever(
+                    main_index_path=faiss_index_path,
+                    commands_index_dir=commands_index_dir,
+                    top_k=retriever_top_k,
+                    commands_weight=commands_weight
+                )
+                logger.info(f"✅ Multi-index retriever initialized (commands weight: {commands_weight})")
+            except Exception as e:
+                logger.warning(f"⚠️  Multi-index retriever failed, falling back to single index: {e}")
+                self.retriever = HybridRetriever(
+                    faiss_index_path=faiss_index_path,
+                    metadata_path=metadata_path,
+                    tfidf_path=tfidf_path,
+                    svd_path=svd_path,
+                    embedding_model=embedding_model,
+                    top_k=retriever_top_k
+                )
+                self.enable_multi_index = False
+        else:
+            # Use single hybrid retriever (backward compatible)
+            self.retriever = HybridRetriever(
+                faiss_index_path=faiss_index_path,
+                metadata_path=metadata_path,
+                tfidf_path=tfidf_path,
+                svd_path=svd_path,
+                embedding_model=embedding_model,
+                top_k=retriever_top_k
+            )
+            logger.info("ℹ️  Using single hybrid retriever")
         
         logger.info("\n[2/4] 🤖 Initializing Reranker...")
         self.reranker = LLMReranker(
@@ -208,9 +240,155 @@ class RAGPipeline:
         logger.info("\n✅ RAG Pipeline initialized successfully!")
         logger.info("=" * 70)
     
+    def _extract_command_mentions(self, documents: List[Dict[str, Any]], question: str) -> List[str]:
+        """
+        Extract ZebOS command mentions from reranked documents and question
+        
+        Detects command keywords like:
+        - router ospf, router bgp, router rip
+        - interface ethernet, interface loopback
+        - ipv4 address, ipv6 address
+        - neighbor, network, redistribute
+        - show commands
+        
+        Args:
+            documents: Reranked documentation chunks
+            question: User's question
+        
+        Returns:
+            List of detected command names/keywords
+        """
+        import re
+        
+        detected = set()
+        
+        # Common ZebOS command patterns
+        command_patterns = [
+            # Router protocols
+            r'\b(router\s+(?:ospf|bgp|rip|isis)(?:\s+\d+)?)\b',
+            # Interface commands
+            r'\b(interface\s+(?:ethernet|loopback|gigabitethernet|tunnel)(?:\s+[\d/]+)?)\b',
+            # IP address commands
+            r'\b(ipv[46]\s+address)\b',
+            # BGP commands
+            r'\b(neighbor(?:\s+[\d.]+)?)\b',
+            r'\b(bgp\s+(?:router-id|network|redistribute))\b',
+            # OSPF commands
+            r'\b(ospf\s+(?:area|network|passive-interface))\b',
+            r'\b(area\s+[\d.]+)\b',
+            # Show commands
+            r'\b(show\s+(?:ip|ipv6|running-config|interface|route|bgp|ospf)(?:\s+\w+)*)\b',
+            # General configuration
+            r'\b(ip\s+(?:route|forwarding))\b',
+            r'\b(no\s+shutdown)\b',
+            r'\b(description)\b',
+            r'\b(redistribute)\b',
+            r'\b(network)\b',
+        ]
+        
+        # Search in question
+        question_lower = question.lower()
+        for pattern in command_patterns:
+            matches = re.findall(pattern, question_lower, re.IGNORECASE)
+            detected.update(matches)
+        
+        # Search in document texts
+        for doc in documents[:5]:  # Check top 5 reranked docs
+            text_lower = doc.get('text', '').lower()
+            for pattern in command_patterns:
+                matches = re.findall(pattern, text_lower, re.IGNORECASE)
+                detected.update(matches)
+        
+        # Extract standalone command words from question
+        command_keywords = [
+            'router', 'interface', 'bgp', 'ospf', 'rip', 'isis',
+            'neighbor', 'network', 'redistribute', 'area',
+            'ipv4', 'ipv6', 'address', 'route', 'show',
+            'configure', 'protocol', 'tunnel', 'loopback'
+        ]
+        
+        words = question_lower.split()
+        for keyword in command_keywords:
+            if keyword in words:
+                detected.add(keyword)
+        
+        return sorted(list(detected))
+    
+    def _build_two_stage_context(self, 
+                                  doc_chunks: List[Dict[str, Any]], 
+                                  command_chunks: List[Dict[str, Any]],
+                                  detected_commands: List[str]) -> str:
+        """
+        Build combined context from two-stage retrieval
+        
+        Format:
+        1. Network topology (if available)
+        2. Detected commands summary
+        3. Documentation context (conceptual info)
+        4. Command syntax reference (exact syntax, parameters, examples)
+        
+        Args:
+            doc_chunks: Reranked documentation chunks from Stage 1
+            command_chunks: Command syntax chunks from Stage 2
+            detected_commands: List of detected command keywords
+        
+        Returns:
+            Formatted combined context string
+        """
+        context_parts = []
+        
+        # Section 1: Topology context
+        if self.enable_topology and self.topology_context:
+            context_parts.append("=" * 70)
+            context_parts.append("NETWORK TOPOLOGY CONTEXT")
+            context_parts.append("=" * 70)
+            context_parts.append(self.topology_context)
+            context_parts.append("=" * 70)
+            context_parts.append("\n")
+        
+        # Section 2: Detected commands summary
+        if detected_commands:
+            context_parts.append("=" * 70)
+            context_parts.append("DETECTED COMMANDS")
+            context_parts.append("=" * 70)
+            context_parts.append(f"The following commands were mentioned: {', '.join(detected_commands)}")
+            context_parts.append("=" * 70)
+            context_parts.append("\n")
+        
+        # Section 3: Documentation context
+        context_parts.append("=" * 70)
+        context_parts.append("DOCUMENTATION CONTEXT")
+        context_parts.append("=" * 70)
+        context_parts.append("The following documentation provides conceptual information:\n")
+        
+        for i, doc in enumerate(doc_chunks, 1):
+            source = doc.get('metadata', {}).get('source', 'Unknown')
+            context_parts.append(f"\n[Document {i}] (Source: {source})")
+            context_parts.append(doc['text'])
+        
+        context_parts.append("\n" + "=" * 70)
+        context_parts.append("\n")
+        
+        # Section 4: Command syntax reference
+        if command_chunks:
+            context_parts.append("=" * 70)
+            context_parts.append("COMMAND SYNTAX REFERENCE")
+            context_parts.append("=" * 70)
+            context_parts.append("The following are exact ZebOS command syntax, parameters, and examples:\n")
+            
+            for i, cmd_doc in enumerate(command_chunks, 1):
+                # Commands have structured format
+                text = cmd_doc.get('text', '')
+                context_parts.append(f"\n[Command Reference {i}]")
+                context_parts.append(text)
+            
+            context_parts.append("\n" + "=" * 70)
+        
+        return "\n".join(context_parts)
+    
     def _build_context(self, documents: List[Dict[str, Any]]) -> str:
         """
-        Build context string from reranked documents
+        Build context string from reranked documents (LEGACY - kept for backward compatibility)
         
         Includes:
         - Retrieved documents
@@ -249,14 +427,17 @@ class RAGPipeline:
              return_sources: bool = False,
              output_format: Optional[str] = None) -> Dict[str, Any]:
         """
-        Process a query through the RAG pipeline
+        Process a query through the TWO-STAGE RAG pipeline
         
-        Luồng xử lý:
-        1. Check cache
-        2. Retrieve documents (if cache miss)
-        3. Rerank documents
-        4. Generate answer
-        5. Save to cache
+        Two-Stage Retrieval Process:
+        1. Stage 1: Hybrid search in main documentation
+           - Find relevant conceptual information
+           - Detect what commands are needed
+        2. Rerank the documentation chunks
+        3. Stage 2: Search commands database
+           - Get exact syntax, parameters, examples
+           - Based on commands mentioned in Stage 1
+        4. Combine contexts and generate answer
         
         Args:
             question: User question
@@ -277,10 +458,11 @@ class RAGPipeline:
         logger.info("\n" + "=" * 70)
         logger.info(f"📝 QUERY: {question}")
         logger.info(f"   Output format: {output_format}")
+        logger.info(f"   Pipeline: Two-Stage Retrieval")
         logger.info("=" * 70)
         
         # Step 1: Check cache
-        logger.info("\n[STEP 1/5] 💾 Checking cache...")
+        logger.info("\n[STEP 1/6] 💾 Checking cache...")
         cached_result = self.cache.get(question)
         
         if cached_result:
@@ -307,13 +489,32 @@ class RAGPipeline:
         
         # Cache MISS - Continue with pipeline
         self.stats['cache_misses'] += 1
-        logger.info("❌ Cache MISS - Processing through pipeline...")
+        logger.info("❌ Cache MISS - Processing through two-stage pipeline...")
         
-        # Step 2: Retrieve documents
-        logger.info(f"\n[STEP 2/5] 🔍 Retrieving top-{self.retriever_top_k} documents...")
+        # STAGE 1: Retrieve from main documentation
+        logger.info(f"\n[STEP 2/6] 🔍 STAGE 1: Searching main documentation...")
+        logger.info(f"   Goal: Find relevant info & detect needed commands")
         retrieval_start = time.time()
         
-        retrieved_docs = self.retriever.retrieve_with_scores(question, top_k=self.retriever_top_k)
+        # Always search main docs first (not multi-index)
+        if self.enable_multi_index and hasattr(self.retriever, 'main_retriever'):
+            # Use main retriever from multi-index
+            retrieved_docs = self.retriever.main_retriever.retrieve_with_scores(
+                question, top_k=self.retriever_top_k
+            )
+        elif hasattr(self.retriever, 'retrieve_with_scores'):
+            # Use single retriever
+            retrieved_docs = self.retriever.retrieve_with_scores(
+                question, top_k=self.retriever_top_k
+            )
+        else:
+            logger.error("❌ No valid retriever available!")
+            return {
+                'question': question,
+                'answer': "Error: Retrieval system not configured properly.",
+                'from_cache': False,
+                'error': 'No retriever available'
+            }
         
         retrieval_time = time.time() - retrieval_start
         logger.info(f"✅ Retrieved {len(retrieved_docs)} documents in {retrieval_time:.2f}s")
@@ -327,8 +528,8 @@ class RAGPipeline:
                 'error': 'No documents retrieved'
             }
         
-        # Step 3: Rerank documents
-        logger.info(f"\n[STEP 3/5] 🤖 Reranking to top-{self.reranker_top_k} documents...")
+        # STEP 3: Rerank documents
+        logger.info(f"\n[STEP 3/6] 🤖 Reranking documentation to top-{self.reranker_top_k}...")
         rerank_start = time.time()
         
         reranked_docs = self.reranker.rerank(question, retrieved_docs, top_k=self.reranker_top_k)
@@ -340,51 +541,63 @@ class RAGPipeline:
             logger.error("❌ Reranking failed!")
             reranked_docs = retrieved_docs[:self.reranker_top_k]
         
-        # Step 4: Chain-of-Thought Reasoning (if enabled)
-        cot_prompt = None
-        if self.enable_cot and self.cot:
-            logger.info(f"\n[STEP 4/5] 🧠 Chain-of-Thought Reasoning...")
-            cot_start = time.time()
-            
-            # Run CoT analysis steps
-            analysis = self.cot.analyze_question(question)
-            evaluated_docs = self.cot.evaluate_documents(question, reranked_docs)
-            synthesis = self.cot.synthesize_information(question, evaluated_docs)
-            plan = self.cot.plan_answer(question, synthesis)
-            
-            # Build context
-            context = self._build_context(reranked_docs)
-            
-            # Generate CoT-enhanced prompt
-            cot_prompt = self.cot.generate_cot_prompt(question, context, analysis, synthesis, plan)
-            
-            cot_time = time.time() - cot_start
-            logger.info(f"✅ Chain-of-Thought generated in {cot_time:.2f}s")
-            logger.info(f"   Reasoning trace length: {len(self.cot.get_thoughts_summary())} characters")
-            
-            # Print thoughts for debugging
-            logger.info("\n📋 REASONING THOUGHTS:")
-            print("\n" + "=" * 70)
-            print("📋 CHAIN-OF-THOUGHT REASONING TRACE")
-            print("=" * 70)
-            print(self.cot.get_thoughts_summary())
-            print("=" * 70 + "\n")
-        else:
-            # Step 4: Build context (without CoT)
-            logger.info(f"\n[STEP 4/5] 📝 Building context...")
-            context = self._build_context(reranked_docs)
-            logger.info(f"✅ Context built: {len(context)} characters")
+        # Extract command mentions from reranked docs
+        logger.info(f"\n[STEP 4/6] 🔎 Detecting commands mentioned in documentation...")
+        detected_commands = self._extract_command_mentions(reranked_docs, question)
+        logger.info(f"✅ Detected {len(detected_commands)} command(s): {', '.join(detected_commands[:5])}")
         
-        # Step 5: Generate answer
-        logger.info(f"\n[STEP 5/5] 💬 Generating answer with {self.llm_client.model}...")
+        # STAGE 2: Search commands database for exact syntax
+        commands_docs = []
+        if self.enable_multi_index and detected_commands:
+            logger.info(f"\n[STEP 4/6] ⚡ STAGE 2: Searching commands database...")
+            logger.info(f"   Goal: Get exact syntax, parameters & examples")
+            
+            commands_search_start = time.time()
+            
+            # Search for each detected command
+            for cmd in detected_commands[:10]:  # Limit to top 10 commands
+                cmd_query = f"{cmd} command syntax parameters examples"
+                if hasattr(self.retriever, '_search_commands'):
+                    cmd_results = self.retriever._search_commands(cmd_query, top_k=2)
+                    commands_docs.extend(cmd_results)
+                    logger.info(f"   Found {len(cmd_results)} results for '{cmd}'")
+            
+            # Also do a general search with the original question
+            if hasattr(self.retriever, '_search_commands'):
+                general_cmd_results = self.retriever._search_commands(question, top_k=3)
+                commands_docs.extend(general_cmd_results)
+            
+            commands_search_time = time.time() - commands_search_start
+            logger.info(f"✅ Retrieved {len(commands_docs)} command documents in {commands_search_time:.2f}s")
+        else:
+            logger.info(f"\n[STEP 4/6] ℹ️  STAGE 2: Skipped (no multi-index or no commands detected)")
+        
+        # STEP 5: Build combined context
+        logger.info(f"\n[STEP 5/6] 📝 Building combined context...")
+        logger.info(f"   Documentation chunks: {len(reranked_docs)}")
+        logger.info(f"   Command chunks: {len(commands_docs)}")
+        
+        context = self._build_two_stage_context(reranked_docs, commands_docs, detected_commands)
+        logger.info(f"✅ Combined context built: {len(context)} characters")
+        
+        # STEP 6: Generate answer
+        logger.info(f"\n[STEP 6/6] 💬 Generating answer with {self.llm_client.model}...")
         logger.info(f"   Format: {output_format}")
         generation_start = time.time()
         
         # Determine session type based on topology
         session_type = "topology" if self.enable_topology else "general"
         
-        # Use CoT prompt if available
-        if cot_prompt:
+        # Use CoT if enabled
+        cot_prompt = None
+        if self.enable_cot and self.cot:
+            logger.info("   Using Chain-of-Thought reasoning...")
+            analysis = self.cot.analyze_question(question)
+            evaluated_docs = self.cot.evaluate_documents(question, reranked_docs)
+            synthesis = self.cot.synthesize_information(question, evaluated_docs)
+            plan = self.cot.plan_answer(question, synthesis)
+            cot_prompt = self.cot.generate_cot_prompt(question, context, analysis, synthesis, plan)
+            
             llm_result = self.llm_client.generate(
                 query=question,
                 context=context,
@@ -511,7 +724,7 @@ class RAGPipeline:
         # Calculate averages
         if stats['total_queries'] > 0:
             stats['avg_total_time'] = stats['total_time'] / stats['total_queries']
-            stats['cache_hit_rate'] = (stats['cach:e_hits'] / stats['total_queries']) * 100
+            stats['cache_hit_rate'] = (stats['cache_hits'] / stats['total_queries']) * 100
         else:
             stats['avg_total_time'] = 0.0
             stats['cache_hit_rate'] = 0.0

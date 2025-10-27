@@ -1,0 +1,208 @@
+```
+TWO-STAGE RAG PIPELINE WORKFLOW
+================================
+
+User Question: "How do I configure OSPF area 0 on router R1?"
+     |
+     v
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 1: Cache Check                                        │
+│  ─────────────────────                                      │
+│  Query hash → Cache lookup                                  │
+│  Cache HIT ─→ Return cached answer (FAST!)                 │
+│  Cache MISS ─→ Continue to retrieval pipeline              │
+└─────────────────────────────────────────────────────────────┘
+     │ (Cache MISS)
+     v
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 2: STAGE 1 - Search Main Documentation               │
+│  ───────────────────────────────────────────                │
+│  • Hybrid Search (70% dense + 30% sparse)                  │
+│  • Search database/document/ ONLY                           │
+│  • Retrieve top-K1 docs (default: 10)                       │
+│  • Goal: Find conceptual information                        │
+│                                                             │
+│  Retrieved: 10 documents about OSPF concepts                │
+│    - OSPF protocol overview                                 │
+│    - Area configuration                                     │
+│    - Router ID selection                                    │
+│    - Network statements                                     │
+│    - Best practices                                         │
+└─────────────────────────────────────────────────────────────┘
+     │
+     v
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 3: Rerank Documentation                               │
+│  ────────────────────────                                   │
+│  • LLM-based reranking (qwen2.5-coder:3b)                  │
+│  • Reduce to top-K2 (default: 5)                           │
+│  • Filter most relevant docs                                │
+│                                                             │
+│  Reranked: 5 most relevant documents                        │
+│    1. OSPF area configuration guide                         │
+│    2. Router OSPF command reference                         │
+│    3. Network statement examples                            │
+│    4. OSPF troubleshooting                                  │
+│    5. Area 0 backbone requirements                          │
+└─────────────────────────────────────────────────────────────┘
+     │
+     v
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 4a: Command Detection                                 │
+│  ──────────────────────                                     │
+│  • Regex pattern matching                                   │
+│  • Search in reranked docs + question                       │
+│  • Extract command keywords                                 │
+│                                                             │
+│  Detected Commands:                                         │
+│    - "router ospf"                                          │
+│    - "network"                                              │
+│    - "area"                                                 │
+│    - "interface ethernet"                                   │
+│    - "ipv4 address"                                         │
+└─────────────────────────────────────────────────────────────┘
+     │
+     v
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 4b: STAGE 2 - Search Commands Database               │
+│  ───────────────────────────────────────────                │
+│  • For each detected command:                               │
+│    → Query: "{cmd} command syntax parameters examples"     │
+│    → Retrieve 2 results from database/commands/            │
+│  • Also general query with original question (3 results)   │
+│  • Hybrid search on commands FAISS index                    │
+│                                                             │
+│  Retrieved: 13 command syntax documents                     │
+│    - router ospf {process-id} (syntax + params)            │
+│    - network {ip} {wildcard} area {area-id} (examples)     │
+│    - area {area-id} (configuration options)                │
+│    - interface ethernet {slot/port} (basic setup)          │
+│    - ipv4 address {ip} {mask} (addressing)                 │
+│    + 8 more related commands                                │
+└─────────────────────────────────────────────────────────────┘
+     │
+     v
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 5: Build Combined Context                             │
+│  ──────────────────────────                                 │
+│  Merge all information into structured format:              │
+│                                                             │
+│  ┌───────────────────────────────────────┐                 │
+│  │ SECTION 1: Network Topology           │                 │
+│  │ ─────────────────────────             │                 │
+│  │ R1 ──── R2 ──── R3 (ring)            │                 │
+│  │ Interfaces, IPs, connections          │                 │
+│  └───────────────────────────────────────┘                 │
+│                                                             │
+│  ┌───────────────────────────────────────┐                 │
+│  │ SECTION 2: Detected Commands          │                 │
+│  │ ─────────────────────────             │                 │
+│  │ router ospf, network, area,           │                 │
+│  │ interface ethernet, ipv4 address      │                 │
+│  └───────────────────────────────────────┘                 │
+│                                                             │
+│  ┌───────────────────────────────────────┐                 │
+│  │ SECTION 3: Documentation Context      │                 │
+│  │ ─────────────────────────             │                 │
+│  │ [Document 1] OSPF area config guide   │                 │
+│  │ [Document 2] Router OSPF reference    │                 │
+│  │ [Document 3] Network statement guide  │                 │
+│  │ [Document 4] OSPF troubleshooting     │                 │
+│  │ [Document 5] Area 0 requirements      │                 │
+│  └───────────────────────────────────────┘                 │
+│                                                             │
+│  ┌───────────────────────────────────────┐                 │
+│  │ SECTION 4: Command Syntax Reference   │                 │
+│  │ ─────────────────────────             │                 │
+│  │ [Command 1] router ospf {process-id}  │                 │
+│  │   Syntax: ...                          │                 │
+│  │   Parameters: ...                      │                 │
+│  │   Examples: ...                        │                 │
+│  │ [Command 2] network {ip} {wildcard}   │                 │
+│  │   area {area-id}                      │                 │
+│  │   Syntax: ...                          │                 │
+│  │   ... (11 more commands)              │                 │
+│  └───────────────────────────────────────┘                 │
+│                                                             │
+│  Total context: ~8500 characters                            │
+└─────────────────────────────────────────────────────────────┘
+     │
+     v
+┌─────────────────────────────────────────────────────────────┐
+│  STEP 6: LLM Generation                                     │
+│  ──────────────────                                         │
+│  • Model: qwen2.5-coder:3b                                 │
+│  • Temperature: 0.1 (factual)                              │
+│  • Input: Question + Combined Context                       │
+│  • System Prompt: ZebOS-only enforcement                    │
+│  • Output Format: multi_code_block                          │
+│  • Optional: Chain-of-Thought reasoning                     │
+│                                                             │
+│  Generated Answer:                                          │
+│  ┌─────────────────────────────────────┐                   │
+│  │ To configure OSPF area 0 on R1:     │                   │
+│  │                                     │                   │
+│  │ **R1 Configuration:**               │                   │
+│  │ ```                                 │                   │
+│  │ configure                           │                   │
+│  │ router ospf 1                       │                   │
+│  │   router-id 1.1.1.1                │                   │
+│  │   network 10.0.0.0 0.0.0.255       │                   │
+│  │     area 0.0.0.0                   │                   │
+│  │   exit                              │                   │
+│  │ interface ethernet 0/0              │                   │
+│  │   ipv4 address 10.0.0.1 255.255... │                   │
+│  │   no shutdown                       │                   │
+│  │ ```                                 │                   │
+│  │                                     │                   │
+│  │ Explanation: ...                    │                   │
+│  └─────────────────────────────────────┘                   │
+└─────────────────────────────────────────────────────────────┘
+     │
+     v
+┌─────────────────────────────────────────────────────────────┐
+│  Cache & Return                                             │
+│  ──────────────                                             │
+│  • Save to cache (TTL: 24 hours)                           │
+│  • Calculate timing breakdown                               │
+│  • Update statistics                                        │
+│  • Return result to user                                    │
+│                                                             │
+│  Result:                                                    │
+│    answer: <generated answer>                               │
+│    elapsed_time: 5.51s                                      │
+│    breakdown:                                               │
+│      retrieval: 0.45s (8.2%)                               │
+│      reranking: 1.23s (22.3%)                              │
+│      generation: 3.45s (62.6%)                             │
+│    from_cache: false                                        │
+│    model: qwen2.5-coder:3b                                 │
+│    tokens: 1024                                             │
+└─────────────────────────────────────────────────────────────┘
+
+
+KEY DIFFERENCES FROM OLD PIPELINE
+===================================
+
+OLD (Single-Stage):
+  Retrieve (docs + commands mixed) → Rerank → Generate
+
+NEW (Two-Stage):
+  Retrieve DOCS → Rerank → Detect Commands → 
+  Retrieve COMMANDS → Build Combined Context → Generate
+
+
+ADVANTAGES:
+  ✅ Separation of conceptual vs syntax information
+  ✅ Better command coverage (all detected commands)
+  ✅ Structured context (4 clear sections)
+  ✅ Reduced hallucination (exact syntax provided)
+  ✅ Easier debugging (see each stage)
+  ✅ Flexible tuning (optimize stages independently)
+
+
+PERFORMANCE:
+  Total: 5-7 seconds
+  Bottleneck: LLM generation (60-70%)
+  Overhead: <1 second vs single-stage
+```

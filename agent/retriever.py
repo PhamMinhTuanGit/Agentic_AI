@@ -9,15 +9,20 @@ from typing import List, Dict, Tuple, Any, Optional
 from sklearn.preprocessing import normalize
 from sklearn.decomposition import TruncatedSVD
 from dotenv import load_dotenv
+from pathlib import Path
 
 # Load environment variables
 load_dotenv()
 
+# Get project root directory
+PROJECT_ROOT = Path(__file__).parent.parent
+DATABASE_DIR = PROJECT_ROOT / "database" / "document"
+
 EMBEDDING_API_URL = os.getenv("EMBEDDING_API_URL")
-FAISS_INDEX_PATH = os.getenv("FAISS_INDEX_PATH", "../database/document/hybrid_docs_index.faiss")
-METADATA_PATH = os.getenv("METADATA_PATH", "../database/document/hybrid_docs_metadata.json")
-TFIDF_PATH = os.getenv("TFIDF_PATH", "../database/document/tfidf_vectorizer.pkl")
-SVD_PATH = os.getenv("SVD_PATH", "../database/document/svd_transformer.pkl")
+FAISS_INDEX_PATH = os.getenv("FAISS_INDEX_PATH", str(DATABASE_DIR / "hybrid_docs_index.faiss"))
+METADATA_PATH = os.getenv("METADATA_PATH", str(DATABASE_DIR / "hybrid_docs_metadata.json"))
+TFIDF_PATH = os.getenv("TFIDF_PATH", str(DATABASE_DIR / "tfidf_vectorizer.pkl"))
+SVD_PATH = os.getenv("SVD_PATH", str(DATABASE_DIR / "svd_transformer.pkl"))
 
 # Configure logging
 logging.basicConfig(
