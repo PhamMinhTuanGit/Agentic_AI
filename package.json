@@ -1,0 +1,20 @@
+{
+  "name": "agent",
+  "version": "1.0.0",
+  "description": "Hệ thống RAG (Retrieval-Augmented Generation) hoàn chỉnh với hybrid embeddings, intelligent caching, và LLM reranking để trả lời câu hỏi dựa trên tài liệu một cách nhanh chóng và chính xác.",
+  "main": "auto-like.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhamMinhTuanGit/Agentic_AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhamMinhTuanGit/Agentic_AI/issues"
+  },
+  "homepage": "https://github.com/PhamMinhTuanGit/Agentic_AI#readme"
+}
