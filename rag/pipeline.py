@@ -593,8 +593,8 @@ class RAGPipeline:
         if self.enable_cot and self.cot:
             logger.info("   Using Chain-of-Thought reasoning...")
             analysis = self.cot.analyze_question(question)
-            evaluated_docs = self.cot.evaluate_documents(question, reranked_docs)
-            synthesis = self.cot.synthesize_information(question, evaluated_docs)
+            # Skip document evaluation - already done by reranker with LLM
+            synthesis = self.cot.synthesize_information(question, reranked_docs)
             plan = self.cot.plan_answer(question, synthesis)
             cot_prompt = self.cot.generate_cot_prompt(question, context, analysis, synthesis, plan)
             

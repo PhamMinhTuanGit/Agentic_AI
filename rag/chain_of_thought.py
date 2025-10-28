@@ -4,10 +4,12 @@ Chain-of-Thought (CoT) Module for RAG Pipeline
 
 Implements Chain-of-Thought prompting technique for improved reasoning:
 1. Problem Analysis: Break down the question
-2. Document Evaluation: Assess relevance of each document
-3. Information Synthesis: Combine relevant information
+2. Information Synthesis: Combine information from reranked documents
+3. Answer Planning: Structure the answer
 4. Answer Construction: Build the final answer step by step
-5. Validation: Verify the answer
+
+Note: Document relevance evaluation is handled by the LLM-based reranker
+with comprehensive scoring (0-100) and quality threshold (>= 50).
 
 Reference: "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
 Wei et al., 2022
@@ -122,16 +124,19 @@ class ChainOfThought:
                               question: str,
                               documents: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
-        Step 3: Synthesize information from relevant documents
+        Step 2: Synthesize information from reranked documents
+        
+        Note: Document relevance evaluation is skipped as documents are already
+        evaluated and filtered by the LLM-based reranker (score >= 50/100).
         
         Args:
             question: User's question
-            documents: Relevant documents
+            documents: Reranked documents (already filtered for quality)
         
         Returns:
             Synthesized information summary
         """
-        thought = f"🧠 STEP 3: SYNTHESIZING INFORMATION"
+        thought = f"🧠 STEP 2: SYNTHESIZING INFORMATION"
         self._log_thought(thought)
         
         # Group documents by topic/theme
@@ -140,15 +145,15 @@ class ChainOfThought:
         synthesis = {
             'question': question,
             'total_documents': len(documents),
-            'relevant_documents': sum(1 for d in documents if d.get('is_relevant', False)),
+            'relevant_documents': len(documents),  # All docs are relevant (reranker filtered)
             'themes_identified': themes,
             'key_points': self._extract_key_points(documents),
             'data_coverage': self._assess_data_coverage(question, documents)
         }
         
         step_thought = f"""
-   Total documents reviewed: {synthesis['total_documents']}
-   Relevant documents: {synthesis['relevant_documents']}
+   Total documents (reranked): {synthesis['total_documents']}
+   Relevant documents: {synthesis['relevant_documents']} (all filtered by reranker)
    Themes identified: {', '.join(themes)}
    Key points to address: {len(synthesis['key_points'])}
    Data coverage: {synthesis['data_coverage']}%
@@ -162,7 +167,7 @@ class ChainOfThought:
                    question: str,
                    synthesis: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Step 4: Plan the answer structure
+        Step 3: Plan the answer structure
         
         Args:
             question: User's question
@@ -171,7 +176,7 @@ class ChainOfThought:
         Returns:
             Answer plan with structure
         """
-        thought = f"🧠 STEP 4: PLANNING ANSWER STRUCTURE"
+        thought = f"🧠 STEP 3: PLANNING ANSWER STRUCTURE"
         self._log_thought(thought)
         
         plan = {
