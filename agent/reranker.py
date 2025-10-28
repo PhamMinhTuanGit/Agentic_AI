@@ -52,7 +52,10 @@ class LLMReranker:
     
     def _create_rerank_prompt(self, query: str, documents: List[Dict[str, Any]]) -> str:
         """
-        Create a prompt for the LLM to score document relevance
+        Create a comprehensive prompt for RAG-based document reranking
+        
+        Uses a detailed evaluation framework to assess document relevance
+        for retrieval augmented generation systems.
         
         Args:
             query: Original query
@@ -61,81 +64,158 @@ class LLMReranker:
         Returns:
             Prompt string for the reranker model
         """
-        # Check if using specialized reranker model
-        is_reranker_model = "reranker" in self.model.lower()
+        # Build passages section
+        passages_text = ""
+        for i, doc in enumerate(documents):
+            # Use full text if available, otherwise truncate
+            text = doc.get('text', '')
+            if len(text) > 500:
+                text = text[:500] + "..."
+            passages_text += f"<passage id='id{i}'>{text}</passage>\n"
         
-        if is_reranker_model:
-            # Format for Qwen3-Reranker - simpler format
-            doc_text = ""
-            for i, doc in enumerate(documents, 1):
-                doc_text += f"[{i}] {doc['text'][:150]}\n"
-            
-            prompt = f"""Query: {query}
+        # Create comprehensive RAG reranking prompt
+        prompt = f"""You are a customer support answer service. Your task is to evaluate help center passages and score their relevance to a given customer query for a retrieval augmented generation (RAG) system.
 
-Documents:
-{doc_text}
+Evaluation Process:
+1. Analyze the customer's query to identify both explicit needs and implicit context including underlying user goals
+2. Assess each passage's ability to directly resolve the query or provide substantive supporting information with actionable guidance
+3. Score based on how effectively the passage addresses the query's core intent while considering potential interpretations
 
-Score each document's relevance to the query (0-100). Return ONLY JSON array of scores."""
-        else:
-            # Format for general LLMs
-            doc_text = ""
-            for i, doc in enumerate(documents, 1):
-                doc_text += f"[DOC {i}]\n{doc['text'][:200]}...\n\n"
-            
-            prompt = f"""You are a document g scorer. Given a query and a list of documents, score each document's relevance to the query from 0-100.
+Grading Criteria:
+<grading_scale>
+10: EXCEPTIONAL match - Contains exact step-by-step instructions that perfectly match the query's specific scenario. Must include all required parameters/context and resolve the issue completely without any ambiguity. Reserved for definitive solutions that exactly mirror the user's described situation and require no interpretation.
 
-Query: {query}
+9: NEAR-PERFECT solution - Contains all critical steps for resolution but may lack one minor non-essential detail. Addresses the precise query parameters with specialized information. Solution must be directly applicable without requiring adaptation or assumptions.
 
-Documents:
-{doc_text}
+8: STRONG MATCH - Provides complete technical resolution through specific instructions, but may require simple logical inferences for full application. Covers all essential components but might need minor contextualization.
 
-Task: Score each document from 0-100 based on how well it answers the query. Return ONLY a JSON array of scores like this:
-[85, 45, 92, 30, 78, 55, 88, 40, 70, 50]
+7: GOOD MATCH - Contains substantial relevant details that address core aspects of the query, but lacks one important element for complete resolution. Provides concrete guidance requiring some user interpretation.
 
-Important: Return ONLY the JSON array, nothing else."""
+6: PARTIAL match – General guidance on the right topic but lacks the specifics for direct application. May only resolve a subset of the request.
+
+5: LIMITED relevance – Related context or approach, but indirect. Requires substantial effort to adapt to the user's exact need.
+
+4: TANGENTIAL – Mentions related concepts/keywords with little practical connection to the request. Minimal actionable value.
+
+3: VAGUE domain info – Talks about the general area but not the query's specifics. No concrete, actionable steps.
+
+2: TOKEN overlap – Shares isolated terms without context or intent aligned to the request. Similarity is coincidental.
+
+1: IRRELEVANT – Uses query terms in a completely unrelated way. No meaningful link to the user's goal.
+
+0: UNRELATED – No thematic or contextual connection to the query at all.
+</grading_scale>
+
+Input Format:
+<input_format>
+<query>
+{query}
+</query>
+<passages>
+{passages_text}</passages>
+</input_format>
+
+Output Format:
+<output_format>
+Return your response in a valid JSON (skip spaces):
+{{"id0":score0,"id1":score1,...}}
+
+Strict guidelines:
+- Return ONLY a well-formed valid JSON with passage IDs as keys
+- Each key must be a passage id in the format "idN"
+- Each score must be an integer between 5 to 10. EXCLUDE passages that score below 5 (i.e. 0, 1, 2, 3 or 4)
+- Integer values only, no decimals
+- Skip spaces in the JSON
+- No additional text or formatting
+- Maintain original passage ID order
+- Note: If NO passages score 5+, return empty JSON object {{}}
+</output_format>
+
+Now evaluate the passages and return ONLY the JSON:"""
         
         return prompt
     
-    def _parse_scores(self, response_text: str) -> Optional[List[float]]:
+    def _parse_scores(self, response_text: str, num_documents: int) -> Optional[List[float]]:
         """
-        Parse LLM response to extract scores
+        Parse LLM response to extract scores from JSON object format
+        
+        Expected format: {"id0":8,"id1":6,"id2":9,...}
         
         Args:
             response_text: LLM response
+            num_documents: Expected number of documents
         
         Returns:
-            List of scores or None if parsing fails
+            List of scores (in order) or None if parsing fails
         """
         try:
             # Clean response
             response_text = response_text.strip()
             
-            # Find JSON array
-            start_idx = response_text.find('[')
-            end_idx = response_text.rfind(']') + 1
+            # Find JSON object (first try curly braces)
+            start_idx = response_text.find('{')
+            end_idx = response_text.rfind('}') + 1
             
             if start_idx == -1 or end_idx == 0:
-                logger.warning(f"⚠️ No JSON array found in response")
-                return None
+                # Fallback: try to find array format (backward compatibility)
+                start_idx = response_text.find('[')
+                end_idx = response_text.rfind(']') + 1
+                
+                if start_idx == -1 or end_idx == 0:
+                    logger.warning(f"⚠️ No JSON found in response")
+                    logger.debug(f"Response: {response_text[:200]}")
+                    return None
             
             json_str = response_text[start_idx:end_idx]
             
-            # Evaluate as Python literal
-            import ast
-            scores = ast.literal_eval(json_str)
+            # Parse JSON
+            import json
+            parsed = json.loads(json_str)
             
-            # Validate scores
-            if not isinstance(scores, list):
-                logger.warning(f"⚠️ Scores not a list: {type(scores)}")
+            # Handle object format: {"id0":8, "id1":6, ...}
+            if isinstance(parsed, dict):
+                # Extract scores in order (id0, id1, id2, ...)
+                scores = []
+                for i in range(num_documents):
+                    key = f"id{i}"
+                    if key in parsed:
+                        score = float(parsed[key])
+                        # Convert 0-10 scale to 0-100 scale
+                        if score <= 10:
+                            score = score * 10
+                        scores.append(score)
+                    else:
+                        # If passage not in response, it scored below 5
+                        # Assign minimum score (0)
+                        scores.append(0.0)
+                
+                logger.debug(f"✅ Parsed {len(scores)} scores from object format")
+                return scores
+            
+            # Handle array format (backward compatibility): [85, 45, 92, ...]
+            elif isinstance(parsed, list):
+                scores = [float(s) for s in parsed]
+                
+                # Validate count
+                if len(scores) != num_documents:
+                    logger.warning(f"⚠️ Score count mismatch: expected {num_documents}, got {len(scores)}")
+                    # Pad or truncate
+                    if len(scores) < num_documents:
+                        scores.extend([0.0] * (num_documents - len(scores)))
+                    else:
+                        scores = scores[:num_documents]
+                
+                logger.debug(f"✅ Parsed {len(scores)} scores from array format")
+                return scores
+            
+            else:
+                logger.warning(f"⚠️ Unexpected JSON type: {type(parsed)}")
                 return None
-            
-            scores = [float(s) for s in scores]
-            
-            # Clamp scores to 0-100
-            scores = [max(0, min(100, s)) for s in scores]
-            
-            return scores
         
+        except json.JSONDecodeError as e:
+            logger.error(f"❌ JSON decode error: {e}")
+            logger.debug(f"JSON string: {json_str[:200] if 'json_str' in locals() else 'N/A'}")
+            return None
         except Exception as e:
             logger.error(f"❌ Error parsing scores: {e}")
             logger.debug(f"Response: {response_text[:200]}")
@@ -201,13 +281,17 @@ Important: Return ONLY the JSON array, nothing else."""
         """
         Rerank documents using LLM-based relevance scoring
         
+        Documents are scored using a comprehensive RAG evaluation framework (0-100 scale).
+        Only documents scoring >= 50/100 are included in the results.
+        
         Args:
             query: Original query
             documents: List of documents from retriever (with 'text', 'score', etc.)
             top_k: Number of top documents to return (uses self.top_k if not provided)
         
         Returns:
-            Reranked documents sorted by LLM score
+            Reranked documents sorted by LLM score (only docs with score >= 50/100)
+            Returns empty list if no documents score >= 50
         """
         if top_k is None:
             top_k = self.top_k
@@ -232,8 +316,8 @@ Important: Return ONLY the JSON array, nothing else."""
             
             logger.debug(f"✅ Received LLM response")
             
-            # Parse scores
-            scores = self._parse_scores(llm_response)
+            # Parse scores (pass number of documents)
+            scores = self._parse_scores(llm_response, len(documents))
             
             if not scores or len(scores) != len(documents):
                 logger.warning(f"⚠️ Invalid score count: expected {len(documents)}, got {len(scores) if scores else 0}")
@@ -250,16 +334,30 @@ Important: Return ONLY the JSON array, nothing else."""
             # Sort by LLM score (descending)
             reranked_docs.sort(key=lambda x: x['llm_score'], reverse=True)
             
-            # Update ranks
-            for new_rank, doc in enumerate(reranked_docs[:top_k], 1):
+            # Filter out documents with score below 50/100 (quality threshold)
+            filtered_docs = [doc for doc in reranked_docs if doc['llm_score'] >= 50.0]
+            
+            if len(filtered_docs) < len(reranked_docs):
+                excluded_count = len(reranked_docs) - len(filtered_docs)
+                logger.info(f"🔍 Filtered out {excluded_count} document(s) with score < 50/100")
+            
+            # Take top_k from filtered documents
+            final_docs = filtered_docs[:top_k]
+            
+            # Update ranks for final documents
+            for new_rank, doc in enumerate(final_docs, 1):
                 doc['reranked_rank'] = new_rank
             
-            logger.info(f"✅ Reranking complete! Top {top_k} documents:")
-            for doc in reranked_docs[:top_k]:
+            if not final_docs:
+                logger.warning(f"⚠️ No documents scored >= 50/100. Returning empty result.")
+                return []
+            
+            logger.info(f"✅ Reranking complete! Top {len(final_docs)} documents (score >= 50):")
+            for doc in final_docs:
                 logger.info(f"   Rank {doc['reranked_rank']}: LLM Score {doc['llm_score']:.1f} "
                            f"(Original: {doc['original_rank']}, Retriever Score: {doc.get('score', 'N/A')})")
             
-            return reranked_docs[:top_k]
+            return final_docs
         
         except Exception as e:
             logger.error(f"❌ Error during reranking: {e}")
