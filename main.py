@@ -289,6 +289,16 @@ def main():
         default=0.1,
         help='LLM temperature (default: 0.1)'
     )
+    parser.add_argument(
+        '--enable_topology',
+        action='store_true',
+        help='Enable topology-aware retrieval'
+    )
+    parser.add_argument(
+        '--enable_cot',
+        action='store_true',
+        help='Enable Chain-of-Thought reasoning'
+    )
     
     args = parser.parse_args()
     
